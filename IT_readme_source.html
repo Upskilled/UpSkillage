@@ -1,0 +1,465 @@
+<script>
+	var x = document.createElement("STYLE");
+    var t = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
+    x.appendChild(t);
+    t = document.createTextNode( "div.panel{ padding: 15px; text-align: justify; display: none;	}" );
+	x.appendChild(t);
+	 t = document.createTextNode( "div.flip:hover{ background: rgba( 241, 126, 0, 1 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 1), rgba(230, 66, 9, 1) ); }" );
+	x.appendChild(t);
+	document.head.appendChild(x);
+</script>
+
+<!-- ******* IFRAME TEST ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#iframeFlip").click( function(){ $("#iframePan").slideToggle("fast"); } );
+	} );
+</script>
+
+<script type="text/javascript">
+	function popup( mylink, windowname ) {
+		if( !window.focus ) return true;
+		var href;
+		if( typeof(mylink) == 'string' ) href = mylink;
+		else href = mylink.href;
+		window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
+		return false;
+	}
+</script>
+
+<div id="iframeFlip" class="flip">
+	<span><img src="https://www.google.com/s2/favicons?domain=upskilled.edu.au" width="16" height="16"> <strong>iFrame</strong> (show/hide)</span>
+</div>
+<div id="iframePan" class="panel">
+	<iframe src="https://lms.upskilled.edu.au" style="width:100%; height:300px;" >MyUpskilled</iframe>
+</div>
+
+<!-- ******* LEARNING AND ASSESSMENTS ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#learningFlip").click( function(){ $("#learningPan").slideToggle("fast"); } );
+	} );
+</script>
+
+<script type="text/javascript">
+	function popup( mylink, windowname ) {
+		if( !window.focus ) return true;
+		var href;
+		if( typeof(mylink) == 'string' ) href = mylink;
+		else href = mylink.href;
+		window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
+		return false;
+	}
+</script>
+
+<div id="learningFlip" class="flip">
+	<span><img src="https://www.google.com/s2/favicons?domain=upskilled.edu.au" width="16" height="16"> <strong>Learning and assessments, and applying this in the ‘real world’</strong> (show/hide)</span>
+</div>
+<div id="learningPan" class="panel">
+	<p>
+		As a participant in a course, you may have the following questions:</br>
+		<br>1.&nbsp;&nbsp;&nbsp;&nbsp; <em>Why is this learning material in the course, it doesn’t relate to what I do?</em>
+		<br>2.&nbsp;&nbsp;&nbsp;&nbsp; <em>When doing an assessment, I didn’t learn about this in the learning material. Why am I being asked this?</em></br>
+		<br>Learning resources and assessments are provided in your course to meet the Australian Quality Training Framework (AQTF) national set of standards. This framework applies to secondary school, Vocational Education and Training (VET), and to Higher Education studies.</br>
+		<br>One of the requirements in the AQTF is that the training package which your course relates to must involve industry discussion to identify what the industry requires. From this discussion, a Unit of Competency is developed which contains ‘Elements’ and ‘Performance Criteria’ that provide broad requirements of the skills and knowledge the industry requires. This is assessed against ‘Performance Evidence’ and ‘Knowledge Evidence’ to ensure that a participant can demonstrate the knowledge and skills required.</br>
+		<br>In your course Upskilled provide a range of learning resources that are selected to help develop the skills and knowledge that the AQTF and the industry requires for the qualification that you are studying. These resources are often provided based on a person having minimal or no knowledge, so it may seem very large and daunting.&nbsp; However, if you find that you know some of the learning, you can skip it and move onto something else.</br>
+		<br>The learning resources may relate directly to only one unit of competency, or to several units of competency, or build up knowledge over the course – the second and last options are called clustered learning. With clustered learning, you develop some skills and knowledge immediately and are assessed on them at that point of learning, whereas other skills and knowledge will be developed and assessed throughout the course. Clustered learning has the advantage of allowing participants to build the bigger picture of knowledge and understanding over the course, and reinforces knowledge and learning at several points in the course.</br>
+		<br><em>How does this fit in with my written assessments?</em></br>
+		<br>You may find that some questions in an assessment do not appear to directly relate to the learning material. The type of question asked will be similar to that you will get in the industry, and require you to connect different pieces of learning together to identify the answer. So, although you may not directly have covered the question, the learning will have been there and you need to connect the pieces.</br>
+		<br>As a good learning habit, we suggest you review any written assessment instructions and the assessment rubric, before commencing the learning material. This will then set your mind to focus on the knowledge that is required in the assessment.</br>
+		<br>Learning resources and assessments are provided to enable participants to have a qualification that meets both the AQTF standards, and addresses industry needs.</br>
+		<br>Should you have any questions relating to your course please contact your trainer, or Upskilled on 1300 009 924.
+	</p>
+</div>
+
+<!-- ******* PLURALSIGHT ELEARNING ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#pluralFlip").click( function(){ $("#pluralPan").slideToggle("fast"); } );
+	} );
+</script>
+
+<script type="text/javascript" >
+	function popup( mylink, windowname ) {
+		if( !window.focus ) return true;
+		var href;
+		if( typeof(mylink) == 'string' ) href = mylink;
+		else href = mylink.href;
+		window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
+		return false;
+	}
+</script>
+
+<div id="pluralFlip" class="flip" >
+	<span><img src="http://www.google.com/s2/favicons?domain=pluralsight.com" height="16" width="16"><strong> Pluralsight eLearning</strong> (show/hide)</span>
+</div>
+<div id="pluralPan" class="panel" >
+	<p>
+		Each topic of eLearning will have its own link for you to follow to specific PluralSight courses. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the PluralSight eLearning looks like in your course.<br>
+		<br>Each study session will require you to authenticate with the eLearning resources prior to accessing the specific material. Once you have authenticated you can click on the eLearning links during your MyUpskilled session. Once you are in a PluralSight course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.<br>
+		<br>When you log off MyUpskilled your authentication will stop.<br>
+		<br>Example:<br>
+		<br><span style="color: #606060;" ><img src="http://www.google.com/s2/favicons?domain=pluralsight.com" height="16" width="16" > eLearning - Topic Name Here</span><br>
+		<br>Most eLearning has an audio component You will find the experience better if you have speakers on your computer.
+		<br>Tip - If you are in an office with others, it may be more appropriate to have a set of headphones.
+		<br>These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.<br>
+	</p>
+</div>
+
+<!-- ******* LYNDA.COM ELEARNING ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#lyndaFlip").click( function(){ $("#lyndaPan").slideToggle("fast"); } );
+	} );
+</script>
+
+<script type="text/javascript" >
+	function popup( mylink, windowname ) {
+		if( !window.focus ) return true;
+		var href;
+		if( typeof(mylink) == 'string' ) href = mylink;
+		else href = mylink.href;
+		window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
+		return false;
+	}
+</script>
+
+<div id="lyndaFlip" class="flip" >
+	<span><img src="http://www.google.com/s2/favicons?domain=lynda.com" height="16" width="16"><strong> Lynda.com eLearning</strong> (show/hide)</span>
+</div>
+<div id="lyndaPan" class="panel" >
+	<p>
+		Each topic of eLearning will have its own link for you to follow to specific Lynda.com. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the Lynda.com eLearning looks like in your course.<br>
+		<br>Each study session will require you to authenticate with the eLearning resources prior to accessing the specific material. Once you have authenticated you can click on the eLearning links during your MyUpskilled session. Once you are in a Lynda.com course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.<br>
+		<br>When you log off MyUpskilled your authentication will stop.<br>
+		<br>Example:<br>
+		<br><span style="color: #606060;" ><img src="http://www.google.com/s2/favicons?domain=lynda.com" height="16" width="16" > Authenticate with Lynda.com eLearning</span><br>
+		<br><span style="color: #606060;" ><img src="http://www.google.com/s2/favicons?domain=lynda.com" height="16" width="16" > eLearning - Topic Name Here</span><br>
+		<br><strong>Check system requirements <a href="http://www.lynda.com/support/SystemRequirements.aspx">here</a> for Lynda.com (full site)</strong><br>
+		<br><strong>You may need to allow cookies for upskilled.edu.au &amp; lynda.com, IE users see guide below.</strong><br>
+		<br>Most eLearning has an audio component You will find the experience better if you have speakers on your computer.
+		<br>Tip - If you are in an office with others, it may be more appropriate to have a set of headphones.
+		<br>These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.<br>
+		<br><span><img src="http://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24" height="24" width="24" > <a href="https://rebrand.ly/lyndaCookies" onClick="return popup( this, 'rubric' )" ><strong><ins>Guide - How to add cookies for Lynda.com</ins></strong></a> (.pdf)</span><br>
+	</p>
+</div>
+
+<!-- ******* ASSESSMENTS EXPLAINED ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#assessmentFlip").click( function(){ $("#assessmentPan").slideToggle("fast"); } );
+	} );
+</script>
+
+<div id="assessmentFlip" class="flip" >
+	<span><strong>Assessments Explained</strong> (show/hide)</span>
+</div>
+<div id="assessmentPan" class="panel" >
+	<p>
+		<p>In this qualification course you will find many learning materials and assessments. All assessments that are required for you to complete this qualification are contained within your 'MyUpskilled' site.</p>
+		<p><span style="font-size: 10pt; line-height: 1.5em;">Assessments are identified by two distinct icons as seen in the diagram below.</span></p>
+		<div style="margin: auto;" >
+			<table border="0">
+				<tbody>
+					<tr style="height: 35px;">
+						<td><strong>Sustainability</strong></td>
+						<td><p style="font-size: small;">← This is the title of the topic</p></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;&nbsp;<img src="http://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon" class="activityicon" alt="SCORM package">&nbsp;<span style="color: #888888;">Environmental Procedures</span></td>
+						<td><p style="font-size: small;">← Learning materials</p></td>
+					</tr>
+					<tr style="height: 35px;">
+						<td>&nbsp;&nbsp;&nbsp;<img src="http://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon" class="activityicon" alt="Quiz">&nbsp;<span style="color: #888888;">Assessment - Environmental Procedures</span></td>
+						<td><p style="font-size: small;">← Quiz style assessment</p></td>
+					</tr>
+					<tr style="height: 25px;">
+						<td>&nbsp;&nbsp;&nbsp;<img src="http://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf" class="activityicon" alt="File">&nbsp;<span style="color: #888888;">Instructions - </span><span style="color: #888888;">Environmental Procedures</span></td>
+						<td><p style="font-size: small;">← Assignment instructions</p></td>
+					</tr>
+					<tr>
+						<td>&nbsp;&nbsp;&nbsp;<img src="http://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon" class="activityicon" alt="Assignment">&nbsp;<span style="color: #888888;">Assessment - </span><span style="color: #888888;">Environmental Procedures Assignment</span></td>
+						<td><p style="font-size: small;">← Assignment/Project style assessment</p></td>
+					</tr>
+				</tbody>
+			</table>
+		</div><br>
+		<p>Assessments are designed to test you on the learning materials that have preceded it.</p>
+		<p>Quizzes are timed and contain different types of questions like, multichoice, choose one or many, short answer, fill in the blank, etc.</p>
+		<p>Assignments and Projects will have an instructions document preceding it and if supporting information is required, it will be in documentation listed after it.</p>
+		<p>Assignments and Projects will also have a marking guide or rubric for you to see what the assessor is looking for in your submission.</p>
+		<br><script charset="ISO-8859-1" src="http://fast.wistia.com/assets/external/popover-v1.js"></script>
+		<span>
+			<img src="http://www.upskilled.edu.au/favicon.ico" style="margin-right: 3px" height="24" width="24">
+			<a href="http://fast.wistia.net/embed/iframe/q131r4lnhx?popover=true" class="wistia-popover[height=551,playerColor=fe7905,width=980]"><strong>Quick Tip - Quizzes &lt;2min</strong></a><br>
+		</span>
+	</p>
+</div>
+
+<!-- ******* ASSESSMENT RUBRICS ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#rubricFlip").click( function(){ $("#rubricPan").slideToggle("fast"); } );
+	} );
+</script>
+
+<script type="text/javascript" >
+	function popup( mylink, windowname ) {
+		if( !window.focus ) return true;
+		var href;
+		if( typeof(mylink) == 'string' ) href = mylink;
+		else href = mylink.href;
+		window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
+		return false;
+	}
+</script>
+
+<div id="rubricFlip" class="flip" >
+	<span><strong>Assessment Rubrics File</strong> (show/hide)</span>
+</div>
+<div id="rubricPan" class="panel" >
+	<p>
+		<p>Rubrics provide a guide on what elements the assessor is looking for. The rubrics for all assessments are included on the assessment submission pages.</p>
+		<p>**NOTE - this is a useful tool for you to prepare and write your submissions. If there is an element in the rubric that you do not address, that element will get a '0' result!</p>
+		<p>Please read the following document for more information on rubrics</p>
+		<span><img src="http://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24" height="24" width="24" > <a href="https://rebrand.ly/assessRubric" onClick="return popup( this, 'rubric' )" ><strong><ins>Assessment Rubrics</ins></strong></a> (.pdf)</span><br>
+		<br><script src="http://fast.wistia.com/embed/medias/z65qa5bhe5.jsonp" async=""></script>
+		<script src="http://fast.wistia.com/assets/external/E-v1.js" async=""></script>
+		<span class="wistia_embed wistia_async_z65qa5bhe5 popover=true popoverContent=link" style="display:inline">
+			<div id="wistia_164.thumb_container" class="wistia_click_to_play" style="position: relative; display: inline;">
+				<img src="http://www.upskilled.edu.au/favicon.ico" style="margin-right: 3px" height="24" width="24">
+				<a href="#" id="yui_3_15_0_3_1473213461653_1514"><strong>Quick Tip - How to Access Assessment Rubric &lt;1 min</strong></a>
+			</div>
+		</span><br>
+	</p>
+</div>
+
+<!-- ******* GRADES ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#gradeFlip").click( function(){ $("#gradePan").slideToggle("fast"); } );
+	} );
+</script>
+
+<div id="gradeFlip" class="flip" >
+	<span><strong>Grades</strong> (show/hide)</span>
+</div>
+<div id="gradePan" class="panel" >
+	<p>
+		<p>In the settings block on the left of the screen you will see a 'grades' link. This will take you to your grades for all of your assessments. Use this to check your progress and review any comments left by your teacher.</p>
+		<p><strong>-</strong> = This assessment has not yet been attempted or submitted or graded.</p>
+		<p><strong>NR</strong> = Not Required - Not often used, but you may see this from time to time, it is administrative and you can ignore it.</p>
+		<p><strong>RPL</strong> = Recognition of Prior Learning - You have been granted a credit based on prior learning you have undertaken.</p>
+		<p><strong>NYC</strong> = Not Yet Competent - You have not met the requirements yet, and will need to review feedback and resubmit.</p>
+		<p><strong>C</strong> = Competent - You have met the requirements. This is your goal!</p>
+	</p>
+</div>
+
+<!-- ******* FOUNDATIONS COURSE DEV ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#foundation1Flip").click( function(){ $("#foundation1Pan").slideToggle("fast"); } );
+	} );
+</script>
+<script>
+	function showCourse() {
+		var checkBox = document.getElementById("foundationCheck");
+		var doc = document.getElementById("foundCourse");
+		if( checkBox.value == "off" ) {
+			checkBox.value = "on";
+			doc.style.display = "block";
+		} else {
+			checkBox.value = "off";
+			doc.style.display = "none";
+		}
+	}
+</script>
+
+<div id="foundation1Flip" class="flip" >
+	<span><strong>Foundations Course</strong> (show/hide)</span>
+</div>
+<div id="foundation1Pan" class="panel" >
+	<p>
+		<p>Upskilled has created a Foundations course to support you.</p>
+		<p>This course is not part of your qualification course and will not be assessed in any way.</p>
+		<p>We have created this course with basic modules of learning for those of you who would like to get a refresher on some basics or to just get into the swing of IT.</p>
+		<div style="display: inline-block; margin-bottom: 0; vertical-align: middle;">
+			<label for="foundationCheck">Check the box to gain access the foundations course before beginning your course proper.</label>
+		</div>
+		<div style="display: inline-block; margin-bottom: 0; vertical-align: middle;">
+			<input type="checkbox" id="foundationCheck" name="foundationCheck" onclick="showCourse()" value="off" style="display: inline;">
+		</div>
+		<div id="foundCourse" style="display: none;">
+			<br><br>
+			<p>You can enrol in this course by adding an enrolment key when you are prompted after clicking the link below:</p>
+			<p>Copy this key first - <strong>2014DevFun</strong></p>
+			<p><a href="http://lms.upskilled.edu.au/course/view.php?id=1176" target="_blank">Information Technology Development Foundations</a></p>
+		</div>
+	</p>
+</div>
+
+<!-- ******* FOUNDATIONS COURSE ITIF ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#foundation2Flip").click( function(){ $("#foundation2Pan").slideToggle("fast"); } );
+	} );
+</script>
+<script>
+	function showCourse() {
+		var checkBox = document.getElementById("foundationCheck");
+		var doc = document.getElementById("foundCourse");
+		if( checkBox.value == "off" ) {
+			checkBox.value = "on";
+			doc.style.display = "block";
+		} else {
+			checkBox.value = "off";
+			doc.style.display = "none";
+		}
+	}
+</script>
+
+<div id="foundation2Flip" class="flip" >
+	<span><strong>Foundations Course</strong> (show/hide)</span>
+</div>
+<div id="foundation2Pan" class="panel" >
+	<p>
+		<p>Upskilled has created a Foundations course to support you.</p>
+		<p>This course is not part of your qualification course and will not be assessed in any way.</p>
+		<p>We have created this course with basic modules of learning for those of you who would like to get a refresher on some basics or to just get into the swing of IT.</p>
+		<div style="display: inline-block; margin-bottom: 0; vertical-align: middle;">
+			<label for="foundationCheck">Check the box to gain access the foundations course before beginning your course proper.</label>
+		</div>
+		<div style="display: inline-block; margin-bottom: 0; vertical-align: middle;">
+			<input type="checkbox" id="foundationCheck" name="foundationCheck" onclick="showCourse()" value="off" style="display: inline;">
+		</div>
+		<div id="foundCourse" style="display: none;">
+			<br><br>
+			<p>You can enrol in this course by adding an enrolment key when you are prompted after clicking the link below:</p>
+			<p>Copy this key first - <strong>2014ITIF</strong></p>
+			<p><a href="http://lms.upskilled.edu.au/course/view.php?id=1175" target="_blank">IT Infrastructure Foundations Course</a></p>
+		</div>
+	</p>
+</div>
+
+<!-- ******* WORKPLACE ASSESSMENT ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#workplaceFlip").click( function(){ $("#workplacePan").slideToggle("fast"); } );
+	} );
+</script>
+
+<div id="workplaceFlip" class="flip" >
+	<span><strong>Workplace Activities instead of Set Assessments?</strong> (show/hide)</span>
+</div>
+<div id="workplacePan" class="panel">
+	<p>
+		<p>In this qualification course you will find many learning materials and assessments.</p>
+		<p>You may find that some of the assessments we set are similar to activities you do at work.</p>
+		<p>If you believe that one of your workplace activities would be appropriate to submit as an assessment instead of completing the assessment listed in the cluster, then you are welcome to apply to submit your work activity as the assessment task. Most assignments or projects will have a 'Marking Guide' which you can use as a guide to the suitability of your workplace activity as a substitute assessment.</p>
+		<p>This is not a requirement, just an option for you if you want to use it.</p>
+		<p>Download the 'Workplace Activity as Assessment' form, complete it and upload it for your teacher to approve.</p>
+		<span><img src="http://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fdocument-24" height="24" width="24" > <a href="https://rebrand.ly/workAssess" onClick="return popup( this, 'workAssess' )" ><strong><ins>Workplace Activity as Assessment</ins></strong></a> (.docx)</span><br>
+	</p>
+</div>
+
+<!-- ******* UPLOADING FILES FOR REVIEW ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#reviewFlip").click( function(){ $("#reviewPan").slideToggle("fast"); } );
+	} );
+</script>
+
+<div id="reviewFlip" class="flip" >
+	<span><strong>Uploading Files for Teacher Review</strong> (show/hide)</span>
+</div>
+<div id="reviewPan" class="panel" >
+	<p>
+		<p>If you would like to upload development code to your teacher, this is the place to do it.</p>
+		<p>Please 'zip' your build directory into one file and upload using the link below. The size of the file can be no larger than 10MB.</p>
+		<p>You can only upload one file at a time, hence combining your build directory into one compressed file. Once your teacher has reviewed your code, the link will be activated again to make it available for future use.</p>
+	</p>
+</div>
+
+<!-- ******* IOT RASBERRY PI ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#iotFlip").click( function(){ $("#iotPan").slideToggle("fast"); } );
+	} );
+</script>
+
+<div id="iotFlip" class="flip" >
+	<span><strong>Purchasing your Pi and kit</strong> (show/hide)</span>
+</div>
+<div id="iotPan" class="panel" >
+	<p>
+		You have enrolled in the Certificate IV Information Technology Networking - Internet of Things Specialisation. 
+		<br>This course has hardware requirements that you need to purchase to use in the course.  
+		<br>The details are as follows:
+		<br>1 x Raspberry Pi 2 model B.  These are widely available through distributors in Australia or online stores, ensure it has an Australian plug on the power adapter included.
+		<br>1 x 'Adeept' Raspberry Pi 2 kit available from Adeept's ebay store - <a href="http://stores.ebay.com.au/Adeept?_trksid=p2047675.l2563">http://stores.ebay.com.au/Adeept?_trksid=p2047675.l2563</a>.
+		<br>There are a number of kits available, ensure you purchase the 'RFID Starter Kit for Raspberry Pi 2 Model B/B+ Python with 40-Pin GPIO Board' as this is required for your assessments.
+		<br><br>Order this as soon as possible so you are not waiting too long to get in to it.
+	</p>
+</div>
+
+<!-- ******* GRAD CERT TEXTBOOK ******* -->
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready( function(){
+		$("#bookFlip").click( function(){ $("#bookPan").slideToggle("fast"); } );
+	} );
+</script>
+
+<div id="bookFlip" class="flip" >
+	<span><strong>Textbook Order Details</strong> (show/hide)</span>
+</div>
+<div id="bookPan" class="panel" >
+	<p>
+		For this qualification you will require continual access to the following text books.<br>
+		<br>For this qualification you will require continual access to the following text books.<br>
+		<ul><li>Greening Through IT - Information Technology for Environmental Sustainability by Bill Tomlinson.</li></ul>
+		<div class="editor-indent" style="margin-left: 30px;">The book is available to order in hard copy or as a downloadable e-book.<br>
+		<br>Details are at: <a href="http://mitpress-ebooks.mit.edu/product/greening-through">http://mitpress-ebooks.mit.edu/product/greening-through</a></div><br>
+		<ul><li>Research methods for business students by Mark Saunders, Philip Lewis and Adrian Thornhill, (5th Ed) - ISBN-13: 978-0273716860</li></ul>
+		<div class="editor-indent" style="margin-left: 30px;">The book is available to order in hard copy or as a downloadable e-book.<br>
+		<br>There are many sources for this book at varying prices, so choose your best source of supply for your requirement.</div>
+	</p>
+</div>
