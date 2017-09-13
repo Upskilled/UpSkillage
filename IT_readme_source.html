@@ -13,10 +13,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 	function popup( mylink, windowname ) {
-		if( !window.focus ) return true;
+		if( !window.focus ) {
+			return true;
+		}
 		var href;
-		if( typeof(mylink) == 'string' ) href = mylink;
-		else href = mylink.href;
+		if( typeof(mylink) == 'string' ) {
+			href = mylink;
+		} else {
+			href = mylink.href;
+		}
 		window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
 		return false;
 	}
@@ -27,6 +32,8 @@
 	t = document.createTextNode( "div.panel{ padding: 15px; text-align: justify; display: none;	}" );
 	x.appendChild(t);
 	t = document.createTextNode( "div.flip:hover{ background: rgba( 241, 126, 0, 1 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 1), rgba(230, 66, 9, 1) ); }" );
+	x.appendChild(t);
+	t = document.createTextNode( "img.panelIcon{ height: 16px; width: 16px; }" );
 	x.appendChild(t);
 	document.head.appendChild(x);
 </script>
@@ -40,7 +47,7 @@
 </script>
 
 <div id="iframeFlip" class="flip">
-	<span><img src="https://www.google.com/s2/favicons?domain=upskilled.edu.au" alt=" " width="16" height="16"> <strong>iFrame</strong> (show/hide)</span>
+	<span><img src="https://www.google.com/s2/favicons?domain=upskilled.edu.au" class="panelIcon" alt=" " /> <strong>iFrame</strong> (show/hide)</span>
 </div>
 <div id="iframePan" class="panel">
 	<iframe src="https://lms.upskilled.edu.au" style="width:100%; height:300px;" >MyUpskilled</iframe>
@@ -55,16 +62,16 @@
 	} );
 </script>
 
-<div id="pluralFlip" class="flip" >
-	<span><img src="https://www.google.com/s2/favicons?domain=pluralsight.com" alt=" " height="16" width="16"><strong> Pluralsight eLearning</strong> (show/hide)</span>
+<div id="pluralFlip" class="flip">
+	<span><img src="https://www.google.com/s2/favicons?domain=pluralsight.com" class="panelIcon" alt=" " /><strong> Pluralsight eLearning</strong> (show/hide)</span>
 </div>
-<div id="pluralPan" class="panel" >
+<div id="pluralPan" class="panel">
 	<p>
 		Each topic of eLearning will have its own link for you to follow to specific PluralSight courses. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the PluralSight eLearning looks like in your course.<br>
 		<br>Each study session will require you to authenticate with the eLearning resources prior to accessing the specific material. Once you have authenticated you can click on the eLearning links during your MyUpskilled session. Once you are in a PluralSight course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.<br>
 		<br>When you log off MyUpskilled your authentication will stop.<br>
 		<br>Example:<br>
-		<br><span style="color: #606060;" ><img src="https://www.google.com/s2/favicons?domain=pluralsight.com" alt=" " height="16" width="16" > eLearning - Topic Name Here</span><br>
+		<br><span style="color: #606060;" ><img src="https://www.google.com/s2/favicons?domain=pluralsight.com" class="activityicon iconlarge" alt=" " /> eLearning - Topic Name Here</span><br>
 		<br>Most eLearning has an audio component You will find the experience better if you have speakers on your computer.
 		<br>Tip - If you are in an office with others, it may be more appropriate to have a set of headphones.
 		<br>These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.<br>
@@ -80,7 +87,7 @@
 </script>
 
 <div id="lyndaFlip" class="flip" >
-	<span><img src="https://www.google.com/s2/favicons?domain=lynda.com" alt=" " height="16" width="16"><strong> Lynda.com eLearning</strong> (show/hide)</span>
+	<span><img src="https://www.google.com/s2/favicons?domain=lynda.com" class="panelIcon" alt=" " /><strong> Lynda.com eLearning</strong> (show/hide)</span>
 </div>
 <div id="lyndaPan" class="panel" >
 	<p>
@@ -88,16 +95,36 @@
 		<br>Each study session will require you to authenticate with the eLearning resources prior to accessing the specific material. Once you have authenticated you can click on the eLearning links during your MyUpskilled session. Once you are in a Lynda.com course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.<br>
 		<br>When you log off MyUpskilled your authentication will stop.<br>
 		<br>Example:<br>
-		<br><span style="color: #606060;" ><img src="https://www.google.com/s2/favicons?domain=lynda.com" alt=" " height="16" width="16" > Authenticate with Lynda.com eLearning</span><br>
-		<br><span style="color: #606060;" ><img src="https://www.google.com/s2/favicons?domain=lynda.com" alt=" " height="16" width="16" > eLearning - Topic Name Here</span><br>
+		<br><span style="color: #606060;" ><img src="https://www.google.com/s2/favicons?domain=lynda.com" class="activityicon iconlarge" alt=" "/ > Authenticate with Lynda.com eLearning</span><br>
+		<br><span style="color: #606060;" ><img src="https://www.google.com/s2/favicons?domain=lynda.com" class="activityicon iconlarge" alt=" " /> eLearning - Topic Name Here</span><br>
 		<br><strong>Check system requirements <a href="https://www.lynda.com/support/SystemRequirements.aspx">here</a> for Lynda.com (full site)</strong><br>
 		<br><strong>You may need to allow cookies for upskilled.edu.au &amp; lynda.com, IE users see guide below.</strong><br>
 		<br>Most eLearning has an audio component You will find the experience better if you have speakers on your computer.
 		<br>Tip - If you are in an office with others, it may be more appropriate to have a set of headphones.
 		<br>These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.<br>
-		<br><span><img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24" alt=" " height="24" width="24" >
+		<br><span><img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24" class="activityicon iconlarge" alt=" " />
 		<a href="https://rebrand.ly/lyndaCookies" onClick="return popup( this, 'rubric' )" ><strong>Guide - How to add cookies for Lynda.com</strong></a> (.pdf)</span><br>
 	</p>
+</div>
+
+<!-- ******* NICROSOFT VIRTUAL ACADEMY ******* -->
+
+<script>
+	$(document).ready( function(){
+		$("#microFlip").click( function(){ $("#microPan").slideToggle("fast"); } );
+	} );
+</script>
+
+<div id="microFlip" class="flip" >
+	<span><img src="https://www.google.com/s2/favicons?domain=microsoft.com" class="panelIcon" alt=" " /><strong> Microsoft Virtual Academy</strong> (show/hide)</span>
+</div>
+<div id="microPan" class="panel" >
+	<p>In order for you to participate in this training you will be required to have a Microsoft Account.</p>
+	<p>You can use an existing Microsoft Account if you have one. You may have one and not know it. If you have a 'SkyDrive, Xbox Live, Outlook.com, Hotmail, Windows Live ID or other Microsoft Services' these are usually associated with a Microsoft Account.</p>
+	<p>If you do not have a Microsoft Account you can sign up for one. You will find instructions on how to do this <a href="https://windows.microsoft.com/en-AU/windows-live/sign-up-create-account-how" target="_blank"><strong>here</strong></a>. Alternatively you can sign up <a href="https://live.com/" target="_blank"><strong>here</strong></a> and follow the prompts.</p>
+	<p>Each topic of eLearning will have its own Learning Plan for you to follow.</p>
+	<p>Example:</p>
+	<p style="color: #808080;"><img src="https://www.google.com/s2/favicons?domain=microsoft.com" class="activityicon iconlarge" alt="URL" /> eLearning - Topic Name Here</p>
 </div>
 
 <!-- ******* ASSESSMENTS EXPLAINED ******* -->
@@ -123,19 +150,19 @@
 						<td><p style="font-size: small;">← This is the title of the topic</p></td>
 					</tr>
 					<tr>
-						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon" class="activityicon" alt="SCORM package">&nbsp;<span style="color: #888888;">Environmental Procedures</span></td>
+						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon" class="activityicon iconlarge" alt="SCORM package">&nbsp;<span style="color: #888888;">Environmental Procedures</span></td>
 						<td><p style="font-size: small;">← Learning materials</p></td>
 					</tr>
 					<tr style="height: 35px;">
-						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon" class="activityicon" alt="Quiz">&nbsp;<span style="color: #888888;">Assessment - Environmental Procedures</span></td>
+						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon" class="activityicon iconlarge" alt="Quiz">&nbsp;<span style="color: #888888;">Assessment - Environmental Procedures</span></td>
 						<td><p style="font-size: small;">← Quiz style assessment</p></td>
 					</tr>
 					<tr style="height: 25px;">
-						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf" class="activityicon" alt="File">&nbsp;<span style="color: #888888;">Instructions - </span><span style="color: #888888;">Environmental Procedures</span></td>
+						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf" class="activityicon iconlarge" alt="File">&nbsp;<span style="color: #888888;">Instructions - </span><span style="color: #888888;">Environmental Procedures</span></td>
 						<td><p style="font-size: small;">← Assignment instructions</p></td>
 					</tr>
 					<tr>
-						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon" class="activityicon" alt="Assignment">&nbsp;<span style="color: #888888;">Assessment - </span><span style="color: #888888;">Environmental Procedures Assignment</span></td>
+						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon" class="activityicon iconlarge" alt="Assignment">&nbsp;<span style="color: #888888;">Assessment - </span><span style="color: #888888;">Environmental Procedures Assignment</span></td>
 						<td><p style="font-size: small;">← Assignment/Project style assessment</p></td>
 					</tr>
 				</tbody>
@@ -147,7 +174,7 @@
 		<p>Assignments and Projects will also have a marking guide or rubric for you to see what the assessor is looking for in your submission.</p>
 		<br><script charset="ISO-8859-1" src="https://fast.wistia.com/assets/external/popover-v1.js"></script>
 		<span>
-			<img src="https://www.upskilled.edu.au/favicon.ico" alt=" " style="margin-right: 3px" height="24" width="24">
+			<img src="https://www.upskilled.edu.au/favicon.ico" alt=" " class="activityicon iconlarge" />
 			<a href="https://fast.wistia.net/embed/iframe/q131r4lnhx?popover=true" class="wistia-popover[height=551,playerColor=fe7905,width=980]"><strong>Quick Tip - Quizzes &lt;2min</strong></a><br>
 		</span>
 	</p>
@@ -169,13 +196,13 @@
 		<p>Rubrics provide a guide on what elements the assessor is looking for. The rubrics for all assessments are included on the assessment submission pages.</p>
 		<p>**NOTE - this is a useful tool for you to prepare and write your submissions. If there is an element in the rubric that you do not address, that element will get a '0' result!</p>
 		<p>Please read the following document for more information on rubrics</p>
-		<span><img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24" alt=" " height="24" width="24" >
+		<span><img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24" class="activityicon iconlarge" alt=" " />
 		<a href="https://rebrand.ly/assessRubric" onClick="return popup( this, 'rubric' )" ><strong>Assessment Rubrics</strong></a> (.pdf)</span><br>
 		<br><script src="https://fast.wistia.com/embed/medias/z65qa5bhe5.jsonp" async=""></script>
 		<script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script>
 		<span class="wistia_embed wistia_async_z65qa5bhe5 popover=true popoverContent=link" style="display:inline">
 			<div id="wistia_164.thumb_container" class="wistia_click_to_play" style="position: relative; display: inline;">
-				<img src="https://www.upskilled.edu.au/favicon.ico" alt=" " style="margin-right: 3px" height="24" width="24">
+				<img src="https://www.upskilled.edu.au/favicon.ico" class="activityicon iconlarge" alt=" " />
 				<a href="#" id="yui_3_15_0_3_1473213461653_1514"><strong>Quick Tip - How to Access Assessment Rubric &lt;1 min</strong></a>
 			</div>
 		</span><br>
@@ -306,7 +333,7 @@
 		<p>If you believe that one of your workplace activities would be appropriate to submit as an assessment instead of completing the assessment listed in the cluster, then you are welcome to apply to submit your work activity as the assessment task. Most assignments or projects will have a 'Marking Guide' which you can use as a guide to the suitability of your workplace activity as a substitute assessment.</p>
 		<p>This is not a requirement, just an option for you if you want to use it.</p>
 		<p>Download the 'Workplace Activity as Assessment' form, complete it and upload it for your teacher to approve.</p>
-		<span><img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fdocument-24" alt=" " height="24" width="24" >
+		<span><img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fdocument-24" class="activityicon iconlarge" alt=" " />
 		<a href="https://rebrand.ly/workAssess" onClick="return popup( this, 'workAssess' )" ><strong>Workplace Activity as Assessment</strong></a> (.docx)</span><br>
 	</p>
 </div>
