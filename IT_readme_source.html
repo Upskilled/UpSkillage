@@ -6,7 +6,7 @@
 
 <!-- ******* LTI FORMAT ******* -->
 
-<!-- <a onclick="window.open( 'https://lms.upskilled.edu.au/mod/lti/launch.php?id=', 'lti' ); return false;" href="https://lms.upskilled.edu.au/mod/lti/launch.php?id="><img src="https://www.google.com/s2/favicons?domain=lynda.com" alt=" " class="iconlarge activityicon" role="presentation"><span class="instancename">eLearning - ___ - _hrs _mins</span></a> -->
+<!-- <a onclick="window.open( 'https://lms.upskilled.edu.au/mod/lti/launch.php?id=', 'lti' ); return false;" href="https://lms.upskilled.edu.au/mod/lti/launch.php?id="><img src="https://www.google.com/s2/favicons?domain=lynda.com" alt=" " class="iconlarge activityicon" role="presentation" /><span class="instancename">eLearning - ___ - _hrs _mins</span></a> -->
 
 <!-- ******* CSS IN JS & LIBS ******* -->
 
@@ -24,6 +24,18 @@
 		}
 		window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
 		return false;
+	}
+	
+	function showCourse() {
+		var checkBox = document.getElementById("foundationCheck");
+		var doc = document.getElementById("foundCourse");
+		if( checkBox.value == "off" ) {
+			checkBox.value = "on";
+			doc.style.display = "block";
+		} else {
+			checkBox.value = "off";
+			doc.style.display = "none";
+		}
 	}
 	
 	var x = document.createElement("style");
@@ -79,7 +91,7 @@
 		<br>Each study session will require you to authenticate with the eLearning resources prior to accessing the specific material. Once you have authenticated you can click on the eLearning links during your MyUpskilled session. Once you are in a Lynda.com course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.<br>
 		<br>When you log off MyUpskilled your authentication will stop.<br>
 		<br>Example:<br>
-		<br><span style="color: #606060;" ><img src="https://www.google.com/s2/favicons?domain=lynda.com" class="activityicon iconlarge" alt=" "/ > Authenticate with Lynda.com eLearning</span><br>
+		<br><span style="color: #606060;" ><img src="https://www.google.com/s2/favicons?domain=lynda.com" class="activityicon iconlarge" alt=" " /> Authenticate with Lynda.com eLearning</span><br>
 		<br><span style="color: #606060;" ><img src="https://www.google.com/s2/favicons?domain=lynda.com" class="activityicon iconlarge" alt=" " /> eLearning - Topic Name Here</span><br>
 		<br><strong>Check system requirements <a href="https://www.lynda.com/support/SystemRequirements.aspx">here</a> for Lynda.com (full site)</strong><br>
 		<br><strong>You may need to allow cookies for upskilled.edu.au &amp; lynda.com, IE users see guide below.</strong><br>
@@ -134,19 +146,19 @@
 						<td><p style="font-size: small;">← This is the title of the topic</p></td>
 					</tr>
 					<tr style="height: 35px;">
-						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon" class="activityicon iconlarge" alt="SCORM package">&nbsp;<span style="color: #888888;">Environmental Procedures</span></td>
+						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon" class="activityicon iconlarge" alt="SCORM package" />&nbsp;<span style="color: #888888;">Environmental Procedures</span></td>
 						<td><p style="font-size: small;">← Learning materials</p></td>
 					</tr>
 					<tr style="height: 35px;">
-						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon" class="activityicon iconlarge" alt="Quiz">&nbsp;<span style="color: #888888;">Assessment - Environmental Procedures</span></td>
+						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon" class="activityicon iconlarge" alt="Quiz" />&nbsp;<span style="color: #888888;">Assessment - Environmental Procedures</span></td>
 						<td><p style="font-size: small;">← Quiz style assessment</p></td>
 					</tr>
 					<tr style="height: 35px;">
-						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf" class="activityicon iconlarge" alt="File">&nbsp;<span style="color: #888888;">Instructions - Environmental Procedures</span></td>
+						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf" class="activityicon iconlarge" alt="File" />&nbsp;<span style="color: #888888;">Instructions - Environmental Procedures</span></td>
 						<td><p style="font-size: small;">← Assignment instructions</p></td>
 					</tr>
 					<tr style="height: 35px;">
-						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon" class="activityicon iconlarge" alt="Assignment">&nbsp;<span style="color: #888888;">Assessment - Environmental Procedures Assignment</span></td>
+						<td>&nbsp;&nbsp;&nbsp;<img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon" class="activityicon iconlarge" alt="Assignment" />&nbsp;<span style="color: #888888;">Assessment - Environmental Procedures Assignment</span></td>
 						<td><p style="font-size: small;">← Assignment/Project style assessment</p></td>
 					</tr>
 				</tbody>
@@ -159,7 +171,8 @@
 		<br><script charset="ISO-8859-1" src="https://fast.wistia.com/assets/external/popover-v1.js"></script>
 		<span>
 			<img src="https://www.upskilled.edu.au/favicon.ico" alt=" " class="activityicon iconlarge" />
-			<a href="https://fast.wistia.net/embed/iframe/q131r4lnhx?popover=true" class="wistia-popover[height=551,playerColor=fe7905,width=980]"><strong>Quick Tip - Quizzes &lt;2min</strong></a><br>
+			<a href="https://fast.wistia.net/embed/iframe/q131r4lnhx?popover=true" class="wistia-popover[height=551,playerColor=fe7905,width=980]"><strong>Quick Tip - Quizzes &lt;2min</strong></a>
+			<br>
 		</span>
 	</p>
 </div>
@@ -181,7 +194,8 @@
 		<p>**NOTE - this is a useful tool for you to prepare and write your submissions. If there is an element in the rubric that you do not address, that element will get a '0' result!</p>
 		<p>Please read the following document for more information on rubrics</p>
 		<span><img src="https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24" class="activityicon iconlarge" alt=" " />
-		<a href="https://rebrand.ly/assessRubric" onClick="return popup( this, 'rubric' )" ><strong>Assessment Rubrics</strong></a> (.pdf)</span><br>
+		<a href="https://rebrand.ly/assessRubric" onClick="return popup( this, 'rubric' )" ><strong>Assessment Rubrics</strong></a> (.pdf)</span>
+		<br>
 		<br><script src="https://fast.wistia.com/embed/medias/z65qa5bhe5.jsonp" async=""></script>
 		<script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script>
 		<span class="wistia_embed wistia_async_z65qa5bhe5 popover=true popoverContent=link" style="display:inline">
@@ -221,17 +235,6 @@
 	$(document).ready( function(){
 		$("#foundation1Flip").click( function(){ $("#foundation1Pan").slideToggle("fast"); } );
 	} );
-	function showCourse() {
-		var checkBox = document.getElementById("foundationCheck");
-		var doc = document.getElementById("foundCourse");
-		if( checkBox.value == "off" ) {
-			checkBox.value = "on";
-			doc.style.display = "block";
-		} else {
-			checkBox.value = "off";
-			doc.style.display = "none";
-		}
-	}
 </script>
 
 <div id="foundation1Flip" class="flip" >
@@ -246,7 +249,7 @@
 			<label for="foundationCheck">Check the box to gain access the foundations course before beginning your course proper.</label>
 		</div>
 		<div style="display: inline-block; margin-bottom: 0; vertical-align: middle;">
-			<input type="checkbox" id="foundationCheck" name="foundationCheck" onclick="showCourse()" value="off" style="display: inline;">
+			<input type="checkbox" id="foundationCheck" name="foundationCheck" onclick="showCourse()" value="off" style="display: inline;" />
 		</div>
 		<div id="foundCourse" style="display: none;">
 			<br><br>
@@ -263,17 +266,6 @@
 	$(document).ready( function(){
 		$("#foundation2Flip").click( function(){ $("#foundation2Pan").slideToggle("fast"); } );
 	} );
-	function showCourse() {
-		var checkBox = document.getElementById("foundationCheck");
-		var doc = document.getElementById("foundCourse");
-		if( checkBox.value == "off" ) {
-			checkBox.value = "on";
-			doc.style.display = "block";
-		} else {
-			checkBox.value = "off";
-			doc.style.display = "none";
-		}
-	}
 </script>
 
 <div id="foundation2Flip" class="flip" >
@@ -288,7 +280,7 @@
 			<label for="foundationCheck">Check the box to gain access the foundations course before beginning your course proper.</label>
 		</div>
 		<div style="display: inline-block; margin-bottom: 0; vertical-align: middle;">
-			<input type="checkbox" id="foundationCheck" name="foundationCheck" onclick="showCourse()" value="off" style="display: inline;">
+			<input type="checkbox" id="foundationCheck" name="foundationCheck" onclick="showCourse()" value="off" style="display: inline;" />
 		</div>
 		<div id="foundCourse" style="display: none;">
 			<br><br>
@@ -377,13 +369,23 @@
 </div>
 <div id="bookPan" class="panel" >
 	<p>
-		For this qualification you will require continual access to the following text books.<br>
-		<br>For this qualification you will require continual access to the following text books.<br>
-		<ul><li>Greening Through IT - Information Technology for Environmental Sustainability by Bill Tomlinson.</li></ul>
-		<div class="editor-indent" style="margin-left: 30px;">The book is available to order in hard copy or as a downloadable e-book.<br>
-		<br>Details are at: <a href="https://mitpress-ebooks.mit.edu/product/greening-through">https://mitpress-ebooks.mit.edu/product/greening-through</a></div><br>
-		<ul><li>Research methods for business students by Mark Saunders, Philip Lewis and Adrian Thornhill, (5th Ed) - ISBN-13: 978-0273716860</li></ul>
-		<div class="editor-indent" style="margin-left: 30px;">The book is available to order in hard copy or as a downloadable e-book.<br>
-		<br>There are many sources for this book at varying prices, so choose your best source of supply for your requirement.</div>
+		For this qualification you will require continual access to the following text books.
+		<br><br>For this qualification you will require continual access to the following text books.
+		<br>
+		<ul>
+			<li>Greening Through IT - Information Technology for Environmental Sustainability by Bill Tomlinson.</li>
+		</ul>
+		<div class="editor-indent" style="margin-left: 30px;">
+			The book is available to order in hard copy or as a downloadable e-book.
+			<br><br>Details are at: <a href="https://mitpress-ebooks.mit.edu/product/greening-through">https://mitpress-ebooks.mit.edu/product/greening-through</a>
+		</div>
+		<br>
+		<ul>
+			<li>Research methods for business students by Mark Saunders, Philip Lewis and Adrian Thornhill, (5th Ed) - ISBN-13: 978-0273716860</li>
+		</ul>
+		<div class="editor-indent" style="margin-left: 30px;">
+			The book is available to order in hard copy or as a downloadable e-book.
+			<br><br>There are many sources for this book at varying prices, so choose your best source of supply for your requirement.
+		</div>
 	</p>
 </div>
