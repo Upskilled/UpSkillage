@@ -11,44 +11,7 @@
 <!-- ******* CSS IN JS & LIBS ******* -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
-	function popup( mylink, windowname ) {
-		if( !window.focus ) {
-			return true;
-		}
-		var href;
-		if( typeof(mylink) == 'string' ) {
-			href = mylink;
-		} else {
-			href = mylink.href;
-		}
-		window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
-		return false;
-	}
-	
-	function showCourse() {
-		var checkBox = document.getElementById("foundationCheck");
-		var doc = document.getElementById("foundCourse");
-		if( checkBox.value == "off" ) {
-			checkBox.value = "on";
-			doc.style.display = "block";
-		} else {
-			checkBox.value = "off";
-			doc.style.display = "none";
-		}
-	}
-	
-	var x = document.createElement("style");
-	var t = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
-	x.appendChild(t);
-	t = document.createTextNode( "div.panel{ padding: 15px; text-align: justify; display: none;	}" );
-	x.appendChild(t);
-	t = document.createTextNode( "div.flip:hover{ background: rgba( 241, 126, 0, 1 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 1), rgba(230, 66, 9, 1) ); }" );
-	x.appendChild(t);
-	t = document.createTextNode( "img.panelIcon{ height: 16px; width: 16px; }" );
-	x.appendChild(t);
-	document.head.appendChild(x);
-</script>
+<script src="https://skeksalot.github.io/UpSkillage/js_css_lib.js"></script>
 
 <!-- ******* PLURALSIGHT ELEARNING ******* -->
 

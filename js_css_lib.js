@@ -79,6 +79,92 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	}
 }
 
+function setCookie( cname, cvalue, exdays ) {
+	var d = new Date();
+	d.setTime( d.getTime() + ( exdays * 24 * 60 * 60 * 1000 ) );
+	var expires = "expires=" + d.toGMTString();
+	document.cookie = cname + "=" + cvalue + ";expires=" + expires + ";path=/";
+}
+
+function getCookie( cname ) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for( var i = 0; i < ca.length; i++ ) {
+		var c = ca[i];
+		while( c.charAt(0) == ' ' ) {
+			c = c.substring(1);
+		}
+		if( c.indexOf(name) == 0 ) {
+			return c.substring( name.length, c.length );
+		}
+	}
+	return "";
+}
+
+function checkCookie() {
+	var user = getCookie( "username" );
+	if( user != "" ) {
+		alert( "Welcome again " + user );
+	} else {
+		user = prompt( "Please enter your name:", "" );
+		if( user != "" && user != null ) {
+			setCookie( "username", user, 365 );
+		}
+	}
+}
+
+function removeCookie( cname, cvalue ) {
+	var d = new Date();
+	d.setTime( d.getTime() - ( 30 * 24 * 60 * 60 * 1000 ) );
+	var expires = d.toGMTString();
+	document.cookie = cname + "=" + cvalue + ";expires=" + expires + ";path=/";
+}
+
+function updateOptional( cname, cvalue ) {
+	setCookie( cname, cvalue, 365 );
+	if( cvalue == true ) {
+		var opt = document.getElementsByClassName("optional");
+		for( var i = 0; i < opt.length; i++ ) {
+			opt[i].style.display = "inline";
+		}
+		opt = document.getElementsByClassName("optBlock");
+		for( var i = 0; i < opt.length; i++ ) {
+			opt[i].style.display = "block";
+		}
+	} else if( cvalue == false ) {
+		var opt = document.getElementsByClassName("optional");
+		for( var i = 0; i < opt.length; i++ ) {
+			opt[i].style.display = "none";
+		}
+		opt = document.getElementsByClassName("optBlock");
+		for( var i = 0; i < opt.length; i++ ) {
+			opt[i].style.display = "none";
+		}
+	}
+}
+
+function mOver( obj ) {
+	obj.style.opacity = "0.5";
+}
+
+function mOut( obj ) {
+	obj.style.opacity = "1.0";
+}
+
+function select( obj ) {
+	var buttons = document.getElementsByClassName("optButton");
+	for( var i = 0; i < buttons.length; i++ ) {
+		buttons[i].style.opacity = "1.0";
+	}
+	obj.style.opacity = "0.5";
+}
+
+function combine( cname, cvalue, obj ) {
+	updateOptional( cname, cvalue );
+	select(obj);
+}
+
 var i = document.createElement("style");
 var j = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
 i.appendChild(j);
@@ -104,4 +190,15 @@ j = document.createTextNode(".close:hover, .close:focus {color: #bbb; text-decor
 i.appendChild(j);
 j = document.createTextNode("@media only screen and (max-width: 700px){.modal-content {width: 100%;}}");
 i.appendChild(j);
+if( getCookie("optional") == "true" ) {
+	j = document.createTextNode( ".optional{ display: inline; }" );
+	i.appendChild(j);
+	j = document.createTextNode( ".optBlock{ display: block; }" );
+	i.appendChild(j);
+} else {
+	j = document.createTextNode( ".optional{ display: none; }" );
+	i.appendChild(j);
+	j = document.createTextNode( ".optBlock{ display: none; }" );
+	i.appendChild(j);
+}
 document.head.appendChild(i);
