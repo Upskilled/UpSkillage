@@ -1,133 +1,133 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-function setCookie( cname, cvalue, exdays ) {
-	var d = new Date();
-	d.setTime( d.getTime() + ( exdays * 24 * 60 * 60 * 1000 ) );
-	var expires = "expires=" + d.toGMTString();
-	document.cookie = cname + "=" + cvalue + ";expires=" + expires + ";path=/";
-}
+	<head>
+		<script>
+			function setCookie( cname, cvalue, exdays ) {
+				var d = new Date();
+				d.setTime( d.getTime() + ( exdays * 24 * 60 * 60 * 1000 ) );
+				var expires = "expires=" + d.toGMTString();
+				document.cookie = cname + "=" + cvalue + ";expires=" + expires + ";path=/";
+			}
 
-function getCookie( cname ) {
-	var name = cname + "=";
-	var decodedCookie = decodeURIComponent(document.cookie);
-	var ca = decodedCookie.split(';');
-	for( var i = 0; i < ca.length; i++ ) {
-		var c = ca[i];
-		while( c.charAt(0) == ' ' ) {
-			c = c.substring(1);
-		}
-		if( c.indexOf(name) == 0 ) {
-			return c.substring( name.length, c.length );
-		}
-	}
-	return "";
-}
+			function getCookie( cname ) {
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				for( var i = 0; i < ca.length; i++ ) {
+					var c = ca[i];
+					while( c.charAt(0) == ' ' ) {
+						c = c.substring(1);
+					}
+					if( c.indexOf(name) == 0 ) {
+						return c.substring( name.length, c.length );
+					}
+				}
+				return "";
+			}
 
-function checkCookie() {
-	var user = getCookie( "username" );
-	if( user != "" ) {
-		alert( "Welcome again " + user );
-	} else {
-		user = prompt( "Please enter your name:", "" );
-		if( user != "" && user != null ) {
-			setCookie( "username", user, 365 );
-		}
-	}
-}
+			function checkCookie() {
+				var user = getCookie( "username" );
+				if( user != "" ) {
+					alert( "Welcome again " + user );
+				} else {
+					user = prompt( "Please enter your name:", "" );
+					if( user != "" && user != null ) {
+						setCookie( "username", user, 365 );
+					}
+				}
+			}
 
-function removeCookie( cname, cvalue ) {
-	var d = new Date();
-	d.setTime( d.getTime() - ( 30 * 24 * 60 * 60 * 1000 ) );
-	var expires = d.toGMTString();
-	document.cookie = cname + "=" + cvalue + ";expires=" + expires + ";path=/";
-}
+			function removeCookie( cname, cvalue ) {
+				var d = new Date();
+				d.setTime( d.getTime() - ( 30 * 24 * 60 * 60 * 1000 ) );
+				var expires = d.toGMTString();
+				document.cookie = cname + "=" + cvalue + ";expires=" + expires + ";path=/";
+			}
 
-function updateOptional( cname, cvalue ) {
-	setCookie( cname, cvalue, 365 );
-	if( cvalue == true ) {
-		var opt = document.getElementsByClassName("optional");
-		for( var i = 0; i < opt.length; i++ ) {
-			opt[i].style.display = "inline";
-		}
-		opt = document.getElementsByClassName("optBlock");
-		for( var i = 0; i < opt.length; i++ ) {
-			opt[i].style.display = "block";
-		}
-	} else if( cvalue == false ) {
-		var opt = document.getElementsByClassName("optional");
-		for( var i = 0; i < opt.length; i++ ) {
-			opt[i].style.display = "none";
-		}
-		opt = document.getElementsByClassName("optBlock");
-		for( var i = 0; i < opt.length; i++ ) {
-			opt[i].style.display = "none";
-		}
-	}
-}
+			function updateOptional( cname, cvalue ) {
+				setCookie( cname, cvalue, 365 );
+				if( cvalue == true ) {
+					var opt = document.getElementsByClassName("optional");
+					for( var i = 0; i < opt.length; i++ ) {
+						opt[i].style.display = "inline";
+					}
+					opt = document.getElementsByClassName("optBlock");
+					for( var i = 0; i < opt.length; i++ ) {
+						opt[i].style.display = "block";
+					}
+				} else if( cvalue == false ) {
+					var opt = document.getElementsByClassName("optional");
+					for( var i = 0; i < opt.length; i++ ) {
+						opt[i].style.display = "none";
+					}
+					opt = document.getElementsByClassName("optBlock");
+					for( var i = 0; i < opt.length; i++ ) {
+						opt[i].style.display = "none";
+					}
+				}
+			}
 
-function mOver( obj ) {
-	obj.style.opacity = "0.5";
-}
+			function mOver( obj ) {
+				obj.style.opacity = "0.5";
+			}
 
-function mOut( obj ) {
-	obj.style.opacity = "1.0";
-}
+			function mOut( obj ) {
+				obj.style.opacity = "1.0";
+			}
 
-function select( obj ) {
-	var buttons = document.getElementsByClassName("optButton");
-	for( var i = 0; i < buttons.length; i++ ) {
-		buttons[i].style.opacity = "1.0";
-	}
-	obj.style.opacity = "0.5";
-}
+			function select( obj ) {
+				var buttons = document.getElementsByClassName("optButton");
+				for( var i = 0; i < buttons.length; i++ ) {
+					buttons[i].style.opacity = "1.0";
+				}
+				obj.style.opacity = "0.5";
+			}
 
-function combine( cname, cvalue, obj ) {
-	updateOptional( cname, cvalue );
-	select(obj);
-}
+			function combine( cname, cvalue, obj ) {
+				updateOptional( cname, cvalue );
+				select(obj);
+			}
 
-var t;
-var x = document.createElement("style");
-if( getCookie("optional") == "true" ) {
-	t = document.createTextNode( ".optional{ display: inline; }" );
-	x.appendChild(t);
-	t = document.createTextNode( ".optBlock{ display: block; }" );
-	x.appendChild(t);
-} else {
-	t = document.createTextNode( ".optional{ display: none; }" );
-	x.appendChild(t);
-	t = document.createTextNode( ".optBlock{ display: none; }" );
-	x.appendChild(t);
-}
-document.head.appendChild(x);
-</script>
-</head>
-<body>
-	<script>
-		checkCookie();
-		var randVal = Math.floor( ( Math.random() * 1000000 ) + 1 );
-		setCookie( "field", randVal, 365 );
-		
-		var fullCookie = document.cookie;
-		var ca = fullCookie.split(';');
-		var doc = document.createElement("p");
-		for( var i = 0; i < ca.length; i++ ) {
-			var temp = document.createTextNode( ca[i] + " " );
-			doc.appendChild(temp);
-		}
-		document.body.appendChild(doc);
+			var t;
+			var x = document.createElement("style");
+			if( getCookie("optional") == "true" ) {
+				t = document.createTextNode( ".optional{ display: inline; }" );
+				x.appendChild(t);
+				t = document.createTextNode( ".optBlock{ display: block; }" );
+				x.appendChild(t);
+			} else {
+				t = document.createTextNode( ".optional{ display: none; }" );
+				x.appendChild(t);
+				t = document.createTextNode( ".optBlock{ display: none; }" );
+				x.appendChild(t);
+			}
+			document.head.appendChild(x);
+		</script>
+	</head>
+	<body>
+		<script>
+			checkCookie();
+			var randVal = Math.floor( ( Math.random() * 1000000 ) + 1 );
+			setCookie( "field", randVal, 365 );
+			
+			var fullCookie = document.cookie;
+			var ca = fullCookie.split(';');
+			var doc = document.createElement("p");
+			for( var i = 0; i < ca.length; i++ ) {
+				var temp = document.createTextNode( ca[i] + " " );
+				doc.appendChild(temp);
+			}
+			document.body.appendChild(doc);
 
-		//removeCookie( "username", getCookie("username") );
-		removeCookie( "field", getCookie("field") );
-	</script>
-	<input type="button" class="optButton" onclick="updateOptional('optional', true);" onmouseover="mOver(this);" onmouseout="mOut(this);" value="Show Optional Content">
-	<input type="button" class="optButton" onclick="updateOptional('optional', false);" onmouseover="mOver(this);" onmouseout="mOut(this);" value="Disable Optional Content">
-	<br>
-	<input type="button" class="optButton" onclick="combine('optional', true, this);" value="Show Optional Content">
-	<input type="button" class="optButton" onclick="combine('optional', false, this);" value="Disable Optional Content">
-	<br>
-	<a onclick="window.open( 'https://lms.upskilled.edu.au/mod/lti/launch.php?id=387692', 'lti' ); return false;" href="https://lms.upskilled.edu.au/mod/lti/launch.php?id=387692" class="optional"><img src="https://www.google.com/s2/favicons?domain=lynda.com" alt=" " class="iconlarge activityicon" role="presentation"><span class="instancename">eLearning - Writing Research Papers</span></a>
-</body>
+			//removeCookie( "username", getCookie("username") );
+			removeCookie( "field", getCookie("field") );
+		</script>
+		<input type="button" class="optButton" onclick="updateOptional('optional', true);" onmouseover="mOver(this);" onmouseout="mOut(this);" value="Show Optional Content">
+		<input type="button" class="optButton" onclick="updateOptional('optional', false);" onmouseover="mOver(this);" onmouseout="mOut(this);" value="Disable Optional Content">
+		<br>
+		<input type="button" class="optButton" onclick="combine('optional', true, this);" value="Show Optional Content">
+		<input type="button" class="optButton" onclick="combine('optional', false, this);" value="Disable Optional Content">
+		<br>
+		<a onclick="window.open( 'https://lms.upskilled.edu.au/mod/lti/launch.php?id=387692', 'lti' ); return false;" href="https://lms.upskilled.edu.au/mod/lti/launch.php?id=387692" class="optional"><img src="https://www.google.com/s2/favicons?domain=lynda.com" alt=" " class="iconlarge activityicon" role="presentation"><span class="instancename">eLearning - Writing Research Papers</span></a>
+	</body>
 </html>

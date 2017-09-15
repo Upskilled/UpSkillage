@@ -61,19 +61,19 @@
 			var i = document.createElement("style");
 			var j = document.createTextNode(".modal {display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); margin: 0;}");
 			i.appendChild(j);
-			var j = document.createTextNode(".modal-content {margin: auto; display: block;}");
+			j = document.createTextNode(".modal-content {margin: auto; display: block;}");
 			i.appendChild(j);
-			var j = document.createTextNode(".modal-content {-webkit-animation-name: zoom; -webkit-animation-duration: 0.6s; animation-name: zoom; animation-duration: 0.6s;}");
+			j = document.createTextNode(".modal-content {-webkit-animation-name: zoom; -webkit-animation-duration: 0.6s; animation-name: zoom; animation-duration: 0.6s;}");
 			i.appendChild(j);
-			var j = document.createTextNode("@-webkit-keyframes zoom {from {-webkit-transform:scale(0)} to {-webkit-transform:scale(1)}}");
+			j = document.createTextNode("@-webkit-keyframes zoom {from {-webkit-transform:scale(0)} to {-webkit-transform:scale(1)}}");
 			i.appendChild(j);
-			var j = document.createTextNode("@keyframes zoom {from {transform:scale(0)} to {transform:scale(1)}}");
+			j = document.createTextNode("@keyframes zoom {from {transform:scale(0)} to {transform:scale(1)}}");
 			i.appendChild(j);
-			var j = document.createTextNode(".close {position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s;}");
+			j = document.createTextNode(".close {position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s;}");
 			i.appendChild(j);
-			var j = document.createTextNode(".close:hover, .close:focus {color: #bbb; text-decoration: none; cursor: pointer;}");
+			j = document.createTextNode(".close:hover, .close:focus {color: #bbb; text-decoration: none; cursor: pointer;}");
 			i.appendChild(j);
-			var j = document.createTextNode("@media only screen and (max-width: 700px){.modal-content {width: 100%;}}");
+			j = document.createTextNode("@media only screen and (max-width: 700px){.modal-content {width: 100%;}}");
 			i.appendChild(j);
 			document.head.appendChild(i);
 		</script>
