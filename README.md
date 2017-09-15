@@ -5,6 +5,8 @@
     - [skeksalot.github.io/UpSkillage/js_css_lib.js](https://skeksalot.github.io/UpSkillage/js_css_lib.js)
 - Video Popup test using JS
     - [skeksalot.github.io/UpSkillage/popupVideo.html](https://skeksalot.github.io/UpSkillage/popupVideo.html)
+- JS cookie test
+    - [skeksalot.gtihub.io/UpSkillage/jsTest.html](https://skeksalot.github.io/UpSkillage/jsTest.html)
 
 ## Help for GitHub Pages
 
