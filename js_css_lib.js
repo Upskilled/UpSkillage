@@ -13,14 +13,16 @@ function popup( mylink, windowname ) {
 }
 
 function showCourse() {
-	var checkBox = document.getElementById("foundationCheck");
-	var doc = document.getElementById("foundCourse");
-	if( checkBox.value == "off" ) {
-		checkBox.value = "on";
-		doc.style.display = "block";
-	} else {
-		checkBox.value = "off";
-		doc.style.display = "none";
+	var checkBox = document.getElementsByClassName("foundationCheck");
+	var doc = document.getElementsByClassName("foundCourse");
+	for( int i = 0; i < checkBox.length; i++ ) {
+		if( checkBox[i].value == "off" ) {
+			checkBox[i].value = "on";
+			doc[i].style.display = "block";
+		} else {
+			checkBox[i].value = "off";
+			doc[i].style.display = "none";
+		}
 	}
 }
 
