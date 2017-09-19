@@ -12,15 +12,22 @@ function popup( mylink, windowname ) {
 	return false;
 }
 
-function showCourse() {
-	var checkBox = document.getElementById("foundationCheck");
-	var doc = document.getElementById("foundCourse");
-
-	if( checkBox.value == "off" ) {
-		checkBox.value = "on";
+function showCourse( course ) {
+	var check;
+	var doc;
+	if( course == "dev" ) {
+		check = document.getElementById("devCheck");
+		doc = document.getElementById("devCourse");	
+	} else {
+		check = document.getElementById("itifCheck");
+		doc = document.getElementById("itifCourse");
+	}
+	
+	if( check.value == "off" ) {
+		check.value = "on";
 		doc.style.display = "block";
 	} else {
-		checkBox.value = "off";
+		check.value = "off";
 		doc.style.display = "none";
 	}
 }
