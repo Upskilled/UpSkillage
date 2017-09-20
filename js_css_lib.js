@@ -1,4 +1,4 @@
-function popup( mylink, windowname ) {
+function popupDoc( mylink, windowname ) {
 	if( !window.focus ) {
 		return true;
 	}
