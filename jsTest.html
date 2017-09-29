@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Dual ICT50415 Diploma of Information Technology Networking - ICT50315 Diploma of Information Technology Systems Administration 201709</title>
 		<script src="https://skeksalot.github.io/UpSkillage/js_css_lib.js"></script>
 	</head>
 	<body>
+		<div id="cookies"></div>
+		<div id="dom" style="font-weight: bold;"></div>
 		<script>
-			checkCookie();
 			var randVal = Math.floor( ( Math.random() * 1000000 ) + 1 );
 			setCookie( "field", randVal, 365 );
 			
 			var fullCookie = document.cookie;
 			var ca = fullCookie.split(';');
-			var doc = document.createElement("p");
+			var doc = document.getElementById("cookies");
 			for( var i = 0; i < ca.length; i++ ) {
 				var temp = document.createTextNode( ca[i] + " " );
 				doc.appendChild(temp);
+				doc.appendChild( document.createElement("br") );
 			}
-			document.body.appendChild(doc);
 
-			//removeCookie( "username", getCookie("username") );
 			removeCookie( "field", getCookie("field") );
+			
+			// format for single quals:
+			// [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] [START DATE]
+			// eg. ICT40115 Certificate IV in Information Technology 201709
+			// eg. ICT60115 Advanced Diploma of Information Technology 201709
+			// eg. ICT50315 Diploma of Information Technology Systems Administration 201709
+			// for dual quals:
+			// [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] -/with [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] [START DATE]
+			// eg. Dual ICT50415 Diploma of Information Technology Networking - ICT50315 Diploma of Information Technology Systems Administration 201709
+			// eg. Dual ICT40415 Certificate IV in Computer Systems Technology with ICT40215 Certificate IV in Information Techology Support 201709
+			// regex to match both: ((Dual )?ICT[0-9]{5} \w* (\w* )?(in|of) [\w -]* [0-9]{6})
+			
+			function splitQual( qualTitle ) {
+				var code = qualTitle.substring( 0, qualTitle.indexOf(' ') );
+				var level = qualTitle.substring( qualTitle.indexOf(' ') + 1, qualTitle.search(/ in | of /) );
+				var title = qualTitle.substring( qualTitle.search(/ in | of /) + 4, qualTitle.lastIndexOf(' ') );
+				var start = qualTitle.substring( qualTitle.lastIndexOf(' ') + 1 );
+				return [code, level, title, start];
+			}
+			
+			var dom = document.getElementById("dom");
+			var domTitle = document.title;
+			dom.appendChild( document.createTextNode(domTitle) );
+			dom.appendChild( document.createElement("br") );
+			
+			if( domTitle.match(/((Dual )?ICT[0-9]{5} \w* (\w* )?(in|of) [\w -]* [0-9]{6})/g) != null ) {
+				// title fits the format
+				if( domTitle.startsWith('Dual') ) {
+					// it's a dual qual
+					var firstQual = domTitle.substring( 5, domTitle.search(/with|-/) );
+					var secondQual = domTitle.substring( domTitle.search(/with|-/) );
+					secondQual = secondQual.substring( secondQual.indexOf(' ') ).trim();
+					var firstSplit = splitQual( firstQual.concat( secondQual.substring( secondQual.lastIndexOf(' ') ).trim() ) );
+					var secondSplit = splitQual( secondQual );
+					dom.appendChild( document.createTextNode( firstSplit.toString() ) );
+					dom.appendChild( document.createElement("br") );
+					dom.appendChild( document.createTextNode( secondSplit.toString() ) );
+					dom.appendChild( document.createElement("br") );
+					
+					
+				} else {
+					// it's a single qual
+					var split = splitQual(domTitle);
+					dom.appendChild( document.createTextNode( split.toString() ) );
+					dom.appendChild( document.createElement("br") );
+					
+					
+				}
+			}
+			
 		</script>
 		<input type="button" class="optButton" onclick="updateOptional('optional', true);" onmouseover="mOver(this);" onmouseout="mOut(this);" value="Show Optional Content">
 		<input type="button" class="optButton" onclick="updateOptional('optional', false);" onmouseover="mOver(this);" onmouseout="mOut(this);" value="Disable Optional Content">
