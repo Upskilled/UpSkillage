@@ -184,6 +184,8 @@ function pluralsight( container ) {
 		img.alt = " ";
 		span.appendChild(img);
 		span.appendChild( document.createElement("strong").appendChild( document.createTextNode(" Pluralsight eLearning") ) );
+		pluralFlip.appendChild(span);
+		span.document.createElement("span");
 		span.appendChild( document.createTextNode(" (show/hide)") );
 		pluralFlip.appendChild(span);
 		var pluralPan = document.createElement('div');
