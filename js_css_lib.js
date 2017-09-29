@@ -173,7 +173,7 @@ function combine( cname, cvalue, obj ) {
 	select(obj);
 }
 
-function pluralsight() {
+function pluralsight( container ) {
 		var pluralFlip = document.createElement('div');
 		pluralFlip.id = "pluralFlip";
 		pluralFlip.className = "flip";
@@ -210,7 +210,7 @@ function pluralsight() {
 		pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("Tip - If you are in an office with others, it may be more appropriate to have a set of headphones.") ) );
 		pluralPan.appendChild( document.createElement("br") );
 		pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") ) );
-		var readme = document.getElementById("readme");
+		var readme = document.getElementById(container);
 		readme.appendChild(pluralFlip);
 		readme.appendChild(pluralPan);
 	}
