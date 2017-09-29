@@ -173,6 +173,48 @@ function combine( cname, cvalue, obj ) {
 	select(obj);
 }
 
+function pluralsight() {
+		var pluralFlip = document.createElement('div');
+		pluralFlip.id = "pluralFlip";
+		pluralFlip.className = "flip";
+		var span = document.createElement("span");
+		var img = document.createElement("img");
+		img.src = "https://www.google.com/s2/favicons?domain=pluralsight.com";
+		img.className = "panelIcon";
+		img.alt = " ";
+		span.appendChild(img);
+		span.appendChild( document.createElement("strong").appendChild( document.createTextNode(" Pluralsight eLearning") ) );
+		span.appendChild( document.createTextNode(" (show/hide)") );
+		pluralFlip.appendChild(span);
+		var pluralPan = document.createElement('div');
+		pluralPan.id = "pluralPan";
+		pluralPan.className= "panel";
+		pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("Each topic of eLearning will have its own link for you to follow to specific PluralSight courses. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the PluralSight eLearning looks like in your course.") ) );
+		pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("Each study session will require you to authenticate with the eLearning resources prior to accessing the specific material. Once you have authenticated you can click on the eLearning links during your MyUpskilled session. Once you are in a PluralSight course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.") ) );
+		pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("When you log off MyUpskilled your authentication will stop.") ) );
+		pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("Example:") ) );
+		var p = document.createElement("p");
+		span = document.createElement("span");
+		span.style = "color: #606060;";
+		img = document.createElement("img");
+		img.src = "https://www.google.com/s2/favicons?domain=pluralsight.com";
+		img.className = "activityicon iconlarge";
+		img.alt = " ";
+		span.appendChild(img);
+		span.appendChild( document.createTextNode(" eLearning - Topic Name Here") );
+		p.appendChild(img);
+		p.appendChild(span);
+		pluralPan.appendChild(p);
+		pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("Most eLearning has an audio component You will find the experience better if you have speakers on your computer.") ) );
+		pluralPan.appendChild( document.createElement("br") );
+		pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("Tip - If you are in an office with others, it may be more appropriate to have a set of headphones.") ) );
+		pluralPan.appendChild( document.createElement("br") );
+		pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") ) );
+		var readme = document.getElementById("readme");
+		readme.appendChild(pluralFlip);
+		readme.appendChild(pluralPan);
+	}
+
 var i = document.createElement("style");
 var j = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
 i.appendChild(j);
