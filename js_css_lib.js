@@ -183,7 +183,8 @@ function pluralsight( container ) {
 		img.className = "panelIcon";
 		img.alt = " ";
 		span.appendChild(img);
-		span.appendChild( document.createElement("strong").appendChild( document.createTextNode(" Pluralsight eLearning") ) );
+		span.appendChild( document.createTextNode(" Pluralsight eLearning") );
+		span.style = "font-weight: bold;";
 		pluralFlip.appendChild(span);
 		span.document.createElement("span");
 		span.appendChild( document.createTextNode(" (show/hide)") );
