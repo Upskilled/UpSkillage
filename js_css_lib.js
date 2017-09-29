@@ -174,7 +174,7 @@ function combine( cname, cvalue, obj ) {
 }
 
 function pluralsight( container ) {
-	var pluralFlip = document.createElement('div');
+	var pluralFlip = document.createElement("div");
 	pluralFlip.id = "pluralFlip";
 	pluralFlip.className = "flip";
 	var span = document.createElement("span");
@@ -189,14 +189,22 @@ function pluralsight( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	pluralFlip.appendChild(span);
-	var pluralPan = document.createElement('div');
+	var pluralPan = document.createElement("div");
 	pluralPan.id = "pluralPan";
 	pluralPan.className= "panel";
-	pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("Each topic of eLearning will have its own link for you to follow to specific PluralSight courses. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the PluralSight eLearning looks like in your course.") ) );
-	pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("Each study session will require you to authenticate with the eLearning resources prior to accessing the specific material. Once you have authenticated you can click on the eLearning links during your MyUpskilled session. Once you are in a PluralSight course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.") ) );
-	pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("When you log off MyUpskilled your authentication will stop.") ) );
-	pluralPan.appendChild( document.createElement("p").appendChild( document.createTextNode("Example:") ) );
 	var p = document.createElement("p");
+	p.appendChild( document.createTextNode("Each topic of eLearning will have its own link for you to follow to specific PluralSight courses. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the PluralSight eLearning looks like in your course.") );
+	pluralPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Each study session will require you to authenticate with the eLearning resources prior to accessing the specific material. Once you have authenticated you can click on the eLearning links during your MyUpskilled session. Once you are in a PluralSight course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.") );
+	pluralPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("When you log off MyUpskilled your authentication will stop.") );
+	pluralPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Example:") );
+	pluralPan.appendChild(p);
+	p = document.createElement("p");
 	span = document.createElement("span");
 	span.style = "color: #606060;";
 	img = document.createElement("img");
