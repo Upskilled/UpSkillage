@@ -228,6 +228,75 @@ function pluralsight( container ) {
 	readme.appendChild(pluralPan);
 }
 
+function lynda( container ) {
+	var lyndaFlip = document.createElement("div");
+	lyndaFlip.id = "lyndaFlip";
+	lyndaFlip.className = "flip";
+	var span = document.createElement("span");
+	var img = document.createElement("img");
+	img.src = "https://www.google.com/s2/favicons?domain=lynda.com";
+	img.className = "panelIcon";
+	img.alt = " ";
+	span.appendChild(img);
+	span.appendChild( document.createTextNode(" Lynda.com eLearning") );
+	span.style = "font-weight: bold;";
+	lyndaFlip.appendChild(span);
+	span = document.createElement("span");
+	span.appendChild( document.createTextNode(" (show/hide)") );
+	lyndaFlip.appendChild(span);
+	var lyndaPan = document.createElement("div");
+	lyndaPan.id = "lyndaPan";
+	lyndaPan.className= "panel";
+	var p = document.createElement("p");
+	p.appendChild( document.createTextNode("Each topic of eLearning will have its own link for you to follow to specific Lynda.com. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the Lynda.com eLearning looks like in your course.") );
+	lyndaPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Each study session will require you to authenticate with the eLearning resources prior to accessing the specific material. Once you have authenticated you can click on the eLearning links during your MyUpskilled session. Once you are in a Lynda.com course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.") );
+	lyndaPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("When you log off MyUpskilled your authentication will stop.") );
+	lyndaPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Example:") );
+	lyndaPan.appendChild(p);
+	p = document.createElement("p");
+	span = document.createElement("span");
+	span.style = "color: #606060;";
+	img = document.createElement("img");
+	img.src = "https://www.google.com/s2/favicons?domain=lynda.com";
+	img.className = "activityicon iconlarge";
+	img.alt = " ";
+	span.appendChild(img);
+	span.appendChild( document.createTextNode(" Authenticate with Lynda.com eLearning") );
+	p.appendChild(img);
+	p.appendChild(span);
+	lyndaPan.appendChild(p);
+	p = document.createElement("p");
+	span = document.createElement("span");
+	span.style = "color: #606060;";
+	img = document.createElement("img");
+	img.src = "https://www.google.com/s2/favicons?domain=lynda.com";
+	img.className = "activityicon iconlarge";
+	img.alt = " ";
+	span.appendChild(img);
+	span.appendChild( document.createTextNode(" eLearning - Topic Name Here") );
+	p.appendChild(img);
+	p.appendChild(span);
+	lyndaPan.appendChild(p);
+	
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Most eLearning has an audio component You will find the experience better if you have speakers on your computer.") );
+	p.appendChild( document.createElement("br") );
+	p.appendChild( document.createTextNode("Tip - If you are in an office with others, it may be more appropriate to have a set of headphones.") );
+	p.appendChild( document.createElement("br") );
+	p.appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") );
+	lyndaPan.appendChild(p);
+	
+	var readme = document.getElementById(container);
+	readme.appendChild(lyndaFlip);
+	readme.appendChild(lyndaPan);
+}
+
 var i = document.createElement("style");
 var j = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
 i.appendChild(j);
