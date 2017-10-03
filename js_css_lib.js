@@ -1,3 +1,4 @@
+// Opens a linked document in a popup window
 function popupDoc( mylink, windowname ) {
 	if( !window.focus ) {
 		return true;
@@ -12,6 +13,7 @@ function popupDoc( mylink, windowname ) {
 	return false;
 }
 
+// Used to hide/show the link to foundations courses
 function showCourse( course ) {
 	var check;
 	var doc;
@@ -32,6 +34,9 @@ function showCourse( course ) {
 	}
 }
 
+// Creates an iframe as an in-browser popup
+// Requires each popup to be used must be paired with a div
+// The div's id must be the same as the 'givenName' argument in the function
 function popup( givenName, iframeSrc, iconSrc ) {
 	var popupNum = 0;
 	var name = document.getElementById("popup0");
@@ -87,6 +92,7 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	}
 }
 
+// Set a new cookie value
 function setCookie( cname, cvalue, exdays ) {
 	var d = new Date();
 	d.setTime( d.getTime() + ( exdays * 24 * 60 * 60 * 1000 ) );
@@ -94,6 +100,7 @@ function setCookie( cname, cvalue, exdays ) {
 	document.cookie = cname + "=" + cvalue + ";expires=" + expires + ";path=/";
 }
 
+// Retrieve the value of a given cookie
 function getCookie( cname ) {
 	var name = cname + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
@@ -110,6 +117,7 @@ function getCookie( cname ) {
 	return "";
 }
 
+// Used for testing cookie stuff
 function checkCookie() {
 	var user = getCookie( "username" );
 	if( user != "" ) {
@@ -122,6 +130,7 @@ function checkCookie() {
 	}
 }
 
+// Remove a given cookie
 function removeCookie( cname, cvalue ) {
 	var d = new Date();
 	d.setTime( d.getTime() - ( 30 * 24 * 60 * 60 * 1000 ) );
@@ -189,6 +198,7 @@ function pluralsight( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	pluralFlip.appendChild(span);
+	
 	var pluralPan = document.createElement("div");
 	pluralPan.id = "pluralPan";
 	pluralPan.className= "panel";
@@ -223,6 +233,7 @@ function pluralsight( container ) {
 	p.appendChild( document.createElement("br") );
 	p.appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") );
 	pluralPan.appendChild(p);
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(pluralFlip);
 	readme.appendChild(pluralPan);
@@ -244,6 +255,7 @@ function lynda( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	lyndaFlip.appendChild(span);
+	
 	var lyndaPan = document.createElement("div");
 	lyndaPan.id = "lyndaPan";
 	lyndaPan.className= "panel";
@@ -283,7 +295,6 @@ function lynda( container ) {
 	p.appendChild(img);
 	p.appendChild(span);
 	lyndaPan.appendChild(p);
-	
 	p = document.createElement("p");
 	p.appendChild( document.createTextNode("Most eLearning has an audio component You will find the experience better if you have speakers on your computer.") );
 	p.appendChild( document.createElement("br") );
@@ -295,6 +306,164 @@ function lynda( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(lyndaFlip);
 	readme.appendChild(lyndaPan);
+}
+
+function assessment( container ) {
+	var assessmentFlip = document.createElement("div");
+	assessmentFlip.id = "assessmentFlip";
+	assessmentFlip.className = "flip";
+	var span = document.createElement("span");
+	span.appendChild( document.createTextNode("Assessments Explained") );
+	span.style = "font-weight: bold;";
+	assessmentFlip.appendChild(span);
+	span = document.createElement("span");
+	span.appendChild( document.createTextNode(" (show/hide)") );
+	assessmentFlip.appendChild(span);
+	
+	var assessmentPan = document.createElement("div");
+	assessmentPan.id = "assessmentPan";
+	assessmentPan.className= "panel";
+	var p = document.createElement("p");
+	p.appendChild( document.createTextNode("In this qualification course you will find many learning materials and assessments. All assessments that are required for you to complete this qualification are contained within your 'MyUpskilled' site.") );
+	assessmentPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Assessments are identified by two distinct icons as seen in the diagram below.") );
+	p.fontSize = "10pt";
+	p.lineHeight = "1.5em";
+	assessmentPan.appendChild(p);
+	var table = document.createElement("table");
+	table.border = "0";
+	var tr = document.createElement("tr");
+	tr.height = "35px";
+	var td = document.createElement("td");
+	td.fontWeight = "bold";
+	td.appendChild( document.createTextNode("Sustainability") );
+	tr.appendChild(td);
+	td = document.createElement("td");
+	p = document.createElement("p");
+	p.fontSize = "small";
+	p.appendChild( document.createTextNode("← This is the title of the topic") );
+	td.appendChild(p);
+	tr.appendChild(td);
+	table.appendChild(tr);
+	tr = document.createElement("tr");
+	tr.height = "35px";
+	tr.paddingLeft= "3px";
+	td = document.createElement("td");
+	var img = document.createElement("img");
+	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon";
+	img.className = "activityicon iconlarge";
+	img.alt = "SCORM Package";
+	td.appendChild(img);
+	span = document.createElement("span");
+	span.color = "#888888";
+	span.appendChild( document.createTextNode("Environmental Procedures") );
+	td.appendChild(span);
+	tr.appendChild(td);
+	td = document.createElement("td");
+	p = document.createElement("p");
+	p.fontSize = "small";
+	p.appendChild( document.createTextNode("← Learning materials") );
+	td.appendChild(p);
+	tr.appendChild(td);
+	table.appendChild(tr);
+	tr = document.createElement("tr");
+	tr.height = "35px";
+	tr.paddingLeft= "3px";
+	td = document.createElement("td");
+	img = document.createElement("img");
+	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon";
+	img.className = "activityicon iconlarge";
+	img.alt = "Quiz";
+	td.appendChild(img);
+	span = document.createElement("span");
+	span.color = "#888888";
+	span.appendChild( document.createTextNode("Assessment - Environmental Procedures") );
+	td.appendChild(span);
+	tr.appendChild(td);
+	td = document.createElement("td");
+	p = document.createElement("p");
+	p.fontSize = "small";
+	p.appendChild( document.createTextNode("← Quiz style assessment") );
+	td.appendChild(p);
+	tr.appendChild(td);
+	table.appendChild(tr);
+	tr = document.createElement("tr");
+	tr.height = "35px";
+	tr.paddingLeft= "3px";
+	td = document.createElement("td");
+	img = document.createElement("img");
+	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf";
+	img.className = "activityicon iconlarge";
+	img.alt = "File";
+	td.appendChild(img);
+	span = document.createElement("span");
+	span.color = "#888888";
+	span.appendChild( document.createTextNode("Instructions - Environmental Procedures") );
+	td.appendChild(span);
+	tr.appendChild(td);
+	td = document.createElement("td");
+	p = document.createElement("p");
+	p.fontSize = "small";
+	p.appendChild( document.createTextNode("← Assignment instructions") );
+	td.appendChild(p);
+	tr.appendChild(td);
+	table.appendChild(tr);
+	tr = document.createElement("tr");
+	tr.height = "35px";
+	tr.paddingLeft= "3px";
+	td = document.createElement("td");
+	img = document.createElement("img");
+	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon";
+	img.className = "activityicon iconlarge";
+	img.alt = "Assignment";
+	td.appendChild(img);
+	span = document.createElement("span");
+	span.color = "#888888";
+	span.appendChild( document.createTextNode("Assessment - Environmental Procedures Assignment") );
+	td.appendChild(span);
+	tr.appendChild(td);
+	td = document.createElement("td");
+	p = document.createElement("p");
+	p.fontSize = "small";
+	p.appendChild( document.createTextNode("← Assignment/Project style assessment") );
+	td.appendChild(p);
+	tr.appendChild(td);
+	table.appendChild(tr);
+	assessmentPan.appendChild(table);
+	var br = document.createElement("br");
+	assessmentPan.appendChild(br);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Assessments are designed to test you on the learning materials that have preceded it.") );
+	assessmentPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Quizzes are timed and contain different types of questions like, multichoice, choose one or many, short answer, fill in the blank, etc.") );
+	assessmentPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Assignments and Projects will have an instructions document preceding it and if supporting information is required, it will be in documentation listed after it.") );
+	assessmentPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Assignments and Projects will also have a marking guide or rubric for you to see what the assessor is looking for in your submission.") );
+	assessmentPan.appendChild(p);
+	var script = document.createElement("script");
+	script.src = "https://fast.wistia.com/assets/external/popover-v1.js";
+	script.characterSet = "ISO-8859-1";
+	p = document.createElement("p");
+	img = document.createElement("img");
+	img.src = "https://www.upskilled.edu.au/favicon.ico";
+	img.className = "activityicon iconlarge";
+	var a = document.createElement("a");
+	a.href = "https://fast.wistia.net/embed/iframe/q131r4lnhx?popover=true";
+	a.className = "wistia-popover[height=551,playerColor=fe7905,width=980]";
+	a.appendChild( document.createTextNode("Quick Tip - Quizzes <2min") );
+	a.fontWeight = "bold";
+	p.appendChild(img);
+	p.appendChild(a);
+	assessmentPan.appendChild(p);
+	
+	var readme = document.getElementById(container);
+	readme.appendChild(assessmentFlip);
+	readme.appendChild(assessmentPan);
 }
 
 var i = document.createElement("style");
