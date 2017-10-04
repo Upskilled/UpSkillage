@@ -337,7 +337,6 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	var td = document.createElement("td");
 	td.fontWeight = "bold";
-	td.style.textIndent = "16px";
 	td.appendChild( document.createTextNode("Sustainability") );
 	tr.appendChild(td);
 	td = document.createElement("td");
@@ -350,6 +349,7 @@ function assessment( container ) {
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
 	td = document.createElement("td");
+	td.style.textIndent = "16px";
 	var img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon";
 	img.className = "activityicon iconlarge";
@@ -370,6 +370,7 @@ function assessment( container ) {
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
 	td = document.createElement("td");
+	td.style.textIndent = "16px";
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon";
 	img.className = "activityicon iconlarge";
@@ -390,6 +391,7 @@ function assessment( container ) {
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
 	td = document.createElement("td");
+	td.style.textIndent = "16px";
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf";
 	img.className = "activityicon iconlarge";
@@ -410,6 +412,7 @@ function assessment( container ) {
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
 	td = document.createElement("td");
+	td.style.textIndent = "16px";
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon";
 	img.className = "activityicon iconlarge";
