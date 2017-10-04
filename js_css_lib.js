@@ -334,7 +334,7 @@ function assessment( container ) {
 	var table = document.createElement("table");
 	table.border = "0";
 	var tr = document.createElement("tr");
-	tr.height = "35px";
+	tr.style.height = "35px";
 	var td = document.createElement("td");
 	td.fontWeight = "bold";
 	td.appendChild( document.createTextNode("Sustainability") );
@@ -347,8 +347,8 @@ function assessment( container ) {
 	tr.appendChild(td);
 	table.appendChild(tr);
 	tr = document.createElement("tr");
-	tr.height = "35px";
-	tr.paddingLeft= "3px";
+	tr.style.height = "35px";
+	tr.style.paddingLeft= "3px";
 	td = document.createElement("td");
 	var img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon";
@@ -368,8 +368,8 @@ function assessment( container ) {
 	tr.appendChild(td);
 	table.appendChild(tr);
 	tr = document.createElement("tr");
-	tr.height = "35px";
-	tr.paddingLeft= "3px";
+	tr.style.height = "35px";
+	tr.style.paddingLeft= "3px";
 	td = document.createElement("td");
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon";
@@ -389,8 +389,8 @@ function assessment( container ) {
 	tr.appendChild(td);
 	table.appendChild(tr);
 	tr = document.createElement("tr");
-	tr.height = "35px";
-	tr.paddingLeft= "3px";
+	tr.style.height = "35px";
+	tr.style.paddingLeft= "3px";
 	td = document.createElement("td");
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf";
@@ -410,8 +410,8 @@ function assessment( container ) {
 	tr.appendChild(td);
 	table.appendChild(tr);
 	tr = document.createElement("tr");
-	tr.height = "35px";
-	tr.paddingLeft= "3px";
+	tr.style.height = "35px";
+	tr.style.paddingLeft= "3px";
 	td = document.createElement("td");
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon";
