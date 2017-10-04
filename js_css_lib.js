@@ -308,6 +308,10 @@ function lynda( container ) {
 	readme.appendChild(lyndaPan);
 }
 
+function microsoft( container ) {
+	
+}
+
 function assessment( container ) {
 	var assessmentFlip = document.createElement("div");
 	assessmentFlip.id = "assessmentFlip";
@@ -464,6 +468,78 @@ function assessment( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(assessmentFlip);
 	readme.appendChild(assessmentPan);
+}
+
+function rubric( container ) {
+	var rubricFlip = document.createElement("div");
+	rubricFlip.id = "rubricFlip";
+	rubricFlip.className = "flip";
+	var span = document.createElement("span");
+	span.appendChild( document.createTextNode(" Pluralsight eLearning") );
+	span.style = "font-weight: bold;";
+	rubricFlip.appendChild(span);
+	span = document.createElement("span");
+	span.appendChild( document.createTextNode(" (show/hide)") );
+	rubricFlip.appendChild(span);
+	
+	var rubricPan = document.createElement("div");
+	rubricPan.id = "rubricPan";
+	rubricPan.className= "panel";
+	var p = document.createElement("p");
+	p.appendChild( document.createTextNode("Rubrics provide a guide on what elements the assessor is looking for. The rubrics for all assessments are included on the assessment submission pages.") );
+	rubricPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("**NOTE - this is a useful tool for you to prepare and write your submissions. If there is an element in the rubric that you do not address, that element will get a '0' result!") );
+	rubricPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Please read the following document for more information on rubrics") );
+	rubricPan.appendChild(p);
+	p = document.createElement("p");
+	var img = document.createElement("img");
+	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24";
+	img.className = "activityicon iconlarge";
+	img.alt = " ";
+	p.appendChild(img);
+	var a = document.createElement("a");
+	a.href = "https://rebrand.ly/assessRubric";
+	a.onclick = popupDoc( this, 'rubric' );
+	a.appendChild( document.createTextNode("How to Find the Assessment Rubric") );
+	a.style.fontWeight = "bold";
+	p.appendChild(a);
+	rubricPan.appendChild(p);
+	var script = document.createElement("script");
+	script.src = "https://fast.wistia.com/embed/medias/z65qa5bhe5.jsonp";
+	script.async = "";
+	rubricPan.appendChild(script);
+	script = document.createElement("script");
+	script.src = "https://fast.wistia.com/assets/external/E-v1.js";
+	script.async = "";
+	rubricPan.appendChild(script);
+	span = document.createElement("span");
+	span.className = "wistia_embed wistia_async_z65qa5bhe5 popover=true popoverContent=link";
+	span.style.display = "inline";
+	var div = document.createElement("div");
+	div.id = "wistia_164.thumb_container";
+	div.className = "wistia_click_to_play";
+	div.style.position = "relative";
+	div.style.display = "inline";
+	img = document.createElement("img");
+	img.src = "https://www.upskilled.edu.au/favicon.ico";
+	img.className = "activityicon iconlarge";
+	img.alt = " ";
+	div.appendChild(img);
+	a = document.createElement("a");
+	a.href = "#";
+	a.id = "yui_3_15_0_3_1473213461653_1514";
+	a.style.fontWeight = "bold";
+	a.appendChild( document.createTextNode("Quick Tip - How to Access Assessment Rubric <1 min") );
+	div.appendChild(a);
+	span.appendChild(div);
+	rubricPan.appendChild(span);
+	
+	var readme = document.getElementById(container);
+	readme.appendChild(rubricFlip);
+	readme.appendChild(rubricPan);
 }
 
 var i = document.createElement("style");
