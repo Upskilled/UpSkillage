@@ -500,12 +500,9 @@ function rubric( container ) {
 	img.className = "activityicon iconlarge";
 	img.alt = " ";
 	p.appendChild(img);
-	var a = document.createElement("a");
-	a.href = "https://rebrand.ly/assessRubric";
-	a.onclick = popupDoc( a.href, 'rubric' );
-	a.appendChild( document.createTextNode("How to Find the Assessment Rubric") );
-	a.style.fontWeight = "bold";
-	p.appendChild(a);
+	p.onclick = popupDoc( "https://rebrand.ly/assessRubric", 'rubric' );
+	p.appendChild( document.createTextNode("How to Find the Assessment Rubric") );
+	p.style.fontWeight = "bold";
 	rubricPan.appendChild(p);
 	var script = document.createElement("script");
 	script.src = "https://fast.wistia.com/embed/medias/z65qa5bhe5.jsonp";
