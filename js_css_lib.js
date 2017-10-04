@@ -328,8 +328,8 @@ function assessment( container ) {
 	assessmentPan.appendChild(p);
 	p = document.createElement("p");
 	p.appendChild( document.createTextNode("Assessments are identified by two distinct icons as seen in the diagram below.") );
-	p.fontSize = "10pt";
-	p.lineHeight = "1.5em";
+	p.style.fontSize = "10pt";
+	p.style.lineHeight = "1.5em";
 	assessmentPan.appendChild(p);
 	var table = document.createElement("table");
 	table.border = "0";
@@ -337,6 +337,7 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	var td = document.createElement("td");
 	td.fontWeight = "bold";
+	td.style.textIndent = "16px";
 	td.appendChild( document.createTextNode("Sustainability") );
 	tr.appendChild(td);
 	td = document.createElement("td");
@@ -348,7 +349,6 @@ function assessment( container ) {
 	table.appendChild(tr);
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
-	tr.style.paddingLeft= "16px";
 	td = document.createElement("td");
 	var img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon";
@@ -369,7 +369,6 @@ function assessment( container ) {
 	table.appendChild(tr);
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
-	tr.style.paddingLeft= "16px";
 	td = document.createElement("td");
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon";
@@ -390,7 +389,6 @@ function assessment( container ) {
 	table.appendChild(tr);
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
-	tr.style.paddingLeft= "16px";
 	td = document.createElement("td");
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf";
@@ -411,7 +409,6 @@ function assessment( container ) {
 	table.appendChild(tr);
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
-	tr.style.paddingLeft= "16px";
 	td = document.createElement("td");
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon";
