@@ -348,7 +348,7 @@ function assessment( container ) {
 	table.appendChild(tr);
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
-	tr.style.paddingLeft= "3px";
+	tr.style.paddingLeft= "16px";
 	td = document.createElement("td");
 	var img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon";
@@ -356,7 +356,7 @@ function assessment( container ) {
 	img.alt = "SCORM Package";
 	td.appendChild(img);
 	span = document.createElement("span");
-	span.color = "#888888";
+	span.style.color = "#888888";
 	span.appendChild( document.createTextNode("Environmental Procedures") );
 	td.appendChild(span);
 	tr.appendChild(td);
@@ -369,7 +369,7 @@ function assessment( container ) {
 	table.appendChild(tr);
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
-	tr.style.paddingLeft= "3px";
+	tr.style.paddingLeft= "16px";
 	td = document.createElement("td");
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon";
@@ -377,7 +377,7 @@ function assessment( container ) {
 	img.alt = "Quiz";
 	td.appendChild(img);
 	span = document.createElement("span");
-	span.color = "#888888";
+	span.style.color = "#888888";
 	span.appendChild( document.createTextNode("Assessment - Environmental Procedures") );
 	td.appendChild(span);
 	tr.appendChild(td);
@@ -390,7 +390,7 @@ function assessment( container ) {
 	table.appendChild(tr);
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
-	tr.style.paddingLeft= "3px";
+	tr.style.paddingLeft= "16px";
 	td = document.createElement("td");
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf";
@@ -398,7 +398,7 @@ function assessment( container ) {
 	img.alt = "File";
 	td.appendChild(img);
 	span = document.createElement("span");
-	span.color = "#888888";
+	span.style.color = "#888888";
 	span.appendChild( document.createTextNode("Instructions - Environmental Procedures") );
 	td.appendChild(span);
 	tr.appendChild(td);
@@ -411,7 +411,7 @@ function assessment( container ) {
 	table.appendChild(tr);
 	tr = document.createElement("tr");
 	tr.style.height = "35px";
-	tr.style.paddingLeft= "3px";
+	tr.style.paddingLeft= "16px";
 	td = document.createElement("td");
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon";
@@ -419,7 +419,7 @@ function assessment( container ) {
 	img.alt = "Assignment";
 	td.appendChild(img);
 	span = document.createElement("span");
-	span.color = "#888888";
+	span.style.color = "#888888";
 	span.appendChild( document.createTextNode("Assessment - Environmental Procedures Assignment") );
 	td.appendChild(span);
 	tr.appendChild(td);
