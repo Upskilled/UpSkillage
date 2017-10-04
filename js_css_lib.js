@@ -475,7 +475,7 @@ function rubric( container ) {
 	rubricFlip.id = "rubricFlip";
 	rubricFlip.className = "flip";
 	var span = document.createElement("span");
-	span.appendChild( document.createTextNode(" Pluralsight eLearning") );
+	span.appendChild( document.createTextNode("Assessment Rubrics File") );
 	span.style = "font-weight: bold;";
 	rubricFlip.appendChild(span);
 	span = document.createElement("span");
@@ -502,7 +502,7 @@ function rubric( container ) {
 	p.appendChild(img);
 	var a = document.createElement("a");
 	a.href = "https://rebrand.ly/assessRubric";
-	a.onclick = popupDoc( this, 'rubric' );
+	a.onclick = return popupDoc( a.href, 'rubric' );
 	a.appendChild( document.createTextNode("How to Find the Assessment Rubric") );
 	a.style.fontWeight = "bold";
 	p.appendChild(a);
