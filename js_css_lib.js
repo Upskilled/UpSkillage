@@ -502,7 +502,7 @@ function rubric( container ) {
 	p.appendChild(img);
 	var a = document.createElement("a");
 	a.href = "https://rebrand.ly/assessRubric";
-	a.onclick = function{ popupDoc( a.href, 'rubric' ); };
+	a.onclick = function() { popupDoc( a.href, 'rubric' ); };
 	a.appendChild( document.createTextNode("How to Find the Assessment Rubric") );
 	a.style.fontWeight = "bold";
 	p.appendChild(a);
