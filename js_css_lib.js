@@ -555,6 +555,65 @@ function rubric( container ) {
 	readme.appendChild(rubricPan);
 }
 
+function grades( container ) {
+	var gradesFlip = document.createElement("div");
+	gradesFlip.id = "gradesFlip";
+	gradesFlip.className = "flip";
+	var span = document.createElement("span");
+	span.appendChild( document.createTextNode("Grades") );
+	span.style = "font-weight: bold;";
+	gradesFlip.appendChild(span);
+	span = document.createElement("span");
+	span.appendChild( document.createTextNode(" (show/hide)") );
+	gradesFlip.appendChild(span);
+	
+	var gradesPan = document.createElement("div");
+	gradesPan.id = "gradesPan";
+	gradesPan.className= "panel";
+	var p = document.createElement("p");
+	p.appendChild( document.createTextNode("In the settings block on the left of the screen you will see a 'grades' link. This will take you to your grades for all of your assessments. Use this to check your progress and review any comments left by your teacher.") );
+	gradesPan.appendChild(p);
+	p = document.createElement("p");
+	span = document.createElement("span"");
+	span.appendChild( document.createTextNode("-") );
+	span.style.fontWeight = "bold";
+	p.appendChild(span);
+	p.appendChild( document.createTextNode(" = This assessment has not yet been attempted or submitted or graded.") );
+	gradesPan.appendChild(p);
+	p = document.createElement("p");
+	span = document.createElement("span"");
+	span.appendChild( document.createTextNode("NR") );
+	span.style.fontWeight = "bold";
+	p.appendChild(span);
+	p.appendChild( document.createTextNode(" = Not Required - Not often used, but you may see this from time to time, it is administrative and you can ignore it.") );
+	gradesPan.appendChild(p);
+	p = document.createElement("p");
+	span = document.createElement("span"");
+	span.appendChild( document.createTextNode("RPL") );
+	span.style.fontWeight = "bold";
+	p.appendChild(span);
+	p.appendChild( document.createTextNode(" = Recognition of Prior Learning - You have been granted a credit based on prior learning you have undertaken.") );
+	gradesPan.appendChild(p);
+	p = document.createElement("p");
+	span = document.createElement("span"");
+	span.appendChild( document.createTextNode("NYC") );
+	span.style.fontWeight = "bold";
+	p.appendChild(span);
+	p.appendChild( document.createTextNode(" = Not Yet Competent - You have not met the requirements yet, and will need to review feedback and resubmit.") );
+	gradesPan.appendChild(p);
+	p = document.createElement("p");
+	span = document.createElement("span"");
+	span.appendChild( document.createTextNode("C") );
+	span.style.fontWeight = "bold";
+	p.appendChild(span);
+	p.appendChild( document.createTextNode(" = Competent - You have met the requirements. This is your goal!") );
+	gradesPan.appendChild(p);
+	
+	var readme = document.getElementById(container);
+	readme.appendChild(gradesFlip);
+	readme.appendChild(gradesPan);
+}
+
 var i = document.createElement("style");
 var j = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
 i.appendChild(j);

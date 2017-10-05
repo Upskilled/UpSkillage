@@ -170,15 +170,17 @@
 <!-- ******* GRADES ******* -->
 
 <script>
+	grades("readme");
+	
 	$(document).ready( function(){
-		$("#gradeFlip").click( function(){ $("#gradePan").slideToggle("fast"); } );
+		$("#gradesFlip").click( function(){ $("#gradesPan").slideToggle("fast"); } );
 	} );
 </script>
 
-<div id="gradeFlip" class="flip" >
+<div id="gradesFlip" class="flip" >
 	<span><strong>Grades</strong> (show/hide)</span>
 </div>
-<div id="gradePan" class="panel" >
+<div id="gradesPan" class="panel" >
 	<p>In the settings block on the left of the screen you will see a 'grades' link. This will take you to your grades for all of your assessments. Use this to check your progress and review any comments left by your teacher.</p>
 	<p><strong>-</strong> = This assessment has not yet been attempted or submitted or graded.</p>
 	<p><strong>NR</strong> = Not Required - Not often used, but you may see this from time to time, it is administrative and you can ignore it.</p>
