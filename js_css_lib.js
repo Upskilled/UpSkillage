@@ -574,7 +574,7 @@ function grades( container ) {
 	p.appendChild( document.createTextNode("In the settings block on the left of the screen you will see a 'grades' link. This will take you to your grades for all of your assessments. Use this to check your progress and review any comments left by your teacher.") );
 	gradesPan.appendChild(p);
 	p = document.createElement("p");
-	span = document.createElement("span"");
+	span = document.createElement("span");
 	span.appendChild( document.createTextNode("-") );
 	span.style.fontWeight = "bold";
 	p.appendChild(span);
