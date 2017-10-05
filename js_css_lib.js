@@ -302,6 +302,19 @@ function lynda( container ) {
 	p.appendChild( document.createElement("br") );
 	p.appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") );
 	lyndaPan.appendChild(p);
+	p = document.createElement("p");
+	img = document.createElement("img");
+	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24";
+	img.className = "activityicon iconlarge";
+	img.alt = " ";
+	p.appendChild(img);
+	var a = document.createElement("a");
+	a.href = "#";
+	a.onclick = function() { popupDoc( "https://rebrand.ly/LyndaCookies", 'cookies' ); };
+	a.appendChild( document.createTextNode("Guide - How to add cookies for Lynda.com") );
+	a.style.fontWeight = "bold";
+	p.appendChild(a);
+	rubricPan.appendChild(p);
 	
 	var readme = document.getElementById(container);
 	readme.appendChild(lyndaFlip);
@@ -460,7 +473,7 @@ function assessment( container ) {
 	a.href = "https://fast.wistia.net/embed/iframe/q131r4lnhx?popover=true";
 	a.className = "wistia-popover[height=551,playerColor=fe7905,width=980]";
 	a.appendChild( document.createTextNode("Quick Tip - Quizzes <2min") );
-	a.fontWeight = "bold";
+	a.style.fontWeight = "bold";
 	p.appendChild(img);
 	p.appendChild(a);
 	assessmentPan.appendChild(p);
