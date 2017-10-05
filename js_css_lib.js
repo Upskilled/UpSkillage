@@ -314,7 +314,7 @@ function lynda( container ) {
 	a.appendChild( document.createTextNode("Guide - How to add cookies for Lynda.com") );
 	a.style.fontWeight = "bold";
 	p.appendChild(a);
-	rubricPan.appendChild(p);
+	lyndaPan.appendChild(p);
 	
 	var readme = document.getElementById(container);
 	readme.appendChild(lyndaFlip);
