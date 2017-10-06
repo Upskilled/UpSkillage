@@ -823,7 +823,7 @@ function workplace( container ) {
 	p.appendChild( document.createTextNode("Download the 'Workplace Activity as Assessment' form, complete it and upload it for your teacher to approve.") );
 	workplacePan.appendChild(p);
 	var a = document.createElement("a");
-	a.href = function() { popupDoc( 'https://rebrand.ly/workAssess', 'workAssess' ); };
+	a.href = popupDoc( 'https://rebrand.ly/workAssess', 'workAssess' );
 	var img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fdocument-24";
 	img.className = "activityicon iconlarge";
