@@ -49,7 +49,7 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	var a = document.createElement("a");
 	var html = document.createTextNode(givenName);
 	a.id = "vidLink" + popupNum;
-	a.href = "#" + a.id;
+	a.className = "popupLink";
 	var icon = document.createElement("img");
 	icon.src = iconSrc;
 	icon.classList = "iconlarge activityicon";
@@ -309,7 +309,7 @@ function lynda( container ) {
 	img.alt = " ";
 	p.appendChild(img);
 	var a = document.createElement("a");
-	a.href = "#";
+	a.className = "popupLink";
 	a.onclick = function() { popupDoc( "https://rebrand.ly/LyndaCookies", 'cookies' ); };
 	a.appendChild( document.createTextNode("Guide - How to add cookies for Lynda.com") );
 	a.style.fontWeight = "bold";
@@ -556,7 +556,7 @@ function rubric( container ) {
 	img.alt = " ";
 	p.appendChild(img);
 	var a = document.createElement("a");
-	a.href = "#";
+	a.className = "popupLink";
 	a.onclick = function() { popupDoc( "https://rebrand.ly/assessRubric", 'rubric' ); };
 	a.appendChild( document.createTextNode("How to Find the Assessment Rubric") );
 	a.style.fontWeight = "bold";
@@ -823,6 +823,7 @@ function workplace( container ) {
 	p.appendChild( document.createTextNode("Download the 'Workplace Activity as Assessment' form, complete it and upload it for your teacher to approve.") );
 	workplacePan.appendChild(p);
 	var a = document.createElement("a");
+	a.className = "popupLink";
 	a.onclick = function() { popupDoc( 'https://rebrand.ly/workAssess', 'workAssess' ); };
 	var img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fdocument-24";
@@ -1001,6 +1002,8 @@ i.appendChild(j);
 j = document.createTextNode( "div.flip:hover{ background: rgba( 241, 126, 0, 1 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 1), rgba(230, 66, 9, 1) ); }" );
 i.appendChild(j);
 j = document.createTextNode( "img.panelIcon{ height: 16px; width: 16px; }" );
+i.appendChild(j);
+j = document.createTextNode( "a.popupLink:hover{ text-decoration: underline; cursor: pointer; }" );
 i.appendChild(j);
 j = document.createTextNode(".modal {display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); margin: 0;}");
 i.appendChild(j);
