@@ -372,8 +372,9 @@ function microsoft( container ) {
 	readme.appendChild(microPan);
 	
 	var script = document.createElement("script");
+	script.defer = "defer";
 	script.appendChild( document.createTextNode('$(document).ready( function(){	$("#microFlip").click( function(){ $("#microPan").slideToggle("fast"); } );} );') );
-	readme.appendChild(script);
+	//readme.appendChild(script);
 }
 
 function assessment( container ) {
