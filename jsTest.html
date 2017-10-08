@@ -3,10 +3,20 @@
 	<head>
 		<title>Dual ICT50415 Diploma of Information Technology Networking - ICT50315 Diploma of Information Technology Systems Administration 201709</title>
 		<script src="https://skeksalot.github.io/UpSkillage/js_css_lib.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 	</head>
 	<body>
 		<div id="cookies"></div>
 		<div id="dom" style="font-weight: bold;"></div>
+		
+		<div class="tilecontentarea">
+			<h3 class="sectionname accesshide">Read Me First!</h3>
+			<div class="summary">&nbsp;</div>
+			<ul class="section img-text">
+				
+			</ul>
+		</div>
+		
 		<script>
 			var randVal = Math.floor( ( Math.random() * 1000000 ) + 1 );
 			setCookie( "field", randVal, 365 );
@@ -69,6 +79,28 @@
 					
 					
 				}
+			}
+			
+			var titles = document.getElementsByClassName("sectionname");
+			var parent = null;
+			for( var i = 0; i < titles.length; i++ ) {
+				if( titles[i].innerHTML == "Read Me First!" ) {
+					parent = titles[i].parentNode;
+				}
+			}
+			var contentList = null;
+			if( parent != null ) {
+				contentList = parent.getElementsByTagName("ul")[0];
+			}
+			
+			if( contentList != null ) {
+				var li = document.createElement("li");
+				li.id = "wrapper";
+				contentList.appendChild(li);
+				pluralsight("wrapper");
+				lynda("wrapper");
+				microsoft("wrapper");
+				
 			}
 			
 		</script>

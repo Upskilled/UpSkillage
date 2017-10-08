@@ -1,3 +1,8 @@
+// Inclding required JQuery library
+var jQuery = document.createElement("script");
+jQuery.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js";
+document.head.appendChild(jQuery);
+
 // Opens a linked document in a popup window
 function popupDoc( mylink, windowname ) {
 	if( !window.focus ) {
@@ -365,6 +370,10 @@ function microsoft( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(microFlip);
 	readme.appendChild(microPan);
+	
+	$(document).ready( function(){
+		$("#microFlip").click( function(){ $("#microPan").slideToggle("fast"); } );
+	} );
 }
 
 function assessment( container ) {
