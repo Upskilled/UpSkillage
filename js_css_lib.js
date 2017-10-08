@@ -1,8 +1,3 @@
-// Inclding required JQuery library
-var jQuery = document.createElement("script");
-jQuery.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js";
-document.head.appendChild(jQuery);
-
 // Opens a linked document in a popup window
 function popupDoc( mylink, windowname ) {
 	if( !window.focus ) {
@@ -242,6 +237,10 @@ function pluralsight( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(pluralFlip);
 	readme.appendChild(pluralPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#pluralFlip").click( function(){ $("#pluralPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function lynda( container ) {
@@ -324,6 +323,10 @@ function lynda( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(lyndaFlip);
 	readme.appendChild(lyndaPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#lyndaFlip").click( function(){ $("#lyndaPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function microsoft( container ) {
@@ -372,8 +375,7 @@ function microsoft( container ) {
 	readme.appendChild(microPan);
 	
 	var script = document.createElement("script");
-	script.defer = "defer";
-	script.appendChild( document.createTextNode('$(document).ready( function(){	$("#microFlip").click( function(){ $("#microPan").slideToggle("fast"); } );} );') );
+	script.innerHTML = '$(document).ready( function(){ $("#microFlip").click( function(){ $("#microPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
 }
 
@@ -533,6 +535,10 @@ function assessment( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(assessmentFlip);
 	readme.appendChild(assessmentPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){	$("#assessmentFlip").click( function(){ $("#assessmentPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function rubric( container ) {
@@ -605,6 +611,10 @@ function rubric( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(rubricFlip);
 	readme.appendChild(rubricPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#rubricFlip").click( function(){ $("#rubricPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function grades( container ) {
@@ -664,6 +674,10 @@ function grades( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(gradesFlip);
 	readme.appendChild(gradesPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#gradesFlip").click( function(){ $("#gradesPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function dev( container ) {
@@ -732,6 +746,10 @@ function dev( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(devFlip);
 	readme.appendChild(devPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#devFlip").click( function(){ $("#devPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function itif( container ) {
@@ -800,6 +818,10 @@ function itif( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(itifFlip);
 	readme.appendChild(itifPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#itifFlip").click( function(){ $("#itifPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function workplace( container ) {
@@ -847,6 +869,10 @@ function workplace( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(workplaceFlip);
 	readme.appendChild(workplacePan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#workplaceFlip").click( function(){ $("#workplacePan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function review( container ) {
@@ -877,6 +903,10 @@ function review( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(reviewFlip);
 	readme.appendChild(reviewPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#reviewFlip").click( function(){ $("#reviewPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function iot( container ) {
@@ -923,6 +953,10 @@ function iot( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(iotFlip);
 	readme.appendChild(iotPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#iotFlip").click( function(){ $("#iotPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function itsm( container ) {
@@ -960,6 +994,10 @@ function itsm( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(itsmFlip);
 	readme.appendChild(itsmPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#itsmFlip").click( function(){ $("#itsmPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 function itsus( container ) {
@@ -1002,6 +1040,10 @@ function itsus( container ) {
 	var readme = document.getElementById(container);
 	readme.appendChild(itsusFlip);
 	readme.appendChild(itsusPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#itsusFlip").click( function(){ $("#itsusPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
 }
 
 var i = document.createElement("style");
