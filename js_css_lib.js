@@ -371,9 +371,9 @@ function microsoft( container ) {
 	readme.appendChild(microFlip);
 	readme.appendChild(microPan);
 	
-	$(document).ready( function(){
-		$("#microFlip").click( function(){ $("#microPan").slideToggle("fast"); } );
-	} );
+	var script = document.createElement("script");
+	script.appendChild( document.createTextNode('$(document).ready( function(){	$("#microFlip").click( function(){ $("#microPan").slideToggle("fast"); } );} );') );
+	readme.appendChild(script);
 }
 
 function assessment( container ) {
