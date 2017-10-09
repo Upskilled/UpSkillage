@@ -1046,6 +1046,74 @@ function itsus( container ) {
 	readme.appendChild(script);
 }
 
+function courseStream( course ) {
+	var stream = "none";
+	switch(course) {
+		case "ICT50115":
+			stream = "itif";
+			break;
+		case "ICT50215":
+			
+			break;
+		case "ICT50315":
+			stream = "itif";
+			break;
+		case "ICT50415":
+			stream = "itif";
+			break;
+		case "ICT50515":
+			stream = "dev";
+			break;
+		case "ICT50615":
+			stream = "dev";
+			break;
+		case "ICT50715":
+			stream = "dev";
+			break;
+		case "ICT50815":
+			stream = "dev";
+			break;
+		case "ICT50915":
+			stream = "dev";
+			break;
+	}
+	return stream;
+}
+
+function containsReview( course ) {
+	var result = false;
+	switch(course) {
+		case "ICT50115":
+			
+			break;
+		case "ICT50215":
+			result = true;
+			break;
+		case "ICT50315":
+			
+			break;
+		case "ICT50415":
+			
+			break;
+		case "ICT50515":
+			result = true;
+			break;
+		case "ICT50615":
+			result = true;
+			break;
+		case "ICT50715":
+			result = true;
+			break;
+		case "ICT50815":
+			
+			break;
+		case "ICT50915":
+			
+			break;
+	}
+	return result;
+}
+
 var i = document.createElement("style");
 var j = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
 i.appendChild(j);

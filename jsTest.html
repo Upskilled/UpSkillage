@@ -56,6 +56,7 @@
 			var domTitle = document.title;
 			dom.appendChild( document.createTextNode(domTitle) );
 			dom.appendChild( document.createElement("br") );
+			var split;
 			
 			if( domTitle.match(/((Dual )?ICT[0-9]{5} \w* (\w* )?(in|of) [\w -]* [0-9]{6})/g) != null ) {
 				// title fits the format
@@ -70,23 +71,22 @@
 					dom.appendChild( document.createElement("br") );
 					dom.appendChild( document.createTextNode( secondSplit.toString() ) );
 					dom.appendChild( document.createElement("br") );
-					
+					split = [firstSplit, secondSplit];
 					
 				} else {
 					// it's a single qual
-					var split = splitQual(domTitle);
+					split = splitQual(domTitle);
 					dom.appendChild( document.createTextNode( split.toString() ) );
 					dom.appendChild( document.createElement("br") );
-					
 					
 				}
 			}
 			
-			var titles = document.getElementsByClassName("sectionname");
+			var section = document.getElementsByClassName("sectionname");
 			var parent = null;
-			for( var i = 0; i < titles.length; i++ ) {
-				if( titles[i].innerHTML == "Read Me First!" ) {
-					parent = titles[i].parentNode;
+			for( var i = 0; i < section.length; i++ ) {
+				if( section[i].innerHTML == "Read Me First!" ) {
+					parent = section[i].parentNode;
 				}
 			}
 			var contentList = null;
@@ -96,12 +96,70 @@
 			
 			if( contentList != null ) {
 				var li = document.createElement("li");
-				li.id = "wrapper";
+				li.id = "readme_main";
 				contentList.appendChild(li);
-				pluralsight("wrapper");
-				lynda("wrapper");
-				microsoft("wrapper");
 				
+				if( split.length > 2 ) {
+					// SINGLE QUAL
+					// add iot raspberry pi/grad cert textbooks
+					if( split[0] == "ICT40115" && split[1].includes("(IoT)") ) {
+						iot("readme_main");
+					}
+					if( split[0] == "ICT80115" ) {
+						itsm("readme_main");
+					} else if( split[0] == "ICT80215" ) {
+						itsus("readme_main");
+					}
+					pluralsight("readme_main");
+					lynda("readme_main");
+					microsoft("readme_main");
+					assessment("readme_main");
+					rubric("readme_main");
+					grades("readme_main");
+					// decide if course is dev/itif
+					if( courseStream(split[0]) == "dev" ) {
+						dev("readme_main");
+					} else if( courseStream(split[0]) == "itif" ) {
+						itif("readme_main");
+					}
+					workplace("readme_main");
+					li = document.createElement("li");
+					li.id = "readme_second";
+					// include code review if necessary
+					if( containsReview(split[0]) ) {
+						review("readme_second");
+					}
+				} else {
+					// DUAL QUAL
+					// add iot raspberry pi/grad cert textbooks
+					if( ( split[0][0] == "ICT40115" && split[0][1].includes("(IoT)") ) || ( split[1][0] == "ICT40115" && split[1][1].includes("(IoT)") ) ) {
+						iot("readme_main");
+					}
+					if( ( split[0][0] == "ICT80115" ) || ( split[1][0] == "ICT80115" ) ) {
+						itsm("readme_main");
+					} else if ( ( split[0][0] == "ICT80215" ) || ( split[1][0] == "ICT80215" ) ) {
+						itsus("readme_main");
+					}
+					pluralsight("readme_main");
+					lynda("readme_main");
+					microsoft("readme_main");
+					assessment("readme_main");
+					rubric("readme_main");
+					grades("readme_main");
+					// decide if course is dev/itif
+					if( ( courseStream(split[0][0]) == "dev" ) && ( courseStream(split[1][0]) == "dev" ) ) {
+						dev("readme_main");
+					} else if( ( courseStream(split[0][0]) == "itif" ) && ( courseStream(split[1][0]) == "itif" ) ) {
+						itif("readme_main");
+					}
+					workplace("readme_main");
+					li = document.createElement("li");
+					li.id = "readme_second";
+					// include code review if necessary
+					if( containsReview(split[0][0]) && containsReview(split[1][0]) ) {
+						review("readme_second");
+					}
+				}
 			}
 			
 		</script>
@@ -111,6 +169,6 @@
 		<input type="button" class="optButton" onclick="combine('optional', true, this);" value="Show Optional Content">
 		<input type="button" class="optButton" onclick="combine('optional', false, this);" value="Disable Optional Content">
 		<br>
-		<a onclick="window.open( 'https://lms.upskilled.edu.au/mod/lti/launch.php?id=387692', 'lti' ); return false;" href="https://lms.upskilled.edu.au/mod/lti/launch.php?id=387692" class="optional"><img src="https://www.google.com/s2/favicons?domain=lynda.com" alt=" " class="iconlarge activityicon" role="presentation"><span class="instancename">eLearning - Writing Research Papers</span></a>
+		<a onclick="window.open( 'https://lms.upskilled.edu.au/mod/lti/launch.php?id=387692', 'lti' ); return false;" href="https://lms.upskilled.edu.au/mod/lti/launch.php?id=387692" class="optional"><img src="https://www.google.com/s2/favicons?doreadme_main=lynda.com" alt=" " class="iconlarge activityicon" role="presentation"><span class="instancename">eLearning - Writing Research Papers</span></a>
 	</body>
 </html>
