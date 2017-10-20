@@ -1114,6 +1114,133 @@ function containsReview( course ) {
 	return result;
 }
 
+// format for single quals:
+// [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] [START DATE]
+// eg. ICT40115 Certificate IV in Information Technology 201709
+// eg. ICT60115 Advanced Diploma of Information Technology 201709
+// eg. ICT50315 Diploma of Information Technology Systems Administration 201709
+// for dual quals:
+// [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] -/with [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] [START DATE]
+// eg. Dual ICT50415 Diploma of Information Technology Networking - ICT50315 Diploma of Information Technology Systems Administration 201709
+// eg. Dual ICT40415 Certificate IV in Computer Systems Technology with ICT40215 Certificate IV in Information Techology Support 201709
+// regex to match both: (Dual )?ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*( (-)|(with))? (ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*)?[0-9]{6}
+
+function splitQual( qualTitle ) {
+	var code = qualTitle.substring( 0, qualTitle.indexOf(' ') );
+	var level = qualTitle.substring( qualTitle.indexOf(' ') + 1, qualTitle.search(/ in | of /) );
+	var title = qualTitle.substring( qualTitle.search(/ in | of /) + 4, qualTitle.lastIndexOf(' ') );
+	var start = qualTitle.substring( qualTitle.lastIndexOf(' ') + 1 );
+	return [code, level, title, start];
+}
+
+// Simply call insertReadme() once, after defining .
+// It will use the course title to detect what readme elements are necessary
+// and then insert them into the 
+function insertReadme() {
+	var dom = document.getElementById("dom");
+	var domTitle = document.title;
+	var courseTitle = domTitle.match(/(Dual )?ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*( (-)|(with))? (ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*)?[0-9]{6}/g);
+	var split;
+	
+	if( courseTitle != null ) {
+		// title fits the format
+		if( courseTitle[0].startsWith('Dual') ) {
+			// it's a dual qual
+			var firstQual = courseTitle[0].substring( 5, courseTitle[0].search(/with|-/) );
+			var secondQual = courseTitle[0].substring( courseTitle[0].search(/with|-/) );
+			secondQual = secondQual.substring( secondQual.indexOf(' ') ).trim();
+			var firstSplit = splitQual( firstQual.concat( secondQual.substring( secondQual.lastIndexOf(' ') ).trim() ) );
+			var secondSplit = splitQual( secondQual );
+			split = [firstSplit, secondSplit];
+		} else {
+			// it's a single qual
+			split = splitQual(courseTitle[0]);
+		}
+	}
+	
+	var section = document.getElementsByClassName("sectionname");
+	var parent = null;
+	for( var i = 0; i < section.length; i++ ) {
+		if( section[i].innerHTML == "Read Me First!" ) {
+			parent = section[i].parentNode;
+		}
+	}
+	var contentList = null;
+	if( parent != null ) {
+		contentList = parent.getElementsByTagName("ul")[0];
+	}
+	
+	if( contentList != null ) {
+		var li = document.createElement("li");
+		li.id = "readme_main";
+		li.className = "activity label modtype_label";
+		contentList.appendChild(li);
+		
+		if( split.length > 2 ) {
+			// SINGLE QUAL
+			// add iot raspberry pi/grad cert textbooks
+			if( split[0] == "ICT40115" && split[1].includes("(IoT)") ) {
+				iot("readme_main");
+			}
+			if( split[0] == "ICT80115" ) {
+				itsm("readme_main");
+			} else if( split[0] == "ICT80215" ) {
+				itsus("readme_main");
+			}
+			pluralsight("readme_main");
+			lynda("readme_main");
+			microsoft("readme_main");
+			assessment("readme_main");
+			rubric("readme_main");
+			grades("readme_main");
+			// decide if course is dev/itif
+			if( courseStream(split[0]) == "dev" ) {
+				dev("readme_main");d
+			} else if( courseStream(split[0]) == "itif" ) {
+				itif("readme_main");
+			}
+			workplace("readme_main");
+			li = document.createElement("li");
+			li.className = "activity label modtype_label";
+			li.id = "readme_second";
+			// include code review if necessary
+			if( containsReview(split[0]) ) {
+				review("readme_second");
+			}
+		} else {
+			// DUAL QUAL
+			// add iot raspberry pi/grad cert textbooks
+			if( ( split[0][0] == "ICT40115" && split[0][1].includes("(IoT)") ) || ( split[1][0] == "ICT40115" && split[1][1].includes("(IoT)") ) ) {
+				iot("readme_main");
+			}
+			if( ( split[0][0] == "ICT80115" ) || ( split[1][0] == "ICT80115" ) ) {
+				itsm("readme_main");
+			} else if ( ( split[0][0] == "ICT80215" ) || ( split[1][0] == "ICT80215" ) ) {
+				itsus("readme_main");
+			}
+			pluralsight("readme_main");
+			lynda("readme_main");
+			microsoft("readme_main");
+			assessment("readme_main");
+			rubric("readme_main");
+			grades("readme_main");
+			// decide if course is dev/itif
+			if( ( courseStream(split[0][0]) == "dev" ) && ( courseStream(split[1][0]) == "dev" ) ) {
+				dev("readme_main");
+			} else if( ( courseStream(split[0][0]) == "itif" ) && ( courseStream(split[1][0]) == "itif" ) ) {
+				itif("readme_main");
+			}
+			workplace("readme_main");
+			li = document.createElement("li");
+			li.id = "readme_second";
+			// include code review if necessary
+			if( containsReview(split[0][0]) && containsReview(split[1][0]) ) {
+				review("readme_second");
+			}
+		}
+	}
+}
+
 var i = document.createElement("style");
 var j = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
 i.appendChild(j);
