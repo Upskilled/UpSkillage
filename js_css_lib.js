@@ -203,6 +203,7 @@ function pluralsight( container ) {
 	var pluralPan = document.createElement("div");
 	pluralPan.id = "pluralPan";
 	pluralPan.className= "panel";
+	pluralPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("Each topic of eLearning will have its own link for you to follow to specific PluralSight courses. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the PluralSight eLearning looks like in your course.") );
 	pluralPan.appendChild(p);
@@ -265,6 +266,7 @@ function lynda( container ) {
 	var lyndaPan = document.createElement("div");
 	lyndaPan.id = "lyndaPan";
 	lyndaPan.className= "panel";
+	lyndaPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("Each topic of eLearning will have its own link for you to follow to specific Lynda.com. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the Lynda.com eLearning looks like in your course.") );
 	lyndaPan.appendChild(p);
@@ -352,6 +354,7 @@ function microsoft( container ) {
 	var microPan = document.createElement("div");
 	microPan.id = "microPan";
 	microPan.className= "panel";
+	microPan.style.padding = "15px";
 	
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("") );
@@ -398,6 +401,7 @@ function assessment( container ) {
 	var assessmentPan = document.createElement("div");
 	assessmentPan.id = "assessmentPan";
 	assessmentPan.className= "panel";
+	assessmentPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("In this qualification course you will find many learning materials and assessments. All assessments that are required for you to complete this qualification are contained within your 'MyUpskilled' site.") );
 	assessmentPan.appendChild(p);
@@ -561,6 +565,7 @@ function rubric( container ) {
 	var rubricPan = document.createElement("div");
 	rubricPan.id = "rubricPan";
 	rubricPan.className= "panel";
+	rubricPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("Rubrics provide a guide on what elements the assessor is looking for. The rubrics for all assessments are included on the assessment submission pages.") );
 	rubricPan.appendChild(p);
@@ -638,6 +643,7 @@ function grades( container ) {
 	var gradesPan = document.createElement("div");
 	gradesPan.id = "gradesPan";
 	gradesPan.className= "panel";
+	gradesPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("In the settings block on the left of the screen you will see a 'grades' link. This will take you to your grades for all of your assessments. Use this to check your progress and review any comments left by your teacher.") );
 	gradesPan.appendChild(p);
@@ -702,6 +708,7 @@ function dev( container ) {
 	var devPan = document.createElement("div");
 	devPan.id = "devPan";
 	devPan.className= "panel";
+	devPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("Upskilled has created a Foundations course to support you.") );
 	devPan.appendChild(p);
@@ -775,6 +782,7 @@ function itif( container ) {
 	var itifPan = document.createElement("div");
 	itifPan.id = "itifPan";
 	itifPan.className= "panel";
+	itifPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("Upskilled has created a Foundations course to support you.") );
 	itifPan.appendChild(p);
@@ -848,6 +856,7 @@ function workplace( container ) {
 	var workplacePan = document.createElement("div");
 	workplacePan.id = "workplacePan";
 	workplacePan.className= "panel";
+	workplacePan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("In this qualification course you will find many learning materials and assessments.") );
 	workplacePan.appendChild(p);
@@ -900,6 +909,7 @@ function review( container ) {
 	var reviewPan = document.createElement("div");
 	reviewPan.id = "reviewPan";
 	reviewPan.className= "panel";
+	reviewPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("If you would like to upload development code to your teacher, this is the place to do it.") );
 	reviewPan.appendChild(p);
@@ -935,6 +945,7 @@ function iot( container ) {
 	var iotPan = document.createElement("div");
 	iotPan.id = "iotPan";
 	iotPan.className= "panel";
+	iotPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("You have enrolled in the Certificate IV Information Technology - Internet of Things Specialisation.") );
 	iotPan.appendChild(p);
@@ -986,6 +997,7 @@ function itsm( container ) {
 	var itsmPan = document.createElement("div");
 	itsmPan.id = "itsmPan";
 	itsmPan.className= "panel";
+	itsmPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("For this qualification you will require continual access to the following text books.") );
 	itsmPan.appendChild(p);
@@ -1028,6 +1040,7 @@ function itsus( container ) {
 	var itsusPan = document.createElement("div");
 	itsusPan.id = "itsusPan";
 	itsusPan.className= "panel";
+	itsusPan.style.padding = "15px";
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("For this qualification you will require continual access to the following text books.") );
 	itsusPan.appendChild(p);
