@@ -1240,6 +1240,7 @@ function insertReadme() {
 	}
 }
 
+// switched to external css stylesheet
 var link = document.createElement("link");
 link.rel = "stylesheet";
 link.type = "text/css";
@@ -1248,32 +1249,6 @@ document.head.appendChild(link);
 
 var i = document.createElement("style");
 var j;
-/*j = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
-i.appendChild(j);
-j = document.createTextNode( "div.panel{ padding: 15px; text-align: justify; display: none;	}" );
-i.appendChild(j);
-j = document.createTextNode( "div.flip:hover{ background: rgba( 241, 126, 0, 1 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 1), rgba(230, 66, 9, 1) ); }" );
-i.appendChild(j);
-j = document.createTextNode( "img.panelIcon{ height: 16px; width: 16px; }" );
-i.appendChild(j);
-j = document.createTextNode( "a.popupLink:hover{ text-decoration: underline; cursor: pointer; }" );
-i.appendChild(j);
-j = document.createTextNode(".modal {display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9); margin: 0;}");
-i.appendChild(j);
-j = document.createTextNode(".modal-content {margin: auto; display: block;}");
-i.appendChild(j);
-j = document.createTextNode(".modal-content {-webkit-animation-name: zoom; -webkit-animation-duration: 0.6s; animation-name: zoom; animation-duration: 0.6s;}");
-i.appendChild(j);
-j = document.createTextNode("@-webkit-keyframes zoom {from {-webkit-transform:scale(0)} to {-webkit-transform:scale(1)}}");
-i.appendChild(j);
-j = document.createTextNode("@keyframes zoom {from {transform:scale(0)} to {transform:scale(1)}}");
-i.appendChild(j);
-j = document.createTextNode(".close {position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s;}");
-i.appendChild(j);
-j = document.createTextNode(".close:hover, .close:focus {color: #bbb; text-decoration: none; cursor: pointer;}");
-i.appendChild(j);
-j = document.createTextNode("@media only screen and (max-width: 700px){.modal-content {width: 100%;}}");
-i.appendChild(j);*/
 if( getCookie("optional") == "true" ) {
 	j = document.createTextNode( ".optional{ display: inline; }" );
 	i.appendChild(j);
