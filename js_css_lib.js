@@ -1240,8 +1240,15 @@ function insertReadme() {
 	}
 }
 
+var link = document.createElement("link");
+link.rel = "stylesheet";
+type = "text/css";
+href = "https://skeksalot.github.io/UpSkillage/styles.css";
+document.head.appendChild(link);
+
 var i = document.createElement("style");
-var j = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
+var j;
+/*j = document.createTextNode( "div.flip{ padding: 5px; text-align: center; background: rgba( 241, 126, 0, 0.5 ); background: linear-gradient( to bottom right, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) ); }" );
 i.appendChild(j);
 j = document.createTextNode( "div.panel{ padding: 15px; text-align: justify; display: none;	}" );
 i.appendChild(j);
@@ -1266,7 +1273,7 @@ i.appendChild(j);
 j = document.createTextNode(".close:hover, .close:focus {color: #bbb; text-decoration: none; cursor: pointer;}");
 i.appendChild(j);
 j = document.createTextNode("@media only screen and (max-width: 700px){.modal-content {width: 100%;}}");
-i.appendChild(j);
+i.appendChild(j);*/
 if( getCookie("optional") == "true" ) {
 	j = document.createTextNode( ".optional{ display: inline; }" );
 	i.appendChild(j);
