@@ -1128,7 +1128,7 @@ function containsReview( course ) {
 function splitQual( qualTitle ) {
 	var code = qualTitle.substring( 0, qualTitle.indexOf(' ') );
 	var level = qualTitle.substring( qualTitle.indexOf(' ') + 1, qualTitle.search(/ in | of /) );
-	var title = qualTitle.substring( qualTitle.search(/ in | of /) + 4, qualTitle.lastIndexOf(' ') );
+	var title = qualTitle.substring( qualTitle.search(/( in )|( of )/) + 4, qualTitle.lastIndexOf(' ') );
 	var start = qualTitle.substring( qualTitle.lastIndexOf(' ') + 1 );
 	return [code, level, title, start];
 }
@@ -1172,8 +1172,8 @@ function insertReadme() {
 	
 	if( contentList != null ) {
 		var li = document.createElement("li");
-		li.id = "readme_main";
 		li.className = "activity label modtype_label";
+		li.id = "readme_main";
 		contentList.appendChild(li);
 		
 		if( split.length > 2 ) {
