@@ -1242,8 +1242,8 @@ function insertReadme() {
 
 var link = document.createElement("link");
 link.rel = "stylesheet";
-type = "text/css";
-href = "https://skeksalot.github.io/UpSkillage/styles.css";
+link.type = "text/css";
+link.href = "https://skeksalot.github.io/UpSkillage/styles.css";
 document.head.appendChild(link);
 
 var i = document.createElement("style");
