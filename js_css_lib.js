@@ -186,6 +186,7 @@ function pluralsight( container ) {
 	var pluralFlip = document.createElement("div");
 	pluralFlip.id = "pluralFlip";
 	pluralFlip.className = "flip";
+	pluralFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	var img = document.createElement("img");
 	img.src = "https://www.google.com/s2/favicons?domain=pluralsight.com";
@@ -247,6 +248,7 @@ function lynda( container ) {
 	var lyndaFlip = document.createElement("div");
 	lyndaFlip.id = "lyndaFlip";
 	lyndaFlip.className = "flip";
+	lyndaFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	var img = document.createElement("img");
 	img.src = "https://www.google.com/s2/favicons?domain=lynda.com";
@@ -333,6 +335,7 @@ function microsoft( container ) {
 	var microFlip = document.createElement("div");
 	microFlip.id = "microFlip";
 	microFlip.className = "flip";
+	microFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	var img = document.createElement("img");
 	img.src = "https://www.google.com/s2/favicons?domain=microsoft.com";
@@ -383,6 +386,7 @@ function assessment( container ) {
 	var assessmentFlip = document.createElement("div");
 	assessmentFlip.id = "assessmentFlip";
 	assessmentFlip.className = "flip";
+	assessmentFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Assessments Explained") );
 	span.style.fontWeight = "bold";
@@ -545,6 +549,7 @@ function rubric( container ) {
 	var rubricFlip = document.createElement("div");
 	rubricFlip.id = "rubricFlip";
 	rubricFlip.className = "flip";
+	rubricFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Assessment Rubrics File") );
 	span.style.fontWeight = "bold";
@@ -621,6 +626,7 @@ function grades( container ) {
 	var gradesFlip = document.createElement("div");
 	gradesFlip.id = "gradesFlip";
 	gradesFlip.className = "flip";
+	gradesFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Grades") );
 	span.style.fontWeight = "bold";
@@ -684,6 +690,7 @@ function dev( container ) {
 	var devFlip = document.createElement("div");
 	devFlip.id = "devFlip";
 	devFlip.className = "flip";
+	devFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Foundations Course") );
 	span.style.fontWeight = "bold";
@@ -756,6 +763,7 @@ function itif( container ) {
 	var itifFlip = document.createElement("div");
 	itifFlip.id = "itifFlip";
 	itifFlip.className = "flip";
+	itifFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Foundations Course") );
 	span.style.fontWeight = "bold";
@@ -828,6 +836,7 @@ function workplace( container ) {
 	var workplaceFlip = document.createElement("div");
 	workplaceFlip.id = "workplaceFlip";
 	workplaceFlip.className = "flip";
+	workplaceFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Workplace Activities instead of Set Assessments?") );
 	span.style.fontWeight = "bold";
@@ -879,6 +888,7 @@ function review( container ) {
 	var reviewFlip = document.createElement("div");
 	reviewFlip.id = "reviewFlip";
 	reviewFlip.className = "flip";
+	reviewFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Uploading Files for Teacher Review") );
 	span.style.fontWeight = "bold";
@@ -913,6 +923,7 @@ function iot( container ) {
 	var iotFlip = document.createElement("div");
 	iotFlip.id = "iotFlip";
 	iotFlip.className = "flip";
+	iotFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Purchasing your Pi and kit") );
 	span.style.fontWeight = "bold";
@@ -963,6 +974,7 @@ function itsm( container ) {
 	var itsmFlip = document.createElement("div");
 	itsmFlip.id = "itsmFlip";
 	itsmFlip.className = "flip";
+	itsmFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Textbook Order Details") );
 	span.style.fontWeight = "bold";
@@ -1004,6 +1016,7 @@ function itsus( container ) {
 	var itsusFlip = document.createElement("div");
 	itsusFlip.id = "itsusFlip";
 	itsusFlip.className = "flip";
+	itsusFlip.style.padding = "5px";
 	var span = document.createElement("span");
 	span.appendChild( document.createTextNode("Textbook Order Details") );
 	span.style.fontWeight = "bold";
