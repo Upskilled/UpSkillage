@@ -1126,10 +1126,10 @@ function containsReview( course ) {
 // regex to match both: (Dual )?ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*( (-)|(with))? (ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*)?[0-9]{6}
 
 function splitQual( qualTitle ) {
-	var code = qualTitle.substring( 0, qualTitle.indexOf(' ') );
-	var level = qualTitle.substring( qualTitle.indexOf(' ') + 1, qualTitle.search(/ in | of /) );
-	var title = qualTitle.substring( qualTitle.search(/( in )|( of )/) + 4, qualTitle.lastIndexOf(' ') );
-	var start = qualTitle.substring( qualTitle.lastIndexOf(' ') + 1 );
+	var code = qualTitle.substring( 0, qualTitle.indexOf(' ') ).trim();
+	var level = qualTitle.substring( qualTitle.indexOf(' ') + 1, qualTitle.search(/ in | of /) ).trim();
+	var title = qualTitle.substring( qualTitle.search(/( in )|( of )/) + 4, qualTitle.lastIndexOf(' ') ).trim();
+	var start = qualTitle.substring( qualTitle.lastIndexOf(' ') + 1 ).trim();
 	return [code, level, title, start];
 }
 
@@ -1175,11 +1175,10 @@ function insertReadme() {
 		li.className = "activity label modtype_label";
 		li.id = "readme_main";
 		contentList.appendChild(li);
-		
 		if( split.length > 2 ) {
 			// SINGLE QUAL
 			// add iot raspberry pi/grad cert textbooks
-			if( split[0] == "ICT40115" && split[1].includes("(IoT)") ) {
+			if( split[0] == 'ICT40115' && split[2].includes('(IoT)') ) {
 				iot("readme_main");
 			}
 			if( split[0] == "ICT80115" ) {
@@ -1210,7 +1209,7 @@ function insertReadme() {
 		} else {
 			// DUAL QUAL
 			// add iot raspberry pi/grad cert textbooks
-			if( ( split[0][0] == "ICT40115" && split[0][1].includes("(IoT)") ) || ( split[1][0] == "ICT40115" && split[1][1].includes("(IoT)") ) ) {
+			if( ( split[0][0] == "ICT40115" && split[0][2].includes("(IoT)") ) || ( split[1][0] == "ICT40115" && split[1][2].includes("(IoT)") ) ) {
 				iot("readme_main");
 			}
 			if( ( split[0][0] == "ICT80115" ) || ( split[1][0] == "ICT80115" ) ) {
