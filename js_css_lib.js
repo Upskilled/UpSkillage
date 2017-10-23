@@ -1228,6 +1228,7 @@ function insertReadme() {
 			li = document.createElement("li");
 			li.className = "activity label modtype_label";
 			li.id = "readme_second";
+			contentList.appendChild(li);
 			// include code review if necessary
 			if( containsReview(split[0]) ) {
 				review("readme_second");
