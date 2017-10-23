@@ -1109,6 +1109,15 @@ function courseStream( course ) {
 function containsReview( course ) {
 	var result = false;
 	switch(course) {
+		case "ICT40515":
+			result = true;
+			break;
+		case "ICT40315":
+			result = true;
+			break;
+		case "ICT40915":
+			result = true;
+			break;
 		case "ICT50115":
 			
 			break;
