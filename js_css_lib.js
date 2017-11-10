@@ -1079,7 +1079,7 @@ function courseStream( course ) {
 			stream = "itif";
 			break;
 		case "ICT50215":
-			
+			stream = "dev";
 			break;
 		case "ICT50315":
 			stream = "itif";
@@ -1118,17 +1118,8 @@ function containsReview( course ) {
 		case "ICT40915":
 			result = true;
 			break;
-		case "ICT50115":
-			
-			break;
 		case "ICT50215":
 			result = true;
-			break;
-		case "ICT50315":
-			
-			break;
-		case "ICT50415":
-			
 			break;
 		case "ICT50515":
 			result = true;
@@ -1138,12 +1129,6 @@ function containsReview( course ) {
 			break;
 		case "ICT50715":
 			result = true;
-			break;
-		case "ICT50815":
-			
-			break;
-		case "ICT50915":
-			
 			break;
 	}
 	return result;
@@ -1209,7 +1194,9 @@ function insertReadme() {
 		var li = document.createElement("li");
 		li.className = "activity label modtype_label";
 		li.id = "readme_main";
-		contentList.appendChild(li);
+		//contentList.appendChild(li);
+		var workplaceActivity = contentList.getElementsByClassName("assign")[0];
+		contentList.insertBefore( li, workplaceActivity );
 		if( split.length > 2 ) {
 			// SINGLE QUAL
 			// add iot raspberry pi/grad cert textbooks
@@ -1234,12 +1221,14 @@ function insertReadme() {
 				itif("readme_main");
 			}
 			workplace("readme_main");
-			li = document.createElement("li");
-			li.className = "activity label modtype_label";
-			li.id = "readme_second";
-			contentList.appendChild(li);
 			// include code review if necessary
 			if( containsReview(split[0]) ) {
+				li = document.createElement("li");
+				li.className = "activity label modtype_label";
+				li.id = "readme_second";
+				//contentList.appendChild(li);
+				var codeReview = contentList.getElementsByClassName("assign")[1];
+				contentList.insertBefore( li, codeReview );
 				review("readme_second");
 			}
 		} else {
