@@ -240,6 +240,7 @@ function pluralsight( container ) {
 	readme.appendChild(pluralFlip);
 	readme.appendChild(pluralPan);
 	
+	//This is the jQuery for the animation
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#pluralFlip").click( function(){ $("#pluralPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
