@@ -1195,7 +1195,6 @@ function insertReadme() {
 		var li = document.createElement("li");
 		li.className = "activity label modtype_label";
 		li.id = "readme_main";
-		//contentList.appendChild(li);
 		var workplaceActivity = contentList.getElementsByClassName("assign")[0];
 		contentList.insertBefore( li, workplaceActivity );
 		if( split.length > 2 ) {
@@ -1227,7 +1226,6 @@ function insertReadme() {
 				li = document.createElement("li");
 				li.className = "activity label modtype_label";
 				li.id = "readme_second";
-				//contentList.appendChild(li);
 				var codeReview = contentList.getElementsByClassName("assign")[1];
 				contentList.insertBefore( li, codeReview );
 				review("readme_second");
