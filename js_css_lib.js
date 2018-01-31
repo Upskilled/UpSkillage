@@ -1208,6 +1208,7 @@ function insertReadme() {
 			} else if( split[0] == "ICT80215" ) {
 				itsus("readme_main");
 			}
+			//regular readme stuff for all courses
 			pluralsight("readme_main");
 			lynda("readme_main");
 			microsoft("readme_main");
