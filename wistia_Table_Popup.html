@@ -2,21 +2,18 @@
 	<head>
 		<script src="//fast.wistia.com/embed/medias/kmdv2coy3m.jsonp" async=""></script>
 		<script src="//fast.wistia.com/assets/external/E-v1.js" async=""></script>
-		<script>
-			function popup( mylink, windowname ) {
-				if( !window.focus ) return true;
-				var href;
-				if( typeof(mylink) == 'string' ) href = mylink;
-				else href = mylink.href;
-				window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
-				return false;
-			}
-		</script>
+		<script src="https://skeksalot.github.io/UpSkillage/js_css_lib.js"></script>
 	</head>
 	<body>
 		<table border="0" style="border-style:none;">
 			<tbody>
 				<tr>
+					<td style="padding:8px">
+						<div id="Open Video Popup"></div>
+					</td>
+					<td style="padding:8px">
+						<div id="Open Youtube Popup"></div>
+					</td>
 					<td style="padding:8px">
 						<img src="http://www.upskilled.edu.au/favicon.ico" style="margin-right: 3px" height="24" width="24">
 						<span class="wistia_embed wistia_async_kmdv2coy3m popover=true popoverContent=link" style="display:inline"><a href="#" id="wistiaLink1">Webinar - Time Management - Part 1 - 5 Mins </a></span>
@@ -36,10 +33,9 @@
 				</tr>
 			</tbody>
 		</table>
-
-		<a href="#popupVideo" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Launch video player</a>
-		<div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
-			<iframe frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen width="1280" height="720" src="https://online.clickview.com.au/share/embed?shareCode=858b225d&a=false"></iframe>
-		</div>
+		<script>
+			popup( "Open Video Popup", "https://online.clickview.com.au/share/embed?shareCode=858b225d&a=false", "https://www.google.com/s2/favicons?domain=clickview.com.au" );
+			popup( "Open Youtube Popup", "https://www.youtube.com/embed/rlSP9ljqEN8?rel=0", "https://www.google.com/s2/favicons?domain=youtube.com" );
+		</script>
 	</body>
 </html>
