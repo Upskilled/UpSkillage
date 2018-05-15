@@ -358,23 +358,28 @@ function microsoft( container ) {
 	microPan.style.padding = "15px";
 	
 	var p = document.createElement("p");
-	p.appendChild( document.createTextNode("") );
+	p.appendChild( document.createTextNode("In order for you to participate in this training you will be required to have a Microsoft Account.") );
 	microPan.appendChild(p);
-	
 	p = document.createElement("p");
-	p.appendChild( document.createTextNode("") );
+	p.appendChild( document.createTextNode("You can use an existing Microsoft Account if you have one. You may have one and not know it. If you have a 'SkyDrive, Xbox Live, Outlook.com, Hotmail, Windows Live ID or other Microsoft Services' these are usually associated with a Microsoft Account.") );
 	microPan.appendChild(p);
-	
 	p = document.createElement("p");
-	p.appendChild( document.createTextNode("") );
+	p.appendChild( document.createTextNode('If you do not have a Microsoft Account you can sign up for one. You will find instructions on how to do this <a href="https://windows.microsoft.com/en-AU/windows-live/sign-up-create-account-how" style="text-decoration: underline;"><strong>here</strong></a>. Alternatively you can sign up <a href="https://live.com/" style="text-decoration: underline;"><strong>here</strong></a> and follow the prompts.') );
 	microPan.appendChild(p);
-	
 	p = document.createElement("p");
-	p.appendChild( document.createTextNode("") );
+	p.appendChild( document.createTextNode("Each topic of eLearning will have its own Learning Plan for you to follow.") );
 	microPan.appendChild(p);
-	
 	p = document.createElement("p");
-	p.appendChild( document.createTextNode("") );
+	p.appendChild( document.createTextNode("Example:") );
+	microPan.appendChild(p);
+	p = document.createElement("p");
+	img = document.createElement("img");
+	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fhtml";
+	img.className = "activityicon iconlarge";
+	img.alt = " ";
+	p.appendChild(img);
+	p.style.color = "#808080";
+	p.appendChild( document.createTextNode("eLearning - Topic Name Here") );
 	microPan.appendChild(p);
 	
 	var readme = document.getElementById(container);
