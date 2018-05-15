@@ -1158,7 +1158,7 @@ function containsReview( course ) {
 // [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] [START DATE]
 // for dual quals:
 // [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] -/with [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] [START DATE]
-// regex to match all test cases: (Dual )?((ICT[0-9]{5}) (\w+) (\w+ )?(in|of) ([ ,\w()]+?) ((- )|(with ))?){1,2}(([0-9]{6})|(Template v[0-9]_[0-9]))
+// regex to match all test cases: (Dual )?((ICT[0-9]{5}) (\w+) (\w+ )?(in|of) ([ ,\w()]+?) ((- )|(with ))?){1,2}(([0-9]{6})|((Template )?v[0-9]_[0-9]))
 
 /* TEST CASES:
 ICT40115 Certificate IV in Information Technology 201709
@@ -1169,6 +1169,8 @@ ICT60115 Advanced Diploma of Information Technology 201709
 ICT60115 Advanced Diploma of Information Technology Template v2_2
 ICT10115 Certificate I in Information, Digital Media and Technology 201805
 ICT10115 Certificate I in Information, Digital Media and Technology Template v2_2
+ICT20115 Certificate II in Information, Digital Media and Technology 201805
+ICT20115 Certificate II in Information, Digital Media and Technology v2_2
 ICT50315 Diploma of Information Technology Systems Administration 201709
 ICT50315 Diploma of Information Technology Systems Administration Template v2_2
 ICT50315 Diploma of Information Technology Networking 201709
