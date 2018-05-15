@@ -1195,7 +1195,7 @@ function splitQual( qualTitle ) {
 function insertReadme() {
 	var dom = document.getElementById("dom");
 	var domTitle = document.title;
-	var courseTitle = domTitle.match(/(Dual )?((ICT[0-9]{5}) (\w+) (\w+ )?(in|of) ([ ,\w()]+?) ((- )|(with ))?){1,2}(([0-9]{6})|(Template v[0-9]_[0-9]))/g);
+	var courseTitle = domTitle.match(/(Dual )?((ICT[0-9]{5}) (\w+) (\w+ )?(in|of) ([ ,\w()]+?) ((- )|(with ))?){1,2}(([0-9]{6})|((Template )?v[0-9]_[0-9]))/g);
 	var split;
 	
 	if( courseTitle != null ) {
