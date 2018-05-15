@@ -1137,14 +1137,29 @@ function containsReview( course ) {
 
 // format for single quals:
 // [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] [START DATE]
-// eg. ICT40115 Certificate IV in Information Technology 201709
-// eg. ICT60115 Advanced Diploma of Information Technology 201709
-// eg. ICT50315 Diploma of Information Technology Systems Administration 201709
 // for dual quals:
 // [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] -/with [COURSE CODE] [QUAL LEVEL] in/of [QUAL TITLE] [START DATE]
-// eg. Dual ICT50415 Diploma of Information Technology Networking - ICT50315 Diploma of Information Technology Systems Administration 201709
-// eg. Dual ICT40415 Certificate IV in Computer Systems Technology with ICT40215 Certificate IV in Information Techology Support 201709
-// regex to match both: (Dual )?ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*( (-)|(with))? (ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*)?[0-9]{6}
+// regex to match both: 
+
+/* TEST CASES:
+ICT40115 Certificate IV in Information Technology 201709
+ICT40115 Certificate IV in Information Technology Template v2_2
+ICT40115 Certificate IV in Information Technology (IoT) 201709
+ICT40115 Certificate IV in Information Technology (IoT) Template v2_2
+ICT60115 Advanced Diploma of Information Technology 201709
+ICT60115 Advanced Diploma of Information Technology Template v2_2
+ICT10115 Certificate I in Information, Digital Media and Technology 201805
+ICT10115 Certificate I in Information, Digital Media and Technology Template v2_2
+ICT50315 Diploma of Information Technology Systems Administration 201709
+ICT50315 Diploma of Information Technology Systems Administration Template v2_2
+Dual ICT40415 Certificate IV in Computer Systems Technology with ICT40215 Certificate IV in Information Techology Support 201709
+Dual ICT40415 Certificate IV in Computer Systems Technology with ICT40215 Certificate IV in Information Techology Support Template v2_2
+Dual ICT50415 Diploma of Information Technology Networking - ICT50315 Diploma of Information Technology Systems Administration 201709
+Dual ICT50415 Diploma of Information Technology Networking - ICT50315 Diploma of Information Technology Systems Administration Template v2_2
+*/
+
+//(Dual )?ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*( (-)|(with))? (ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*)?[0-9]{6}
+//(Dual )?(ICT[0-9]{5}) (\w*) (\w*)? (in|of) ([\w ()]*)( (-)|(with))? (ICT[0-9]{5} \w*( \w*)? (in|of) [\w ()]*)?([0-9]{6})|(Template v[0-9]_[0-9])
 
 function splitQual( qualTitle ) {
 	var code = qualTitle.substring( 0, qualTitle.indexOf(' ') ).trim();
