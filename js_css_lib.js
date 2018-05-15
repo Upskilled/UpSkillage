@@ -395,6 +395,11 @@ function microsoft( container ) {
 	p.style.color = "#808080";
 	p.appendChild( document.createTextNode("eLearning - Topic Name Here") );
 	microPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Most eLearning has an audio component You will find the experience better if you have speakers on your computer.") );
+	p.appendChild( document.createTextNode("Tip - If you are in an office with others, it may be more appropriate to have a set of headphones.") );
+	p.appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") );
+	microPan.appendChild(p);
 	
 	var readme = document.getElementById(container);
 	readme.appendChild(microFlip);
