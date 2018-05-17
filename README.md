@@ -1,12 +1,12 @@
 ### My Pages!
 - UpSkilled original IT readme source:
-    - [skeksalot.github.io/UpSkillage/IT_readme_source.html](https://skeksalot.github.io/UpSkillage/IT_readme_source.html)
+    - [IT_readme_source.html](https://skeksalot.github.io/UpSkillage/IT_readme_source.html)
 - JS & CSS source for inclusion in courses:
-    - [skeksalot.github.io/UpSkillage/js_css_lib.js](https://skeksalot.github.io/UpSkillage/js_css_lib.js)
+    - [js_css_lib.js](https://skeksalot.github.io/UpSkillage/js_css_lib.js)
 - Video Popup test using JS
-    - [skeksalot.github.io/UpSkillage/wistia_Table_Popup.html](https://skeksalot.github.io/UpSkillage/wistia_Table_Popup.html)
+    - [wistia_Table_Popup.html](https://skeksalot.github.io/UpSkillage/wistia_Table_Popup.html)
 - JS Dynamic Readme via JS lib
-    - [skeksalot.gtihub.io/UpSkillage/jsTest.html](https://skeksalot.github.io/UpSkillage/jsTest.html)
+    - [jsTest.html](https://skeksalot.github.io/UpSkillage/jsTest.html)
 
 ## Help for GitHub Pages
 
