@@ -1230,7 +1230,7 @@ function insertReadme() {
 	}
 	var contentList = null;
 	if( parent != null ) {
-		contentList = parent.getElementsByTagName("ul")[0];
+		contentList = parent.getElementsByClassName("section")[0];
 	}
 	
 	if( contentList != null ) {
