@@ -388,7 +388,7 @@ function microsoft( container ) {
 	microPan.appendChild(p);
 	p = document.createElement("p");
 	img = document.createElement("img");
-	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fhtml";
+	img.src = "https://www.google.com/s2/favicons?domain=microsoft.com";
 	img.className = "activityicon iconlarge";
 	img.alt = " ";
 	p.appendChild(img);
