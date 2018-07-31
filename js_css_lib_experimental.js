@@ -388,7 +388,6 @@ function lynda( container ) {
 	a.className = "popupLink";
 	a.onclick = function() { popupDoc( "https://rebrand.ly/LyndaCookies", 'cookies' ); };
 	a.appendChild( document.createTextNode("Guide - How to add cookies for Lynda.com") );
-	a.style.fontWeight = "bold";
 	p.appendChild(a);
 	lyndaPan.appendChild(p);
 
@@ -679,7 +678,6 @@ function rubric( container ) {
 	a.className = "popupLink";
 	a.onclick = function() { popupDoc( "https://rebrand.ly/assessRubric", 'rubric' ); };
 	a.appendChild( document.createTextNode("How to Find the Assessment Rubric") );
-	a.style.fontWeight = "bold";
 	p.appendChild(a);
 	rubricPan.appendChild(p);
 	var script = document.createElement("script");
@@ -706,7 +704,6 @@ function rubric( container ) {
 	a = document.createElement("a");
 	a.href = "#";
 	a.id = "yui_3_15_0_3_1473213461653_1514";
-	a.style.fontWeight = "bold";
 	a.appendChild( document.createTextNode("Quick Tip - How to Access Assessment Rubric <1 min") );
 	div.appendChild(a);
 	span.appendChild(div);
@@ -716,7 +713,7 @@ function rubric( container ) {
 	readme.appendChild(rubricFlip);
 	readme.appendChild(rubricPan);
 
-	var script = document.createElement("script");
+	script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#rubricFlip").click( function(){ $("#rubricPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
 }
@@ -975,7 +972,6 @@ function workplace( container ) {
 	img.alt = "docx";
 	a.appendChild(img);
 	a.appendChild( document.createTextNode("Workplace Activity as Assessment") );
-	a.style.fontWeight = "bold";
 	workplacePan.appendChild(a);
 
 	var readme = document.getElementById(container);
