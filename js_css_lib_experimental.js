@@ -628,7 +628,6 @@ function assessment( container ) {
 	a.href = "https://fast.wistia.net/embed/iframe/q131r4lnhx?popover=true";
 	a.className = "wistia-popover[height=551,playerColor=fe7905,width=980]";
 	a.appendChild( document.createTextNode("Quick Tip - Quizzes <2min") );
-	a.style.fontWeight = "bold";
 	p.appendChild(img);
 	p.appendChild(a);
 	assessmentPan.appendChild(p);
