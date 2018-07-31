@@ -918,7 +918,6 @@ function itif( container ) {
 	a.href = "https://lms.upskilled.edu.au/course/view.php?id=1175";
 	a.target = "_blank";
 	a.appendChild( document.createTextNode("Information Technology Development Foundations") );
-	a.style.fontWeight = "bold";
 	div.appendChild(a);
 	itifPan.appendChild(div);
 
