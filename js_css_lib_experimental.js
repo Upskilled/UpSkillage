@@ -13,27 +13,6 @@ function popupDoc( mylink, windowname ) {
 	return false;
 }
 
-// Used to hide/show the link to foundations courses
-function showCourse( course ) {
-	var check;
-	var doc;
-	if( course == "dev" ) {
-		check = document.getElementById("devCheck");
-		doc = document.getElementById("devCourse");
-	} else {
-		check = document.getElementById("itifCheck");
-		doc = document.getElementById("itifCourse");
-	}
-
-	if( check.value == "off" ) {
-		check.value = "on";
-		doc.style.display = "block";
-	} else {
-		check.value = "off";
-		doc.style.display = "none";
-	}
-}
-
 // Creates an iframe as an in-browser popup
 // Requires each popup to be used must be paired with a div
 // The div's id must be the same as the 'givenName' argument in the function
@@ -247,6 +226,27 @@ function select( obj ) {
 function combine( cname, cvalue, obj ) {
 	updateOptional( cname, cvalue );
 	select(obj);
+}
+
+// Used to hide/show the link to foundations courses
+function showCourse( course ) {
+	var check;
+	var doc;
+	if( course == "dev" ) {
+		check = document.getElementById("devCheck");
+		doc = document.getElementById("devCourse");
+	} else {
+		check = document.getElementById("itifCheck");
+		doc = document.getElementById("itifCourse");
+	}
+
+	if( check.value == "off" ) {
+		check.value = "on";
+		doc.style.display = "block";
+	} else {
+		check.value = "off";
+		doc.style.display = "none";
+	}
 }
 
 function pluralsight( container ) {
@@ -1374,8 +1374,12 @@ function insertReadme() {
 var link = document.createElement("link");
 link.rel = "stylesheet";
 link.type = "text/css";
+link.id = "UpskillStyle";
 link.href = "https://skeksalot.github.io/UpSkillage/styles.css";
-document.head.appendChild(link);
+// only include stylesheet once
+if( document.getElementById("UpskillStyle") == null  {
+	document.head.appendChild(link);
+}
 
 var i = document.createElement("style");
 var j;
