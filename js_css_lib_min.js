@@ -85,5 +85,9 @@ function popup( givenName, iframeSrc, iconSrc ) {
 var link = document.createElement("link");
 link.rel = "stylesheet";
 link.type = "text/css";
+link.id = "UpskillStyle";
 link.href = "https://skeksalot.github.io/UpSkillage/styles.css";
-document.head.appendChild(link);
+// Only include stylesheet once
+if ( document.getElementById("UpskillStyle") == null ) {
+	document.head.appendChild(link);
+}
