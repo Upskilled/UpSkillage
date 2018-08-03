@@ -1377,21 +1377,21 @@ link.type = "text/css";
 link.id = "UpskillStyle";
 link.href = "https://skeksalot.github.io/UpSkillage/styles.css";
 // only include stylesheet once
-if( document.getElementById("UpskillStyle") == null ) {
+if ( document.getElementById("UpskillStyle") == null ) {
 	document.head.appendChild(link);
-}
 
-var i = document.createElement("style");
-var j;
-if( getCookie("optional") == "true" ) {
-	j = document.createTextNode( ".optional{ display: inline; }" );
-	i.appendChild(j);
-	j = document.createTextNode( ".optBlock{ display: block; }" );
-	i.appendChild(j);
-} else {
-	j = document.createTextNode( ".optional{ display: none; }" );
-	i.appendChild(j);
-	j = document.createTextNode( ".optBlock{ display: none; }" );
-	i.appendChild(j);
+	var i = document.createElement("style");
+	var j;
+	if ( getCookie("optional") == "true" ) {
+		j = document.createTextNode(".optional{ display: inline; }");
+		i.appendChild(j);
+		j = document.createTextNode(".optBlock{ display: block; }");
+		i.appendChild(j);
+	} else {
+		j = document.createTextNode(".optional{ display: none; }");
+		i.appendChild(j);
+		j = document.createTextNode(".optBlock{ display: none; }");
+		i.appendChild(j);
+	}
+	document.head.appendChild(i);
 }
-document.head.appendChild(i);
