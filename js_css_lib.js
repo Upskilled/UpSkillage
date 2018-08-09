@@ -142,15 +142,20 @@ function popup( givenName, iframeSrc, iconSrc ) {
 function showCourse( course ) {
 	var check;
 	var doc;
-	if( course == "dev" ) {
+	if( course === "dev" ) {
 		check = document.getElementById("devCheck");
 		doc = document.getElementById("devCourse");
-	} else {
+	} else if( course === "itif" ) {
 		check = document.getElementById("itifCheck");
 		doc = document.getElementById("itifCourse");
+	} else if( course === "virtDevCheck") {
+		check = document.getElementById("virtDevCheck");
+		doc = document.getElementById("virtDevEnv");
+	} else {
+		return;
 	}
 
-	if( check.value == "off" ) {
+	if( check.value === "off" ) {
 		check.value = "on";
 		doc.style.display = "block";
 	} else {
