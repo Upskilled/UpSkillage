@@ -4,7 +4,7 @@ function popupDoc( mylink, windowname ) {
 		return true;
 	}
 	var href;
-	if( typeof(mylink) == 'string' ) {
+	if( typeof(mylink) === 'string' ) {
 		href = mylink;
 	} else {
 		href = mylink.href;
@@ -61,7 +61,7 @@ function OLDpopup( givenName, iframeSrc, iconSrc ) {
 	a.onclick = function() {
 		container.style.display = "block";
 		content.style.display = "block";
-	}
+	};
 
 	exit.onclick = function() {
 		container.style.display = "none";
@@ -153,10 +153,10 @@ function getCookie( cname ) {
 	var ca = decodedCookie.split(';');
 	for( var i = 0; i < ca.length; i++ ) {
 		var c = ca[i];
-		while( c.charAt(0) == ' ' ) {
+		while( c.charAt(0) === ' ' ) {
 			c = c.substring(1);
 		}
-		if( c.indexOf(name) == 0 ) {
+		if( c.indexOf(name) === 0 ) {
 			return c.substring( name.length, c.length );
 		}
 	}

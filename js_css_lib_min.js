@@ -4,7 +4,7 @@ function popupDoc( mylink, windowname ) {
 		return true;
 	}
 	var href;
-	if( typeof(mylink) == 'string' ) {
+	if( typeof(mylink) === 'string' ) {
 		href = mylink;
 	} else {
 		href = mylink.href;

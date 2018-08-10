@@ -4,7 +4,7 @@ function popupDoc( mylink, windowname ) {
 		return true;
 	}
 	var href;
-	if( typeof(mylink) == 'string' ) {
+	if( typeof(mylink) === 'string' ) {
 		href = mylink;
 	} else {
 		href = mylink.href;
@@ -61,7 +61,7 @@ function OLDpopup( givenName, iframeSrc, iconSrc ) {
 	a.onclick = function() {
 		container.style.display = "block";
 		content.style.display = "block";
-	}
+	};
 
 	exit.onclick = function() { 
 		container.style.display = "none";
@@ -200,7 +200,7 @@ function pluralsight( container ) {
 	pluralPan.appendChild(p);
 	p = document.createElement("p");
 	span = document.createElement("span");
-	span.style = "color: #606060;";
+	span.style.color = "#606060";
 	img = document.createElement("img");
 	img.src = "https://www.google.com/s2/favicons?domain=pluralsight.com";
 	img.className = "activityicon iconlarge";
@@ -264,7 +264,7 @@ function lynda( container ) {
 	lyndaPan.appendChild(p);
 	p = document.createElement("p");
 	span = document.createElement("span");
-	span.style = "color: #606060;";
+	span.style.color = "#606060";
 	img = document.createElement("img");
 	img.src = "https://www.google.com/s2/favicons?domain=lynda.com";
 	img.className = "activityicon iconlarge";
@@ -276,7 +276,7 @@ function lynda( container ) {
 	lyndaPan.appendChild(p);
 	p = document.createElement("p");
 	span = document.createElement("span");
-	span.style = "color: #606060;";
+	span.style.color = "#606060";
 	img = document.createElement("img");
 	img.src = "https://www.google.com/s2/favicons?domain=lynda.com";
 	img.className = "activityicon iconlarge";
@@ -420,14 +420,15 @@ function assessment( container ) {
 	p.style.lineHeight = "1.5em";
 	assessmentPan.appendChild(p);
 	var table = document.createElement("table");
-	table.border = "0";
 	var tr = document.createElement("tr");
 	tr.style.height = "35px";
 	var td = document.createElement("td");
 	td.fontWeight = "bold";
+	td.style.border = "none";
 	td.appendChild( document.createTextNode("Sustainability") );
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← This is the title of the topic") );
@@ -438,6 +439,7 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	td = document.createElement("td");
 	td.style.textIndent = "16px";
+	td.style.border = "none";
 	var img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon";
 	img.className = "activityicon iconlarge";
@@ -449,6 +451,7 @@ function assessment( container ) {
 	td.appendChild(span);
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← Learning materials") );
@@ -459,6 +462,7 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	td = document.createElement("td");
 	td.style.textIndent = "16px";
+	td.style.border = "none";
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon";
 	img.className = "activityicon iconlarge";
@@ -470,6 +474,7 @@ function assessment( container ) {
 	td.appendChild(span);
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← Quiz style assessment") );
@@ -480,6 +485,7 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	td = document.createElement("td");
 	td.style.textIndent = "16px";
+	td.style.border = "none";
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf";
 	img.className = "activityicon iconlarge";
@@ -491,6 +497,7 @@ function assessment( container ) {
 	td.appendChild(span);
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← Assignment instructions") );
@@ -501,6 +508,7 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	td = document.createElement("td");
 	td.style.textIndent = "16px";
+	td.style.border = "none";
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon";
 	img.className = "activityicon iconlarge";
@@ -512,6 +520,7 @@ function assessment( container ) {
 	td.appendChild(span);
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← Assignment/Project style assessment") );
@@ -553,7 +562,7 @@ function assessment( container ) {
 	readme.appendChild(assessmentFlip);
 	readme.appendChild(assessmentPan);
 	
-	var script = document.createElement("script");
+	script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){	$("#assessmentFlip").click( function(){ $("#assessmentPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
 }
@@ -599,11 +608,11 @@ function rubric( container ) {
 	rubricPan.appendChild(p);
 	var script = document.createElement("script");
 	script.src = "https://fast.wistia.com/embed/medias/z65qa5bhe5.jsonp";
-	script.async = "";
+	script.async = true;
 	rubricPan.appendChild(script);
 	script = document.createElement("script");
 	script.src = "https://fast.wistia.com/assets/external/E-v1.js";
-	script.async = "";
+	script.async = true;
 	rubricPan.appendChild(script);
 	span = document.createElement("span");
 	span.className = "wistia_embed wistia_async_z65qa5bhe5 popover=true popoverContent=link";
@@ -631,7 +640,7 @@ function rubric( container ) {
 	readme.appendChild(rubricFlip);
 	readme.appendChild(rubricPan);
 	
-	var script = document.createElement("script");
+	script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#rubricFlip").click( function(){ $("#rubricPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
 }
@@ -736,7 +745,7 @@ function dev( container ) {
 	var input = document.createElement("input");
 	input.type = "checkbox";
 	input.id = "devCheck";
-	input.name = "devCheck"
+	input.name = "devCheck";
 	input.onclick = function(){ showCourse("dev"); };
 	input.value = "off";
 	input.style.display = "inline";
@@ -810,7 +819,7 @@ function itif( container ) {
 	var input = document.createElement("input");
 	input.type = "checkbox";
 	input.id = "itifCheck";
-	input.name = "itifCheck"
+	input.name = "itifCheck";
 	input.onclick = function(){ showCourse("itif"); };
 	input.value = "off";
 	input.style.display = "inline";
@@ -1189,7 +1198,7 @@ function insertReadme() {
 	
 	if( courseTitle != null ) {
 		// title fits the format
-		if( courseTitle[0].startsWith('Dual') ) {
+		if( courseTitle[0].startsWith("Dual") ) {
 			// it's a dual qual
 			var firstQual = courseTitle[0].substring( 5, courseTitle[0].search(/with|-/) );
 			var secondQual = courseTitle[0].substring( courseTitle[0].search(/with|-/) );
@@ -1206,7 +1215,7 @@ function insertReadme() {
 	var section = document.getElementsByClassName("sectionname");
 	var parent = null;
 	for( var i = 0; i < section.length; i++ ) {
-		if( section[i].innerHTML == "Read Me First!" ) {
+		if( section[i].innerHTML === "Read Me First!" ) {
 			parent = section[i].parentNode;
 		}
 	}
@@ -1224,12 +1233,12 @@ function insertReadme() {
 		if( split.length > 2 ) {
 			// SINGLE QUAL
 			// add iot raspberry pi/grad cert textbooks
-			if( split[0] == 'ICT40115' && split[2].includes('(IoT)') ) {
+			if( split[0] === 'ICT40115' && split[2].includes('(IoT)') ) {
 				iot("readme_main");
 			}
-			if( split[0] == "ICT80115" ) {
+			if( split[0] === "ICT80115" ) {
 				itsm("readme_main");
-			} else if( split[0] == "ICT80215" ) {
+			} else if( split[0] === "ICT80215" ) {
 				itsus("readme_main");
 			}
 			//regular readme stuff for all courses
@@ -1240,9 +1249,9 @@ function insertReadme() {
 			rubric("readme_main");
 			grades("readme_main");
 			// decide if course is dev/itif
-			if( courseStream(split[0]) == "dev" ) {
-				dev("readme_main");d
-			} else if( courseStream(split[0]) == "itif" ) {
+			if( courseStream(split[0]) === "dev" ) {
+				dev("readme_main");
+			} else if( courseStream(split[0]) === "itif" ) {
 				itif("readme_main");
 			}
 			workplace("readme_main");
@@ -1258,12 +1267,12 @@ function insertReadme() {
 		} else {
 			// DUAL QUAL
 			// add iot raspberry pi/grad cert textbooks
-			if( ( split[0][0] == "ICT40115" && split[0][2].includes("(IoT)") ) || ( split[1][0] == "ICT40115" && split[1][2].includes("(IoT)") ) ) {
+			if( ( split[0][0] === "ICT40115" && split[0][2].includes("(IoT)") ) || ( split[1][0] === "ICT40115" && split[1][2].includes("(IoT)") ) ) {
 				iot("readme_main");
 			}
-			if( ( split[0][0] == "ICT80115" ) || ( split[1][0] == "ICT80115" ) ) {
+			if( ( split[0][0] === "ICT80115" ) || ( split[1][0] === "ICT80115" ) ) {
 				itsm("readme_main");
-			} else if ( ( split[0][0] == "ICT80215" ) || ( split[1][0] == "ICT80215" ) ) {
+			} else if ( ( split[0][0] === "ICT80215" ) || ( split[1][0] === "ICT80215" ) ) {
 				itsus("readme_main");
 			}
 			pluralsight("readme_main");
@@ -1273,9 +1282,9 @@ function insertReadme() {
 			rubric("readme_main");
 			grades("readme_main");
 			// decide if course is dev/itif
-			if( ( courseStream(split[0][0]) == "dev" ) && ( courseStream(split[1][0]) == "dev" ) ) {
+			if( ( courseStream(split[0][0]) === "dev" ) && ( courseStream(split[1][0]) === "dev" ) ) {
 				dev("readme_main");
-			} else if( ( courseStream(split[0][0]) == "itif" ) && ( courseStream(split[1][0]) == "itif" ) ) {
+			} else if( ( courseStream(split[0][0]) === "itif" ) && ( courseStream(split[1][0]) === "itif" ) ) {
 				itif("readme_main");
 			}
 			workplace("readme_main");
