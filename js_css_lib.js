@@ -303,7 +303,6 @@ function lynda( container ) {
 	a.className = "popupLink";
 	a.onclick = function() { popupDoc( "https://rebrand.ly/LyndaCookies", 'cookies' ); };
 	a.appendChild( document.createTextNode("Guide - How to add cookies for Lynda.com") );
-	a.style.fontWeight = "bold";
 	p.appendChild(a);
 	lyndaPan.appendChild(p);
 	
@@ -553,7 +552,6 @@ function assessment( container ) {
 	a.href = "https://fast.wistia.net/embed/iframe/q131r4lnhx?popover=true";
 	a.className = "wistia-popover[height=551,playerColor=fe7905,width=980]";
 	a.appendChild( document.createTextNode("Quick Tip - Quizzes <2min") );
-	a.style.fontWeight = "bold";
 	p.appendChild(img);
 	p.appendChild(a);
 	assessmentPan.appendChild(p);
@@ -603,7 +601,6 @@ function rubric( container ) {
 	a.className = "popupLink";
 	a.onclick = function() { popupDoc( "https://rebrand.ly/assessRubric", 'rubric' ); };
 	a.appendChild( document.createTextNode("How to Find the Assessment Rubric") );
-	a.style.fontWeight = "bold";
 	p.appendChild(a);
 	rubricPan.appendChild(p);
 	var script = document.createElement("script");
@@ -630,7 +627,6 @@ function rubric( container ) {
 	a = document.createElement("a");
 	a.href = "#";
 	a.id = "yui_3_15_0_3_1473213461653_1514";
-	a.style.fontWeight = "bold";
 	a.appendChild( document.createTextNode("Quick Tip - How to Access Assessment Rubric <1 min") );
 	div.appendChild(a);
 	span.appendChild(div);
@@ -899,7 +895,6 @@ function workplace( container ) {
 	img.alt = "docx";
 	a.appendChild(img);
 	a.appendChild( document.createTextNode("Workplace Activity as Assessment") );
-	a.style.fontWeight = "bold";
 	workplacePan.appendChild(a);
 	
 	var readme = document.getElementById(container);
