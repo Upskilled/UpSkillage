@@ -1,0 +1,59 @@
+h1, h2, h3 , h4, h5, h6 {
+	font-family: 'Muli', sans-serif;
+}
+
+page-header-headings, h1 {
+	color: #FFFFFF;
+}
+
+.format-site {
+	background-image: linear-gradient(-200deg,#7B1CE9,#1548E0);
+	background-size: cover;
+}
+
+a {
+	color: #000000;
+}
+
+.social-networks li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 10px 33px;
+}
+
+.social-networks li a.icon-facebook {
+	font-size: 39px;
+}
+
+.social-networks li a {
+	font-size: 36px;
+	line-height: 42px;
+	color: #fff;
+}
+
+.social-networks li a:hover {
+	color: #000;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+.fa-facebook:before {
+	content: "\f09a" !important;
+}
+.fa-twitter:before {
+	content: "\f099" !important;
+}
+.fa-linkedin:before {
+	content: "\f0e1" !important;
+}
+.fa-instagram:before {
+	content: "\f16d" !important;
+}
+.fa-pinterest:before {
+	content: "\f0d2" !important;
+}
+.fa-youtube:before {
+	content: "\f167" !important;
+}
