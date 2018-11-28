@@ -9,5 +9,5 @@ if( footer.length == 1 ) {
 	newFooter.appendChild( document.createTextNode( '<div class="span3 footer-copyright"><div>© Upskilled Pty Ltd 2018. All rights reserved.</div><div><a href="https://upskilled-kentico-prod.azurewebsites.net/terms-and-conditions" class="footer-copyright-link">Terms &amp; Conditions</a><span> | </span><a href="https://upskilled-kentico-prod.azurewebsites.net/upskilled-policies" class="footer-copyright-link">Upskilled Policies</a><span> | RTO No 40374 | ABN: 14 125 906 676</span></div></div>' ) );
 	newFooter.appendChild( document.createTextNode( '</div>' ) );
 	
-	page.removeChild( page.getElementsByTagName('footer') );
+	page.removeChild( page.getElementsById('page-footer') );
 }
