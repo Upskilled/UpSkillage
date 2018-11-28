@@ -14,8 +14,8 @@
     - [MR_stable.css](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_stable.css)
     - [MR_experimental.css](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_experimental.css)
 - Upskilled JS (stable and experimental release):
-    - [MR_stable.css](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_stable.js)
-    - [MR_experimental.css](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_experimental.js)
+    - [MR_stable.js](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_stable.js)
+    - [MR_experimental.js](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_experimental.js)
     
 
 ## Help for GitHub Pages
