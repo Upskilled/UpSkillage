@@ -10,7 +10,7 @@
     - [jsTest.html](https://skeksalot.github.io/UpSkillage/jsTest.html)
     
 *** NEW LMS ***
-- Upskilled CSS
+- Upskilled CSS (stable and experimental release):
     - [MR_stable.css](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_stable.css)
     - [MR_experimental.css](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_experimental.css)
 
