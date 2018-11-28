@@ -97,3 +97,5 @@ div.appendChild(div2);
 shell.appendChild(div);
 
 footer.appendChild( shell );
+
+body.appendChild( document.createTextNode ('THIS IS TEST TEXT') );
