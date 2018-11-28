@@ -1,5 +1,5 @@
 var footer = document.getElementsByTagName('footer');
-if( footer.length > 1 ) {
+if( footer.length == 1 ) {
 	newFooter = document.createElement('footer');
 	newFooter.appendChild( document.createTextNode( '<div class="span9 footer-shell">' ) );
 	newFooter.appendChild( document.createTextNode( '<div class="span3 footer-ups-logo"><a href="https://upskilled-sandbox.mrooms.net"><img src="https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/upskilled-logo-footer.png" alt="Upskilled logo"></a></div>' ) );
