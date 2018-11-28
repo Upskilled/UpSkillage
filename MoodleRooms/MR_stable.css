@@ -21,7 +21,7 @@ a {
 	margin: 0 0 10px 33px;
 }
 
-.social-networks, li, a.icon-facebook {
+/*.social-networks, li, a.icon-facebook {
 	font-size: 39px;
 }
 
@@ -29,7 +29,7 @@ a {
 	font-size: 36px;
 	line-height: 42px;
 	color: #fff;
-}
+}*/
 
 .social-networks, li, a:hover {
 	color: #000;
