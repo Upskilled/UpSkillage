@@ -1,4 +1,4 @@
-var footer = document.getElementsById('page-footer');
+var footer = document.getElementById('page-footer');
 var page = document.getElementById('page');
 
 footer.appendChild( document.createTextNode( '<div class="span9 footer-shell">' ) );
