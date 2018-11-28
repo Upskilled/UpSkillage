@@ -23,13 +23,13 @@ a {
 
 /*.social-networks, li, a.icon-facebook {
 	font-size: 39px;
-}
+}*/
 
-.social-networks, li, a {
+.social-networks, li.social-ico, a.social-ico {
 	font-size: 36px;
 	line-height: 42px;
 	color: #fff;
-}*/
+}
 
 .social-networks, li, a:hover {
 	color: #000;
