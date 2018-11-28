@@ -98,4 +98,4 @@ shell.appendChild(div);
 
 footer.appendChild( shell );
 
-body.appendChild( document.createTextNode ('THIS IS TEST TEXT') );
+body.appendChild( document.createTextNode( 'THIS IS TEST TEXT' ) );

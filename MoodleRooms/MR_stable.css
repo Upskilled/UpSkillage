@@ -31,12 +31,9 @@ a {
 	color: #fff;
 }
 
-.social-networks, li.social-ico, a:hover {
+a.social-ico:hover {
 	color: #000;
-}
-
-a:hover {
-	text-decoration:none;
+	text-decoration: none;
 }
 
 .fa-facebook:before {
@@ -58,18 +55,8 @@ a:hover {
 	content: "\f167" !important;
 }
 
-* {
-	box-sizing: border-box;
-}
-
-.social-networks-outer, .footer-copyright, .footer-ups-logo {
+/*.social-networks-outer, .footer-copyright, .footer-ups-logo {
 	float: left;
 	width: 33.33%;
 	padding: 30px;
-}
-
-.footer-shell::after {
-	content: "";
-	clear: both;
-	display: table;
-}
+}*/
