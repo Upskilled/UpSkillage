@@ -11,6 +11,7 @@
     
 *** NEW LMS ***
 - Upskilled CSS
+    - [MR_stable.css](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_stable.css)
     - [MR_experimental.css](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_experimental.css)
 
 ## Help for GitHub Pages
