@@ -25,6 +25,10 @@ html, body {
 	min-height: 100%;
 }
 
+div.logo {
+	height: 90px;
+}
+
 /*a, li {
 	color: #f6f6fa;
 }*/
