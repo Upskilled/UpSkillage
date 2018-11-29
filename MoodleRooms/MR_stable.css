@@ -6,7 +6,7 @@ page-header-headings, h1 {
 	color: #FFFFFF;
 }
 
-.logininfo {
+div.logininfo, div.homelink, div.sitelink, footer + a {
 	display: none;
 }
 
