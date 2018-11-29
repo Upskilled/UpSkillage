@@ -1,3 +1,10 @@
+var links = document.getElementsByTagName('link');
+for( var i = 0; i < links.length; i++ ) {
+	if( links[i].rel === 'shortcut icon' ) {
+		links[i].rel = 'https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/favicon.ico';
+	}
+}
+
 /* TESTING METHODOLOGIES FOR FOOTER
 var footer = document.getElementById('page-footer');
 var page = document.getElementById('page');
