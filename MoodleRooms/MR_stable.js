@@ -1,7 +1,7 @@
 var links = document.getElementsByTagName('link');
 for( var i = 0; i < links.length; i++ ) {
 	if( links[i].rel === 'shortcut icon' ) {
-		links[i].rel = 'https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/favicon.ico';
+		links[i].href = 'https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/favicon.ico';
 	}
 }
 
