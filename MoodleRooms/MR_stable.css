@@ -6,6 +6,11 @@ page-header-headings, h1, div.footer-copyright, a.footer-copyright-link {
 	color: #ffffff;
 }
 
+div.footer-copyright, a.footer-copyright-link {
+	font-size: 11px;
+	line-height: 16px;
+}
+
 div.logininfo, div.homelink, div.sitelink, footer > a {
 	display: none;
 }
