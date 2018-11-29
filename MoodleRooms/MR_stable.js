@@ -1,3 +1,4 @@
+/* TESTING METHODOLOGIES FOR FOOTER
 var footer = document.getElementById('page-footer');
 var page = document.getElementById('page');
 
@@ -99,3 +100,4 @@ shell.appendChild(div);
 footer.appendChild( shell );
 
 body.appendChild( document.createTextNode( 'THIS IS TEST TEXT' ) );
+*/
