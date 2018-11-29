@@ -6,7 +6,7 @@ page-header-headings, h1 {
 	color: #FFFFFF;
 }
 
-div.logininfo, div.homelink, div.sitelink, footer + a {
+div.logininfo, div.homelink, div.sitelink, footer > a {
 	display: none;
 }
 
@@ -38,10 +38,6 @@ li.social-ico {
 	margin: 0 0 10px 24px;
 }
 
-/*.social-networks, li, a.icon-facebook {
-	font-size: 39px;
-}*/
-
 li.social-ico, a.social-ico {
 	font-size: 36px;
 	line-height: 42px;
@@ -71,9 +67,3 @@ a.social-ico:hover {
 .fa-youtube:before {
 	content: "\f167" !important;
 }
-
-/*.social-networks-outer, .footer-copyright, .footer-ups-logo {
-	float: left;
-	width: 33.33%;
-	padding: 30px;
-}*/
