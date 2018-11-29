@@ -15,21 +15,23 @@ div.logininfo, div.homelink, div.sitelink, footer > a {
 	background-size: cover;
 }
 
-a {
+/*a {
 	color: #000000;
-}
-
-div.footer-copyright {
-	color: #FFFFFF;
-	display: inline-block;
-}
+}*/
 
 div.footer-ups-logo {
-	display: inline-block;
+	/*display: inline-block;*/
+	float: left;
 }
 
 div.social-networks-outer {
 	display: inline-block;
+}
+
+div.footer-copyright {
+	color: #FFFFFF;
+	/*display: inline-block;*/
+	float: right;
 }
 
 li.social-ico {
