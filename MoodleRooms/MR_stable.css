@@ -2,7 +2,7 @@ h1, h2, h3 , h4, h5, h6 {
 	font-family: 'Muli', sans-serif;
 }
 
-page-header-headings, h1, div.footer-copyright {
+page-header-headings, h1 {
 	color: #FFFFFF;
 }
 
@@ -13,6 +13,19 @@ page-header-headings, h1, div.footer-copyright {
 
 a {
 	color: #000000;
+}
+
+div.footer-copyright {
+	color: #FFFFFF;
+	display: inline-block;
+}
+
+div.footer-ups-logo {
+	display: inline-block;
+}
+
+div.social-networks-outer {
+	display: inline-block;
 }
 
 li.social-ico {
