@@ -6,6 +6,10 @@ page-header-headings, h1 {
 	color: #FFFFFF;
 }
 
+div.logininfo {
+	display: none;
+}
+
 .format-site {
 	background-image: linear-gradient(-200deg,#7B1CE9,#1548E0);
 	background-size: cover;
