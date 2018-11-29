@@ -3,7 +3,7 @@ h1, h2, h3 , h4, h5, h6, div.footer-copyright {
 }
 
 page-header-headings, h1, div.footer-copyright, a.footer-copyright-link {
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 div.logininfo, div.homelink, div.sitelink, footer > a {
@@ -11,7 +11,7 @@ div.logininfo, div.homelink, div.sitelink, footer > a {
 }
 
 body {
-	background-image: linear-gradient(-200deg,#7B1CE9,#1548E0);
+	background-image: linear-gradient(-200deg,#7b1ce9,#1548e0);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -20,9 +20,9 @@ html, body {
 	min-height: 100%;
 }
 
-/*a {
-	color: #000000;
-}*/
+a, li {
+	color: #f6f6fa;
+}
 
 div.footer-ups-logo, div.social-networks-outer, div.footer-copyright {
 	display: inline-block;
@@ -38,11 +38,11 @@ li.social-ico {
 li.social-ico, a.social-ico {
 	font-size: 36px;
 	line-height: 42px;
-	color: #fff;
+	color: #ffffff;
 }
 
 a.social-ico:hover {
-	color: #000;
+	color: #000000;
 	text-decoration: none;
 }
 
