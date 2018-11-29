@@ -2,7 +2,7 @@ h1, h2, h3 , h4, h5, h6 {
 	font-family: 'Muli', sans-serif;
 }
 
-page-header-headings, h1 {
+page-header-headings, h1, a.footer-copyright-link {
 	color: #FFFFFF;
 }
 
@@ -20,18 +20,19 @@ div.logininfo, div.homelink, div.sitelink, footer > a {
 }*/
 
 div.footer-ups-logo {
-	/*display: inline-block;*/
-	float: left;
+	display: inline-block;
+	width: 33.3%;
 }
 
 div.social-networks-outer {
 	display: inline-block;
+	width: 33.3%;
 }
 
 div.footer-copyright {
 	color: #FFFFFF;
-	/*display: inline-block;*/
-	float: right;
+	display: inline-block;
+	width:33.3%;
 }
 
 li.social-ico {
