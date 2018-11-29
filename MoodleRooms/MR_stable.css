@@ -20,9 +20,9 @@ html, body {
 	min-height: 100%;
 }
 
-a, li {
+/*a, li {
 	color: #f6f6fa;
-}
+}*/
 
 div.footer-ups-logo, div.social-networks-outer, div.footer-copyright {
 	display: inline-block;
