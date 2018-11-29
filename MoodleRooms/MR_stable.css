@@ -11,7 +11,7 @@ div.logininfo, div.homelink, div.sitelink, footer > a {
 }
 
 body {
-	background-image: linear-gradient(-200deg,#7b1ce9,#1548e0);
+	background-image: linear-gradient( 215deg, #7b1ce9, #1548e0 );
 	background-size: cover;
 	background-repeat: no-repeat;
 }
