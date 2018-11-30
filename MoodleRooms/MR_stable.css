@@ -1,5 +1,9 @@
-h1, h2, h3 , h4, h5, h6, div.footer-copyright {
+h1, h2, h3 , h4, h5, h6 {
 	font-family: 'Muli', sans-serif;
+}
+
+div.footer-copyright {
+	font-family: 'Karma', serif;
 }
 
 page-header-headings, h1, div.footer-copyright, a.footer-copyright-link {
