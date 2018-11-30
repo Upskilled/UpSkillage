@@ -4,10 +4,6 @@ h1, h2, h3 , h4, h5, h6, div.footer-copyright {
 	font-family: 'Muli', sans-serif;
 }
 
-/*div.footer-copyright {
-	font-family: 'Karma', serif;
-}*/
-
 page-header-headings, h1, div.footer-copyright, a.footer-copyright-link {
 	color: #ffffff;
 }
@@ -34,10 +30,6 @@ html, body {
 div.logo {
 	height: 90px;
 }
-
-/*a, li {
-	color: #f6f6fa;
-}*/
 
 div.footer-ups-logo, div.social-networks-outer, div.footer-copyright {
 	display: inline-block;
