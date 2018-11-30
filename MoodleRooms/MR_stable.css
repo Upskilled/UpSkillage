@@ -1,10 +1,12 @@
-h1, h2, h3 , h4, h5, h6 {
+@import url('https://fonts.googleapis.com/css?family=Karma:300,400,500,600,700|Muli:300,400,700,900');
+
+h1, h2, h3 , h4, h5, h6, div.footer-copyright {
 	font-family: 'Muli', sans-serif;
 }
 
-div.footer-copyright {
+/*div.footer-copyright {
 	font-family: 'Karma', serif;
-}
+}*/
 
 page-header-headings, h1, div.footer-copyright, a.footer-copyright-link {
 	color: #ffffff;
