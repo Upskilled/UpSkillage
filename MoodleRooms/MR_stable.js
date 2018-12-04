@@ -7,7 +7,7 @@ for( var i = 0; i < links.length; i++ ) {
 }
 
 // Altered for the new MoodleRooms LMS
-function popup( givenName, iframeSrc, iconSrc ) {
+function popupMR( givenName, iframeSrc, iconSrc ) {
 	// Produce a random id
 	var popupID = Math.floor( ( Math.random() * 1000 ) + 1 );
 	while ( document.getElementById( givenName.replace( /\s/g, '' ) + popupID ) != null ) {
@@ -48,7 +48,7 @@ function popup( givenName, iframeSrc, iconSrc ) {
 			content = document.createElement("iframe");
 			content.classList = "modal-content";
 			content.id = "popupVid" + popupID;
-			content.style = "width: 1280px; height: 720px; border:none;";
+			content.style = "width: 75%; height: 75%; min-width: 640px; min-height: 360px; border:none;";
 			content.src = 'https://' + iframeSrc;
 			content.setAttribute('allowfullScreen', '');
 			content.setAttribute('mozallowfullScreen', '');
