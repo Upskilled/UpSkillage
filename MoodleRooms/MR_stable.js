@@ -1,8 +1,74 @@
+// Removes the generic Moodle footer info that messes with our custom footer.
 var links = document.getElementsByTagName('link');
 for( var i = 0; i < links.length; i++ ) {
 	if( links[i].rel === 'shortcut icon' ) {
 		links[i].href = 'https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/favicon.ico';
 	}
+}
+
+// Altered for the new MoodleRooms LMS
+function popup( givenName, iframeSrc, iconSrc ) {
+	// Produce a random id
+	var popupID = Math.floor( ( Math.random() * 1000 ) + 1 );
+	while ( document.getElementById( givenName.replace( /\s/g, '' ) + popupID ) != null ) {
+		popupID = Math.floor( ( Math.random() * 1000 ) + 1 );
+	}
+	
+	// Create the link and add to the container
+	var a = document.createElement("a");
+	var html = document.createTextNode(givenName);
+	a.id = "vidLink" + popupID;
+	a.className = "popupLink";
+	var icon = document.createElement("img");
+	icon.src = 'https://' + iconSrc;
+	icon.classList = "iconlarge activityicon";
+	icon.alt = givenName;
+	a.appendChild(icon);
+	a.appendChild(html);
+	document.getElementById(givenName).appendChild(a);
+	var content = document.createElement("iframe");
+	var exit = document.createElement("span");
+	var container = document.createElement("div");
+	
+	// Add dynamic actions (the popup bit)
+	a.onclick = function() {
+		// If first time clicking link, create content
+		if ( document.getElementById(givenName).children.length <= 1 ) {
+			// Create the container
+			container = document.createElement("div");
+			container.classList = "modal";
+			container.id = givenName.replace( /\s/g, '' ) + popupID;
+			// Create the close button for within the popup
+			exit = document.createElement("span");
+			exit.innerHTML = "&times;";
+			exit.classList = "close";
+			exit.id = "close" + popupID;
+			container.appendChild(exit);
+			// Create the iframe for within the popup
+			content = document.createElement("iframe");
+			content.classList = "modal-content";
+			content.id = "popupVid" + popupID;
+			content.style = "width: 1280px; height: 720px; border:none;";
+			content.src = 'https://' + iframeSrc;
+			content.setAttribute('allowfullScreen', '');
+			content.setAttribute('mozallowfullScreen', '');
+			content.setAttribute('webkitallowfullScreen', '');
+			container.appendChild(content);
+			document.getElementById(givenName).appendChild(container);
+
+			exit.onclick = function() {
+				// Hide the content
+				container.style.display = "none";
+				content.style.display = "none";
+				content.src = content.src;
+			}
+		}
+		
+		// Display the content
+		container.style.display = "block";
+		content.style.display = "block";
+	}
+	
 }
 
 /* TESTING METHODOLOGIES FOR FOOTER

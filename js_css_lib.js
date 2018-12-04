@@ -88,7 +88,7 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	a.className = "popupLink";
 	var icon = document.createElement("img");
 	icon.src = iconSrc;
-	icon.classList = "iconlarge activityicon";
+	icon.classList = "activityicon iconlarge";
 	icon.alt = givenName;
 	a.appendChild(icon);
 	a.appendChild(html);
