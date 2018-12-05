@@ -23,6 +23,11 @@ body, #page {
 	background-repeat: no-repeat;
 }
 
+div.summary, div.sectionname {
+	color: white;
+	background: none;
+}
+
 #moodle-footer {
 	background-color: #2c2c36;
 }
