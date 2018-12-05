@@ -57,10 +57,18 @@ function popupMR( givenName, iframeSrc, iconSrc ) {
 			document.getElementById(givenName).appendChild(container);
 
 			exit.onclick = function() {
-				// Hide the content
+				// Hide the content (close icon)
 				container.style.display = "none";
 				content.style.display = "none";
 				content.src = content.src;
+			}
+			exit.onkeyup = function(e) {
+				// Hide the content (esc key)
+				if( e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27 ) {
+					container.style.display = "none";
+					content.style.display = "none";
+					content.src = content.src;
+				}
 			}
 		}
 		
