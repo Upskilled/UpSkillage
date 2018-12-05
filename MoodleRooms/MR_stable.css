@@ -31,6 +31,10 @@ div.logo {
 	height: 90px;
 }
 
+span.close {
+	color: white;
+}
+
 div.footer-ups-logo, div.social-networks-outer, div.footer-copyright {
 	display: inline-block;
 	width: 30%;
