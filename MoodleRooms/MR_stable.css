@@ -58,9 +58,13 @@ li.social-ico, a.social-ico {
 	color: #ffffff;
 }
 
-a.social-ico:hover {
+a.social-ico:hover, li.social-ico:hover {
 	color: #000000;
 	text-decoration: none;
+}
+
+.snap-feature-spots-heading{
+	color: #7b1ce9;
 }
 
 .fa-facebook:before {
