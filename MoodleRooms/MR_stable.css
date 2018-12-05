@@ -84,13 +84,13 @@ li.social-ico {
 	margin: 0 0 10px 24px;
 }
 
-li.social-ico, a.social-ico {
+#moodle-footer a.social-ico {
 	font-size: 36px;
 	line-height: 42px;
 	color: #ffffff;
 }
 
-a.social-ico:hover, li.social-ico:hover {
+#moodle-footer a.social-ico:hover {
 	color: #aaaab4;
 	text-decoration: none;
 }
