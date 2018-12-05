@@ -67,6 +67,12 @@ a.social-ico:hover, li.social-ico:hover {
 	color: #7b1ce9;
 }
 
+.snap-feature-text {
+	margin: 0 0 20px;
+	text-align: left;
+	margin-top: 20px;
+}
+
 .fa-facebook:before {
 	content: "\f09a" !important;
 }
