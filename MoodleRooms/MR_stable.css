@@ -4,7 +4,7 @@ h1, h2, h3 , h4, h5, h6, div.footer-copyright {
 	font-family: 'Muli', sans-serif;
 }
 
-page-header-headings, div.footer-copyright, a.footer-copyright-link, li.breadcrumb-item, #page-mast, a > li {
+page-header-headings, div.footer-copyright, a.footer-copyright-link, li.breadcrumb-item, li.breadcrumb-item > a, div#page-mast a {
 	color: #ffffff;
 }
 
