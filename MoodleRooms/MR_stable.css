@@ -41,7 +41,7 @@ body.category-7 #page-header {
 	background-repeat: no-repeat;
 }
 
-body.category-7 #mr-nav span, body.category-7 #mr-nav path {
+body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close {
 	color: #ffffff;
 }
 
@@ -59,8 +59,17 @@ div.logo {
 	height: 90px;
 }
 
-span.close {
-	color: white;
+/*
+Front page heading colour
+*/
+.snap-feature-spots-heading{
+	color: #7b1ce9;
+}
+
+.snap-feature-text {
+	margin: 0 0 20px;
+	text-align: left;
+	margin-top: 20px;
 }
 
 div.footer-ups-logo, div.social-networks-outer, div.footer-copyright {
@@ -82,18 +91,8 @@ li.social-ico, a.social-ico {
 }
 
 a.social-ico:hover, li.social-ico:hover {
-	color: #000000;
+	color: #aaaab4;
 	text-decoration: none;
-}
-
-.snap-feature-spots-heading{
-	color: #7b1ce9;
-}
-
-.snap-feature-text {
-	margin: 0 0 20px;
-	text-align: left;
-	margin-top: 20px;
 }
 
 .fa-facebook:before {
