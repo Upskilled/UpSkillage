@@ -37,7 +37,8 @@ span.close {
 
 div.footer-ups-logo, div.social-networks-outer, div.footer-copyright {
 	display: inline-block;
-	width: 30%;
+	width: 33%;
+	text-align: center;
 }
 
 li.social-ico {
