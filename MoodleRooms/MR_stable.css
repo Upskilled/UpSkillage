@@ -19,8 +19,30 @@ div.footer-copyright, a.footer-copyright-link {
 	display: none;
 }*/
 
+/*
+Category ID's are the internal stored values in the system.
+Can also be found in the Snap theme settings under category colours.
+*/
+body.category-3 #page-header {
+	background-image: linear-gradient( 190deg, #1696ec, #1548e0 );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 body.category-6 #page-header {
 	background-image: linear-gradient( 190deg, #ec2262, #90104c );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.category-5 #page-header {
+	background-image: linear-gradient( 190deg, #f2b81e, #cc840a );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body.category-7 #page-header {
+	background-image: linear-gradient( 190deg, #2c2c36, #000000 );
 	background-size: cover;
 	background-repeat: no-repeat;
 }
