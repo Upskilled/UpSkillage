@@ -4,6 +4,8 @@ h1, h2, h3 , h4, h5, h6, div.footer-copyright {
 	font-family: 'Muli', sans-serif;
 }
 
+
+
 page-header-headings, div.footer-copyright, a.footer-copyright-link, li.breadcrumb-item, li.breadcrumb-item > a, div#page-mast a, div#page-mast h1:only-child, div#page-header a {
 	color: #ffffff;
 }
@@ -16,6 +18,12 @@ div.footer-copyright, a.footer-copyright-link {
 /*div.logininfo, div.homelink, div.sitelink, footer > a {
 	display: none;
 }*/
+
+body.category-6 #page-header {
+	background-image: linear-gradient( 190deg, #ec2262, #90104c );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 
 #page-header {
 	background-image: linear-gradient( 190deg, #7b1ce9, #1548e0 );
