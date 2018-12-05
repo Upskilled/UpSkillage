@@ -59,6 +59,18 @@ div.logo {
 	height: 90px;
 }
 
+iframe.modal-content {
+	width: 75%;
+	height: 75%;
+	min-width: 640px;
+	min-height: 360px;
+	border: none;
+}
+
+span.close {
+	color: #aaaab4;
+}
+
 /*
 Front page heading colour
 */

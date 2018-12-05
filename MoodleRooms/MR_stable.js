@@ -20,7 +20,7 @@ function popupMR( givenName, iframeSrc, iconSrc ) {
 	a.id = "vidLink" + popupID;
 	a.className = "popupLink";
 	var icon = document.createElement("img");
-	icon.src = 'https://' + iconSrc;
+	icon.src = iconSrc;
 	icon.classList = "iconlarge activityicon";
 	icon.alt = givenName;
 	a.appendChild(icon);
@@ -48,8 +48,8 @@ function popupMR( givenName, iframeSrc, iconSrc ) {
 			content = document.createElement("iframe");
 			content.classList = "modal-content";
 			content.id = "popupVid" + popupID;
-			content.style = "width: 75%; height: 75%; min-width: 640px; min-height: 360px; border:none;";
-			content.src = 'https://' + iframeSrc;
+			//content.style = "width: 75%; height: 75%; min-width: 640px; min-height: 360px; border:none;";
+			content.src = iframeSrc;
 			content.setAttribute('allowfullScreen', '');
 			content.setAttribute('mozallowfullScreen', '');
 			content.setAttribute('webkitallowfullScreen', '');
