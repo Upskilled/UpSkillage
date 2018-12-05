@@ -55,6 +55,9 @@ body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close {
 	background-color: #2c2c36;
 }
 
+/*
+Included to allow readme sections to display full width
+*/
 div.mod-indent-outer {
 	display: block;
 }
@@ -72,6 +75,7 @@ iframe.modal-content {
 }
 
 span.close {
+	margin-top: 100px;
 	color: #aaaab4;
 }
 
