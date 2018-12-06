@@ -1147,11 +1147,11 @@ function insertReadmeMR() {
 		}
 	}
 	
-	var section = document.getElementsByClassName("section");
+	var section = document.getElementsByClassName("sectionname");
 	var parent = null;
 	for( var i = 0; i < section.length; i++ ) {
 		if( section[i].innerHTML === "Read Me First!" ) {
-			parent = section[i].parentNode;
+			parent = section[i].parentNode.parentNode;
 		}
 	}
 	var contentList = null;
