@@ -158,14 +158,14 @@ function pluralsight( container ) {
 	p.appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") );
 	pluralPan.appendChild(p);
 	
-	var readme = document.getElementById(container);
-	readme.appendChild(pluralFlip);
-	readme.appendChild(pluralPan);
-	
 	//This is the jQuery for the animation
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#pluralFlip").click( function(){ $("#pluralPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
+	
+	var readme = document.getElementById(container);
+	readme.appendChild(pluralFlip);
+	readme.appendChild(pluralPan);
 }
 
 function lynda( container ) {
@@ -1161,7 +1161,7 @@ function insertReadmeMR() {
 	
 	if( contentList != null ) {
 		var li = document.createElement("li");
-		li.className = "activity label modtype_label";
+		li.className = "snap-extended-resource snap-asset activity label modtype_label";
 		li.id = "readme_main";
 		var workplaceActivity = contentList.getElementsByClassName("assign")[0];
 		contentList.insertBefore( li, workplaceActivity );
@@ -1193,7 +1193,7 @@ function insertReadmeMR() {
 			// include code review if necessary
 			if( containsReview(split[0]) ) {
 				li = document.createElement("li");
-				li.className = "activity label modtype_label";
+				li.className = "snap-extended-resource snap-asset activity label modtype_label";
 				li.id = "readme_second";
 				var codeReview = contentList.getElementsByClassName("assign")[1];
 				contentList.insertBefore( li, codeReview );
