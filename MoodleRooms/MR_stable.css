@@ -29,7 +29,7 @@ body.category-6 #page-header {
 	background-repeat: no-repeat;
 }
 
-body.category-6 ul#toc-search-results {
+body.category-6 ul#toc-search-results a {
 	color: #ec2262;
 }
 
