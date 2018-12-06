@@ -120,6 +120,10 @@ li.social-ico {
 	text-decoration: none;
 }
 
+.modal-backdrop {
+	display: none;
+}
+
 .fa-facebook:before {
 	content: "\f09a" !important;
 }
