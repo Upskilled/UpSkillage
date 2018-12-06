@@ -157,16 +157,15 @@ function pluralsight( container ) {
 	p.appendChild( document.createElement("br") );
 	p.appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") );
 	pluralPan.appendChild(p);
-
+	
 	var readme = document.getElementById(container);
+	readme.appendChild(pluralFlip);
+	readme.appendChild(pluralPan);
 	
 	//This is the jQuery for the animation
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#pluralFlip").click( function(){ $("#pluralPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	
-	readme.appendChild(pluralFlip);
-	readme.appendChild(pluralPan);
 }
 
 function lynda( container ) {
@@ -248,13 +247,12 @@ function lynda( container ) {
 	lyndaPan.appendChild(p);
 	
 	var readme = document.getElementById(container);
+	readme.appendChild(lyndaFlip);
+	readme.appendChild(lyndaPan);
 	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#lyndaFlip").click( function(){ $("#lyndaPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	
-	readme.appendChild(lyndaFlip);
-	readme.appendChild(lyndaPan);
 }
 
 function microsoft( container ) {
@@ -1153,7 +1151,7 @@ function insertReadmeMR() {
 	var parent = null;
 	for( var i = 0; i < section.length; i++ ) {
 		if( section[i].innerHTML === "Read Me First!" ) {
-			parent = section[i].parentNode.parentNode;
+			parent = section[i].parentElement.parentElement;
 		}
 	}
 	var contentList = null;
