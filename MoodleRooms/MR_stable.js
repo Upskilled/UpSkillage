@@ -248,12 +248,13 @@ function lynda( container ) {
 	lyndaPan.appendChild(p);
 	
 	var readme = document.getElementById(container);
-	readme.appendChild(lyndaFlip);
-	readme.appendChild(lyndaPan);
 	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#lyndaFlip").click( function(){ $("#lyndaPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
+	
+	readme.appendChild(lyndaFlip);
+	readme.appendChild(lyndaPan);
 }
 
 function microsoft( container ) {
