@@ -75,6 +75,7 @@ function popupMR( givenName, iframeSrc, iconSrc ) {
 		// Display the content
 		container.style.display = "block";
 		content.style.display = "block";
+		container.focus();
 	}
 	
 }
