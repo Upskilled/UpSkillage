@@ -79,8 +79,11 @@ a.popupLink:hover {
 .modal-content {
 	margin: auto;
 	display: block;
-}
-.modal-content {
+	width: 75%;
+	height: 75%;
+	min-width: 640px;
+	min-height: 360px;
+	border: none;
 	-webkit-animation-name: zoom;
 	-webkit-animation-duration: 0.6s;
 	animation-name: zoom;

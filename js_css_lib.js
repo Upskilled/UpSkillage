@@ -115,7 +115,6 @@ function popup( givenName, iframeSrc, iconSrc ) {
 			content = document.createElement("iframe");
 			content.classList = "modal-content";
 			content.id = "popupVid" + popupID;
-			content.style = "width: 1280px; height: 720px; border:none;";
 			content.src = iframeSrc;
 			content.setAttribute('allowfullScreen', '');
 			content.setAttribute('mozallowfullScreen', '');
