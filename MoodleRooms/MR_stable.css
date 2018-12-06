@@ -23,10 +23,18 @@ body.category-3 #page-header {
 	background-repeat: no-repeat;
 }
 
+body.category-6 ul#toc-search-results {
+	color: #1696ec;
+}
+
 body.category-6 #page-header {
 	background-image: linear-gradient( 190deg, #ec2262, #90104c );
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+body.category-6 ul#toc-search-results {
+	color: #ec2262;
 }
 
 body.category-5 #page-header {
@@ -35,10 +43,18 @@ body.category-5 #page-header {
 	background-repeat: no-repeat;
 }
 
+body.category-6 ul#toc-search-results {
+	color: #f2b81e;
+}
+
 body.category-7 #page-header {
 	background-image: linear-gradient( 190deg, #2c2c36, #000000 );
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+body.category-6 ul#toc-search-results {
+	color: #2c2c36;
 }
 
 body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close {
