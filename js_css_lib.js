@@ -152,6 +152,14 @@ function popup( givenName, iframeSrc, iconSrc ) {
 					content.src = content.src;
 				}
 			}
+			document.getElementById(givenName).onkeyup = function(e) {
+				// Hide the content (esc key)
+				if( e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27 ) {
+					container.style.display = "none";
+					content.style.display = "none";
+					content.src = content.src;
+				}
+			}
 		}
 		
 		// Display the content
