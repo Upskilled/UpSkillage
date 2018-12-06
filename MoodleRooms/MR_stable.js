@@ -64,11 +64,11 @@ function popupMR( givenName, iframeSrc, iconSrc ) {
 			}
 			document.onkeyup = function(e) {
 				// Hide the content (esc key)
-				/*if( e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27 ) {
+				if( e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27 ) {
 					container.style.display = "none";
 					content.style.display = "none";
 					content.src = content.src;
-				}*/
+				}
 				alert('Esc key pressed');
 			}
 			document.getElementById(givenName).onkeyup = function(e) {
