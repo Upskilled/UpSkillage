@@ -53,7 +53,7 @@ body.category-7 ul#toc-search-results a {
 	color: #2c2c36;
 }
 
-body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close {
+body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading, ol#chapters {
 	color: #ffffff;
 }
 
