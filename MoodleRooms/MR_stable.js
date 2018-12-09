@@ -166,7 +166,6 @@ function pluralsight( container ) {
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#pluralFlip").click( function(){ $("#pluralPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function lynda( container ) {
@@ -254,7 +253,6 @@ function lynda( container ) {
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#lyndaFlip").click( function(){ $("#lyndaPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function microsoft( container ) {
@@ -333,7 +331,6 @@ function microsoft( container ) {
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#microFlip").click( function(){ $("#microPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function assessment( container ) {
@@ -506,7 +503,6 @@ function assessment( container ) {
 	script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){	$("#assessmentFlip").click( function(){ $("#assessmentPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function rubric( container ) {
@@ -583,7 +579,6 @@ function rubric( container ) {
 	script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#rubricFlip").click( function(){ $("#rubricPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function grades( container ) {
@@ -649,7 +644,6 @@ function grades( container ) {
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#gradesFlip").click( function(){ $("#gradesPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function dev( container ) {
@@ -724,7 +718,6 @@ function dev( container ) {
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#devFlip").click( function(){ $("#devPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function itif( container ) {
@@ -799,7 +792,6 @@ function itif( container ) {
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#itifFlip").click( function(){ $("#itifPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function workplace( container ) {
@@ -940,7 +932,6 @@ function iot( container ) {
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#iotFlip").click( function(){ $("#iotPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function itsm( container ) {
@@ -984,7 +975,6 @@ function itsm( container ) {
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#itsmFlip").click( function(){ $("#itsmPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function itsus( container ) {
@@ -1033,7 +1023,6 @@ function itsus( container ) {
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#itsusFlip").click( function(){ $("#itsusPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
-	readme.appendChild( document.createElement('br') );
 }
 
 function courseStream( course ) {

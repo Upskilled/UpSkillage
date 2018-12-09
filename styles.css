@@ -6,6 +6,7 @@ div.panel {
 div.flip {
 	padding: 5px;
 	text-align: center;
+	margin: 0 10px;
 	background: rgba( 241, 126, 0, 0.5 );
 	background: linear-gradient( to bottom left, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) );
 }
