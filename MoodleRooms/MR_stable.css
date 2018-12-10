@@ -72,6 +72,7 @@ div.flip {
 }
 
 div.flip:hover {
+	color: #aaaab4;
 	background: rgba( 123, 28, 233, 1 );
 	background: linear-gradient( 190deg, rgba(123, 28, 233, 1), rgba(21, 72, 224, 1) );
 }
