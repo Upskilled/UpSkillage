@@ -13,7 +13,7 @@ div.footer-copyright, a.footer-copyright-link {
 Category ID's are the internal stored values in the system.
 Can also be found in the Snap theme settings under category colours.
 */
-body.category-3 #page-header, body.category-3 div.BUS:hover {
+body.category-3 #page-header, div.BUS:hover {
 	background: rgba( 22, 150, 236, 1 );
 	background: linear-gradient( 190deg, rgba(22, 150, 236, 1), rgba(21, 72, 224, 1) );
 	background-size: cover;
@@ -24,7 +24,7 @@ body.category-3 ul#toc-search-results a {
 	color: #1696ec;
 }
 
-body.category-6 #page-header, body.category-6 div.CHC:hover {
+body.category-6 #page-header, div.CHC:hover {
 	background: rgba( 236, 34, 98, 1 );
 	background: linear-gradient( 190deg, rgba(236, 34, 98, 1), rgba(144, 16, 76, 1) );
 	background-size: cover;
@@ -35,7 +35,7 @@ body.category-6 ul#toc-search-results a {
 	color: #ec2262;
 }
 
-body.category-5 #page-header, body.category-5 div.ICT:hover {
+body.category-5 #page-header, div.ICT:hover {
 	background: rgba( 242, 184, 30, 1 );
 	background: linear-gradient( 190deg, rgba(242, 184, 30, 1), rgba(204, 132, 10, 1) );
 	background-size: cover;
@@ -46,7 +46,7 @@ body.category-5 ul#toc-search-results a {
 	color: #f2b81e;
 }
 
-body.category-7 #page-header, body.category-7 div.Corp:hover {
+body.category-7 #page-header, div.Corp:hover {
 	background: rgba( 44, 44, 54, 1 );
 	background: linear-gradient( 190deg, rgba(44, 44, 54, 1), rgba(0, 0, 0, 1) );
 	background-size: cover;
