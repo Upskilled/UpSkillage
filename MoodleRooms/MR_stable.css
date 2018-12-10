@@ -18,6 +18,7 @@ body.category-3 #page-header, div.BUS:hover {
 	background: linear-gradient( 190deg, rgba(22, 150, 236, 1), rgba(21, 72, 224, 1) );
 	background-size: cover;
 	background-repeat: no-repeat;
+	color: #ffffff;
 }
 
 body.category-3 ul#toc-search-results a {
@@ -29,6 +30,7 @@ body.category-6 #page-header, div.CHC:hover {
 	background: linear-gradient( 190deg, rgba(236, 34, 98, 1), rgba(144, 16, 76, 1) );
 	background-size: cover;
 	background-repeat: no-repeat;
+	color: #ffffff;
 }
 
 body.category-6 ul#toc-search-results a {
@@ -40,6 +42,7 @@ body.category-5 #page-header, div.ICT:hover {
 	background: linear-gradient( 190deg, rgba(242, 184, 30, 1), rgba(204, 132, 10, 1) );
 	background-size: cover;
 	background-repeat: no-repeat;
+	color: #ffffff;
 }
 
 body.category-5 ul#toc-search-results a {
@@ -72,7 +75,7 @@ div.flip {
 }
 
 div.flip:hover {
-	color: #aaaab4;
+	color: #ffffff;
 	background: rgba( 123, 28, 233, 1 );
 	background: linear-gradient( 190deg, rgba(123, 28, 233, 1), rgba(21, 72, 224, 1) );
 }
