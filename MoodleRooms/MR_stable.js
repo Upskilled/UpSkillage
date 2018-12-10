@@ -6,6 +6,21 @@ for( var i = 0; i < links.length; i++ ) {
 	}
 }
 
+// Opens a linked document in a popup window
+function popupDoc( mylink, windowname ) {
+	if( !window.focus ) {
+		return true;
+	}
+	var href;
+	if( typeof(mylink) === 'string' ) {
+		href = mylink;
+	} else {
+		href = mylink.href;
+	}
+	window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
+	return false;
+}
+
 // Altered for the new MoodleRooms LMS
 function popupMR( givenName, iframeSrc, iconSrc ) {
 	// Produce a random id

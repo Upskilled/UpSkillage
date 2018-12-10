@@ -14,7 +14,6 @@ div.flip:hover {
 	background: rgba( 241, 126, 0, 1 );
 	background: linear-gradient( to bottom left, rgba(249, 176, 0, 1), rgba(230, 66, 9, 1) );
 }
-
 img.panelIcon {
 	height: 16px;
 	width: 16px;
