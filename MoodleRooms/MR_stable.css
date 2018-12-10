@@ -13,8 +13,9 @@ div.footer-copyright, a.footer-copyright-link {
 Category ID's are the internal stored values in the system.
 Can also be found in the Snap theme settings under category colours.
 */
-body.category-3 #page-header {
-	background-image: linear-gradient( 190deg, #1696ec, #1548e0 );
+body.category-3 #page-header, body.category-3 div.BUS:hover {
+	background: rgba( 22, 150, 236, 1 );
+	background: linear-gradient( 190deg, rgba(22, 150, 236, 1), rgba(21, 72, 224, 1) );
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -23,8 +24,9 @@ body.category-3 ul#toc-search-results a {
 	color: #1696ec;
 }
 
-body.category-6 #page-header {
-	background-image: linear-gradient( 190deg, #ec2262, #90104c );
+body.category-6 #page-header, body.category-6 div.CHC:hover {
+	background: rgba( 236, 34, 98, 1 );
+	background: linear-gradient( 190deg, rgba(236, 34, 98, 1), rgba(144, 16, 76, 1) );
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -33,8 +35,9 @@ body.category-6 ul#toc-search-results a {
 	color: #ec2262;
 }
 
-body.category-5 #page-header {
-	background-image: linear-gradient( 190deg, #f2b81e, #cc840a );
+body.category-5 #page-header, body.category-5 div.ICT:hover {
+	background: rgba( 242, 184, 30, 1 );
+	background: linear-gradient( 190deg, rgba(242, 184, 30, 1), rgba(204, 132, 10, 1) );
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -43,14 +46,60 @@ body.category-5 ul#toc-search-results a {
 	color: #f2b81e;
 }
 
-body.category-7 #page-header {
-	background-image: linear-gradient( 190deg, #2c2c36, #000000 );
+body.category-7 #page-header, body.category-7 div.Corp:hover {
+	background: rgba( 44, 44, 54, 1 );
+	background: linear-gradient( 190deg, rgba(44, 44, 54, 1), rgba(0, 0, 0, 1) );
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 body.category-7 ul#toc-search-results a {
 	color: #2c2c36;
+}
+
+div.panel {
+	padding: 15px;
+	text-align: justify;
+	display: none;
+}
+
+div.flip {
+	padding: 5px;
+	text-align: center;
+	margin: 10px 0;
+	background: rgba( 123, 28, 233, 0.5 );
+	background: linear-gradient( 190deg, rgba(123, 28, 233, 0.5), rgba(21, 72, 224, 0.5) );
+}
+
+div.flip:hover {
+	background: rgba( 123, 28, 233, 1 );
+	background: linear-gradient( 190deg, rgba(123, 28, 233, 1), rgba(21, 72, 224, 1) );
+}
+
+div.ICT {
+	padding: 5px;
+	text-align: center;
+	background: rgba( 242, 184, 30, 0.5 );
+	background: linear-gradient( 190deg, rgba(242, 184, 30, 0.5), rgba(204, 132, 10, 0.5) );
+}
+div.BUS {
+	padding: 5px;
+	text-align: center;
+	background: rgba( 22, 150, 236, 0.5 );
+	background: linear-gradient( 190deg, rgba(22, 150, 236, 0.5), rgba(21, 72, 224, 0.5) );
+}
+div.CHC {
+	padding: 5px;
+	text-align: center;
+	background: rgba( 236, 34, 98, 0.5 );
+	background: linear-gradient( 190deg, rgba(236, 34, 98, 0.5), rgba(144, 16, 76, 0.5) );
+}
+div.Corp {
+	color: white;
+	padding: 5px;
+	text-align: center;
+	background: rgba( 44, 44, 54, 0.5 );
+	background: linear-gradient( 190deg, rgba(44, 44, 54, 0.5), rgba(0, 0, 0, 0.5) );
 }
 
 body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading, ol#chapters {
