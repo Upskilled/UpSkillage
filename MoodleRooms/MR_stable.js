@@ -1,4 +1,4 @@
-// Removes the generic Moodle footer info that messes with our custom footer.
+// Enforce the rebranded favicon
 var links = document.getElementsByTagName('link');
 for( var i = 0; i < links.length; i++ ) {
 	if( links[i].rel === 'shortcut icon' ) {
