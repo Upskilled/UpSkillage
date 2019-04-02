@@ -153,6 +153,8 @@ div.modal {
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.9);
 	margin: 0;
+	text-align: center;
+	text-align: -moz-center;
 }
 
 iframe.modal-content {
