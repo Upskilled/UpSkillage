@@ -114,6 +114,7 @@ li.snap-asset .snap-activity .activity{
 
 ol#chapters {
 	column-count: 3 !important;
+	list-style-position: inside;
 }
 
 ol#chapters > li {
