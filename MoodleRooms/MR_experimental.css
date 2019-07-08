@@ -130,7 +130,7 @@ body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-d
 	background-repeat: no-repeat;
 }
 
-page-header-headings, div.footer-copyright, a.footer-copyright-link, li.breadcrumb-item, li.breadcrumb-item > a, div#page-mast a, div#page-mast h1:only-child, div#page-header a {
+page-header-headings, div.footer-copyright, a.footer-copyright-link, li.breadcrumb-item, li.breadcrumb-item > a, div#page-mast a:not(.chapter-title), div#page-mast h1:only-child, div#page-header a {
 	color: #ffffff;
 }
 
