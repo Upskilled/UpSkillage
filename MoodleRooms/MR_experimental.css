@@ -232,5 +232,5 @@ li.social-ico {
 /* Beginning modifications for Pseudo-Tile Format */
 
 li.snap-asset .snap-activity .activity{
-	padding-bottom: 0px;
+	padding-bottom: 0px !important;
 }
