@@ -114,11 +114,15 @@ li.snap-asset .snap-activity .activity{
 
 ol#chapters {
 	column-count: 3 !important;
-	list-style-position: inside;
+	list-style-position: inside !important;
 }
 
 ol#chapters > li {
 	background-color: white;
+}
+
+.toc-footer {
+	padding: 0px, 10px, 0px, 10px;
 }
 
 body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading {
