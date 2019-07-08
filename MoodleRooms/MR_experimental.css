@@ -238,3 +238,8 @@ li.snap-asset .snap-activity .activity{
 ol#chapters {
 	column-count: 3 !important;
 }
+
+ol#chapters > li {
+	background-color: white;
+	color: black;
+}
