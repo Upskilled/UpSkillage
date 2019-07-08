@@ -236,5 +236,5 @@ li.snap-asset .snap-activity .activity{
 }
 
 ol#chapters {
-	column-count: 3;
+	column-count: 3 !important;
 }
