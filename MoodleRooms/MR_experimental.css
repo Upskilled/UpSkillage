@@ -119,10 +119,11 @@ ol#chapters {
 
 ol#chapters > li {
 	background-color: white;
+	padding: 4px 4px 4px 0px;
 }
 
 .toc-footer {
-	padding: 0px, 10px, 0px, 10px;
+	padding: 10px, 10px, 10px, 10px;
 }
 
 body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading {
