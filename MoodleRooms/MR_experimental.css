@@ -234,3 +234,7 @@ li.social-ico {
 li.snap-asset .snap-activity .activity{
 	padding-bottom: 0px !important;
 }
+
+#chapters {
+	columns: 3;
+}
