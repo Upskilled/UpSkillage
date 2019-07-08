@@ -123,7 +123,7 @@ ol#chapters > li {
 }
 
 .toc-footer {
-	padding: 10px, 10px, 10px, 10px;
+	padding: 10px 0px 10px 0px;
 }
 
 body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading {
