@@ -6,6 +6,27 @@ for( var i = 0; i < links.length; i++ ) {
 	}
 }
 
+// COURSE FRONT PAGE REMODELLING
+
+// Grab front page content
+var frontpage;
+if( document.getElementsByClassName("content").length == 1 ) {
+	frontpage = document.getElementsByClassName("content")[0];
+}
+// Find all snap-activities and reduce bottom padding
+var frontItems = frontpage.getElementsByClassName("snap-activity");
+for( var i = 0; i < frontItems.length; i++ ) {
+	frontItems[i].style.padding = "0px";
+}
+
+// Grab table of contents
+
+// Shift content into area containing table of contents (above)
+
+// Convert table of contents into tiles and display below content
+
+
+
 // Opens a linked document in a popup window
 function popupDoc( mylink, windowname ) {
 	if( !window.focus ) {
