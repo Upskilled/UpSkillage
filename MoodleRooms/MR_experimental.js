@@ -16,6 +16,7 @@ if( document.getElementsByClassName("content").length == 1 ) {
 // Find all snap-activities and reduce bottom padding
 var frontItems = frontpage.getElementsByClassName("snap-activity");
 for( var i = 0; i < frontItems.length; i++ ) {
+	frontItems[i].stlye.color = "red";
 	frontItems[i].style.padding = "0px";
 }
 
