@@ -241,5 +241,5 @@ ol#chapters {
 
 ol#chapters > li {
 	background-color: white;
-	color: black;
+	color: #000000 !important;
 }
