@@ -165,6 +165,10 @@ iframe.modal-content {
 	border: none;
 }
 
+.modal-backdrop {
+	display: none;
+}
+
 span.close {
 	margin-top: 60px;
 	color: #aaaab4;
@@ -206,10 +210,6 @@ li.social-ico {
 	text-decoration: none;
 }
 
-.modal-backdrop {
-	display: none;
-}
-
 .fa-facebook:before {
 	content: "\f09a" !important;
 }
@@ -227,4 +227,10 @@ li.social-ico {
 }
 .fa-youtube:before {
 	content: "\f167" !important;
+}
+
+/* Beginning modifications for Pseudo-Tile Format */
+
+li.snap-asset {
+	padding-bottom: 0px;
 }
