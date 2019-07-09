@@ -124,7 +124,7 @@ ol#chapters > li {
 	margin-left: 0px !important;
 }
 
-.text.completionstatus.outoftotal .chapter-title {
+.text.completionstatus.outoftotal, .chapter-title {
 	background: #2c2c36;
 }
 
