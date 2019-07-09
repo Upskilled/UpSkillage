@@ -123,7 +123,7 @@ ol#chapters > li {
 	min-height: 9.8em;
 	margin-left: 0em !important;
 	background-image: url(https://skeksalot.github.io/UpSkillage/MoodleRooms/res/grey.png);
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 	background-position-y: bottom;
 	background-size: 3.2em;
 }
