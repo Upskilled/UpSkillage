@@ -113,7 +113,7 @@ li.snap-asset .snap-activity .activity{
 }
 
 ol#chapters {
-	column-count: 3 !important;
+	column-count: 4 !important;
 	list-style-position: inside !important;
 }
 
@@ -143,11 +143,11 @@ li.snap-visible-section > a {
 }
 
 .chapter-title {
-	font-size: 0.8em;
+	font-size: 0.7em;
 }
 
 #course-toc .text small {
-	font-size: 0.6em;
+	font-size: 0.6em !important;
 }
 
 #toc-search {
