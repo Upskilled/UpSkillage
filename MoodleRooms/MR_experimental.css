@@ -129,9 +129,12 @@ ol#chapters > li {
 	vertical-align: bottom;
 }
 
-ol#chapters > li > a[href="#section-0"], .chapter-title, .text.completionstatus.outoftotal {
+ol#chapters > li > a[href="#section-0"] {
 	margin-top: 1em;
-	color: #ffffff;
+}
+
+ol#chapters > li > a[href="#section-0"], .chapter-title, .text.completionstatus.outoftotal {
+	color: #ffffff !important;
 }
 
 #toc-search {
