@@ -121,6 +121,7 @@ ol#chapters > li {
 	background-color: white;
 	padding: 4px 0px 4px 4px;
 	min-height: 76px;
+	margin: 0px;
 }
 
 .toc-footer {
