@@ -137,6 +137,10 @@ ol#chapters > li > a[href="#section-0"], .chapter-title, .text.completionstatus.
 	color: #ffffff !important;
 }
 
+.snap-visible-section {
+	color: #aaaab4 !important;
+}
+
 #toc-search {
 	top: 0px !important;
 }
