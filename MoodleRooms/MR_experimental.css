@@ -143,11 +143,11 @@ li.snap-visible-section > a {
 }
 
 .chapter-title {
-	font-size: 0.6em;
+	font-size: 0.8em;
 }
 
-.text.completionstatus.outoftotal, .published-status {
-	font-size: 0.4em;
+#course-toc .text small {
+	font-size: 0.6em;
 }
 
 #toc-search {
