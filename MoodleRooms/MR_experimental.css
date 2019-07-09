@@ -119,9 +119,10 @@ ol#chapters {
 
 ol#chapters > li {
 	background-color: white;
-	padding: 4px 0px 4px 4px;
-	min-height: 76px;
-	margin: 0px;
+	padding: 100px 0px 4px 4px;
+	min-height: 176px;
+	margin-left: 0px !important;
+
 }
 
 .toc-footer {
@@ -129,7 +130,7 @@ ol#chapters > li {
 }
 
 .section li.snap-activity {
-	padding-bottom: 0px !important;
+	padding-bottom: 1em !important;
 }
 
 body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading {
