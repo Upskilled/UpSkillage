@@ -106,7 +106,7 @@ div.Corp {
 	background: linear-gradient( 190deg, rgba(44, 44, 54, 0.5), rgba(0, 0, 0, 0.5) );
 }
 
-/* Beginning modifications for Pseudo-Tile Format 
+/* Beginning modifications for Pseudo-Tile Format */
 
 li.snap-asset .snap-activity .activity{
 	padding-bottom: 0em !important;
@@ -167,7 +167,7 @@ li.snap-visible-section > a {
 	padding-bottom: 1em !important;
 }
 
- End of Pseudo-Tile format */
+/* End of Pseudo-Tile format */
 
 body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading {
 	color: #ffffff;
