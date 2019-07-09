@@ -8,8 +8,6 @@ for( var i = 0; i < links.length; i++ ) {
 
 // COURSE FRONT PAGE REMODELLING
 
-//document.getElementById('chapters').style.columnCount = 3;
-
 // Check URL to only remodel the frontpage of courses
 
 // Grab front page content

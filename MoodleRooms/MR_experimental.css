@@ -142,6 +142,14 @@ li.snap-visible-section > a {
 	color: #ffffff !important;
 }
 
+.chapter-title {
+	font-size: 0.6em;
+}
+
+.text.completionstatus.outoftotal, .published-status {
+	font-size: 0.4em;
+}
+
 #toc-search {
 	top: 0px !important;
 }
@@ -157,6 +165,8 @@ li.snap-visible-section > a {
 .section li.snap-activity {
 	padding-bottom: 1em !important;
 }
+
+/* End of Pseudo-Tile format */
 
 body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading {
 	color: #ffffff;
