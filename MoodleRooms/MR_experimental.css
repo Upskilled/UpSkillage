@@ -109,7 +109,7 @@ div.Corp {
 /* Beginning modifications for Pseudo-Tile Format */
 
 li.snap-asset .snap-activity .activity{
-	padding-bottom: 0px !important;
+	padding-bottom: 0em !important;
 }
 
 ol#chapters {
@@ -119,9 +119,9 @@ ol#chapters {
 
 ol#chapters > li {
 	background-color: white;
-	padding: 5.6em 0px 0px 0.4em;
+	padding: 5.6em 0em 0em 0.4em;
 	min-height: 9.8em;
-	margin-left: 0px !important;
+	margin-left: 0em !important;
 	background-image: "https://skeksalot.github.io/UpSkillage/MoodleRooms/res/grey.png";
 }
 
@@ -130,7 +130,11 @@ ol#chapters > li {
 }
 
 .toc-footer {
-	padding: 10px 0px 10px 0px;
+	padding: 0.6em 0em 0.6em 0em;
+}
+
+#course-toc #chapters li {
+	padding-bottom: 0em;
 }
 
 .section li.snap-activity {
