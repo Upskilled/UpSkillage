@@ -137,11 +137,9 @@ li.snap-visible-section > a {
 	color: #aaaab4 !important;
 }
 
-ol#chapters > li > a[href="#section-0"], .chapter-title, .text.completionstatus.outoftotal {
+.chapter-title, .text.completionstatus.outoftotal {
 	color: #ffffff !important;
 }
-
-
 
 #toc-search {
 	top: 0px !important;
