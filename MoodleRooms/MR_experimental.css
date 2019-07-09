@@ -133,13 +133,15 @@ ol#chapters > li > a[href="#section-0"] {
 	margin-top: 1em;
 }
 
+.snap-visible-section {
+	color: #aaaab4 !important;
+}
+
 ol#chapters > li > a[href="#section-0"], .chapter-title, .text.completionstatus.outoftotal {
 	color: #ffffff !important;
 }
 
-.snap-visible-section {
-	color: #aaaab4 !important;
-}
+
 
 #toc-search {
 	top: 0px !important;
