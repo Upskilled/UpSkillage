@@ -119,8 +119,8 @@ ol#chapters {
 
 ol#chapters > li {
 	background-color: white;
-	padding: 100px 0px 0px 4px;
-	min-height: 176px;
+	padding: 5.6em 0px 0px 0.4px;
+	min-height: 9.8em;
 	margin-left: 0px !important;
 
 }
