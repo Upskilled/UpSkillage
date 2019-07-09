@@ -126,7 +126,7 @@ ol#chapters > li {
 }
 
 #toc-search {
-	top: 0px;
+	top: 0px !important;
 }
 
 .toc-footer {
