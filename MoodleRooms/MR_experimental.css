@@ -122,6 +122,7 @@ ol#chapters > li {
 	padding: 5.6em 0px 0px 0.4em;
 	min-height: 9.8em;
 	margin-left: 0px !important;
+	background-image: "https://skeksalot.github.io/UpSkillage/MoodleRooms/res/grey.png";
 }
 
 .text.completionstatus.outoftotal, .chapter-title {
