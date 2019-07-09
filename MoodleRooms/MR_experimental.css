@@ -125,6 +125,10 @@ ol#chapters > li {
 
 }
 
+#toc-search {
+	top: 0px;
+}
+
 .toc-footer {
 	padding: 10px 0px 10px 0px;
 }
