@@ -125,10 +125,6 @@ ol#chapters > li {
 	background-image: "https://skeksalot.github.io/UpSkillage/MoodleRooms/res/grey.png";
 }
 
-.text.completionstatus.outoftotal, .chapter-title {
-	background: #2c2c36;
-}
-
 #toc-search {
 	top: 0px !important;
 }
