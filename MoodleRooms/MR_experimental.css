@@ -122,7 +122,10 @@ ol#chapters > li {
 	padding: 5.6em 0px 0px 0.4em;
 	min-height: 9.8em;
 	margin-left: 0px !important;
+}
 
+.text.completionstatus.outoftotal .chapter-title {
+	background: #2c2c36;
 }
 
 #toc-search {
