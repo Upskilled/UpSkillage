@@ -91,3 +91,11 @@ link.href = "https://skeksalot.github.io/UpSkillage/styles.css";
 if ( document.getElementById("UpskillStyle") == null ) {
 	document.head.appendChild(link);
 }
+
+// H5P content modifications
+var llnStyles = document.createElement('style');
+var language = document.getElementById('lln-language');
+
+llnStyles.innerHTML = '.qs-retrybutton{ display: none; }';
+
+language.window.document.getElementsByTagName('head').appendChild(llnStyles);
