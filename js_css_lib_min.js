@@ -96,5 +96,11 @@ if ( document.getElementById("UpskillStyle") == null ) {
 
 var llnStyles = document.createElement('style');
 llnStyles.innerHTML = '.qs-retrybutton{ display: none; }';
-var language = document.getElementById('lln-language');
-language.window.document.head.appendChild(llnStyles);
+var handle = setInterval( function(){
+	if( document.getElementById('lln-language') != null ) {
+		var language = document.getElementById('lln-language');
+		language.window.document.head.appendChild(llnStyles);
+		clearInterval(handle);
+	}
+}, 200 );
+
