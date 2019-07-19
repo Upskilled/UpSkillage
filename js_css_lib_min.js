@@ -93,14 +93,15 @@ if ( document.getElementById("UpskillStyle") == null ) {
 }
 
 // H5P content modifications
-
+/*
 var llnStyles = document.createElement('style');
 llnStyles.innerHTML = '.qs-retrybutton{ display: none; }';
 var handle = setInterval( function(){
-	if( document.getElementById('lln-language') != null ) {
-		var language = document.getElementById('lln-language');
+	var language = document.getElementById('lln-language');
+	if( language != null ) {
 		language.window.document.head.appendChild(llnStyles);
 		clearInterval(handle);
 	}
 }, 200 );
 
+*/
