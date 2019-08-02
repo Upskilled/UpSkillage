@@ -15,12 +15,12 @@ div.flip {
 	padding: 5px;
 	text-align: center;
 	margin: 10px 0;
-	background: rgba( 241, 126, 0, 0.5 );
-	background: linear-gradient( to bottom left, rgba(249, 176, 0, 0.5), rgba(230, 66, 9, 0.5) );
+	background: rgba( 204, 132, 10, 0.5 );
+	background: linear-gradient( to bottom left, rgba(242, 184, 30, 0.5), rgba(204, 132, 10, 0.5) );
 }
 div.flip:hover {
-	background: rgba( 241, 126, 0, 1 );
-	background: linear-gradient( to bottom left, rgba(249, 176, 0, 1), rgba(230, 66, 9, 1) );
+	background: rgba( 204, 132, 10, 1 );
+	background: linear-gradient( to bottom left, rgba(242, 184, 30, 1), rgba(204, 132, 10, 1) );
 }
 img.panelIcon {
 	height: 16px;
@@ -91,4 +91,8 @@ td.vidCell {
 
 table.vidContainer {
 	margin: 0;
+}
+
+.upfrontLink, .upfrontLink:link, .upfrontLink:visited  {
+	color: #ffffff;
 }
