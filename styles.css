@@ -93,6 +93,6 @@ table.vidContainer {
 	margin: 0;
 }
 
-.upfrontLink, .upfrontLink:link, .upfrontLink:visited  {
+div.tileoutlinecontent > a, div.tileoutlinecontent > a:link, div.tileoutlinecontent > a:visited  {
 	color: #ffffff;
 }
