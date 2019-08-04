@@ -93,6 +93,6 @@ table.vidContainer {
 	margin: 0;
 }
 
-div.tileoutlinecontent > a, div.tileoutlinecontent > a:link, div.tileoutlinecontent > a:visited  {
+div.tileoutlinecontent a, div.tileoutlinecontent a:link, div.tileoutlinecontent a:visited  {
 	color: #ffffff;
 }
