@@ -322,6 +322,81 @@ function lynda( container ) {
 	readme.appendChild(script);
 }
 
+function linkedin( container ) {
+	var linkedinFlip = document.createElement("div");
+	linkedinFlip.id = "linkedinFlip";
+	linkedinFlip.className = "flip";
+	linkedinFlip.style.padding = "5px";
+	var span = document.createElement("span");
+	var img = document.createElement("img");
+	img.src = "https://www.google.com/s2/favicons?domain=linkedin.com/learning";
+	img.className = "panelIcon";
+	img.alt = " ";
+	span.appendChild(img);
+	span.appendChild( document.createTextNode(" LinkedIn Learning") );
+	span.style.fontWeight = "bold";
+	linkedinFlip.appendChild(span);
+	span = document.createElement("span");
+	span.appendChild( document.createTextNode(" (show/hide)") );
+	linkedinFlip.appendChild(span);
+	
+	var linkedinPan = document.createElement("div");
+	linkedinPan.id = "linkedinPan";
+	linkedinPan.className= "panel";
+	linkedinPan.style.padding = "15px";
+	var p = document.createElement("p");
+	p.appendChild( document.createTextNode("Each topic of eLearning will have its own link for you to follow to specific LinkedIn Learning. This eLearning is only accessible via the links in MyUpskilled. The example below shows what the LinkedIn Learning looks like in your course.") );
+	linkedinPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Once you are in a LinkedIn Learning course you will have access to the full catalogue should you wish to undertake additional studies separate to the assigned topics in your course.") );
+	linkedinPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("When you log off MyUpskilled your authentication will stop.") );
+	linkedinPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Example:") );
+	linkedinPan.appendChild(p);
+	p = document.createElement("p");
+	span = document.createElement("span");
+	span.style.color = "#606060";
+	img = document.createElement("img");
+	img.src = "https://www.google.com/s2/favicons?domain=linkedin.com/learning";
+	img.className = "activityicon iconlarge";
+	img.alt = " ";
+	span.appendChild(img);
+	span.appendChild( document.createTextNode(" eLearning - Topic Name Here") );
+	p.appendChild(img);
+	p.appendChild(span);
+	linkedinPan.appendChild(p);
+	p = document.createElement("p");
+	p.appendChild( document.createTextNode("Most eLearning has an audio component You will find the experience better if you have speakers on your computer.") );
+	p.appendChild( document.createElement("br") );
+	p.appendChild( document.createTextNode("Tip - If you are in an office with others, it may be more appropriate to have a set of headphones.") );
+	p.appendChild( document.createElement("br") );
+	p.appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") );
+	linkedinPan.appendChild(p);
+	p = document.createElement("p");
+	img = document.createElement("img");
+	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&component=core&rev=1447640343&image=f%2Fpdf-24";
+	img.className = "activityicon iconlarge";
+	img.alt = " ";
+	p.appendChild(img);
+	var a = document.createElement("a");
+	a.className = "popupLink";
+	a.onclick = function() { popupDoc( "https://rebrand.ly/LinkedinCookies", 'cookies' ); };
+	a.appendChild( document.createTextNode("Guide - How to add cookies for LinkedIn Learning") );
+	p.appendChild(a);
+	linkedinPan.appendChild(p);
+	
+	var readme = document.getElementById(container);
+	readme.appendChild(linkedinFlip);
+	readme.appendChild(linkedinPan);
+	
+	var script = document.createElement("script");
+	script.innerHTML = '$(document).ready( function(){ $("#linkedinFlip").click( function(){ $("#linkedinPan").slideToggle("fast"); } );} );';
+	readme.appendChild(script);
+}
+
 function microsoft( container ) {
 	var microFlip = document.createElement("div");
 	microFlip.id = "microFlip";
@@ -1245,7 +1320,8 @@ function insertReadme() {
 			}
 			//regular readme stuff for all courses
 			pluralsight("readme_main");
-			lynda("readme_main");
+			//lynda("readme_main");
+			linkedin("readme_main");
 			microsoft("readme_main");
 			assessment("readme_main");
 			rubric("readme_main");
@@ -1278,7 +1354,8 @@ function insertReadme() {
 				itsus("readme_main");
 			}
 			pluralsight("readme_main");
-			lynda("readme_main");
+			//lynda("readme_main");
+			linkedin("readme_main");
 			microsoft("readme_main");
 			assessment("readme_main");
 			rubric("readme_main");
