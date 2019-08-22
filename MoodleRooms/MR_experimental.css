@@ -108,17 +108,17 @@ div.Corp {
 
 /* Beginning modifications for Pseudo-Tile Format */
 
-li.snap-asset .snap-activity .activity{
+body.category-14 li.snap-asset .snap-activity .activity{
 	padding-bottom: 0em !important;
 }
 
-ol#chapters {
+body.category-14 ol#chapters {
 	column-count: 4 !important;
 	list-style-position: inside !important;
 	column-gap: 0.5em;
 }
 
-ol#chapters > li {
+body.category-14 ol#chapters > li {
 	color: #000000;
 	background-color: #FFFFFF;
 	padding: 5em 0em 0em 0.4em;
@@ -132,39 +132,39 @@ ol#chapters > li {
 	vertical-align: bottom;
 }
 
-ol#chapters > li > a[href="#section-0"] {
+body.category-14 ol#chapters > li > a[href="#section-0"] {
 	margin-top: 1.5em;
 }
 
-li.snap-visible-section > a {
+body.category-14 li.snap-visible-section > a {
 	color: #aaaab4 !important;
 }
 
-.chapter-title, .text.completionstatus.outoftotal {
+body.category-14 .chapter-title, .text.completionstatus.outoftotal {
 	color: #ffffff !important;
 }
 
-.chapter-title {
+body.category-14 .chapter-title {
 	font-size: 0.7em;
 }
 
-#course-toc .text small {
+body.category-14 #course-toc .text small {
 	font-size: 0.6em !important;
 }
 
-#toc-search {
+body.category-14 #toc-search {
 	top: 0px !important;
 }
 
-.toc-footer {
+body.category-14 .toc-footer {
 	padding: 0.6em 0em 0.6em 0em;
 }
 
-#course-toc #chapters li {
+body.category-14 #course-toc #chapters li {
 	padding-bottom: 0em;
 }
 
-.section li.snap-activity {
+body.category-14 .section li.snap-activity {
 	padding-bottom: 1em !important;
 }
 
