@@ -13,6 +13,7 @@ div.footer-copyright, a.footer-copyright-link {
 Category ID's are the internal stored values in the system.
 Can also be found in the Snap theme settings under category colours.
 */
+
 body.category-3 #page-header, div.BUS:hover {
 	background: rgba( 22, 150, 236, 1 );
 	background: linear-gradient( 190deg, rgba(22, 150, 236, 1), rgba(21, 72, 224, 1) );
@@ -170,18 +171,18 @@ body.category-14 .section li.snap-activity {
 
 /* End of Pseudo-Tile format */
 
-body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading {
-	color: #ffffff;
-}
-
 #page-header {
 	background-image: linear-gradient( 190deg, #7b1ce9, #1548e0 );
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-page-header-headings, div.footer-copyright, a.footer-copyright-link, li.breadcrumb-item, li.breadcrumb-item > a, div#page-mast a:not(.chapter-title), div#page-mast h1:only-child, div#page-header a:not(.chapter-title) {
+body.category-7 #mr-nav span, body.category-7 #mr-nav path, span.close, h2#toc-desktop-menu-heading, .chapter-title, .text.completionstatus.outoftotal, page-header-headings, div.footer-copyright, a.footer-copyright-link, li.breadcrumb-item, li.breadcrumb-item > a, div#page-mast a:not(.chapter-title), div#page-mast h1:only-child, div#page-header a:not(.chapter-title) {
 	color: #ffffff;
+}
+
+li.snap-visible-section > a {
+	color: #aaaab4 !important;
 }
 
 #moodle-footer {
@@ -191,6 +192,7 @@ page-header-headings, div.footer-copyright, a.footer-copyright-link, li.breadcru
 /*
 Included to allow readme sections to display full width
 */
+
 div.mod-indent-outer {
 	display: block;
 }
