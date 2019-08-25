@@ -117,6 +117,78 @@ function popupMR( givenName, iframeSrc, iconSrc ) {
 	
 }
 
+// Popup function to overwrite old one used in Andro site
+function popup( givenName, iframeSrc, iconSrc ) {
+	// Produce a random id
+	var popupID = Math.floor( ( Math.random() * 1000 ) + 1 );
+	while ( document.getElementById( givenName.replace( /\s/g, '' ) + popupID ) != null ) {
+		popupID = Math.floor( ( Math.random() * 1000 ) + 1 );
+	}
+	
+	// Create the link and add to the container
+	var a = document.createElement("a");
+	var html = document.createTextNode(givenName);
+	a.id = "vidLink" + popupID;
+	a.className = "popupLink";
+	var icon = document.createElement("img");
+	icon.src = iconSrc;
+	icon.classList = "activityicon iconlarge";
+	icon.alt = givenName;
+	a.appendChild(icon);
+	a.appendChild(html);
+	document.getElementById(givenName).appendChild(a);
+	var content = document.createElement("iframe");
+	var exit = document.createElement("span");
+	var container = document.createElement("div");
+	
+	// Add dynamic actions (the popup bit)
+	a.onclick = function() {
+		// If first time clicking link, create content
+		if ( document.getElementById(givenName).children.length <= 1 ) {
+			// Create the container
+			container = document.createElement("div");
+			container.classList = "modal";
+			container.id = givenName.replace( /\s/g, '' ) + popupID;
+			// Create the close button for within the popup
+			exit = document.createElement("span");
+			exit.innerHTML = "&times;";
+			exit.classList = "close";
+			exit.id = "close" + popupID;
+			container.appendChild(exit);
+			// Create the iframe for within the popup
+			content = document.createElement("iframe");
+			content.classList = "modal-content";
+			content.id = "popupVid" + popupID;
+			content.src = iframeSrc;
+			content.setAttribute('allowfullScreen', '');
+			content.setAttribute('mozallowfullScreen', '');
+			content.setAttribute('webkitallowfullScreen', '');
+			container.appendChild(content);
+			document.getElementById(givenName).appendChild(container);
+
+			exit.onclick = function() {
+				// Hide the content (close icon)
+				container.style.display = "none";
+				content.style.display = "none";
+				content.src = content.src;
+			}
+			document.onkeyup = function(e) {
+				// Hide the content (esc key)
+				if( e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27 ) {
+					container.style.display = "none";
+					content.style.display = "none";
+					content.src = content.src;
+				}
+			}
+		}
+		
+		// Display the content
+		container.style.display = "block";
+		content.style.display = "block";
+	}
+	
+}
+
 // Used to hide/show the link to foundations courses
 function showCourse( course ) {
 	var check;
