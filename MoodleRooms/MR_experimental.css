@@ -143,6 +143,9 @@ body.category-14 li.snap-visible-section > a {
 
 body.category-14 .chapter-title, .text.completionstatus.outoftotal {
 	color: #ffffff !important;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 body.category-14 .chapter-title {
