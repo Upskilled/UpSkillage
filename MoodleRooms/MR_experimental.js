@@ -1326,15 +1326,30 @@ function insertReadmeMR() {
 
 // *** Pseudo-Tile click event handling
 
-// Find each tile in table of contents
+function registerTocListeners() {
+	// Find each tile in table of contents
+	var toc = document.getElementById('chapters');
+	var tiles = toc.getElementsByClassName('li');
 
-var toc = null;
-while( toc == null ) {
-	toc = document.getElementById('chapters');
+	// Add event listener for clicks, direct to the contained hyperlink
+	for( var i = 0; i < tiles.length; i++ ) {
+		tiles[i].addEventListener( "onclick", function(){ tiles[i].getElementsByTagName('a')[0].click() }, true );
+	}
 }
-var tiles = toc.getElementsByClassName('li');
 
-// Add event listener for clicks, direct to the contained hyperlink
-for( var i = 0; i < tiles.length; i++ ) {
-	tiles[i].addEventListener( "onclick", function(){ tiles[i].getElementsByTagName('a')[0].click() }, true );
+// Using script to add onload funtion without wiping existing ones
+// https://stackoverflow.com/questions/807878/javascript-that-executes-after-page-load
+if( window.attachEvent ) {
+	window.attachEvent( 'onload', registerTocListeners );
+} else {
+	if( window.onload ) {
+		var curronload = window.onload;
+		var newonload = function(evt) {
+			curronload(evt);
+			registerTocListeners();
+		};
+		window.onload = newonload;
+	} else {
+		window.onload = registerTocListeners;
+	}
 }
