@@ -216,6 +216,10 @@ body.category-14 .section li.snap-activity {
 	padding-bottom: 1em !important;
 }
 
+body.category-14 #toc-search-input {
+	margin-top: 1em;
+}
+
 /* Styling for readme dropdowns */
 
 div.panel {

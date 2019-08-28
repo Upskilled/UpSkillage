@@ -1341,6 +1341,7 @@ function registerTocListeners() {
 // Using script to add onload funtion without wiping existing ones
 // https://stackoverflow.com/questions/807878/javascript-that-executes-after-page-load
 // Modified to only occur on course pages
+alert(window.location);
 if( window.location.startsWith('https://upskilled-sandbox.mrooms.net/course/view.php') || window.location.startsWith('http://upskilled-sandbox.mrooms.net/course/view.php') ) {
 	if( window.attachEvent ) {
 		window.attachEvent( 'onload', registerTocListeners );
