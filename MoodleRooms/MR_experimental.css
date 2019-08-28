@@ -12,7 +12,7 @@ h1, h2, h3 , h4, h5, h6, div.footer-copyright {
 	background-repeat: no-repeat;
 }
 
-.snap-feature-spots-heading {
+.snap-feature-spots-heading, ::selection {
 	color: #7b1ce9;
 }
 
@@ -61,7 +61,7 @@ body.category-3 #page-header, body.category-15 #page-header, div.BUS:hover {
 	color: #ffffff;
 }
 
-body.category-3 ul#toc-search-results a, body.category-15 ul#toc-search-results a {
+body.category-3 ul#toc-search-results a, body.category-15 ul#toc-search-results a, ::selection {
 	color: #1696ec;
 }
 
@@ -73,7 +73,7 @@ body.category-6 #page-header, body.category-16 #page-header div.CHC:hover {
 	color: #ffffff;
 }
 
-body.category-6 ul#toc-search-results a, body.category-16 ul#toc-search-results a {
+body.category-6 ul#toc-search-results a, body.category-16 ul#toc-search-results a, ::selection {
 	color: #ec2262;
 }
 
@@ -85,7 +85,7 @@ body.category-5 #page-header, body.category-17 #page-header, div.ICT:hover {
 	color: #ffffff;
 }
 
-body.category-5 ul#toc-search-results a, body.category-17 ul#toc-search-results a {
+body.category-5 ul#toc-search-results a, body.category-17 ul#toc-search-results a, ::selection {
 	color: #f2b81e;
 }
 
