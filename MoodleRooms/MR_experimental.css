@@ -130,10 +130,6 @@ body.category-14 ol#chapters > li {
 	vertical-align: bottom;
 }
 
-body.category-14 ol#chapters > li > a[href="#section-0"] {
-	margin-top: 1.5em;
-}
-
 body.category-14 li.snap-visible-section > a {
 	color: #aaaab4 !important;
 }
@@ -147,7 +143,6 @@ body.category-14 .chapter-title, body.category-14 .text.completionstatus.outofto
 
 body.category-14 .chapter-title {
 	font-size: 0.7em;
-	margin-top: 0;
 }
 
 body.category-14 #course-toc .text small {
