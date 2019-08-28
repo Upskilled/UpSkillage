@@ -1329,8 +1329,10 @@ function insertReadmeMR() {
 // Find each tile in table of contents
 var toc;
 var timer = setInterval( function() {
-	toc = document.getElementById('chapters')
-	clearInterval(timer);
+	toc = document.getElementById('chapters');
+	if( toc != null ) {
+		clearInterval(timer);
+	}
 }, 500 );
 
 var tiles = toc.getElementsByClassName('li');
