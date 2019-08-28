@@ -1330,7 +1330,7 @@ function registerTocListeners() {
 	// Find each tile in table of contents
 	alert('Adding listeners');
 	var toc = document.getElementById('chapters');
-	var tiles = toc.getElementsByClassName('li');
+	var tiles = toc.getElementsByTagName('li');
 
 	// Add event listener for clicks, direct to the contained hyperlink
 	for( var i = 0; i < tiles.length; i++ ) {
