@@ -48,6 +48,10 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a {
 	background: #f6f6fa;
 }
 
+.snap-assettype {
+	display: none;
+}
+
 /*div#page-mast a:not(.chapter-title), div#page-mast h1:only-child, div#page-header a:not(.chapter-title), page-header-headings {
 	color: #ffffff !important;
 }*/
