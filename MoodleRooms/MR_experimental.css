@@ -29,7 +29,7 @@ li.snap-visible-section > a {
 	color: #2c2c36 !important;
 }
 
-li.breadcrumb-item, li.breadcrumb-item > a, h2#toc-desktop-menu-heading, .chapter-title, .text.completionstatus.outoftotal {
+li.breadcrumb-item, li.breadcrumb-item > a, h2#toc-desktop-menu-heading, .chapter-title, .text.completionstatus.outoftotal, div#page-header a {
 	/* Text colouring for breadcrumbs, header and items in the table of contents */
 	color: #ffffff;
 }
