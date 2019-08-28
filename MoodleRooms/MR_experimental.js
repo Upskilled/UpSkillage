@@ -1329,7 +1329,7 @@ function insertReadmeMR() {
 // Find each tile in table of contents
 
 var toc = null;
-while( toc = null ) {
+while( toc == null ) {
 	toc = document.getElementById('chapters');
 }
 var tiles = toc.getElementsByClassName('li');
