@@ -12,6 +12,9 @@ for( var i = 0; i < links.length; i++ ) {
 var toc = document.getElementById('chapters').getElementsByClassName('li');
 
 // Add event listener for clicks, direct to the contained hyperlink
+for( var i = 0; i < toc.length; i++ ) {
+	toc[i].addEventListener( "onclick", function(){ toc[i].getElementsByTagName('a')[0].click() }, true );
+}
 
 // *** FUNCTION DEFINITIONS ***
 
