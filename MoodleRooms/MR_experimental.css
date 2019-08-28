@@ -186,6 +186,10 @@ body.category-14 ol#chapters > li.snap-visible-section {
 	opacity: 0.7;
 }
 
+body.category-14 ol#chapters > li.snap-visible-section:hover {
+	cursor: auto;
+}
+
 body.category-14 li.snap-visible-section > a {
 	color: #aaaab4 !important;
 }
