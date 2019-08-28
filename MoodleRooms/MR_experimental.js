@@ -1328,14 +1328,10 @@ function insertReadmeMR() {
 
 // Find each tile in table of contents
 
-var timer = setInterval( function() {
-	var check = document.getElementById('chapters');
-	if( check != null ) {
-		clearInterval(timer);
-	}
-}, 500 );
-
-var toc = document.getElementById('chapters');;
+var toc = null;
+while( toc = null ) {
+	toc = document.getElementById('chapters');
+}
 var tiles = toc.getElementsByClassName('li');
 
 // Add event listener for clicks, direct to the contained hyperlink
