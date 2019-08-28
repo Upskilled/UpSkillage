@@ -38,7 +38,7 @@ li.breadcrumb-item, li.breadcrumb-item > a, h2#toc-desktop-menu-heading, .chapte
 	margin: 0;
 }
 
-#snap-course-wrapper > div > div {
+#snap-course-wrapper > div > div:first-child {
 	background: #f6f6fa;
 }
 
