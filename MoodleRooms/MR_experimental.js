@@ -6,16 +6,6 @@ for( var i = 0; i < links.length; i++ ) {
 	}
 }
 
-// *** Pseudo-Tile click event handling
-
-// Find each tile in table of contents
-var toc = document.getElementById('chapters').getElementsByClassName('li');
-
-// Add event listener for clicks, direct to the contained hyperlink
-for( var i = 0; i < toc.length; i++ ) {
-	toc[i].addEventListener( "onclick", function(){ toc[i].getElementsByTagName('a')[0].click() }, true );
-}
-
 // *** FUNCTION DEFINITIONS ***
 
 // Opens a linked document in a popup window
@@ -1332,4 +1322,20 @@ function insertReadmeMR() {
 			}
 		}
 	}
+}
+
+// *** Pseudo-Tile click event handling
+
+// Find each tile in table of contents
+var toc;
+var timer = setInterval( function() {
+	toc = document.getElementById('chapters')
+	clearInterval(timer);
+}, 500 );
+
+var tiles = toc.getElementsByClassName('li');
+
+// Add event listener for clicks, direct to the contained hyperlink
+for( var i = 0; i < tiles.length; i++ ) {
+	tiles[i].addEventListener( "onclick", function(){ tiles[i].getElementsByTagName('a')[0].click() }, true );
 }
