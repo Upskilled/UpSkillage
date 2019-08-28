@@ -111,7 +111,7 @@ body.category-14 li.snap-asset .snap-activity .activity {
 }
 
 body.category-14 ol#chapters {
-	column-count: 1 !important;
+	column-count: 2 !important;
 	list-style-position: inside !important;
 	column-gap: 0.5em;
 }
