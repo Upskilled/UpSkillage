@@ -1328,6 +1328,7 @@ function insertReadmeMR() {
 
 function registerTocListeners() {
 	// Find each tile in table of contents
+	alert('Adding listeners');
 	var toc = document.getElementById('chapters');
 	var tiles = toc.getElementsByClassName('li');
 
