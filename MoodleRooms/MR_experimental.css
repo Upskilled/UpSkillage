@@ -6,6 +6,10 @@ h1, h2, h3 , h4, h5, h6, div.footer-copyright {
 	font-family: 'Muli', sans-serif;
 }
 
+.theme-snap#page-login-index #page {
+	background: #ffffff;
+}
+
 #page-header {
 	background-image: linear-gradient( 190deg, #7b1ce9, #1548e0 );
 	background-size: cover;
@@ -35,8 +39,8 @@ li.snap-visible-section > a {
 	color: #2c2c36 !important;
 }
 
-li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a {
-	/* Text colouring for breadcrumbs and header */
+li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #chapters a, #chapters .text.completionstatus.outoftotal, #toc-desktop-menu-heading {
+	/* Text colouring for breadcrumbs, toc and header */
 	color: #ffffff;
 }
 
@@ -45,7 +49,7 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a {
 }
 
 #snap-course-wrapper > div > div:first-child {
-	background: #f6f6fa;
+	background: #aaaab4;
 }
 
 .snap-assettype {
