@@ -151,7 +151,7 @@ body.category-14 ol#chapters > li {
 	background-image: url(https://skeksalot.github.io/UpSkillage/MoodleRooms/res/grey.png);
 	background-repeat: repeat-x;
 	background-position-y: bottom;
-	background-size: 2.1em;
+	background-size: 2.4em;
 	vertical-align: bottom;
 }
 
@@ -188,10 +188,6 @@ body.category-14 #toc-search {
 
 body.category-14 .toc-footer {
 	padding: 0.6em 0em 0.6em 0em;
-}
-
-body.category-14 #course-toc #chapters li {
-	padding-bottom: 0em;
 }
 
 body.category-14 .section li.snap-activity {
