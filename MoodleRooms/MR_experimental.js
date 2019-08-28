@@ -6,29 +6,14 @@ for( var i = 0; i < links.length; i++ ) {
 	}
 }
 
-// COURSE FRONT PAGE REMODELLING
+// *** Pseudo-Tile click event handling
 
-// Check URL to only remodel the frontpage of courses
+// Find each tile in table of contents
+var toc = document.getElementById('chapters').getElementsByClassName('li');
 
-// Grab front page content
-var frontpage;
-if( document.getElementsByClassName("content").length == 1 ) {
-	frontpage = document.getElementsByClassName("content")[0];
-}
-// Find all snap-activities and reduce bottom padding
-/*var frontItems = frontpage.getElementsByClassName("snap-activity");
-for( var i = 0; i < frontItems.length; i++ ) {
-	frontItems[i].stlye.color = "red";
-	frontItems[i].style.padding = "0px";
-}*/
+// Add event listener for clicks, direct to the contained hyperlink
 
-// Grab table of contents
-
-// Shift content into area containing table of contents (above)
-
-// Convert table of contents into tiles and display below content
-
-
+// *** FUNCTION DEFINITIONS ***
 
 // Opens a linked document in a popup window
 function popupDoc( mylink, windowname ) {

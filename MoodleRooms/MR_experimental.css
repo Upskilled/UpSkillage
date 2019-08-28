@@ -37,6 +37,7 @@ a.popupLink:hover {
 
 li.snap-visible-section > a {
 	color: #2c2c36 !important;
+	cursor: auto;
 }
 
 li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #chapters a, #chapters .text.completionstatus.outoftotal, #toc-desktop-menu-heading {
@@ -57,7 +58,6 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 }
 
 #toc-search-input {
-	margin: 0.5em;
 	background-color: #ffffff;
 	background-image: url(https://upskilled-sandbox.mrooms.net/theme/image.php/snap/theme/1566569217/search);
 	background-size: 1.5em;
@@ -213,6 +213,10 @@ body.category-14 .toc-footer {
 
 body.category-14 .section li.snap-activity {
 	padding-bottom: 1em !important;
+}
+
+body.category-14 #toc-search-input {
+	margin: 0.5em;
 }
 
 /* Styling for readme dropdowns */
