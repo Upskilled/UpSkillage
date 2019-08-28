@@ -1333,7 +1333,7 @@ function registerTocListeners() {
 
 	// Add event listener for clicks, direct to the contained hyperlink
 	for( var i = 0; i < tiles.length; i++ ) {
-		tiles[i].addEventListener( "onclick", function(){ tiles[i].getElementsByTagName('a')[0].click() }, true );
+		tiles[i].addEventListener( 'click', function(){ tiles[i].getElementsByTagName('a')[0].click() }, true );
 	}
 }
 
