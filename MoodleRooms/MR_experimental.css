@@ -138,7 +138,7 @@ body.category-14 li.snap-visible-section > a {
 	color: #aaaab4 !important;
 }
 
-body.category-14 .chapter-title, .text.completionstatus.outoftotal {
+body.category-14 .chapter-title, body.category-14 .text.completionstatus.outoftotal {
 	color: #ffffff !important;
 	white-space: nowrap;
     overflow: hidden;
