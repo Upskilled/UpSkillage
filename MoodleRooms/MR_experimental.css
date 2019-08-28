@@ -40,7 +40,7 @@ li.snap-visible-section > a {
 	cursor: auto;
 }
 
-li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #chapters a, #chapters .text.completionstatus.outoftotal, #toc-desktop-menu-heading {
+li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #chapters a, #chapters .text.completionstatus.outoftotal, #toc-desktop-menu-heading, #page-mast {
 	/* Text colouring for breadcrumbs, toc and header */
 	color: #ffffff;
 }
