@@ -295,6 +295,10 @@ div.footer-ups-logo, div.social-networks-outer, div.footer-copyright {
 	text-align: center;
 }
 
+ul.social-networks {
+	padding: 0;
+}
+
 li.social-ico {
 	display: inline-block;
 	vertical-align: middle;
