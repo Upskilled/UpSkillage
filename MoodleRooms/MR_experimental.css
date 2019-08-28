@@ -104,7 +104,7 @@ body.category-7 #mr-nav span, body.category-7 #mr-nav path {
 	color: #ffffff;
 }
 
-/* Beginning modifications for Pseudo-Tile Format */
+/* Modifications for Pseudo-Tile Format */
 
 body.category-14 li.snap-asset .snap-activity .activity {
 	padding-bottom: 0em !important;
@@ -147,6 +147,7 @@ body.category-14 .chapter-title, body.category-14 .text.completionstatus.outofto
 
 body.category-14 .chapter-title {
 	font-size: 0.7em;
+	margin-top: 0;
 }
 
 body.category-14 #course-toc .text small {
