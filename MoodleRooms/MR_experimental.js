@@ -1334,23 +1334,26 @@ function registerTocListeners() {
 
 	// Add event listener for clicks, direct to the contained hyperlink
 	for( var i = 0; i < tiles.length; i++ ) {
-		tiles[i].addEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, true );
+		tiles[i].addEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
 	}
 }
 
 // Using script to add onload funtion without wiping existing ones
 // https://stackoverflow.com/questions/807878/javascript-that-executes-after-page-load
-if( window.attachEvent ) {
-	window.attachEvent( 'onload', registerTocListeners );
-} else {
-	if( window.onload ) {
-		var curronload = window.onload;
-		var newonload = function(evt) {
-			curronload(evt);
-			registerTocListeners();
-		};
-		window.onload = newonload;
+// Modified to only occur on course pages
+if( window.location.startsWith('https://upskilled-sandbox.mrooms.net/course/view.php') || window.location.startsWith('http://upskilled-sandbox.mrooms.net/course/view.php') ) {
+	if( window.attachEvent ) {
+		window.attachEvent( 'onload', registerTocListeners );
 	} else {
-		window.onload = registerTocListeners;
+		if( window.onload ) {
+			var curronload = window.onload;
+			var newonload = function(evt) {
+				curronload(evt);
+				registerTocListeners();
+			};
+			window.onload = newonload;
+		} else {
+			window.onload = registerTocListeners;
+		}
 	}
 }

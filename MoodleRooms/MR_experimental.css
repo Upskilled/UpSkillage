@@ -63,6 +63,7 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 	background-size: 1.5em;
 	background-repeat: no-repeat;
 	background-position: center;
+	margin-right: 0.5em;
 }
 
 #toc-search-input:focus {
@@ -213,10 +214,6 @@ body.category-14 .toc-footer {
 
 body.category-14 .section li.snap-activity {
 	padding-bottom: 1em !important;
-}
-
-body.category-14 #toc-search-input {
-	margin: 0.5em;
 }
 
 /* Styling for readme dropdowns */
