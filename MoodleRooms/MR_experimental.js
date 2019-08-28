@@ -1327,14 +1327,15 @@ function insertReadmeMR() {
 // *** Pseudo-Tile click event handling
 
 // Find each tile in table of contents
-var toc;
+
 var timer = setInterval( function() {
-	toc = document.getElementById('chapters');
-	if( toc != null ) {
+	var check = document.getElementById('chapters');
+	if( check != null ) {
 		clearInterval(timer);
 	}
 }, 500 );
 
+var toc = document.getElementById('chapters');;
 var tiles = toc.getElementsByClassName('li');
 
 // Add event listener for clicks, direct to the contained hyperlink
