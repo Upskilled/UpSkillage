@@ -1345,7 +1345,7 @@ function registerTocListeners() {
 // Modified to only occur on course pages
 if( window.location.pathname.startsWith('/course/view.php') || window.location.pathname.startsWith('/course/view.php') ) {
 	// Page is a course, continue
-	var cat = body.classList;
+	var cat = document.body.classList;
 	alert(cat);
 	if( cat.includes('') ){
 		// Course is on the legacy format, continue
