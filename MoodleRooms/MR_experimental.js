@@ -1327,14 +1327,17 @@ function insertReadmeMR() {
 // *** Pseudo-Tile click event handling
 
 function registerTocListeners() {
-	// Find each tile in table of contents
-	var toc = document.getElementById('chapters');
-	var tiles = toc.getElementsByTagName('li');
-
-	// Add event listener for clicks, direct to the contained hyperlink
-	for( var i = 0; i < tiles.length; i++ ) {
-		tiles[i].addEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
-	}
+	var inter = setInterval( function() {
+		// Find each tile in table of contents
+		var toc = document.getElementById('chapters');
+		var tiles = toc.getElementsByTagName('li');
+		
+		// Add event listener for clicks, direct to the contained hyperlink
+		for( var i = 0; i < tiles.length; i++ ) {
+			tiles[i].removeEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
+			tiles[i].addEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
+		}
+	}, 1000);
 }
 
 // Using script to add onload funtion without wiping existing ones
