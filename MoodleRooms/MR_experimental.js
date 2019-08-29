@@ -1329,7 +1329,7 @@ function insertReadmeMR() {
 function registerTocListeners() {
 	var cat = document.body.classList;
 	alert(cat);
-	if( cat.includes('category-15') || cat.includes('category-16') || cat.includes('category-17') ){
+	if( cat.contains('category-15') || cat.contains('category-16') || cat.contains('category-17') ){
 		// Course is on the legacy format, continue
 		//alert(cat);
 		var inter = setInterval( function() {
