@@ -99,7 +99,7 @@ body.category-15 ::selection, body.category-15 ::selection {
 	text-shadow: none;
 }
 
-body.category-6 #page-header, body.category-16 #page-header div.CHC:hover {
+body.category-6 #page-header, body.category-16 #page-header, div.CHC:hover {
 	background: rgba( 236, 34, 98, 1 );
 	background: linear-gradient( 190deg, rgba(236, 34, 98, 1), rgba(144, 16, 76, 1) );
 	background-size: cover;
