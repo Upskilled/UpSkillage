@@ -1346,9 +1346,9 @@ function registerTocListeners() {
 if( window.location.pathname.startsWith('/course/view.php') || window.location.pathname.startsWith('/course/view.php') ) {
 	// Page is a course, continue
 	var cat = document.body.classList;
-	alert(cat);
-	if( cat.includes('') ){
+	if( cat.includes('category-15') || cat.includes('category-16') || cat.includes('category-17') ){
 		// Course is on the legacy format, continue
+		alert(cat);
 		if( window.attachEvent ) {
 			window.attachEvent( 'onload', registerTocListeners );
 		} else {
