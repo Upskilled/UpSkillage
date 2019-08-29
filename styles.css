@@ -97,6 +97,7 @@ table.vidContainer tr {
 
 table.vidContainer {
 	margin: 0;
+	font-size: 1em;
 }
 
 div.tileoutlinecontent a, div.tileoutlinecontent a:link, div.tileoutlinecontent a:visited  {
