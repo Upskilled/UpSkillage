@@ -91,6 +91,10 @@ td.vidCell {
 	font-family: "Muli",Georgia,"Times New Roman",Times,serif;
 }
 
+table.vidContainer tr {
+	font-size: 1em;
+}
+
 table.vidContainer {
 	margin: 0;
 }

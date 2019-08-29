@@ -70,10 +70,6 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 	background-image: none;
 }
 
-img[source="https://www.upskilled.edu.au/favicon.ico"] {
-	src: url(https://github.com/Skeksalot/UpSkillage/raw/master/MoodleRooms/res/favicon.ico);
-}
-
 /*
 Category ID's are the internal stored values in the system.
 Can also be found in the Snap theme settings under category colours.
