@@ -1331,7 +1331,7 @@ function registerTocListeners() {
 	//alert(cat);
 	if( cat.contains('category-15') || cat.contains('category-16') || cat.contains('category-17') ){
 		// Course is on the legacy format, continue
-		alert(cat);
+		//alert(cat);
 		var inter = setInterval( function() {
 			// Find each tile in table of contents
 			var toc = document.getElementById('chapters');
