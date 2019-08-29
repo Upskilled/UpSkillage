@@ -87,6 +87,7 @@ td.vidCell {
 	padding: 0 8px 0 0;
 	border: none;
 	vertical-align: bottom;
+	font-size: 1em;
 }
 
 table.vidContainer {
