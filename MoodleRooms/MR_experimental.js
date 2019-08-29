@@ -1327,17 +1327,23 @@ function insertReadmeMR() {
 // *** Pseudo-Tile click event handling
 
 function registerTocListeners() {
-	var inter = setInterval( function() {
-		// Find each tile in table of contents
-		var toc = document.getElementById('chapters');
-		var tiles = toc.getElementsByTagName('li');
-		
-		// Add event listener for clicks, direct to the contained hyperlink
-		for( var i = 0; i < tiles.length; i++ ) {
-			tiles[i].removeEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
-			tiles[i].addEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
-		}
-	}, 1000);
+	var cat = document.body.classList;
+	alert(cat);
+	if( cat.includes('category-15') || cat.includes('category-16') || cat.includes('category-17') ){
+		// Course is on the legacy format, continue
+		//alert(cat);
+		var inter = setInterval( function() {
+			// Find each tile in table of contents
+			var toc = document.getElementById('chapters');
+			var tiles = toc.getElementsByTagName('li');
+			
+			// Add event listener for clicks, direct to the contained hyperlink
+			for( var i = 0; i < tiles.length; i++ ) {
+				tiles[i].removeEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
+				tiles[i].addEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
+			}
+		}, 1000);
+	}
 }
 
 // Using script to add onload funtion without wiping existing ones
@@ -1345,23 +1351,18 @@ function registerTocListeners() {
 // Modified to only occur on course pages
 if( window.location.pathname.startsWith('/course/view.php') || window.location.pathname.startsWith('/course/view.php') ) {
 	// Page is a course, continue
-	var cat = document.body.classList;
-	if( cat.includes('category-15') || cat.includes('category-16') || cat.includes('category-17') ){
-		// Course is on the legacy format, continue
-		alert(cat);
-		if( window.attachEvent ) {
-			window.attachEvent( 'onload', registerTocListeners );
+	if( window.attachEvent ) {
+		window.attachEvent( 'onload', registerTocListeners );
+	} else {
+		if( window.onload ) {
+			var curronload = window.onload;
+			var newonload = function(evt) {
+				curronload(evt);
+				registerTocListeners();
+			};
+			window.onload = newonload;
 		} else {
-			if( window.onload ) {
-				var curronload = window.onload;
-				var newonload = function(evt) {
-					curronload(evt);
-					registerTocListeners();
-				};
-				window.onload = newonload;
-			} else {
-				window.onload = registerTocListeners;
-			}
+			window.onload = registerTocListeners;
 		}
 	}
 }
