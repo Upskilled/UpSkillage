@@ -48,9 +48,9 @@
 
 #chatMinimise {
 	top: 0px;
-	right: 0px;
+	right: 50px;
 	height: 46px;
-	width: calc(100% - 50px);
+	width: calc(100% - 100px);
 	position: absolute;
 	background: transparent;
 	cursor: pointer;
