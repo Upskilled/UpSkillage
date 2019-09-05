@@ -70,8 +70,20 @@ body.category-5 #chatBubble {
 	background-color: #1696ec;
 }
 
+body.category-41 #chatBubble {
+	background-color: #1696ec;
+}
+
 body.category-44 #chatBubble {
 	background-color: #ec2262;
+}
+
+body.category-45 #chatBubble {
+	background-color: #1696ec;
+}
+
+body.category-46 #chatBubble {
+	background-color: #1696ec;
 }
 
 #chatBubble[class~=lc-max] {
