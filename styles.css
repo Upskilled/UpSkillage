@@ -6,6 +6,143 @@
 
 /* END */
 
+/* *** LIVECHAT *** */
+
+#chatContainer[class~=lc-max] {
+	width: calc(400px - 16px);
+	height: calc(450px - 16px);
+	opacity: 1;
+	visibility: visible;
+	z-index: 2147483639;
+	position: fixed;
+	bottom: 0px;
+	max-width: 100%;
+	max-height: 100%;
+	min-height: 0px;
+	min-width: 0px;
+	background-color: transparent;
+	border: 0px;
+	overflow: hidden;
+	right: 80px;
+	transition: all 0.5s ease 0s !important;
+}
+
+#chatContainer[class~=lc-min] {
+	width: 80px;
+	height: 80px;
+	opacity: 1;
+	visibility: visible;
+	z-index: 2147483639;
+	position: fixed;
+	bottom: 0px;
+	max-width: 80px;
+	max-height: 80px;
+	min-height: 0px;
+	min-width: 0px;
+	background-color: transparent;
+	border: 0px;
+	overflow: hidden;
+	right: 80px;
+	transition: all 0.5s ease 0s !important;
+}
+
+#chatMinimise {
+	top: 0px;
+	right: 0px;
+	height: 46px;
+	width: calc(100% - 50px);
+	position: absolute;
+	background: transparent;
+	cursor: pointer;
+}
+
+.lc-svg {
+	fill: #ffffff;
+	display: block;
+	color: #ffffff;
+}
+
+body.category-9 #chatBubble {
+	background-color: #f2b81e;
+}
+
+body.category-5 #chatBubble {
+	background-color: #1696ec;
+}
+
+body.category-44 #chatBubble {
+	background-color: #ec2262;
+}
+
+#chatBubble[class~=lc-max] {
+	width: 60px;
+	height: 60px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+	border-radius: 50%;
+	-moz-box-pack: center;
+	justify-content: center;
+	position: fixed;
+	right: 80px;
+	bottom: 0px;
+	margin: 16px 0px;
+	transition: all 0.2s ease 0.5s !important;
+	cursor: pointer;
+}
+
+#chatBubble[class~=lc-min] {
+	width: 0px;
+	height: 0px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+	border-radius: 50%;
+	-moz-box-pack: center;
+	justify-content: center;
+	position: fixed;
+	right: 80px;
+	bottom: 0px;
+	margin: 0px;
+	transition: all 0.5s ease 0s !important;
+}
+
+#chatIframe[class~=lc-max] {
+	width: inherit;
+	height: inherit;
+	margin: 0px;
+	padding: 0px;
+	background-image: none;
+	background-position: 0% 0%;
+	background-size: initial;
+	background-attachment: scroll;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgba(0, 0, 0, 0);
+	border-width: 0px;
+	float: none;
+	bottom: 0px;
+	right: 0px;
+	transition: all 0.2s ease 0s !important;
+}
+
+#chatIframe[class~=lc-min] {
+	width: 0px;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+	background-image: none;
+	background-position: 0% 0%;
+	background-size: initial;
+	background-attachment: scroll;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgba(0, 0, 0, 0);
+	border-width: 0px;
+	float: none;
+	bottom: 0px;
+	right: 0px;
+	transition: all 0.5s ease 0s !important;
+}
+
+/* END */
+
 div.panel {
 	padding: 15px;
 	text-align: justify;
