@@ -252,3 +252,9 @@ table.vidContainer {
 div.tileoutlinecontent a, div.tileoutlinecontent a:link, div.tileoutlinecontent a:visited  {
 	color: #ffffff;
 }
+
+/* Quality of life improvement for SQL reports */
+
+div.fitem_id_querysql div.ftextarea {
+	width: 100%;
+}
