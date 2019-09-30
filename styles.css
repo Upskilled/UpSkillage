@@ -255,6 +255,6 @@ div.tileoutlinecontent a, div.tileoutlinecontent a:link, div.tileoutlinecontent 
 
 /* Quality of life improvement for SQL reports */
 
-div.fitem_id_querysql div.ftextarea {
+div#fitem_id_querysql div.felement.ftextarea {
 	width: 100%;
 }
