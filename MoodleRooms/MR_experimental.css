@@ -170,7 +170,7 @@ body.category-14 ol#chapters {
 body.category-14 ol#chapters > li {
 	color: #000000;
 	background-color: #FFFFFF;
-	padding: 5em 0em 0em 0.4em;
+	padding: 5em 0em 0em 0.4em !important;
 	min-height: 8.6em;
 	margin-left: 0em !important;
 	margin-bottom: 0.5em;
@@ -201,8 +201,8 @@ body.category-14 li.snap-visible-section > a {
 body.category-14 .chapter-title, body.category-14 .text.completionstatus.outoftotal {
 	color: #ffffff !important;
 	white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 body.category-14 .chapter-title {
