@@ -156,8 +156,6 @@ body.category-7 #mr-nav span, body.category-7 #mr-nav path {
 
 /* Modifications for Pseudo-Tile Format */
 
-
-
 body.category-14 li.snap-asset .snap-activity .activity {
 	padding-bottom: 0em !important;
 }
@@ -181,12 +179,6 @@ body.category-14 ol#chapters > li {
 	background-position-y: bottom;
 	background-size: 2.4em;
 	vertical-align: bottom;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
-	body.category-14 ol#chapters > li {
-		min-height: 8.4px;
-	}
 }
 
 body.category-14 ol#chapters > li:hover {
