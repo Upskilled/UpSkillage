@@ -170,7 +170,7 @@ body.category-14 ol#chapters {
 body.category-14 ol#chapters > li {
 	color: #000000;
 	background-color: #FFFFFF;
-	padding: 5em 0em 0em 0.4em !important;
+	padding: 5em 0em 0em 0.4em;
 	min-height: 8.6em;
 	margin-left: 0em !important;
 	margin-bottom: 0.5em;
