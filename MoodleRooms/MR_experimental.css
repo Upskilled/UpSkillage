@@ -207,6 +207,7 @@ body.category-14 .chapter-title, body.category-14 .text.completionstatus.outofto
 
 body.category-14 .chapter-title {
 	font-size: 0.7em;
+	padding-top: 6px;
 }
 
 body.category-14 #course-toc .text small {
