@@ -78,6 +78,10 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 	padding-bottom: 0;
 }
 
+form.togglecompletion img.icon {
+	margin-right: 0px !important;
+}
+
 /*
 Category ID's are the internal stored values in the system.
 Can also be found in the Snap theme settings under category colours.
