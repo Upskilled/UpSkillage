@@ -320,9 +320,12 @@ iframe.modal-content {
 }
 
 span.close {
-	top: 6em;
-	right: 6em;
+	position: absolute;
+	top: 3em;
+	right: 3em;
 	color: #aaaab4;
+	font-size: 2em;
+	text-shadow: none;
 }
 
 /* Footer styling */
