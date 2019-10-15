@@ -306,6 +306,8 @@ div.modal {
 }
 
 iframe.modal-content {
+	left: 25%;
+	top: 12.5%;
 	width: 75%;
 	height: 75%;
 	min-width: 640px;
@@ -318,7 +320,8 @@ iframe.modal-content {
 }
 
 span.close {
-	margin-top: 60px;
+	top: 6em;
+	right: 6em;
 	color: #aaaab4;
 }
 
