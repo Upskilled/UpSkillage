@@ -1333,8 +1333,9 @@ function insertReadmeMR() {
 // *** Pseudo-Tile click event handling
 
 // Function to call click on inner link
-function innerClick() {
+function innerClick(event) {
 	this.getElementsByTagName('a')[0].click();
+	//event.currentTarget.removeEventListener(event.type, innerClick);
 }
 
 function registerTocListeners() {
@@ -1353,8 +1354,8 @@ function registerTocListeners() {
 			
 			// Add event listener for clicks, direct to the contained hyperlink
 			for( var i = 0; i < tiles.length; i++ ) {
-				tiles[i].removeEventListener( 'click', innerClick(), true );
-				tiles[i].addEventListener( 'click', innerClick(), true );
+				tiles[i].removeEventListener( 'click', innerClick(event), {once:true} );
+				tiles[i].addEventListener( 'click', innerClick(event), {once:true} );
 			}
 		}, 1000);
 
