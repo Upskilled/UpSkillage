@@ -1345,7 +1345,6 @@ function registerTocListeners() {
 		// Course is on the legacy format, continue
 		//alert(cat);
 		
-		/**/
 		// Method using a set interval to ensure the click handlers are always registered, including after switching sections in a course
 		var inter = setInterval( function() {
 			// Find each tile in table of contents
@@ -1354,24 +1353,11 @@ function registerTocListeners() {
 			
 			// Add event listener for clicks, direct to the contained hyperlink
 			for( var i = 0; i < tiles.length; i++ ) {
-				//tiles[i].removeEventListener( 'click', function cb(event){ event.currentTarget.removeEventListener(event.type, cb); }, {once:true} );
 				tiles[i].addEventListener( 'click', function cb(event) { 
 					event.currentTarget.getElementsByTagName('a')[0].click();event.currentTarget.removeEventListener(event.type, cb);
 				}, {once:true} );
 			}
 		}, 1000);
-
-		/* 
-		// Without interval, handlers only set initially
-		var toc = document.getElementById('chapters');
-		var tiles = toc.getElementsByTagName('li');
-		
-		// Add event listener for clicks, direct to the contained hyperlink
-		for( var i = 0; i < tiles.length; i++ ) {
-			tiles[i].removeEventListener( 'click', innerClick false );
-			tiles[i].addEventListener( 'click', innerClick, false );
-		}
-		*/
 	}
 }
 
