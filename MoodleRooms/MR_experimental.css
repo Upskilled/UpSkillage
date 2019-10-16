@@ -89,11 +89,11 @@ table.vidContainer {
 	display: none !important;
 }
 
-div.activityinstance > div.snap-header-card {
+/*div.activityinstance > div.snap-header-card {
 	right: -30px;
 	position: absolute;
 	display: inline;
-}
+}*/
 
 body.snap-resource-list .asset-wrapper .snap-header-card-icons {
 	width: 100%;
