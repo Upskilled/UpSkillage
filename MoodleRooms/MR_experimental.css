@@ -105,6 +105,10 @@ div.pagemod-content > div.d-block {
 	padding-left: 0 !important;
 }
 
+div.snap-asset-content p.snap-resource-card-fadeout {
+	display: none;
+}
+
 /*
 Category ID's are the internal stored values in the system.
 Can also be found in the Snap theme settings under category colours.
