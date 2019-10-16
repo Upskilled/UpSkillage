@@ -90,7 +90,7 @@ table.vidContainer {
 }
 
 div.activityinstance > div.snap-header-card {
-	right: 20px;
+	right: -30px;
 	position: absolute;
 	display: inline;
 }
