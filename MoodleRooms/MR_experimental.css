@@ -53,14 +53,7 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 	background: #aaaab4;
 }
 
-.snap-assettype {
-	display: none !important;
-}
 
-div.snap-header-card-icons > div.snap-asset-completion-tracking {
-	right: 20px;
-	position: absolute;
-}
 
 #toc-search-input {
 	background-color: #ffffff;
@@ -87,10 +80,19 @@ form.togglecompletion img.icon {
 	margin-right: 0px !important;
 }
 
-/* Fix for webinars - smaller text sizing within tables by default */
-
 table.vidContainer {
+	/* Fix for webinars - smaller text sizing within tables by default */
 	font-size: 1em !important;
+}
+
+.snap-assettype {
+	display: none !important;
+}
+
+div.activityinstance > div.snap-header-card {
+	right: 20px;
+	position: absolute;
+	display: inline;
 }
 
 .previous_section .nav_icon {
@@ -100,6 +102,8 @@ table.vidContainer {
 .next_section .nav_icon {
 	margin: 0.3em;
 }
+
+/* Clearing unnecessary spacing in course content */
 
 div.pagemod-content > div.d-block {
 	padding-left: 0 !important;
