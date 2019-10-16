@@ -1353,8 +1353,8 @@ function registerTocListeners() {
 			
 			// Add event listener for clicks, direct to the contained hyperlink
 			for( var i = 0; i < tiles.length; i++ ) {
-				tiles[i].removeEventListener( 'click', innerClick(), false );
-				tiles[i].addEventListener( 'click', innerClick(), false );
+				tiles[i].removeEventListener( 'click', innerClick(), true );
+				tiles[i].addEventListener( 'click', innerClick(), true );
 			}
 		}, 1000);
 
