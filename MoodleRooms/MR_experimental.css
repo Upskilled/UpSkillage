@@ -97,6 +97,10 @@ table.vidContainer {
 	margin: 0.3em;
 }
 
+.next_section .nav_icon {
+	margin: 0.3em;
+}
+
 /*
 Category ID's are the internal stored values in the system.
 Can also be found in the Snap theme settings under category colours.
