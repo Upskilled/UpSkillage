@@ -144,6 +144,12 @@ function popup( givenName, iframeSrc, iconSrc ) {
 			container.appendChild(content);
 			document.getElementById(givenName).appendChild(container);
 
+			container.onclick = function() {
+				// Hide the content (background clicked)
+				container.style.display = "none";
+				content.style.display = "none";
+				content.src = content.src;
+			}
 			exit.onclick = function() {
 				// Hide the content (close icon)
 				container.style.display = "none";
