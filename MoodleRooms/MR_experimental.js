@@ -1332,12 +1332,20 @@ function insertReadmeMR() {
 
 // *** Pseudo-Tile click event handling
 
+// Function to call click on inner link
+function innerClick() {
+	this.getElementsByTagName('a')[0].click();
+}
+
 function registerTocListeners() {
 	var cat = document.body.classList;
 	//alert(cat);
 	if( cat.contains('category-15') || cat.contains('category-16') || cat.contains('category-17') ){
 		// Course is on the legacy format, continue
 		//alert(cat);
+		
+		/**/
+		// Method using a set interval to ensure the click handlers are always registered, including after switching sections in a course
 		var inter = setInterval( function() {
 			// Find each tile in table of contents
 			var toc = document.getElementById('chapters');
@@ -1345,10 +1353,22 @@ function registerTocListeners() {
 			
 			// Add event listener for clicks, direct to the contained hyperlink
 			for( var i = 0; i < tiles.length; i++ ) {
-				tiles[i].removeEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
-				tiles[i].addEventListener( 'click', function(){ this.getElementsByTagName('a')[0].click() }, false );
+				tiles[i].removeEventListener( 'click', innerClick(), false );
+				tiles[i].addEventListener( 'click', innerClick(), false );
 			}
 		}, 1000);
+
+		/* 
+		// Without interval, handlers only set initially
+		var toc = document.getElementById('chapters');
+		var tiles = toc.getElementsByTagName('li');
+		
+		// Add event listener for clicks, direct to the contained hyperlink
+		for( var i = 0; i < tiles.length; i++ ) {
+			tiles[i].removeEventListener( 'click', innerClick(), false );
+			tiles[i].addEventListener( 'click', innerClick(), false );
+		}
+		*/
 	}
 }
 
