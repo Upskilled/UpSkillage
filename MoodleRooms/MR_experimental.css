@@ -95,6 +95,10 @@ div.activityinstance > div.snap-header-card {
 	display: inline;
 }
 
+body.snap-resource-list .asset-wrapper .snap-header-card-icons {
+	width: 100%;
+}
+
 .previous_section .nav_icon {
 	margin: 0.3em;
 }
