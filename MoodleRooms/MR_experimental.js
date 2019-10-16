@@ -1339,33 +1339,27 @@ function innerClick() {
 }
 
 function registerTocListeners() {
-	var cat = document.body.classList;
-	//alert(cat);
-	if( cat.contains('category-15') || cat.contains('category-16') || cat.contains('category-17') ){
-		// Course is on the legacy format, continue
-		//alert(cat);
+	// Method using a set interval to ensure the click handlers are always registered, including after switching sections in a course
+	var inter = setInterval( function() {
+		// Find each tile in table of contents
+		var toc = document.getElementById('chapters');
+		var tiles = toc.getElementsByTagName('li');
 		
-		// Method using a set interval to ensure the click handlers are always registered, including after switching sections in a course
-		var inter = setInterval( function() {
-			// Find each tile in table of contents
-			var toc = document.getElementById('chapters');
-			var tiles = toc.getElementsByTagName('li');
-			
-			// Add event listener for clicks, direct to the contained hyperlink
-			for( var i = 0; i < tiles.length; i++ ) {
-				tiles[i].addEventListener( 'click', function cb(event) { 
-					event.currentTarget.getElementsByTagName('a')[0].click();event.currentTarget.removeEventListener(event.type, cb);
-				}, {once:true} );
-			}
-		}, 1000);
-	}
+		// Add event listener for clicks, direct to the contained hyperlink
+		for( var i = 0; i < tiles.length; i++ ) {
+			tiles[i].addEventListener( 'click', function cb(event) { 
+				event.currentTarget.getElementsByTagName('a')[0].click();event.currentTarget.removeEventListener(event.type, cb);
+			}, {once:true} );
+		}
+	}, 1000);
 }
 
 // Using script to add onload funtion without wiping existing ones
 // https://stackoverflow.com/questions/807878/javascript-that-executes-after-page-load
-// Modified to only occur on course pages
-if( window.location.pathname.startsWith('/course/view.php') || window.location.pathname.startsWith('/course/view.php') ) {
-	// Page is a course, continue
+// Modified to only occur on course pages using legacy format
+var cat = document.body.classList;
+if( window.location.pathname.startsWith('/course/view.php') && ( cat.contains('category-15') || cat.contains('category-16') || cat.contains('category-17') ) ) {
+	// Page is a course and legacy, continue
 	if( window.attachEvent ) {
 		window.attachEvent( 'onload', registerTocListeners );
 	} else {
