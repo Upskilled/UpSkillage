@@ -82,6 +82,12 @@ form.togglecompletion img.icon {
 	margin-right: 0px !important;
 }
 
+/* Fix for webinars - smaller text sizing within tables by default */
+
+table.vidContainer {
+	font-size: 1em !important;
+}
+
 /*
 Category ID's are the internal stored values in the system.
 Can also be found in the Snap theme settings under category colours.
