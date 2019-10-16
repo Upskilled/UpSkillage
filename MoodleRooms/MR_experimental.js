@@ -1347,6 +1347,7 @@ function registerTocListeners() {
 		var tiles = toc.getElementsByTagName('li');
 		
 		// Add event listener for clicks, direct to the contained hyperlink
+		// See https://developers.google.com/web/updates/2016/10/addeventlistener-once for info
 		for( var i = 0; i < tiles.length; i++ ) {
 			tiles[i].addEventListener( 'click', function cb(event) { 
 				event.currentTarget.getElementsByTagName('a')[0].click();event.currentTarget.removeEventListener(event.type, cb);
