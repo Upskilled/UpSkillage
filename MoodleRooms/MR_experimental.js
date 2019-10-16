@@ -1342,7 +1342,7 @@ function registerTocListeners() {
 	// Legacy format check occurs after body has loaded relevant category info
 	var cat = document.body.classList;
 	//alert(cat);
-	if( cat.contains('category-15') || cat.contains('category-16') || cat.contains('category-17') ){
+	//if( cat.contains('category-15') || cat.contains('category-16') || cat.contains('category-17') ){
 		// Course is on the legacy format, continue
 		
 		// Method using a set interval to ensure the click handlers are always registered, including after switching sections in a course
@@ -1358,7 +1358,7 @@ function registerTocListeners() {
 				}, {once:true} );
 			}
 		}, 1000);
-	}
+//	}
 }
 
 // Using script to add onload funtion without wiping existing ones
