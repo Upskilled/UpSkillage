@@ -1364,6 +1364,7 @@ function registerTocListeners() {
 // Using script to add onload funtion without wiping existing ones
 // https://stackoverflow.com/questions/807878/javascript-that-executes-after-page-load
 // Modified to only occur on course pages
+var cat = document.body.classList;
 if( window.location.pathname.startsWith('/course/view.php') && ( cat.contains('category-15') || cat.contains('category-16') || cat.contains('category-17') ) ) {
 	// Page is a course, continue
 	if( window.attachEvent ) {
