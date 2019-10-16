@@ -102,7 +102,7 @@ table.vidContainer {
 }
 
 div.pagemod-content > div.d-block {
-	padding: 0;
+	padding-left: 0 !important;
 }
 
 /*
