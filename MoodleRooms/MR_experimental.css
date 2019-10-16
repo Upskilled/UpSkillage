@@ -57,6 +57,11 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 	display: none !important;
 }
 
+div.snap-header-card-icons > div.snap-asset-completion-tracking {
+	right: 20px;
+	position: absolute;
+}
+
 #toc-search-input {
 	background-color: #ffffff;
 	background-image: url(https://upskilled-sandbox.mrooms.net/theme/image.php/snap/theme/1566569217/search);
