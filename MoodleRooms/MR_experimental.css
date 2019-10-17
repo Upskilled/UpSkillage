@@ -72,6 +72,7 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 
 #snap-home {
 	height: 2.4em !important;
+	max-width: 40%;
 }
 
 form.togglecompletion img.icon {
