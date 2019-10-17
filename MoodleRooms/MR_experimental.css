@@ -53,8 +53,6 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 	background: #aaaab4;
 }
 
-
-
 #toc-search-input {
 	background-color: #ffffff;
 	background-image: url(https://upskilled-sandbox.mrooms.net/theme/image.php/snap/theme/1566569217/search);
@@ -68,12 +66,12 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 	background-image: none;
 }
 
-#snap-pm-trigger {
+#mr-nav, #snap-pm-trigger {
 	padding-bottom: 0;
 }
 
-#mr-nav {
-	padding-bottom: 0;
+#snap-home {
+	height: 2.4em;
 }
 
 form.togglecompletion img.icon {
