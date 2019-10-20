@@ -66,9 +66,12 @@ li.breadcrumb-item, li.breadcrumb-item > a, .chapter-title, div#page-header a, #
 	background-image: none;
 }
 
-#mr-nav, #snap-pm-trigger {
-	/*padding-bottom: 0;
-	min-width: 3.3em;*/
+#snap-pm-trigger {
+	padding: 0.6em !important;
+}
+
+#mr-nav {
+	padding-bottom: 0;
 }
 
 #snap-home {
