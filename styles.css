@@ -253,7 +253,7 @@ div.tileoutlinecontent a, div.tileoutlinecontent a:link, div.tileoutlinecontent 
 	color: #ffffff;
 }
 
-td.hasevent.calender_event_course {
+td.hasevent.calendar_event_course {
 	font-weight: 900;
 }
 /* Quality of life improvement for SQL reports */
