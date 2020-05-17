@@ -1,0 +1,123 @@
+/* Login Page */
+.ic-Login__container {
+	margin-top: 10%;
+	margin-left: 40%;
+}
+
+body.ic-Login-Body {
+	background-image: var(--ic-brand-Login-body-bgd-image);
+}
+
+/* popupLink formatting */
+.popupLink {
+	color: #02A878;
+	text-decoration: none !important;
+}
+.popupLink:hover {
+	color: #02A878;
+	text-decoration: underline !important;
+}
+/* Tile formatting for course pages */
+.banner {
+	width: 100%;
+}
+.page-wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	color: #ffffff;
+}
+.tile {
+	background-color: #ffffff;
+	color: #2c2c36;
+	min-height: 6em;
+	padding: 0;
+	opacity: 0.8;
+	transition: opacity .2s ease-in-out;
+	text-decoration: none !important;
+	position: relative;
+}
+.tile:hover {
+	opacity: 1;
+}
+.tile-img {
+	border-radius: .5em;
+	object-fit: contain;
+}
+.tile-bar{
+	color: #ffffff;
+	background-color: #ffffff;
+	background-image: linear-gradient(45deg, #1548E0, #7B1CE9);
+	display: inline-block;
+	position: absolute;
+	margin: 0em 0em 0em -0.5em;
+	bottom: 0.5em;
+	left: 0em;
+	min-height: 3em;
+	width: 50%;
+	/* border-radius: 0.5em; */
+	transition: width .4s ease-in-out;
+	transition-property: width;
+}
+.tile-bar:hover{
+	width: 100%;
+}
+.tile-title {
+	display: block;
+	font-size: 1.2em;
+	padding: 0.4em 0em 0em 0.5em;
+	word-break: break-word;
+	word-wrap: break-word;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.tile-pre {
+	background-color: #ffffff;
+	color: #2c2c36;
+	min-height: 6em;
+	padding: 0;
+	opacity: 0.8;
+	transition: opacity .2s ease-in-out;
+	text-decoration: none !important;
+	position: relative;
+}
+.tile-pre:hover {
+	opacity: 1;
+}
+.tile-img-pre {
+	border-radius: .5em;
+	object-fit: contain;
+}
+.tile-bar-pre {
+	color: #2c2c36;
+	background-color: #ffffff;
+	display: inline-block;
+	position: absolute;
+	margin: 0em 0em 0em -0.5em;
+	bottom: 0.5em;
+	left: 0em;
+	min-height: 3em;
+	width: 50%;
+	/* border-radius: 0.5em; */
+	transition: width .4s ease-in-out;
+	transition-property: width;
+}
+.tile-bar-pre:hover {
+	width: 100%;
+}
+.tile-title-pre {
+	display: block;
+	font-size: 1.4em;
+	padding: 0.3em 0em 0em 0.5em;
+	word-break: break-word;
+	word-wrap: break-word;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.side-list {
+	list-style: none;
+	vertical-align: middle;
+}
