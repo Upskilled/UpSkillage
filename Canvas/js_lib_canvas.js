@@ -56,22 +56,6 @@ function toggleLC() {
 
 /* ***** Direct Code ***** */
 
-// *** Fix for displaying documents in a popup window
-var anchors = document.getElementsByTagName('a');
-for( var i = 0; i < anchors.length; i++ ) {
-	if( anchors[i].classList.contains('popupLink') ) {
-		// Clone to remove event listeners and add needed onclick action
-		var newAnchor = anchors[i].cloneNode(true);
-		newAnchor.onclick = function(){ return popupWindow( this, 'Popup Window' ); };
-		anchors[i].parentNode.replaceChild( newAnchor, anchors[i] );
-	}
-}
-var script = document.createElement('script');
-script.defer = true;
-script.async = true;
-script.innerHTML = "var anchors = document.getElementsByTagName('a'); for( var i = 0; i < anchors.length; i++ ) { if( anchors[i].classList.contains('popupLink') ) { var newAnchor = anchors[i].cloneNode(true); newAnchor.onclick = function(){ return popupWindow( this, 'Popup Window' ); }; anchors[i].parentNode.replaceChild( newAnchor, anchors[i] ); } }";
-document.body.appendChild(script);
-
 // *** LiveChat code ***
 
 // Support livechat across the board, whole site.
@@ -94,13 +78,16 @@ if( url.startsWith('http://34.75.151.180/courses') || url.startsWith('https://34
 
 	// Manual method of generating a second chat window
 	var path = document.createElement('path');
+	path.classList = 'lc-path';
 	path.d = 'M14,25.5 C12.4,25.5 10.8,25.2 9.4,24.7 L4.5,27.5 L4.5,21.9 C2,19.6 0.5,16.5 0.5,13 C0.5,6.1 6.5,0.5 14,0.5 C21.5,0.5 27.5,6.1 27.5,13 C27.5,19.9 21.5,25.5 14,25.5 L14,25.5 Z M9,11.5 C8.2,11.5 7.5,12.2 7.5,13 C7.5,13.8 8.2,14.5 9,14.5 C9.8,14.5 10.5,13.8 10.5,13 C10.5,12.2 9.8,11.5 9,11.5 L9,11.5 Z M14,11.5 C13.2,11.5 12.5,12.2 12.5,13 C12.5,13.8 13.2,14.5 14,14.5 C14.8,14.5 15.5,13.8 15.5,13 C15.5,12.2 14.8,11.5 14,11.5 L14,11.5 Z M19,11.5 C18.2,11.5 17.5,12.2 17.5,13 C17.5,13.8 18.2,14.5 19,14.5 C19.8,14.5 20.5,13.8 20.5,13 C20.5,12.2 19.8,11.5 19,11.5 L19,11.5 Z';
 
 	var g2 = document.createElement('g');
+	g2.classList = 'lc-g-inner';
 	g2.fill = '#ffffff';
 	g2.appendChild(path);
 
 	var g = document.createElement('g');
+	g.classList = 'lc-g-outer';
 	g.stroke = 'none';
 	g.stroke.width = 1;
 	g.fill = 'none';
@@ -109,6 +96,7 @@ if( url.startsWith('http://34.75.151.180/courses') || url.startsWith('https://34
 
 	var svg = document.createElement('svg');
 	svg.id = 'chatInnerBubble';
+	svg.classList = "lc-svg";
 	svg.width = '28px';
 	svg.height = '28px';
 	svg.viewBox = '0 0 28 28';
@@ -119,7 +107,6 @@ if( url.startsWith('http://34.75.151.180/courses') || url.startsWith('https://34
 	var div2 = document.createElement('div');
 	div2.id = 'chatBubble';
 	div2.classList = 'lc-max';
-	div2.onclick = toggleLC();
 	div2.title = 'Ask a Trainer';
 	div2.appendChild(svg);
 
@@ -131,7 +118,6 @@ if( url.startsWith('http://34.75.151.180/courses') || url.startsWith('https://34
 
 	var div3 = document.createElement('div');
 	div3.id = 'chatMinimise';
-	div3.onclick = toggleLC();
 	div3.title = 'Minimise chat window';
 
 	var div = document.createElement('div');
@@ -144,3 +130,33 @@ if( url.startsWith('http://34.75.151.180/courses') || url.startsWith('https://34
 }
 
 // End of LiveChat code
+
+// *** Fix for 
+// Include displaying documents in a popup window, livechat toggle
+// var anchors = document.getElementsByTagName('a');
+// for( var i = 0; i < anchors.length; i++ ) {
+// 	if( anchors[i].classList.contains('popupLink') ) {
+// 		// Clone to remove event listeners and add needed onclick action
+// 		var newAnchor = anchors[i].cloneNode(true);
+// 		newAnchor.onclick = function(){ return popupWindow( this, 'Popup Window' ); };
+// 		anchors[i].parentNode.replaceChild( newAnchor, anchors[i] );
+// 	}
+// }
+// document.getElementById('chatBubble').onclick = function(){ return toggleLC(); };
+// document.getElementById('chatMinimise').onclick = function(){ return toggleLC(); };
+// Needs to be delayed till page load to apply to all relevant links
+window.onload = function() {
+	// PopupWindow fix
+	var script = document.createElement('script');
+	script.defer = true;
+	script.async = true;
+	script.innerText = "var anchors = document.getElementsByTagName('a');" +
+	"for( var i = 0; i < anchors.length; i++ ) {" +
+		"if( anchors[i].classList.contains('popupLink') ) {" +
+			"var newAnchor = anchors[i].cloneNode(true);" +
+			"newAnchor.onclick = function(){ return popupWindow( this, 'Popup Window' ); };" +
+			"anchors[i].parentNode.replaceChild( newAnchor, anchors[i] ); } }" +
+	"document.getElementById('chatBubble').onclick = function(){ return toggleLC(); };" +
+	"document.getElementById('chatMinimise').onclick = function(){ return toggleLC(); };"
+	document.body.appendChild(script);
+};

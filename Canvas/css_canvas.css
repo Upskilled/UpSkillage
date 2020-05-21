@@ -8,6 +8,12 @@ body.ic-Login-Body {
 	background-image: var(--ic-brand-Login-body-bgd-image);
 }
 
+/* Icon styling */
+.activityicon {
+	padding: 0.4em 0.4em 0.4em 0em;
+	height: 1.6em;
+}
+
 /* popupLink formatting */
 .popupLink {
 	color: #02A878;
@@ -17,6 +23,7 @@ body.ic-Login-Body {
 	color: #02A878;
 	text-decoration: underline !important;
 }
+
 /* Tile formatting for course pages */
 .banner {
 	width: 100%;
@@ -121,3 +128,153 @@ body.ic-Login-Body {
 	list-style: none;
 	vertical-align: middle;
 }
+
+/* *** LIVECHAT *** */
+#chatContainer[class~=lc-max] {
+	width: calc(400px - 16px);
+	height: calc(450px - 16px);
+	opacity: 1;
+	visibility: visible;
+	z-index: 2147483639;
+	position: fixed;
+	bottom: 0px;
+	max-width: 100%;
+	max-height: 100%;
+	min-height: 0px;
+	min-width: 0px;
+	background-color: transparent;
+	border: 0px;
+	overflow: hidden;
+	right: 80px;
+	transition: all 0.5s ease 0s !important;
+}
+#chatContainer[class~=lc-min] {
+	width: 80px;
+	height: 80px;
+	opacity: 1;
+	visibility: visible;
+	z-index: 2147483639;
+	position: fixed;
+	bottom: 0px;
+	max-width: 80px;
+	max-height: 80px;
+	min-height: 0px;
+	min-width: 0px;
+	background-color: transparent;
+	border: 0px;
+	overflow: hidden;
+	right: 80px;
+	transition: all 0.5s ease 0s !important;
+}
+#chatBubble[class~=lc-max] {
+	background-color: #7B1CE9;
+	width: 60px;
+	height: 60px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+	border-radius: 50%;
+	-moz-box-pack: center;
+	justify-content: center;
+	position: fixed;
+	right: 80px;
+	bottom: 0px;
+	margin: 16px 0px;
+	transition: all 0.2s ease 0.5s !important;
+	cursor: pointer;
+}
+#chatBubble[class~=lc-min] {
+	background-color: #7B1CE9;
+	width: 0px;
+	height: 0px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+	border-radius: 50%;
+	-moz-box-pack: center;
+	justify-content: center;
+	position: fixed;
+	right: 80px;
+	bottom: 0px;
+	margin: 0px;
+	transition: all 0.5s ease 0s !important;
+}
+#chatIframe[class~=lc-max] {
+	width: inherit;
+	height: inherit;
+	margin: 0px;
+	padding: 0px;
+	background-image: none;
+	background-position: 0% 0%;
+	background-size: initial;
+	background-attachment: scroll;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgba(0, 0, 0, 0);
+	border-width: 0px;
+	float: none;
+	bottom: 0px;
+	right: 0px;
+	transition: all 0.2s ease 0s !important;
+}
+#chatIframe[class~=lc-min] {
+	width: 0px;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+	background-image: none;
+	background-position: 0% 0%;
+	background-size: initial;
+	background-attachment: scroll;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: rgba(0, 0, 0, 0);
+	border-width: 0px;
+	float: none;
+	bottom: 0px;
+	right: 0px;
+	transition: all 0.5s ease 0s !important;
+}
+#chatMinimise {
+	top: 16px;
+	right: 32px;
+	height: 46px;
+	width: calc(100% - 100px);
+	position: absolute;
+	background: transparent;
+	cursor: pointer;
+}
+.lc-svg {
+	fill: #ffffff;
+	display: block;
+	color: #ffffff;
+}
+.lc-g-outer {
+	stroke: none;
+	stroke-width: 1;
+	fill: none;
+	fill-rule: evenodd;
+}
+.lc-g-inner {
+	fill: #ffffff;
+}
+.lc-path{
+	
+}
+/*
+body.category-9 #chatBubble {
+	background-color: #f2b81e;
+}
+body.category-5 #chatBubble {
+	background-color: #1696ec;
+}
+body.category-41 #chatBubble {
+	background-color: #1696ec;
+}
+body.category-44 #chatBubble {
+	background-color: #ec2262;
+}
+body.category-45 #chatBubble {
+	background-color: #1696ec;
+}
+body.category-46 #chatBubble {
+	background-color: #1696ec;
+}
+*/
+/* END */
