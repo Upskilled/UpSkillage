@@ -1,4 +1,4 @@
-/* Login Page */
+/* Login Page & Main UI Customisation */
 .ic-Login__container {
 	margin-top: 10%;
 	margin-left: 40%;
@@ -6,6 +6,10 @@
 
 body.ic-Login-Body {
 	background-image: var(--ic-brand-Login-body-bgd-image);
+}
+
+.ic-app-header__logomark {
+	background-color: var(--ic-brand-primary);
 }
 
 /* Icon styling */
