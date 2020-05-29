@@ -10,6 +10,8 @@ body.ic-Login-Body {
 
 .ic-app-header__logomark {
 	background-color: var(--ic-brand-primary);
+	background-position-y: top;
+	height: 55px;
 }
 
 /* Icon styling */
