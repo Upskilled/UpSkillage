@@ -60,7 +60,7 @@ function toggleLC() {
 
 // Support livechat across the board, whole site.
 //console.log(document.URL);
-var url = document.URL;
+/*var url = document.URL;
 if( url.startsWith('http://34.75.151.180/courses') || url.startsWith('https://34.75.151.180/courses') ) {
 	window.__lc = window.__lc || {};
 	window.__lc.license = 2673501;
@@ -127,7 +127,7 @@ if( url.startsWith('http://34.75.151.180/courses') || url.startsWith('https://34
 	div.appendChild(iframe);
 	div.appendChild(div3);
 	document.getElementsByTagName('body')[0].appendChild(div);
-}
+}*/
 
 // End of LiveChat code
 
@@ -155,8 +155,6 @@ window.onload = function() {
 		"if( anchors[i].classList.contains('popupLink') ) {" +
 			"var newAnchor = anchors[i].cloneNode(true);" +
 			"newAnchor.onclick = function(){ return popupWindow( this, 'Popup Window' ); };" +
-			"anchors[i].parentNode.replaceChild( newAnchor, anchors[i] ); } }" +
-	"document.getElementById('chatBubble').onclick = function(){ return toggleLC(); };" +
-	"document.getElementById('chatMinimise').onclick = function(){ return toggleLC(); };"
+			"anchors[i].parentNode.replaceChild( newAnchor, anchors[i] ); } }";
 	document.body.appendChild(script);
 };

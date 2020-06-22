@@ -14,6 +14,10 @@ body.ic-Login-Body {
 	height: 55px;
 }
 
+body:not(.full-width):not(.outcomes) .ic-Layout-wrapper {
+    max-width: none;
+}
+
 /* Icon styling */
 .activityicon {
 	padding: 0.4em 0.4em 0.4em 0em;
