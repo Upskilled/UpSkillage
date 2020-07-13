@@ -249,6 +249,30 @@ td.hasevent.calendar_event_course {
 	font-weight: 900;
 }
 
+footer div.social {
+	display: none;
+}
+footer .footer_social-links {
+    list-style: none;
+    font-size: 0;
+    line-height: 20px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+footer .footer_social-link-item {
+    display: inline-block;
+    height: 24px;
+	vertical-align: middle;
+	text-align: right;
+}
+footer .footer_social-link-item:not(:first-child) {
+	padding-left: 12px;
+}
+footer .footer_social-link-item svg {
+    fill: #1548e0;
+}
+
 /* Quality of life improvement for SQL reports */
 
 div#fitem_id_querysql div.felement.ftextarea {

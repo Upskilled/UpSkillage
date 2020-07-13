@@ -63,7 +63,7 @@ function OLDpopup( givenName, iframeSrc, iconSrc ) {
 		content.style.display = "block";
 	};
 
-	exit.onclick = function() {
+	exit.onclick = function() { 
 		container.style.display = "none";
 		content.style.display = "none";
 		content.src = content.src;
@@ -80,7 +80,7 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	while ( document.getElementById( givenName.replace( /\s/g, '' ) + popupID ) != null ) {
 		popupID = Math.floor( ( Math.random() * 1000 ) + 1 );
 	}
-
+	
 	// Create the link and add to the container
 	var a = document.createElement("a");
 	var html = document.createTextNode(givenName);
@@ -88,7 +88,7 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	a.className = "popupLink";
 	var icon = document.createElement("img");
 	icon.src = iconSrc;
-	icon.classList = "iconlarge activityicon";
+	icon.classList = "activityicon iconlarge";
 	icon.alt = givenName;
 	a.appendChild(icon);
 	a.appendChild(html);
@@ -96,7 +96,7 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	var content = document.createElement("iframe");
 	var exit = document.createElement("span");
 	var container = document.createElement("div");
-
+	
 	// Add dynamic actions (the popup bit)
 	a.onclick = function() {
 		// If first time clicking link, create content
@@ -115,7 +115,6 @@ function popup( givenName, iframeSrc, iconSrc ) {
 			content = document.createElement("iframe");
 			content.classList = "modal-content";
 			content.id = "popupVid" + popupID;
-			content.style = "width: 1280px; height: 720px; border:none;";
 			content.src = iframeSrc;
 			content.setAttribute('allowfullScreen', '');
 			content.setAttribute('mozallowfullScreen', '');
@@ -129,118 +128,41 @@ function popup( givenName, iframeSrc, iconSrc ) {
 				content.style.display = "none";
 				content.src = content.src;
 			}
+			document.onkeyup = function(e) {
+				// Hide the content (esc key)
+				if( e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27 ) {
+					container.style.display = "none";
+					content.style.display = "none";
+					content.src = content.src;
+				}
+			}
 		}
-
+		
 		// Display the content
 		container.style.display = "block";
 		content.style.display = "block";
 	}
-
-}
-
-// Set a new cookie value
-function setCookie( cname, cvalue, exdays ) {
-	var d = new Date();
-	d.setTime( d.getTime() + ( exdays * 24 * 60 * 60 * 1000 ) );
-	var expires = "expires=" + d.toGMTString();
-	document.cookie = cname + "=" + cvalue + ";expires=" + expires + ";path=/";
-}
-
-// Retrieve the value of a given cookie
-function getCookie( cname ) {
-	var name = cname + "=";
-	var decodedCookie = decodeURIComponent(document.cookie);
-	var ca = decodedCookie.split(';');
-	for( var i = 0; i < ca.length; i++ ) {
-		var c = ca[i];
-		while( c.charAt(0) === ' ' ) {
-			c = c.substring(1);
-		}
-		if( c.indexOf(name) === 0 ) {
-			return c.substring( name.length, c.length );
-		}
-	}
-	return "";
-}
-
-// Used for testing cookie stuff
-function checkCookie() {
-	var user = getCookie( "username" );
-	if( user != "" ) {
-		alert( "Welcome again " + user );
-	} else {
-		user = prompt( "Please enter your name:", "" );
-		if( user != "" && user != null ) {
-			setCookie( "username", user, 365 );
-		}
-	}
-}
-
-// Remove a given cookie
-function removeCookie( cname, cvalue ) {
-	var d = new Date();
-	d.setTime( d.getTime() - ( 30 * 24 * 60 * 60 * 1000 ) );
-	var expires = d.toGMTString();
-	document.cookie = cname + "=" + cvalue + ";expires=" + expires + ";path=/";
-}
-
-function updateOptional( cname, cvalue ) {
-	setCookie( cname, cvalue, 365 );
-	if( cvalue == true ) {
-		var opt = document.getElementsByClassName("optional");
-		for( var i = 0; i < opt.length; i++ ) {
-			opt[i].style.display = "inline";
-		}
-		opt = document.getElementsByClassName("optBlock");
-		for( var i = 0; i < opt.length; i++ ) {
-			opt[i].style.display = "block";
-		}
-	} else if( cvalue == false ) {
-		var opt = document.getElementsByClassName("optional");
-		for( var i = 0; i < opt.length; i++ ) {
-			opt[i].style.display = "none";
-		}
-		opt = document.getElementsByClassName("optBlock");
-		for( var i = 0; i < opt.length; i++ ) {
-			opt[i].style.display = "none";
-		}
-	}
-}
-
-function mOver( obj ) {
-	obj.style.opacity = "0.5";
-}
-
-function mOut( obj ) {
-	obj.style.opacity = "1.0";
-}
-
-function select( obj ) {
-	var buttons = document.getElementsByClassName("optButton");
-	for( var i = 0; i < buttons.length; i++ ) {
-		buttons[i].style.opacity = "1.0";
-	}
-	obj.style.opacity = "0.5";
-}
-
-function combine( cname, cvalue, obj ) {
-	updateOptional( cname, cvalue );
-	select(obj);
+	
 }
 
 // Used to hide/show the link to foundations courses
 function showCourse( course ) {
 	var check;
 	var doc;
-	if( course == "dev" ) {
+	if( course === "dev" ) {
 		check = document.getElementById("devCheck");
 		doc = document.getElementById("devCourse");
-	} else {
+	} else if( course === "itif" ) {
 		check = document.getElementById("itifCheck");
 		doc = document.getElementById("itifCourse");
+	} else if( course === "virtDevCheck") {
+		check = document.getElementById("virtDevCheck");
+		doc = document.getElementById("virtDevEnv");
+	} else {
+		return;
 	}
 
-	if( check.value == "off" ) {
+	if( check.value === "off" ) {
 		check.value = "on";
 		doc.style.display = "block";
 	} else {
@@ -266,7 +188,7 @@ function pluralsight( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	pluralFlip.appendChild(span);
-
+	
 	var pluralPan = document.createElement("div");
 	pluralPan.id = "pluralPan";
 	pluralPan.className= "panel";
@@ -285,7 +207,7 @@ function pluralsight( container ) {
 	pluralPan.appendChild(p);
 	p = document.createElement("p");
 	span = document.createElement("span");
-	span.style = "color: #606060;";
+	span.style.color = "#606060";
 	img = document.createElement("img");
 	img.src = "https://www.google.com/s2/favicons?domain=pluralsight.com";
 	img.className = "activityicon iconlarge";
@@ -302,11 +224,11 @@ function pluralsight( container ) {
 	p.appendChild( document.createElement("br") );
 	p.appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") );
 	pluralPan.appendChild(p);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(pluralFlip);
 	readme.appendChild(pluralPan);
-
+	
 	//This is the jQuery for the animation
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#pluralFlip").click( function(){ $("#pluralPan").slideToggle("fast"); } );} );';
@@ -330,7 +252,7 @@ function lynda( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	lyndaFlip.appendChild(span);
-
+	
 	var lyndaPan = document.createElement("div");
 	lyndaPan.id = "lyndaPan";
 	lyndaPan.className= "panel";
@@ -349,7 +271,7 @@ function lynda( container ) {
 	lyndaPan.appendChild(p);
 	p = document.createElement("p");
 	span = document.createElement("span");
-	span.style = "color: #606060;";
+	span.style.color = "#606060";
 	img = document.createElement("img");
 	img.src = "https://www.google.com/s2/favicons?domain=lynda.com";
 	img.className = "activityicon iconlarge";
@@ -361,7 +283,7 @@ function lynda( container ) {
 	lyndaPan.appendChild(p);
 	p = document.createElement("p");
 	span = document.createElement("span");
-	span.style = "color: #606060;";
+	span.style.color = "#606060";
 	img = document.createElement("img");
 	img.src = "https://www.google.com/s2/favicons?domain=lynda.com";
 	img.className = "activityicon iconlarge";
@@ -390,11 +312,11 @@ function lynda( container ) {
 	a.appendChild( document.createTextNode("Guide - How to add cookies for Lynda.com") );
 	p.appendChild(a);
 	lyndaPan.appendChild(p);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(lyndaFlip);
 	readme.appendChild(lyndaPan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#lyndaFlip").click( function(){ $("#lyndaPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -492,12 +414,12 @@ function microsoft( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	microFlip.appendChild(span);
-
+	
 	var microPan = document.createElement("div");
 	microPan.id = "microPan";
 	microPan.className= "panel";
 	microPan.style.padding = "15px";
-
+	
 	var p = document.createElement("p");
 	p.appendChild( document.createTextNode("In order for you to participate in this training you will be required to have a Microsoft Account.") );
 	microPan.appendChild(p);
@@ -543,11 +465,11 @@ function microsoft( container ) {
 	p.appendChild( document.createElement('br') );
 	p.appendChild( document.createTextNode("These plug into the 'green' jack or socket on the back or front of the computer. If it is not green then it will have a picture of headphones next to the jack.") );
 	microPan.appendChild(p);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(microFlip);
 	readme.appendChild(microPan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#microFlip").click( function(){ $("#microPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -565,7 +487,7 @@ function assessment( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	assessmentFlip.appendChild(span);
-
+	
 	var assessmentPan = document.createElement("div");
 	assessmentPan.id = "assessmentPan";
 	assessmentPan.className= "panel";
@@ -579,14 +501,15 @@ function assessment( container ) {
 	p.style.lineHeight = "1.5em";
 	assessmentPan.appendChild(p);
 	var table = document.createElement("table");
-	table.border = "0";
 	var tr = document.createElement("tr");
 	tr.style.height = "35px";
 	var td = document.createElement("td");
 	td.fontWeight = "bold";
+	td.style.border = "none";
 	td.appendChild( document.createTextNode("Sustainability") );
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← This is the title of the topic") );
@@ -597,6 +520,7 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	td = document.createElement("td");
 	td.style.textIndent = "16px";
+	td.style.border = "none";
 	var img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=scorm&amp;rev=1382312684&amp;image=icon";
 	img.className = "activityicon iconlarge";
@@ -608,6 +532,7 @@ function assessment( container ) {
 	td.appendChild(span);
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← Learning materials") );
@@ -618,6 +543,7 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	td = document.createElement("td");
 	td.style.textIndent = "16px";
+	td.style.border = "none";
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=quiz&amp;rev=1382312684&amp;image=icon";
 	img.className = "activityicon iconlarge";
@@ -629,6 +555,7 @@ function assessment( container ) {
 	td.appendChild(span);
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← Quiz style assessment") );
@@ -639,6 +566,7 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	td = document.createElement("td");
 	td.style.textIndent = "16px";
+	td.style.border = "none";
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=core&amp;rev=1382312684&amp;image=f%2Fpdf";
 	img.className = "activityicon iconlarge";
@@ -650,6 +578,7 @@ function assessment( container ) {
 	td.appendChild(span);
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← Assignment instructions") );
@@ -660,6 +589,7 @@ function assessment( container ) {
 	tr.style.height = "35px";
 	td = document.createElement("td");
 	td.style.textIndent = "16px";
+	td.style.border = "none";
 	img = document.createElement("img");
 	img.src = "https://lms.upskilled.edu.au/theme/image.php?theme=ups&amp;component=assign&amp;rev=1382312684&amp;image=icon";
 	img.className = "activityicon iconlarge";
@@ -671,6 +601,7 @@ function assessment( container ) {
 	td.appendChild(span);
 	tr.appendChild(td);
 	td = document.createElement("td");
+	td.style.border = "none";
 	p = document.createElement("p");
 	p.fontSize = "small";
 	p.appendChild( document.createTextNode("← Assignment/Project style assessment") );
@@ -706,12 +637,12 @@ function assessment( container ) {
 	p.appendChild(img);
 	p.appendChild(a);
 	assessmentPan.appendChild(p);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(assessmentFlip);
 	readme.appendChild(assessmentPan);
-
-	var script = document.createElement("script");
+	
+	script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){	$("#assessmentFlip").click( function(){ $("#assessmentPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
 }
@@ -728,7 +659,7 @@ function rubric( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	rubricFlip.appendChild(span);
-
+	
 	var rubricPan = document.createElement("div");
 	rubricPan.id = "rubricPan";
 	rubricPan.className= "panel";
@@ -756,11 +687,11 @@ function rubric( container ) {
 	rubricPan.appendChild(p);
 	var script = document.createElement("script");
 	script.src = "https://fast.wistia.com/embed/medias/z65qa5bhe5.jsonp";
-	script.async = "";
+	script.async = true;
 	rubricPan.appendChild(script);
 	script = document.createElement("script");
 	script.src = "https://fast.wistia.com/assets/external/E-v1.js";
-	script.async = "";
+	script.async = true;
 	rubricPan.appendChild(script);
 	span = document.createElement("span");
 	span.className = "wistia_embed wistia_async_z65qa5bhe5 popover=true popoverContent=link";
@@ -782,11 +713,11 @@ function rubric( container ) {
 	div.appendChild(a);
 	span.appendChild(div);
 	rubricPan.appendChild(span);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(rubricFlip);
 	readme.appendChild(rubricPan);
-
+	
 	script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#rubricFlip").click( function(){ $("#rubricPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -804,7 +735,7 @@ function grades( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	gradesFlip.appendChild(span);
-
+	
 	var gradesPan = document.createElement("div");
 	gradesPan.id = "gradesPan";
 	gradesPan.className= "panel";
@@ -847,11 +778,11 @@ function grades( container ) {
 	p.appendChild(span);
 	p.appendChild( document.createTextNode(" = Competent - You have met the requirements. This is your goal!") );
 	gradesPan.appendChild(p);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(gradesFlip);
 	readme.appendChild(gradesPan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#gradesFlip").click( function(){ $("#gradesPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -869,7 +800,7 @@ function dev( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	devFlip.appendChild(span);
-
+	
 	var devPan = document.createElement("div");
 	devPan.id = "devPan";
 	devPan.className= "panel";
@@ -892,7 +823,7 @@ function dev( container ) {
 	var input = document.createElement("input");
 	input.type = "checkbox";
 	input.id = "devCheck";
-	input.name = "devCheck"
+	input.name = "devCheck";
 	input.onclick = function(){ showCourse("dev"); };
 	input.value = "off";
 	input.style.display = "inline";
@@ -921,11 +852,11 @@ function dev( container ) {
 	a.style.fontWeight = "bold";
 	div.appendChild(a);
 	devPan.appendChild(div);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(devFlip);
 	readme.appendChild(devPan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#devFlip").click( function(){ $("#devPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -943,7 +874,7 @@ function itif( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	itifFlip.appendChild(span);
-
+	
 	var itifPan = document.createElement("div");
 	itifPan.id = "itifPan";
 	itifPan.className= "panel";
@@ -966,7 +897,7 @@ function itif( container ) {
 	var input = document.createElement("input");
 	input.type = "checkbox";
 	input.id = "itifCheck";
-	input.name = "itifCheck"
+	input.name = "itifCheck";
 	input.onclick = function(){ showCourse("itif"); };
 	input.value = "off";
 	input.style.display = "inline";
@@ -992,13 +923,14 @@ function itif( container ) {
 	a.href = "https://lms.upskilled.edu.au/course/view.php?id=1175";
 	a.target = "_blank";
 	a.appendChild( document.createTextNode("Information Technology Development Foundations") );
+	a.style.fontWeight = "bold";
 	div.appendChild(a);
 	itifPan.appendChild(div);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(itifFlip);
 	readme.appendChild(itifPan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#itifFlip").click( function(){ $("#itifPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -1016,7 +948,7 @@ function workplace( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	workplaceFlip.appendChild(span);
-
+	
 	var workplacePan = document.createElement("div");
 	workplacePan.id = "workplacePan";
 	workplacePan.className= "panel";
@@ -1046,11 +978,11 @@ function workplace( container ) {
 	a.appendChild(img);
 	a.appendChild( document.createTextNode("Workplace Activity as Assessment") );
 	workplacePan.appendChild(a);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(workplaceFlip);
 	readme.appendChild(workplacePan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#workplaceFlip").click( function(){ $("#workplacePan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -1068,7 +1000,7 @@ function review( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	reviewFlip.appendChild(span);
-
+	
 	var reviewPan = document.createElement("div");
 	reviewPan.id = "reviewPan";
 	reviewPan.className= "panel";
@@ -1082,11 +1014,11 @@ function review( container ) {
 	p = document.createElement("p");
 	p.appendChild( document.createTextNode("You can only upload one file at a time, hence combining your build directory into one compressed file. Once your teacher has reviewed your code, the link will be activated again to make it available for future use.") );
 	reviewPan.appendChild(p);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(reviewFlip);
 	readme.appendChild(reviewPan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#reviewFlip").click( function(){ $("#reviewPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -1104,7 +1036,7 @@ function iot( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	iotFlip.appendChild(span);
-
+	
 	var iotPan = document.createElement("div");
 	iotPan.id = "iotPan";
 	iotPan.className= "panel";
@@ -1128,17 +1060,17 @@ function iot( container ) {
 	p.appendChild(a);
 	p.appendChild( document.createTextNode(".") );
 	iotPan.appendChild(p);
-
+	
 	p = document.createElement("p");
 	p.appendChild( document.createTextNode("There are a number of kits available, ensure you purchase the 'RFID Starter Kit for Raspberry Pi 2 Model B/B+ Python with 40-Pin GPIO Board' as this is required for your assessments.") );
 	p.appendChild( document.createElement("br") );
 	p.appendChild( document.createTextNode("Order this as soon as possible so you are not waiting too long to get in to it.") );
 	iotPan.appendChild(p);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(iotFlip);
 	readme.appendChild(iotPan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#iotFlip").click( function(){ $("#iotPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -1156,7 +1088,7 @@ function itsm( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	itsmFlip.appendChild(span);
-
+	
 	var itsmPan = document.createElement("div");
 	itsmPan.id = "itsmPan";
 	itsmPan.className= "panel";
@@ -1177,11 +1109,11 @@ function itsm( container ) {
 	li.appendChild(p);
 	ul.appendChild(li);
 	itsmPan.appendChild(ul);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(itsmFlip);
 	readme.appendChild(itsmPan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#itsmFlip").click( function(){ $("#itsmPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -1199,7 +1131,7 @@ function itsus( container ) {
 	span = document.createElement("span");
 	span.appendChild( document.createTextNode(" (show/hide)") );
 	itsusFlip.appendChild(span);
-
+	
 	var itsusPan = document.createElement("div");
 	itsusPan.id = "itsusPan";
 	itsusPan.className= "panel";
@@ -1225,11 +1157,11 @@ function itsus( container ) {
 	li.appendChild(p);
 	ul.appendChild(li);
 	itsusPan.appendChild(ul);
-
+	
 	var readme = document.getElementById(container);
 	readme.appendChild(itsusFlip);
 	readme.appendChild(itsusPan);
-
+	
 	var script = document.createElement("script");
 	script.innerHTML = '$(document).ready( function(){ $("#itsusFlip").click( function(){ $("#itsusPan").slideToggle("fast"); } );} );';
 	readme.appendChild(script);
@@ -1340,10 +1272,10 @@ function insertReadme() {
 	var domTitle = document.title;
 	var courseTitle = domTitle.match(/(Dual )?((ICT[0-9]{5}) (\w+) (\w+ )?(in|of) ([ ,\w()]+?) ((- )|(with ))?){1,2}(([0-9]{6})|((Template )?v[0-9]_[0-9]))/g);
 	var split;
-
+	
 	if( courseTitle != null ) {
 		// title fits the format
-		if( courseTitle[0].startsWith('Dual') ) {
+		if( courseTitle[0].startsWith("Dual") ) {
 			// it's a dual qual
 			var firstQual = courseTitle[0].substring( 5, courseTitle[0].search(/with|-/) );
 			var secondQual = courseTitle[0].substring( courseTitle[0].search(/with|-/) );
@@ -1356,11 +1288,11 @@ function insertReadme() {
 			split = splitQual(courseTitle[0]);
 		}
 	}
-
+	
 	var section = document.getElementsByClassName("sectionname");
 	var parent = null;
 	for( var i = 0; i < section.length; i++ ) {
-		if( section[i].innerHTML == "Read Me First!" ) {
+		if( section[i].innerHTML === "Read Me First!" ) {
 			parent = section[i].parentNode;
 		}
 	}
@@ -1368,7 +1300,7 @@ function insertReadme() {
 	if( parent != null ) {
 		contentList = parent.getElementsByClassName("section")[0];
 	}
-
+	
 	if( contentList != null ) {
 		var li = document.createElement("li");
 		li.className = "activity label modtype_label";
@@ -1378,12 +1310,12 @@ function insertReadme() {
 		if( split.length > 2 ) {
 			// SINGLE QUAL
 			// add iot raspberry pi/grad cert textbooks
-			if( split[0] == 'ICT40115' && split[2].includes('(IoT)') ) {
+			if( split[0] === 'ICT40115' && split[2].includes('(IoT)') ) {
 				iot("readme_main");
 			}
-			if( split[0] == "ICT80115" ) {
+			if( split[0] === "ICT80115" ) {
 				itsm("readme_main");
-			} else if( split[0] == "ICT80215" ) {
+			} else if( split[0] === "ICT80215" ) {
 				itsus("readme_main");
 			}
 			//regular readme stuff for all courses
@@ -1395,9 +1327,9 @@ function insertReadme() {
 			rubric("readme_main");
 			grades("readme_main");
 			// decide if course is dev/itif
-			if( courseStream(split[0]) == "dev" ) {
-				dev("readme_main");d
-			} else if( courseStream(split[0]) == "itif" ) {
+			if( courseStream(split[0]) === "dev" ) {
+				dev("readme_main");
+			} else if( courseStream(split[0]) === "itif" ) {
 				itif("readme_main");
 			}
 			workplace("readme_main");
@@ -1413,12 +1345,12 @@ function insertReadme() {
 		} else {
 			// DUAL QUAL
 			// add iot raspberry pi/grad cert textbooks
-			if( ( split[0][0] == "ICT40115" && split[0][2].includes("(IoT)") ) || ( split[1][0] == "ICT40115" && split[1][2].includes("(IoT)") ) ) {
+			if( ( split[0][0] === "ICT40115" && split[0][2].includes("(IoT)") ) || ( split[1][0] === "ICT40115" && split[1][2].includes("(IoT)") ) ) {
 				iot("readme_main");
 			}
-			if( ( split[0][0] == "ICT80115" ) || ( split[1][0] == "ICT80115" ) ) {
+			if( ( split[0][0] === "ICT80115" ) || ( split[1][0] === "ICT80115" ) ) {
 				itsm("readme_main");
-			} else if ( ( split[0][0] == "ICT80215" ) || ( split[1][0] == "ICT80215" ) ) {
+			} else if ( ( split[0][0] === "ICT80215" ) || ( split[1][0] === "ICT80215" ) ) {
 				itsus("readme_main");
 			}
 			pluralsight("readme_main");
@@ -1429,9 +1361,9 @@ function insertReadme() {
 			rubric("readme_main");
 			grades("readme_main");
 			// decide if course is dev/itif
-			if( ( courseStream(split[0][0]) == "dev" ) && ( courseStream(split[1][0]) == "dev" ) ) {
+			if( ( courseStream(split[0][0]) === "dev" ) && ( courseStream(split[1][0]) === "dev" ) ) {
 				dev("readme_main");
-			} else if( ( courseStream(split[0][0]) == "itif" ) && ( courseStream(split[1][0]) == "itif" ) ) {
+			} else if( ( courseStream(split[0][0]) === "itif" ) && ( courseStream(split[1][0]) === "itif" ) ) {
 				itif("readme_main");
 			}
 			workplace("readme_main");
@@ -1452,23 +1384,8 @@ var link = document.createElement("link");
 link.rel = "stylesheet";
 link.type = "text/css";
 link.id = "UpskillStyle";
-link.href = "https://skeksalot.github.io/UpSkillage/styles.css";
+link.href = "https://skeksalot.github.io/UpSkillage/styles_experimental.css";
 // only include stylesheet once
 if ( document.getElementById("UpskillStyle") == null ) {
 	document.head.appendChild(link);
-
-	var i = document.createElement("style");
-	var j;
-	if ( getCookie("optional") == "true" ) {
-		j = document.createTextNode(".optional{ display: inline; }");
-		i.appendChild(j);
-		j = document.createTextNode(".optBlock{ display: block; }");
-		i.appendChild(j);
-	} else {
-		j = document.createTextNode(".optional{ display: none; }");
-		i.appendChild(j);
-		j = document.createTextNode(".optBlock{ display: none; }");
-		i.appendChild(j);
-	}
-	document.head.appendChild(i);
 }
