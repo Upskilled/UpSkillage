@@ -1,11 +1,3 @@
-/* FOR H5P CONTENT */
-
-.qs-retrybutton{
-	display: none;
-}
-
-/* END */
-
 /* *** LIVECHAT *** */
 
 #chatContainer[class~=lc-max] {
@@ -256,6 +248,22 @@ div.tileoutlinecontent a, div.tileoutlinecontent a:link, div.tileoutlinecontent 
 td.hasevent.calendar_event_course {
 	font-weight: 900;
 }
+
+footer .footer__social-links {
+    list-style: none;
+    font-size: 0;
+    line-height: 20px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+footer .footer__social-link-item {
+    display: inline-block;
+    height: 24px;
+	vertical-align: middle;
+	text-align: right;
+}
+
 /* Quality of life improvement for SQL reports */
 
 div#fitem_id_querysql div.felement.ftextarea {

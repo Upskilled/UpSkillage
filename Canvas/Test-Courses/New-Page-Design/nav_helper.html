@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="../../js_lib_canvas.js" async defer></script>
+<link rel="stylesheet" media="all" href="https://35.244.87.60/dist/brandable_css/responsive_layout_normal_contrast/bundles/common-eb6006144c.css">
+<link rel="stylesheet" media="all" href="../../css_canvas.css">
+
+<div id="nav-tray-portal" style="position: relative; z-index: 99;" aria-hidden="true">
+	<span dir="ltr" style="--fLzZc-smallWidth:28em;">
+		<span class="fLzZc_bGBk fLzZc_fSpQ fLzZc_doqw fLzZc_bxia eJkkQ_eOlt" style="--fLzZc-smallWidth:28em;">
+			<div role="dialog" aria-label="Help tray">
+				<div class="fLzZc_caGd">
+					<div class="navigation-tray-container help-tray">
+						<span class="ejhDx_bGBk ejhDx_bQpq ejhDx_coHh">
+							<button cursor="pointer" type="button" tabindex="0" class="fOyUs_bGBk fOyUs_fKyb fOyUs_cuDs fOyUs_cBHs fOyUs_eWbJ fOyUs_fmDy fOyUs_eeJl fOyUs_cBtr fOyUs_fuTR fOyUs_cnfU fQfxa_bGBk" style="margin: 0px; padding: 0px; border-radius: 0.25rem; border-width: 0px; width: auto; cursor: pointer;">
+								<span class="fQfxa_caGd fQfxa_VCXp fQfxa_buuG fQfxa_EMjX fQfxa_bCUx fQfxa_bVmg fQfxa_bIHL">
+									<span direction="row" wrap="no-wrap" class="fOyUs_bGBk fOyUs_desw bDzpk_bGBk bDzpk_eRIA bDzpk_fZWR bDzpk_qOas" style="width: 100%; height: 100%;">
+										<span class="fOyUs_bGBk dJCgj_bGBk">
+											<span class="fQfxa_eoCh">
+												<svg name="IconX" viewBox="0 0 1920 1920" rotate="0" style="width: 1em; height: 1em;" width="1em" height="1em" aria-hidden="true" role="presentation" focusable="false" class="esvoZ_bGBk esvoZ_drOs esvoZ_eXrk cGqzL_bGBk"><g role="presentation"><path d="M771.548 960.11L319 1412.658l188.562 188.562 452.548-452.548 452.548 452.548 188.562-188.562-452.548-452.548 452.548-452.548L1412.658 319 960.11 771.548 507.562 319 319 507.562z" fill-rule="nonzero" stroke="none" stroke-width="1"></path></g></svg>
+											</span>
+											<span class="ergWt_bGBk">Close</span>
+										</span>
+									</span>
+								</span>
+							</button>
+						</span>
+						<div class="tray-with-space-for-global-nav">
+							<div id="help_tray" class="MYpOQ_bGBk" style="padding: 1.5rem;">
+								<h2 class="fOyUs_bGBk emyav_bGBk emyav_dlZd emyav_fAVi">Help</h2>
+								<hr role="presentation">
+								<form action="/api/v1/conversations" method="POST">
+									<fieldset class="ic-Form-group ic-HelpDialog__form-fieldset">
+										<legend class="screenreader-only">Ask your instructor a question</legend>
+										<label class="ic-Form-control">
+											<span class="ic-Label">Which course is this question about?</span>
+											<select class="ic-Input" required="" aria-required="true" name="recipients[]">
+												<option value="course_4_admins">LLN</option>
+											</select>
+											<span class="ic-Form-help-text">The message will be sent to all the teachers and teaching assistants in the course.</span>
+										</label>
+										<label class="ic-Form-control">
+											<span class="ic-Label">Message</span>
+											<textarea class="ic-Input" required="" aria-required="true" name="body"></textarea>
+										</label>
+										<div class="ic-HelpDialog__form-actions">
+											<button type="button" class="Button">Cancel</button>&nbsp;
+											<button type="submit" class="Button Button--primary">
+												<i class="icon-message" aria-hidden="true"></i>&nbsp;&nbsp;Send Message</button>
+										</div>
+										<input type="hidden" name="group_conversation" value="true">
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</span>
+	</span>
+</div>
