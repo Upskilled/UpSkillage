@@ -325,6 +325,9 @@ div.block div.content {
 div.block {
 	background: none;
 }
+.collapsibleregioncaption {
+	background: none;
+}
 
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
