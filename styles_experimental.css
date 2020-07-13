@@ -299,13 +299,13 @@ nav.navbar-inner {
 .block .header .block_action {
 	float: inline-start;
 }
-.block .header .block_action img, .block .header .block_action input{
+.block .header .block_action img, .block .header .block_action input {
 	border: none;
 }
 div#page-navbar {
 	border: none;
 }
-.block .content {
+div.block div.content {
 	border: none;
 }
 div.block {
