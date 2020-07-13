@@ -272,6 +272,11 @@ footer .footer_social-link-item:not(:first-child) {
 footer .footer_social-link-item svg {
     fill: #1548e0;
 }
+::selection {
+    background: #7b1ce9;
+    color: #ffffff;
+    text-shadow: none;
+}
 
 /* Quality of life improvement for SQL reports */
 
