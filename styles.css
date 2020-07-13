@@ -249,7 +249,7 @@ td.hasevent.calendar_event_course {
 	font-weight: 900;
 }
 
-footer .footer__social-links {
+footer .footer_social-links {
     list-style: none;
     font-size: 0;
     line-height: 20px;
@@ -257,13 +257,13 @@ footer .footer__social-links {
     padding: 0;
     margin: 0;
 }
-footer .footer__social-link-item {
+footer .footer_social-link-item {
     display: inline-block;
     height: 24px;
 	vertical-align: middle;
 	text-align: right;
 }
-footer .footer__social-link-item svg {
+footer .footer_social-link-item svg {
     fill: #1548e0;
 }
 
