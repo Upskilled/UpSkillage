@@ -286,7 +286,7 @@ footer .footer_social-link-item svg {
 #footnotewrapper div.copyright a.footer_copyright-link {
     color: #aaaab4;
 }
-html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside {
+html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th {
 	font-family: Mont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
