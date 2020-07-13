@@ -302,6 +302,9 @@ nav.navbar-inner {
 .block .header .block_action img, .block .header .block_action input{
 	border: none;
 }
+div#page-navbar {
+	border: none;
+}
 
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
