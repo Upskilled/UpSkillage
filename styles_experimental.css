@@ -283,8 +283,8 @@ footer .footer_social-link-item svg {
     color: #ffffff;
     text-shadow: none;
 }
-div.copyright {
-	content: "© Upskilled Pty Ltd 2020. All rights reserved. Terms & Conditions | Upskilled Policies |	RTO No 40374  |  ABN: 14 125 906 676";
+div.copyright .footer_copyright-link {
+    color: #aaaab4;
 }
 
 /* Quality of life improvement for SQL reports */
