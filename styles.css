@@ -256,7 +256,7 @@ footer .footer_social-links {
     list-style: none;
     font-size: 0;
     line-height: 20px;
-    text-align: center;
+    text-align: left;
     padding: 0;
     margin: 0;
 }
@@ -267,7 +267,7 @@ footer .footer_social-link-item {
 	text-align: right;
 }
 footer .footer_social-link-item:not(:first-child) {
-	padding-left: 24px;
+	padding-left: 12px;
 }
 footer .footer_social-link-item svg {
     fill: #1548e0;
