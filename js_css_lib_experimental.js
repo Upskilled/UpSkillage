@@ -1384,7 +1384,7 @@ var link = document.createElement("link");
 link.rel = "stylesheet";
 link.type = "text/css";
 link.id = "UpskillStyle";
-link.href = "https://github.com/Skeksalot/UpSkillage/raw/master/styles_experimental.css";
+link.href = "https://skeksalot.github.io/UpSkillage/styles_experimental.css";
 // only include stylesheet once
 if ( document.getElementById("UpskillStyle") == null ) {
 	document.head.appendChild(link);
