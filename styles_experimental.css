@@ -286,8 +286,8 @@ footer .footer_social-link-item svg {
 #footnotewrapper div.copyright a.footer_copyright-link {
     color: #aaaab4;
 }
-html {
-	font-family: Mont,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+* {
+	font-family: Mont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 /* Quality of life improvement for SQL reports */
@@ -297,6 +297,26 @@ div#fitem_id_querysql div.felement.ftextarea {
 }
 
 /* Taken from additional theme css */
+
+/* LT163381 */
+.category-45 .tiletitle {
+    color: #fff;
+    text-shadow: initial !important;
+}
+.category-45 .tile a:hover .tiletitle {
+    text-shadow: initial !important;
+}
+.tiletitle, .tile a:hover .tiletitle {
+    text-shadow: none !important;
+}
+.tile a:hover .tiletitle {
+   background-repeat: no-repeat;
+}
+.block .header .title h2, .block h3.main,
+.block_navigation .block_tree li {
+   font-weight: normal;
+}
+
 .section .activity .editing_move {
 	z-index: 2;
 }
