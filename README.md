@@ -4,11 +4,14 @@
     - [IT_readme_source.html](https://skeksalot.github.io/UpSkillage/IT_readme_source.html)
 - JS & CSS source library for reference and inclusion in courses:
     - [js_css_lib.js](https://skeksalot.github.io/UpSkillage/js_css_lib.js)
+    - [styles.css](https://skeksalot.github.io/UpSkillage/styles.css)
 - Video and webinars popup test using JS
     - [wistia_Table_Popup.html](https://skeksalot.github.io/UpSkillage/wistia_Table_Popup.html)
 - JS dynamically generated readme via JS lib
     - [jsTest.html](https://skeksalot.github.io/UpSkillage/jsTest.html)
-    
+- Experimental version of JS & CSS source library for testing prior to deployment:
+    - [js_css_lib_experimental.js](https://skeksalot.github.io/UpSkillage/js_css_lib_experimental.js)
+    - [styles-experimental.css](https://skeksalot.github.io/UpSkillage/styles_experimental.css)
 *** NEW LMS ***
 - Upskilled CSS (stable and experimental release):
     - [MR_stable.css](https://skeksalot.github.io/UpSkillage/MoodleRooms/MR_stable.css)
