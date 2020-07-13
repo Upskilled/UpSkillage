@@ -1389,3 +1389,7 @@ link.href = "https://skeksalot.github.io/UpSkillage/styles_experimental.css";
 if ( document.getElementById("UpskillStyle") == null ) {
 	document.head.appendChild(link);
 }
+
+// Alter footer copyright info
+var copyright = document.querySelector('div.copyright');
+copyright.innerHTML = '© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676';
