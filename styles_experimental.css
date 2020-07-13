@@ -249,6 +249,9 @@ td.hasevent.calendar_event_course {
 	font-weight: 900;
 }
 
+.footnote.text-left {
+	width: 50%;
+}
 footer div.social {
 	display: none;
 }
@@ -256,13 +259,13 @@ footer .footer_social-links {
     list-style: none;
     font-size: 0;
     line-height: 20px;
-    text-align: left;
+    text-align: center;
     padding: 0;
     margin: 0;
 }
 footer .footer_social-link-item {
     display: inline-block;
-    height: 24px;
+    height: 32px;
 	vertical-align: middle;
 	text-align: right;
 }
@@ -270,7 +273,7 @@ footer .footer_social-link-item:hover {
     opacity: 0.8;
 }
 footer .footer_social-link-item:not(:first-child) {
-	padding-left: 12px;
+	padding-left: 20px;
 }
 footer .footer_social-link-item svg {
     fill: #ffffff;
