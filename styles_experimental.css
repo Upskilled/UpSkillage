@@ -278,6 +278,9 @@ footer .footer_social-link-item:not(:first-child) {
 footer .footer_social-link-item svg {
     fill: #ffffff;
 }
+footer#pagefooter {
+	font-size: 1em;
+}
 ::selection {
     background: #7b1ce9;
     color: #ffffff;
@@ -298,7 +301,7 @@ nav.navbar-inner {
 }
 .block .header .block_action {
 	float: inline-start;
-	padding: 0 0 0 4px;
+	padding: 0 4px;
 }
 .block .header .title {
 	border: none;
@@ -315,6 +318,8 @@ div#page-navbar {
 }
 div.block div.content {
 	border: none;
+	background-color: #f6f6fa;
+	color: #2c2c36;
 }
 div.block {
 	background: none;
