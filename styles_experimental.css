@@ -309,6 +309,7 @@ nav.navbar-inner {
 .block .header .title h2 {
 	border: none;
 	background-color: #aaaab4;
+	color: #2c2c36
 }
 .block .header .block_action img, .block .header .block_action input {
 	border: none;
@@ -317,7 +318,7 @@ div#page-navbar {
 	border: none;
 }
 div.block div.content {
-	border: none;
+	border: none !important;
 	background-color: #f6f6fa;
 	color: #2c2c36;
 }
@@ -378,10 +379,11 @@ div#fitem_id_querysql div.felement.ftextarea {
 div.upskilled_news_date .month, div.upskilled_news_date .day {
 	line-height: 1em;
 }
-div.site-news-forum .forumpost {
+.forumpost {
 	border: none;
+	background-color: #f6f6fa;
 }
-div.site-news-forum .forumpost .content {
+.forumpost .content {
 	background: none;
 }
 
