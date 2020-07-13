@@ -306,7 +306,7 @@ nav.navbar-inner {
 .block .header .title {
 	border: none;
 }
-.block .header h2 {
+.block .header .title h2 {
 	border: none;
 	background-color: #aaaab4;
 }
@@ -345,35 +345,44 @@ div#fitem_id_querysql div.felement.ftextarea {
     text-shadow: none !important;
 }
 .tile a:hover .tiletitle {
-   background-repeat: no-repeat;
+	background-repeat: no-repeat;
 }
 .block .header .title h2, .block h3.main,
 .block_navigation .block_tree li {
-   font-weight: normal;
+	font-weight: normal;
 }
 
 .section .activity .editing_move {
 	z-index: 2;
 }
 .tiletitle, .tile a:hover .tiletitle {
-    text-shadow: none !important;
+	text-shadow: none !important;
 }
 .forumpost .row.header {
-    /*background: #0b924d url(/theme/image.php?theme=ups&component=theme&rev=1544487563&image=newsheader_bg) top repeat-x;*/
-    background-color: #1548e0;
-    background-image: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    background-image: -moz-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    background-image: -o-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    background-image: -ms-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    background-image: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    border-top: 1px solid #a65afa;
+	/*background: #0b924d url(/theme/image.php?theme=ups&component=theme&rev=1544487563&image=newsheader_bg) top repeat-x;*/
+	background-color: #1548e0;
+	background-image: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
+	background-image: -moz-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
+	background-image: -o-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
+	background-image: -ms-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
+	background-image: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
+	border: none;
 }
 .forumpost .header .upskilled_news_date {
-    color: #7b1ce9;
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/newsdatebg_new.png);
+	color: #7b1ce9;
+	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/newsdatebg_new.png);
 }
 .block_calendar_month.block .minicalendar td.today, .block .minicalendar td.today {
-    background-color: #1548e0;
+	background-color: #1548e0;
+}
+div.upskilled_news_date .month, div.upskilled_news_date .day {
+	line-height: 1em;
+}
+div.site-news-forum .forumpost {
+	border: none;
+}
+div.site-news-forum .forumpost .content {
+	background: none;
 }
 
 /* *** FACULTY INDIVIDUAL THEMING *** */
