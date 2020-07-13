@@ -292,6 +292,9 @@ html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav
 body, h1, h2, h3, h4, h5, h6 {
 	color: #2c2c36;
 }
+nav.navbar-inner {
+    border-bottom: none !important;
+}
 
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
@@ -299,7 +302,7 @@ div#fitem_id_querysql div.felement.ftextarea {
 	max-width: 1440px;
 }
 
-/* Taken from additional theme css */
+/*** Taken from additional theme css ***/
 
 /* LT163381 */
 .category-45 .tiletitle {
