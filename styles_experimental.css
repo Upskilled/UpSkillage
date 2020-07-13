@@ -298,6 +298,14 @@ nav.navbar-inner {
 }
 .block .header .block_action {
 	float: inline-start;
+	padding: 0 0 0 4px;
+}
+.block .header .title {
+	border: none;
+}
+.block .header h2 {
+	border: none;
+	background-color: #aaaab4;
 }
 .block .header .block_action img, .block .header .block_action input {
 	border: none;
