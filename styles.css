@@ -263,6 +263,9 @@ footer .footer__social-link-item {
 	vertical-align: middle;
 	text-align: right;
 }
+footer .footer__social-link-item svg {
+    fill: #1548e0;
+}
 
 /* Quality of life improvement for SQL reports */
 
