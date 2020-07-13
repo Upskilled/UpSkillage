@@ -229,7 +229,7 @@ td.vidCell {
 	border: none;
 	vertical-align: bottom;
 	font-size: 1em;
-	font-family: "Muli",Georgia,"Times New Roman",Times,serif;
+	font-family: Mont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 table.vidContainer tr {
@@ -259,7 +259,7 @@ footer .footer_social-links {
     list-style: none;
     font-size: 0;
     line-height: 20px;
-    text-align: center;
+    text-align: left;
     padding: 0;
     margin: 0;
 }
@@ -286,9 +286,11 @@ footer .footer_social-link-item svg {
 #footnotewrapper div.copyright a.footer_copyright-link {
     color: #aaaab4;
 }
+html {
+	font-family: Mont,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
 
 /* Quality of life improvement for SQL reports */
-
 div#fitem_id_querysql div.felement.ftextarea {
 	width: 100%;
 	max-width: 1440px;
