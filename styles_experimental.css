@@ -289,6 +289,9 @@ footer .footer_social-link-item svg {
 html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th {
 	font-family: Mont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+body, h1, h2, h3, h4, h5, h6 {
+	color: #2c2c36;
+}
 
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
