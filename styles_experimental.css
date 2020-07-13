@@ -283,7 +283,7 @@ footer .footer_social-link-item svg {
     color: #ffffff;
     text-shadow: none;
 }
-div.copyright .footer_copyright-link {
+#footnotewrapper div.copyright a.footer_copyright-link {
     color: #aaaab4;
 }
 
