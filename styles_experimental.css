@@ -288,12 +288,16 @@ footer .footer_social-link-item svg {
 }
 html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th {
 	font-family: Mont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 2em;
 }
 body, h1, h2, h3, h4, h5, h6 {
 	color: #2c2c36;
 }
 nav.navbar-inner {
-    border-bottom: none !important;
+	border-bottom: none !important;
+}
+.block .header .block_action {
+	float: inline-start;
 }
 
 /* Quality of life improvement for SQL reports */
