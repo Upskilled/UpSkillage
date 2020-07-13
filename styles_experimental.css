@@ -305,6 +305,12 @@ nav.navbar-inner {
 div#page-navbar {
 	border: none;
 }
+.block .content {
+	border: none;
+}
+div.block {
+	background: none;
+}
 
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
