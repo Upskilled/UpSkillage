@@ -351,6 +351,10 @@ section#region-main {
 	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.png) left top no-repeat;
 	padding: 4px 4px 4px 24px;
 }
+.block .header .block_action > input.moveto.customcommand.requiresjs {
+	max-width: 24px;
+	padding: 4px;
+}
 
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {

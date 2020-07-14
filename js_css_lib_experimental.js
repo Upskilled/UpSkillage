@@ -1403,7 +1403,7 @@ if ( document.getElementById("UpskillStyle") == null ) {
 // for( var i = 0; i < icons.length; i++ ) {
 // 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.png';
 // }
-// var icons = document.querySelectorAll('input.moveto customcommand requiresjs');
+// var icons = document.querySelectorAll('input.moveto.customcommand.requiresjs');
 // for( var i = 0; i < icons.length; i++ ) {
 // 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.png';
 // }
@@ -1417,7 +1417,7 @@ window.onload = function() {
 						'for( var i = 0; i < icons.length; i++ ) {'+
 							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.png\';'+
 						'}'+
-						'var icons = document.querySelectorAll(\'input.moveto customcommand requiresjs\');'+
+						'var icons = document.querySelectorAll(\'input.moveto.customcommand.requiresjs\');'+
 						'for( var i = 0; i < icons.length; i++ ) {'+
 							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.png\';'+
 						'}';
