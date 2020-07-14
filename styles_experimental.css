@@ -331,7 +331,7 @@ div.block {
 section#region-main {
 	min-height: 645px;
 }
-img.block-hider-hide {
+.block .header .block_action > img.block-hider-hide {
 	max-width: 24px;
 	padding: 4px;
 	/* width: 24px;
