@@ -331,13 +331,15 @@ div.block {
 section#region-main {
 	min-height: 645px;
 }
-.block-hider-hide {
+/* .block-hider-hide {
 	width: 24px;
-	height: auto;
+	height: 24px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.png) left top no-repeat;
-	padding: 4px 4px 4px 24px;
+		background-size: auto;
+	padding: 0 4px 0 24px;
+	background-size: contain;
 }
 .block-hider-show {
 	width: 24px;
@@ -346,7 +348,7 @@ section#region-main {
 	-moz-box-sizing: border-box;
 	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.png) left top no-repeat;
 	padding: 4px 4px 4px 24px;
-}
+} */
 
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
