@@ -368,9 +368,16 @@ section#region-main {
 aside#block-region-side-post {
 	background-color: #f6f6fa;
 }
-div#page-navbar {
-	background: #f6f6fa;
+#page-login-index #region-main {
+	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
+	position: absolute;
+	z-index: 12345;
+	top: 0;
+	height: 100%;
 }
+/* div#page-navbar {
+	background: #f6f6fa;
+} */
 div#page-content {
 	display: flex;
 }
@@ -380,6 +387,7 @@ div#region-bs-main-and-pre {
 div#region-bs-main-and-pre > div.row-fluid {
 	display: flex;
 }
+
 
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
