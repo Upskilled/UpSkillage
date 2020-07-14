@@ -1398,7 +1398,6 @@ if ( document.getElementById("UpskillStyle") == null ) {
 // var icons = document.querySelectorAll('img.block-hider-hide');
 // for( var i = 0; i < icons.length; i++ ) {
 // 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.png';
-// 	}
 // }
 window.onload = function() {
 	var script = document.createElement('script');
@@ -1409,6 +1408,6 @@ window.onload = function() {
 						'var icons = document.querySelectorAll(\'img.block-hider-hide\');'+
 						'for( var i = 0; i < icons.length; i++ ) {'+
 							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.png\';'+
-						'} }';
+						'}';
 	document.body.appendChild(script);
 };
