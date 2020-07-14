@@ -1399,6 +1399,14 @@ if ( document.getElementById("UpskillStyle") == null ) {
 // for( var i = 0; i < icons.length; i++ ) {
 // 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.png';
 // }
+// var icons = document.querySelectorAll('img.block-hider-show');
+// for( var i = 0; i < icons.length; i++ ) {
+// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.png';
+// }
+// var icons = document.querySelectorAll('input.moveto customcommand requiresjs');
+// for( var i = 0; i < icons.length; i++ ) {
+// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.png';
+// }
 window.onload = function() {
 	var script = document.createElement('script');
 	script.defer = true;
@@ -1408,6 +1416,10 @@ window.onload = function() {
 						'var icons = document.querySelectorAll(\'img.block-hider-hide\');'+
 						'for( var i = 0; i < icons.length; i++ ) {'+
 							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.png\';'+
+						'}'+
+						'var icons = document.querySelectorAll(\'input.moveto customcommand requiresjs\');'+
+						'for( var i = 0; i < icons.length; i++ ) {'+
+							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.png\';'+
 						'}';
 	document.body.appendChild(script);
 };

@@ -331,8 +331,9 @@ div.block {
 section#region-main {
 	min-height: 645px;
 }
-.block-hider-hide {
+img.block-hider-hide {
 	max-width: 24px;
+	padding: 4px;
 	/* width: 24px;
 	height: 24px;
 	box-sizing: border-box;
@@ -354,7 +355,7 @@ section#region-main {
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
 	width: 100%;
-	max-width: 1440px;
+	max-width: 1280px;
 }
 
 /*** Taken from additional theme css ***/
