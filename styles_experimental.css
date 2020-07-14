@@ -357,19 +357,28 @@ section#region-main {
 }
 aside#block-region-side-pre {
 	background-color: #f6f6fa;
-	overflow: hidden;
-	height: 10000px;
-}
-aside#block-region-side-post {
-	background-color: #f6f6fa;
-	overflow: hidden;
-	height: 10000px;
+	flex: 1;
+	order: 1;
 }
 section#region-main {
 	background-color: #ffffff;
+	flex: 5;
+	order: 2;
+}
+aside#block-region-side-post {
+	background-color: #f6f6fa;
 }
 div#page-navbar {
 	background-color: #f6f6fa;
+}
+div#page-content {
+	display: flex;
+}
+div#region-bs-main-and-pre {
+	display: flex;
+}
+div#region-bs-main-and-pre > div.row-fluid {
+	display: flex;
 }
 
 /* Quality of life improvement for SQL reports */
