@@ -355,6 +355,22 @@ section#region-main {
 	max-width: 24px;
 	padding: 4px;
 }
+aside#block-region-side-pre {
+	background-color: #f6f6fa;
+	overflow: hidden;
+	height: 10000px;
+}
+aside#block-region-side-post {
+	background-color: #f6f6fa;
+	overflow: hidden;
+	height: 10000px;
+}
+section#region-main {
+	background-color: #ffffff;
+}
+div#page-navbar {
+	background-color: #f6f6fa;
+}
 
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
