@@ -308,8 +308,8 @@ nav.navbar-inner {
 }
 .block .header .title h2 {
 	border: none;
-	background-color: #aaaab4;
-	color: #2c2c36
+	background-color: #1548e0;
+	color: #ffffff;
 }
 .block .header .block_action img, .block .header .block_action input {
 	border: none;
@@ -338,7 +338,7 @@ section#region-main {
 	height: 24px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.png) left top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg) left top no-repeat;
 		background-size: auto;
 	padding: 0 4px 0 24px;
 	background-size: contain; */
@@ -348,7 +348,7 @@ section#region-main {
 	height: auto;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.png) left top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) left top no-repeat;
 	padding: 4px 4px 4px 24px;
 }
 .block .header .block_action > input.moveto.customcommand.requiresjs {
@@ -359,6 +359,7 @@ aside#block-region-side-pre {
 	background-color: #f6f6fa;
 	flex: 1;
 	order: 1;
+	padding-top: 8px;
 }
 section#region-main {
 	background-color: #ffffff;
@@ -367,6 +368,7 @@ section#region-main {
 }
 aside#block-region-side-post {
 	background-color: #f6f6fa;
+	padding-top: 8px;
 }
 #page-login-index #region-main {
 	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
@@ -375,9 +377,38 @@ aside#block-region-side-post {
 	top: 0;
 	height: 100%;
 }
-/* div#page-navbar {
-	background: #f6f6fa;
-} */
+div.loginbox {
+	margin: 15% 0 0 55%;
+	border: none;
+}
+div#page-navbar, div#page-navbar-wrapper {
+	background: none !important;
+	border: none;
+}
+#page-navbar nav.breadcrumb-nav {
+	padding: 0;
+}
+#page-navbar div.breadcrumb-button {
+	padding: 0 12px 0 0;
+	margin: 0;
+}
+ul.breadcrumb, ul.breadcrumb a {
+	color: #ffffff;
+}
+nav.breadcrumb-nav ul.breadcrumb {
+	padding: 0 0 0 12px;
+}
+#page-navbar .singlebutton input {
+	color: #2c2c36;
+	background: #ffffff !important;
+	border-radius: 2px;
+	border: 2px solid #ffffff;
+	transition: all ease-in-out 0.2s;
+}
+#page-navbar .singlebutton input:hover {
+	border-radius: 0;
+	border: 2px solid #2c2c36;
+}
 div#page-content {
 	display: flex;
 }

@@ -1397,15 +1397,15 @@ if ( document.getElementById("UpskillStyle") == null ) {
 
 // var icons = document.querySelectorAll('img.block-hider-hide');
 // for( var i = 0; i < icons.length; i++ ) {
-// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.png';
+// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg';
 // }
 // var icons = document.querySelectorAll('img.block-hider-show');
 // for( var i = 0; i < icons.length; i++ ) {
-// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.png';
+// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg';
 // }
 // var icons = document.querySelectorAll('input.moveto.customcommand.requiresjs');
 // for( var i = 0; i < icons.length; i++ ) {
-// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.png';
+// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.svg';
 // }
 window.onload = function() {
 	var script = document.createElement('script');
@@ -1415,11 +1415,11 @@ window.onload = function() {
 						'copyright.innerHTML = \'© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676\';'+
 						'var icons = document.querySelectorAll(\'img.block-hider-hide\');'+
 						'for( var i = 0; i < icons.length; i++ ) {'+
-							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.png\';'+
+							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg\';'+
 						'}'+
 						'var icons = document.querySelectorAll(\'input.moveto.customcommand.requiresjs\');'+
 						'for( var i = 0; i < icons.length; i++ ) {'+
-							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.png\';'+
+							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.svg\';'+
 						'}';
 	document.body.appendChild(script);
 };
