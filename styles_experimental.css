@@ -318,6 +318,34 @@ ul#action-menu-0-menu .filler {
 	margin: 4px 1px;
 	border: none;
 }
+/* Calendar */
+.block_calendar_month.block .content {
+	padding: 0;
+	background: #aaaab4;
+}
+.block_calendar_month.block .content .calendar-controls {
+	background: #1548e0;
+}
+.minicalendar.calendartable tr.weekdays {
+	background: #2c2c36;
+}
+.minicalendar.calendartable td.dayblank {
+	border: 1px solid #2c2c36;
+}
+.minicalendar.calendartable td.day {
+	background: #f6f6fa;
+	color: #2c2c36;
+	border: 1px solid #aaaab4;
+}
+.minicalendar.calendartable td.weekend.day {
+	color: #aaaab4;
+}
+.block_calendar_month.block .minicalendar td.today, .block .minicalendar td.today {
+	background-color: #1548e0;
+}
+div.upskilled_news_date .month, div.upskilled_news_date .day {
+	line-height: 1em;
+}
 /* Blocks */
 .block .header {
 	border: none;
@@ -526,12 +554,6 @@ div#fitem_id_querysql div.felement.ftextarea {
 	font-size: 14px;
 	color: #7b1ce9;
 	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/newsdatebg_new.png);
-}
-.block_calendar_month.block .minicalendar td.today, .block .minicalendar td.today {
-	background-color: #1548e0;
-}
-div.upskilled_news_date .month, div.upskilled_news_date .day {
-	line-height: 1em;
 }
 .forumpost {
 	border: none;
