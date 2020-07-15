@@ -295,11 +295,14 @@ footer#page-footer {
     color: #aaaab4;
 }
 html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th {
-	font-family: Mont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 1.5em;
 }
 body, h1, h2, h3, h4, h5, h6 {
 	color: #2c2c36;
+}
+.block .header {
+	border: none;
 }
 .block .header .block_action {
 	float: inline-start;
@@ -350,11 +353,13 @@ section#region-main {
 }
 .block-hider-show {
 	width: 24px;
-	height: auto;
+	height: 24px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) left top no-repeat;
-	padding: 4px 4px 4px 24px;
+		background-size: auto;
+	padding: 0 4px 0 24px;
+	background-size: contain;
 }
 body.has_dock #page {
 	padding: 0;
@@ -453,15 +458,18 @@ aside#block-region-side-pre input[type="submit"], aside#block-region-side-post i
 	border-radius: 0;
 	border: 2px solid #4ADCB0;
 }
-aside#block-region-side-pre input[type="text"] {
+aside#block-region-side-pre input[type="text"], aside#block-region-side-pre input#adminsearchquery {
 	border: 1px solid #000000;
 	box-shadow: none;
-	border-radius: 4px;
+	border-radius: 16px;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/search-interface-symbol.svg) no-repeat 4px center;
+	background-size: 1.5em;
+	padding-left: 30px;
 	transition: all ease-in-out 0.2s;
+	max-width: 100%;
 }
-aside#block-region-side-pre input[type="text"]:hover {
+aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pre input#adminsearchquery:hover, aside#block-region-side-pre input[type="text"]:focus, aside#block-region-side-pre input#adminsearchquery:focus {
 	border-radius: 0px;
-	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/search-interface-symbol.svg) contain;
 }
 
 /* Quality of life improvement for SQL reports */
@@ -486,8 +494,7 @@ div#fitem_id_querysql div.felement.ftextarea {
 .tile a:hover .tiletitle {
 	background-repeat: no-repeat;
 }
-.block .header .title h2, .block h3.main,
-.block_navigation .block_tree li {
+.block .header .title h2, .block h3.main, .block_navigation .block_tree li {
 	font-weight: normal;
 }
 
@@ -498,7 +505,6 @@ div#fitem_id_querysql div.felement.ftextarea {
 	text-shadow: none !important;
 }
 .forumpost .row.header {
-	/*background: #0b924d url(/theme/image.php?theme=ups&component=theme&rev=1544487563&image=newsheader_bg) top repeat-x;*/
 	background-color: #1548e0;
 	background-image: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
 	background-image: -moz-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
@@ -508,8 +514,9 @@ div#fitem_id_querysql div.felement.ftextarea {
 	border: none;
 }
 .forumpost .header .upskilled_news_date {
+	font-size: 14px;
 	color: #7b1ce9;
-	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/newsdatebg_new.png);
+	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/newsdatebg_new.png);
 }
 .block_calendar_month.block .minicalendar td.today, .block .minicalendar td.today {
 	background-color: #1548e0;
