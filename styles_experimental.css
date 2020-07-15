@@ -249,40 +249,8 @@ td.hasevent.calendar_event_course {
 	font-weight: 900;
 }
 
-/* Big restyling improvements */
-.footnote.text-left {
-	width: 50%;
-}
-footer div.social {
-	display: none;
-}
-footer .footer_social-links {
-    list-style: none;
-    font-size: 0;
-    line-height: 20px;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-}
-footer .footer_social-link-item {
-    display: inline-block;
-    height: 32px;
-	vertical-align: middle;
-	text-align: right;
-}
-footer .footer_social-link-item:hover {
-    opacity: 0.8;
-}
-footer .footer_social-link-item:not(:first-child) {
-	padding-left: 20px;
-}
-footer .footer_social-link-item svg {
-    fill: #ffffff;
-}
-footer#page-footer {
-	font-size: 0.8em;
-	padding: 15px 0;
-}
+/* ***** MAJOR MOODLE RESTYLE AND IMPROVEMENT ***** */
+/* General Site-Wide */
 ::selection {
     background: #7b1ce9;
     color: #ffffff;
@@ -291,9 +259,6 @@ footer#page-footer {
 .container-fluid {
 	background: #2c2c36;
 }
-#footnotewrapper div.copyright a.footer_copyright-link {
-    color: #aaaab4;
-}
 html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th {
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 1.5em;
@@ -301,6 +266,59 @@ html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav
 body, h1, h2, h3, h4, h5, h6 {
 	color: #2c2c36;
 }
+/* Login Page */
+#page-login-index #region-main {
+	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
+	position: absolute;
+	z-index: 12345;
+	top: 0;
+	height: 100%;
+}
+div.loginbox {
+	margin: 15% 0 0 55%;
+	border: none;
+}
+/* Top Navbar */
+div#page-navbar, div#page-navbar-wrapper {
+	background: none !important;
+	border: none;
+}
+#page-navbar nav.breadcrumb-nav {
+	padding: 0;
+}
+#page-navbar div.breadcrumb-button {
+	padding: 0 12px 0 0;
+	margin: 0;
+}
+ul.breadcrumb, ul.breadcrumb a {
+	color: #ffffff;
+}
+nav.breadcrumb-nav ul.breadcrumb {
+	padding: 0 0 0 12px;
+}
+#page-navbar .singlebutton input {
+	color: #2c2c36;
+	background: #ffffff !important;
+	border-radius: 2px;
+	border: 2px solid #ffffff;
+	transition: all ease-in-out 0.2s;
+}
+#page-navbar .singlebutton input:hover {
+	border-radius: 0;
+	border: 2px solid #2c2c36;
+}
+.usermenu .moodle-actionmenu .toggle-display {
+	color: #f6f6fa;
+}
+ul#action-menu-0-menu {
+	padding: 0;
+	margin: 0;
+}
+ul#action-menu-0-menu .filler {
+	margin: 4px 1px;
+	border: none;
+}
+/* Blocks */
 .block .header {
 	border: none;
 }
@@ -339,26 +357,20 @@ div.block {
 section#region-main {
 	min-height: 645px;
 }
-.block .header .block_action > img.block-hider-hide {
+.block .header .block_action > img.block-hider-hide, .block .header .block_action > .block-hider-show {
 	max-width: 24px;
-	padding: 4px;
-	/* width: 24px;
-	height: 24px;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg) 4px top no-repeat;
-		background-size: auto;
-	padding: 0 4px 0 28px;
-	background-size: contain; */
-}
-.block .header .block_action > .block-hider-show {
 	width: 24px;
 	height: 24px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) 4px top no-repeat;
-		background-size: auto;
 	padding: 0 4px 0 28px;
+}
+.block .header .block_action > img.block-hider-hide {
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg) 4px top no-repeat;
+	background-size: contain;
+}
+.block .header .block_action > .block-hider-show {
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) 4px top no-repeat;
 	background-size: contain;
 }
 body.has_dock #page {
@@ -368,6 +380,7 @@ body.has_dock #page {
 	max-width: 24px;
 	padding: 4px;
 }
+/* Page Content and Layout */
 aside#block-region-side-pre {
 	background-color: #f6f6fa;
 	flex: 1;
@@ -382,48 +395,6 @@ section#region-main {
 aside#block-region-side-post {
 	background-color: #f6f6fa;
 	padding-top: 8px;
-}
-#page-login-index #region-main {
-	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
-	position: absolute;
-	z-index: 12345;
-	top: 0;
-	height: 100%;
-}
-div.loginbox {
-	margin: 15% 0 0 55%;
-	border: none;
-}
-div#page-navbar, div#page-navbar-wrapper {
-	background: none !important;
-	border: none;
-}
-#page-navbar nav.breadcrumb-nav {
-	padding: 0;
-}
-#page-navbar div.breadcrumb-button {
-	padding: 0 12px 0 0;
-	margin: 0;
-}
-ul.breadcrumb, ul.breadcrumb a {
-	color: #ffffff;
-}
-nav.breadcrumb-nav ul.breadcrumb {
-	padding: 0 0 0 12px;
-}
-#page-navbar .singlebutton input {
-	color: #2c2c36;
-	background: #ffffff !important;
-	border-radius: 2px;
-	border: 2px solid #ffffff;
-	transition: all ease-in-out 0.2s;
-}
-#page-navbar .singlebutton input:hover {
-	border-radius: 0;
-	border: 2px solid #2c2c36;
-}
-.usermenu .moodle-actionmenu .toggle-display {
-	color: #f6f6fa;
 }
 div#page-content {
 	display: flex;
@@ -442,14 +413,15 @@ div#region-bs-main-and-pre > div.row-fluid {
 	font-weight: bold;
 	border-radius: 4px;
 	border: 2px solid #ffffff;
-	transition: all ease-in-out 0.2s;
 	box-shadow: none;
+	transition: all ease-in-out 0.2s;
 }
 aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"] {
 	background: #4ADCB0 !important;
 	font-weight: bold;
 	border-radius: 4px;
 	border: 2px solid #f6f6fa;
+	box-shadow: none;
 	transition: all ease-in-out 0.2s;
 }
 #region-main input[type="submit"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover {
@@ -470,6 +442,43 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 }
 aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pre input#adminsearchquery:hover, aside#block-region-side-pre input[type="text"]:focus, aside#block-region-side-pre input#adminsearchquery:focus {
 	border-radius: 0px;
+}
+/* Footer */
+.footnote.text-left {
+	width: 50%;
+}
+footer div.social {
+	display: none;
+}
+footer .footer_social-links {
+    list-style: none;
+    font-size: 0;
+    line-height: 20px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+footer .footer_social-link-item {
+    display: inline-block;
+    height: 32px;
+	vertical-align: middle;
+	text-align: right;
+}
+footer .footer_social-link-item:hover {
+    opacity: 0.8;
+}
+footer .footer_social-link-item:not(:first-child) {
+	padding-left: 20px;
+}
+footer .footer_social-link-item svg {
+    fill: #ffffff;
+}
+footer#page-footer {
+	font-size: 0.8em;
+	padding: 15px 0;
+}
+#footnotewrapper div.copyright a.footer_copyright-link {
+    color: #aaaab4;
 }
 
 /* Quality of life improvement for SQL reports */
