@@ -346,19 +346,19 @@ section#region-main {
 	height: 24px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg) left top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg) 4px top no-repeat;
 		background-size: auto;
-	padding: 0 4px 0 24px;
+	padding: 0 4px 0 28px;
 	background-size: contain; */
 }
-.block-hider-show {
+.block .header .block_action > .block-hider-show {
 	width: 24px;
 	height: 24px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) left top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) 4px top no-repeat;
 		background-size: auto;
-	padding: 0 4px 0 24px;
+	padding: 0 4px 0 28px;
 	background-size: contain;
 }
 body.has_dock #page {
