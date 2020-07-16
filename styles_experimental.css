@@ -569,7 +569,7 @@ div#tileoutlinearea div.tileoutlinecontent {
 div#tileoutlinearea.tileoutlinearea {
 	padding-top: 0;
 }
-.tile span.tiletitle, .tiletitle, .tile a:hover .tiletitle {
+.tile span.tiletitle, .tiletitle, .tile a:hover .tiletitle, #tileoutlinearea h3.sectionname {
 	font-family: inherit;
 }
 .tile span.tiletopic, .tile a:hover .tiletopic {
