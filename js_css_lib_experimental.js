@@ -1412,14 +1412,6 @@ window.onload = function() {
 	script.defer = true;
 	script.async = true;
 	script.innerText = 'var copyright = document.querySelector(\'div.copyright\');' +
-						'copyright.innerHTML = \'© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676\';'+
-						'var icons = document.querySelectorAll(\'img.block-hider-hide\');'+
-						'for( var i = 0; i < icons.length; i++ ) {'+
-							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg\';'+
-						'}'+
-						'var icons = document.querySelectorAll(\'input.moveto.customcommand.requiresjs\');'+
-						'for( var i = 0; i < icons.length; i++ ) {'+
-							'icons[i].src = \'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.svg\';'+
-						'}';
+						'copyright.innerHTML = \'© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676\';';
 	document.body.appendChild(script);
 };

@@ -255,7 +255,7 @@ td.hasevent.calendar_event_course {
 .container-fluid {
 	background: #2c2c36;
 }
-html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th, strong, b, ins, i, img, em, label {
+html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, optgroup, select, table, td, tr, th, strong, b, ins, i, img, em, label, dl, dt, dd {
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 2em;
 }
@@ -337,13 +337,19 @@ nav.navbar-inner {
 div#page-navbar {
 	border: none;
 }
-.bannertext img {
+.bannertext img, .logounit img {
     width: 205px;
     height: 33px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/text_logo_mont.png) left top no-repeat;
     padding-left: 205px;
+}
+header.navbar.navbar-fixed-top.moodle-has-zindex {
+	background: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
+}
+#page-user-profile .page-context-header {
+	background: #ffffff;
 }
 /* Calendar */
 .block_calendar_month.block .content {
@@ -379,7 +385,7 @@ div.upskilled_news_date .month, div.upskilled_news_date .day {
 }
 .block .header .block_action {
 	float: right;
-	padding: 2px 4px;
+	padding: 4px;
 }
 .block .header .title {
 	border: none;
@@ -405,7 +411,7 @@ div.block {
 .collapsibleregioncaption {
 	background: none;
 }
-.block .header .block_action > img.block-hider-hide, .block .header .block_action > .block-hider-show {
+.block .header .block_action > img.block-hider-hide, .block .header .block_action > .block-hider-show, .block .header .block_action input.moveto.customcommand.requiresjs {
 	max-width: 24px;
 	width: 24px;
 	height: 24px;
@@ -424,17 +430,17 @@ div.block {
 	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) 4px top no-repeat;
 	background-size: contain;
 }
+.block .header .block_action input.moveto.customcommand.requiresjs {
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.svg) 4px top no-repeat;
+	background-size: contain;
+}
 body.has_dock #page {
 	padding: 0;
-}
-.block .header .block_action > input.moveto.customcommand.requiresjs {
-	max-width: 24px;
-	padding: 4px;
 }
 .block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li, .block_navigation .block_tree li.depth_3:hover {
 	background: #f6f6fa;
 }
-aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:visited {
+aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:visited, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:visited {
 	color: #2c2c36 !important;
 }
 .block_settings .block_tree li.item_with_icon > p img {
@@ -533,6 +539,9 @@ aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pr
 	margin-bottom: 0;
 	border-radius: 2px;
 	border: none;
+}
+#page-report-outline-user .mod-scorm .structlist > li {
+    word-wrap: break-word;
 }
 /* Footer */
 .footnote.text-left {
