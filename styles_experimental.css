@@ -443,6 +443,9 @@ body.has_dock #page {
 aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:visited, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:visited {
 	color: #2c2c36 !important;
 }
+aside#block-region-side-pre .block_navigation .block_tree li.depth_1:first-child {
+	border: none;
+}
 .block_settings .block_tree li.item_with_icon > p img {
 	top: 0.4em;
 }
@@ -542,6 +545,9 @@ aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pr
 }
 #page-report-outline-user .mod-scorm .structlist > li {
     word-wrap: break-word;
+}
+table.flexible th, .generaltable th {
+	font-weight: 600;
 }
 /* Footer */
 .footnote.text-left {
