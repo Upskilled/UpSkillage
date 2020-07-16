@@ -255,15 +255,18 @@ td.hasevent.calendar_event_course {
 .container-fluid {
 	background: #2c2c36;
 }
-html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th, strong, b, ins, i, img, em {
+html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th, strong, b, ins, i, img, em, label {
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 2em;
 }
 pre, code, pre span {
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
-body, h1, h2, h3, h4, h5, h6 {
+body, h1, h2, h3, h4, h5, h6, p {
 	color: #2c2c36;
+}
+a, a:link, a:visited {
+	color: rgba(44,44,54,0.7);
 }
 /* Login Page */
 #page-login-index #region-main {
@@ -339,7 +342,7 @@ div#page-navbar {
     height: 33px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/text_logo_mont.png) left top no-repeat;
+    background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/text_logo_mont.png) left top no-repeat;
     padding-left: 205px;
 }
 /* Calendar */
@@ -431,8 +434,14 @@ body.has_dock #page {
 .block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li, .block_navigation .block_tree li.depth_3:hover {
 	background: #f6f6fa;
 }
-.block_navigation .block_tree li.depth_3 ul li a:link, .block_navigation .block_tree li.depth_3 ul ul li a:link, .block_navigation .block_tree li.depth_3:hover a:link, .block_navigation .block_tree li.depth_3 ul li:hover a:link, .block_navigation .block_tree li.depth_3:hover a:visited {
+aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:visited {
 	color: #2c2c36 !important;
+}
+.block_settings .block_tree li.item_with_icon > p img {
+	top: 0.4em;
+}
+.jsenabled .block_settings .block_tree .tree_item.branch{
+	background-position-y: 0.4em;
 }
 .block_navigation .dimmed_text {
 	color: #aaaab4;
@@ -472,6 +481,7 @@ div#region-bs-main-and-pre > div.row-fluid {
 }
 section#region-main {
 	min-height: 73.5vh;
+	padding-top: 10px;
 }
 #region-main input[type="submit"] {
 	background: #4ADCB0 !important;
@@ -505,14 +515,19 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 	border: 1px solid #000000;
 	box-shadow: none;
 	border-radius: 16px;
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/search-interface-symbol.svg) no-repeat 4px center;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/search-interface-symbol.svg) no-repeat 6px center;
 	background-size: 1.5em;
-	padding-left: 30px;
+	padding-left: 32px;
 	transition: all ease-in-out 0.2s;
 	max-width: 100%;
 }
 aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pre input#adminsearchquery:hover, input#searchform_search:hover, aside#block-region-side-pre input[type="text"]:focus, aside#block-region-side-pre input#adminsearchquery:focus, input#searchform_search:focus {
 	border-radius: 0px;
+}
+#region-main hr, aside#block-region-side-pre hr {
+	height: 0px;
+	border: 1px solid #aaaab4;
+	border-top: none;
 }
 .alert {
 	margin-bottom: 0;
@@ -579,6 +594,7 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 #tileoutlinetiles .tile a {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 50px/100% no-repeat !important;
 	font-family: inherit;
+	border-radius: 2px !important;
 	transition: all ease-in-out 0.2s;
 }
 #tileoutlinetiles .tile a:hover {
@@ -586,8 +602,6 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 }
 body.category-44 #tileoutlinetiles .tile a {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 50px/100% no-repeat !important;
-	font-family: inherit;
-	transition: all ease-in-out 0.2s;
 }
 body.category-44 #tileoutlinetiles .tile a:hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 0px/110% no-repeat !important;
@@ -610,6 +624,36 @@ div#tileoutlinearea.tileoutlinearea {
 	padding: .1em 0.6em;
 	transition: all ease-in-out 0.2s;
 }
+.tiletopicnav ul li a {
+	background: #7b1ce9;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	border-radius: 2px;
+	transition: all ease-in-out 0.2s;
+}
+.tiletopicnav ul li a:hover, .tiletopicnav ul li a.current {
+	background: #ffffff;
+	border: 2px solid #7b1ce9;
+	color: #7b1ce9 !important;
+}
+body.category-44 .tiletopicnav ul li a {
+	background: #ec2262;
+	border: 2px solid #ec2262;
+	color: #ffffff;
+	border-radius: 2px;
+	transition: all ease-in-out 0.2s;
+}
+body.category-44 .tiletopicnav ul li a:hover, body.category-44 .tiletopicnav ul li a.current {
+	background: #ffffff;
+	border: 2px solid #ec2262;
+	color: #ec2262 !important;
+}
+#region-main .tiletopicnav ul li a.disabled {
+	background: #aaaab4;
+	border: 2px solid #aaaab4;
+	color: #ffffff !important;
+	border-radius: 2px;
+}
 div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited  {
 	color: #2c2c36;
 }
@@ -618,70 +662,6 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 }
 .tile a:hover .tiletopic {
 	background: rgba(44,44,54,1);
-}
-/* Ring animation from Upskilled.edu.au */
-.animation--rings {
-	max-width: none;
-	margin: 0 auto 135px;
-	height: auto;
-	position: relative;
-	width: auto;
-}
-.animation--rings .animation__view {
-	padding-bottom: 44%;
-	position: relative;
-	top: auto;
-	left: auto;
-	width: auto;
-	height: auto;
-	margin-left: 0;
-	margin-right: 0;
-	-webkit-transform: none;
-	-ms-transform: none;
-	transform: none;
-	padding-top: 40px;
-	overflow: hidden;
-}
-.animation--rings .animation__container {
-	max-width: 1120px;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 100%;
-	height: 100%;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-	margin: 0 auto;
-}
-.animation--rings .animation__ringWrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 200%;
-	-webkit-animation: spin 120s linear infinite;
-	animation: spin 120s linear infinite;
-}
-.animation--rings .animation__ring {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-@-webkit-keyframes spin {
-	100% {
-		-webkit-transform:rotate(360deg);
-		transform:rotate(360deg)
-	}
-}
-@keyframes spin {
-	100% {
-		-webkit-transform:rotate(360deg);
-		transform:rotate(360deg)
-	}
 }
 
 /* Quality of life improvement for SQL reports */
@@ -741,7 +721,7 @@ div#fitem_id_querysql div.felement.ftextarea {
 /* *** FACULTY INDIVIDUAL THEMING *** */
 
 /* Defaults */
-#page-header, input[type="submit"]:not([id|="rubric"]), input[type="submit"]:not([id|="rubric"]):hover, input#id_submitbutton, input#id_submitbutton:hover, .tiletopicnav ul li a.current, .tiletopicnav ul li a:hover, td.submit input, input[type="button"], input[type="button"]:hover, .searchform button, .searchform button:hover, button[class|="fp-file"], button[class|="fp-file"]:hover {
+#page-header, input[type="submit"]:not([id|="rubric"]), input[type="submit"]:not([id|="rubric"]):hover, input#id_submitbutton, input#id_submitbutton:hover, td.submit input, input[type="button"], input[type="button"]:hover, .searchform button, .searchform button:hover, button[class|="fp-file"], button[class|="fp-file"]:hover {
     background-image: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
     background-image: -moz-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
     background-image: -o-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
