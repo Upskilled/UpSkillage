@@ -259,9 +259,12 @@ td.hasevent.calendar_event_course {
 .container-fluid {
 	background: #2c2c36;
 }
-html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th, strong, b, ins, i, img {
+html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, select, table, td, tr, th, strong, b, ins, i, img, em {
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	line-height: 1.5em;
+	line-height: 2em;
+}
+pre, code, pre span {
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 body, h1, h2, h3, h4, h5, h6 {
 	color: #2c2c36;
@@ -307,6 +310,11 @@ nav.breadcrumb-nav ul.breadcrumb {
 	background: #ffffff !important;
 	border-radius: 2px;
 	border: 2px solid #ffffff;
+	padding: 0.6em 1.2em;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1em;
+	box-shadow: none;
 	transition: all ease-in-out 0.2s;
 }
 #page-navbar .singlebutton input:hover {
@@ -329,6 +337,14 @@ nav.navbar-inner {
 }
 div#page-navbar {
 	border: none;
+}
+.bannertext img {
+    width: 205px;
+    height: 33px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/text_logo_mont.png) left top no-repeat;
+    padding-left: 205px;
 }
 /* Calendar */
 .block_calendar_month.block .content {
@@ -364,7 +380,7 @@ div.upskilled_news_date .month, div.upskilled_news_date .day {
 }
 .block .header .block_action {
 	float: right;
-	padding: 0 4px;
+	padding: 2px 4px;
 }
 .block .header .title {
 	border: none;
@@ -389,9 +405,6 @@ div.block {
 }
 .collapsibleregioncaption {
 	background: none;
-}
-section#region-main {
-	min-height: 689px;
 }
 .block .header .block_action > img.block-hider-hide, .block .header .block_action > .block-hider-show {
 	max-width: 24px;
@@ -419,10 +432,10 @@ body.has_dock #page {
 	max-width: 24px;
 	padding: 4px;
 }
-.block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li {
+.block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li, .block_navigation .block_tree li.depth_3:hover {
 	background: #f6f6fa;
 }
-.block_navigation .block_tree li.depth_3 ul li a:link, .block_navigation .block_tree li.depth_3 ul ul li a:link, .block_navigation .block_tree li.depth_3:hover a:link, .block_navigation .block_tree li.depth_3 ul li:hover a:link {
+.block_navigation .block_tree li.depth_3 ul li a:link, .block_navigation .block_tree li.depth_3 ul ul li a:link, .block_navigation .block_tree li.depth_3:hover a:link, .block_navigation .block_tree li.depth_3 ul li:hover a:link, .block_navigation .block_tree li.depth_3:hover a:visited {
 	color: #2c2c36 !important;
 }
 .block_navigation .dimmed_text {
@@ -461,26 +474,34 @@ div#region-bs-main-and-pre > div.row-fluid {
 #page-site-index .forumolddiscuss {
 	background: none;
 }
+section#region-main {
+	min-height: 73.5vh;
+}
 #region-main input[type="submit"] {
 	background: #4ADCB0 !important;
-	font-weight: bold;
+	font-weight: 600;
+	font-size: 16px;
 	border-radius: 4px;
 	border: 2px solid #ffffff;
 	box-shadow: none;
+	padding: 0.6em 1.2em;
 	transition: all ease-in-out 0.2s;
 }
 aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], aside#block-region-side-post button {
 	background: #4ADCB0 !important;
-	font-weight: bold;
+	font-weight: 600;
+	font-size: 16px;
 	border-radius: 4px;
 	/* border: 2px solid #f6f6fa; */
 	border: 2px solid #ffffff;
 	box-shadow: none;
+	padding: 0.6em 1.2em;
 	transition: all ease-in-out 0.2s;
 }
 #region-main input[type="submit"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, aside#block-region-side-post button:hover {
 	background: #4ADCB0 !important;
-	font-weight: bold;
+	font-weight: 600;
+	font-size: 16px;
 	border-radius: 0;
 	border: 2px solid #4ADCB0;
 }
@@ -496,6 +517,11 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 }
 aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pre input#adminsearchquery:hover, input#searchform_search:hover, aside#block-region-side-pre input[type="text"]:focus, aside#block-region-side-pre input#adminsearchquery:focus, input#searchform_search:focus {
 	border-radius: 0px;
+}
+.alert {
+	margin-bottom: 0;
+	border-radius: 2px;
+	border: none;
 }
 /* Footer */
 .footnote.text-left {
@@ -530,9 +556,97 @@ footer .footer_social-link-item svg {
 footer#page-footer {
 	font-size: 0.8em;
 	padding: 15px 0;
+	border: none;
 }
 #footnotewrapper div.copyright a.footer_copyright-link {
     color: #aaaab4;
+}
+/* Course Specific */
+div#tileoutlinearea div.tileoutlinecontent {
+	background: #2c2c36;
+	position: static;
+}
+div#tileoutlinearea.tileoutlinearea {
+	padding-top: 0;
+}
+.tile span.tiletitle, .tiletitle, .tile a:hover .tiletitle {
+	font-family: inherit;
+}
+.tile span.tiletopic, .tile a:hover .tiletopic {
+	border: none;
+	border-radius: 2px;
+	color: #ffffff;
+	background: rgba(44,44,54,0.8);
+	font-family: inherit;
+	padding: .1em 0.6em;
+	transition: all ease-in-out 0.2s;
+}
+.tile a:hover .tiletopic {
+	background: rgba(44,44,54,1);
+}
+/* Ring animation from Upskilled.edu.au */
+.animation--rings {
+	max-width: none;
+	margin: 0 auto 135px;
+	height: auto;
+	position: relative;
+	width: auto;
+}
+.animation--rings .animation__view {
+	padding-bottom: 44%;
+	position: relative;
+	top: auto;
+	left: auto;
+	width: auto;
+	height: auto;
+	margin-left: 0;
+	margin-right: 0;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+	padding-top: 40px;
+	overflow: hidden;
+}
+.animation--rings .animation__container {
+	max-width: 1120px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	margin: 0 auto;
+}
+.animation--rings .animation__ringWrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 200%;
+	-webkit-animation: spin 120s linear infinite;
+	animation: spin 120s linear infinite;
+}
+.animation--rings .animation__ring {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg)
+	}
 }
 
 /* Quality of life improvement for SQL reports */
@@ -600,16 +714,7 @@ div#fitem_id_querysql div.felement.ftextarea {
     background-image: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
     color: white;
 }
-.tile span.tiletitle, .tiletitle, .tile a:hover .tiletitle {
-	font-family: inherit;
-}
-.tile span.tiletopic, .tile a:hover .tiletopic {
-	border: none;
-	border-radius: 0;
-	color: #ffffff;
-	background: #2c2c36;
-	font-family: inherit;
-}
+
 .tile a {
 	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new.png) !important;
 	font-family: inherit;
@@ -617,17 +722,6 @@ div#fitem_id_querysql div.felement.ftextarea {
 .tile a:hover {
 	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new.png) !important;
 	font-family: inherit;
-}
-.bannertext img {
-    width: 205px;
-    height: 33px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/text_logo_mont.png) left top no-repeat;
-    padding-left: 205px;
-}
-div#tileoutlinearea div.tileoutlinecontent {
-	background: #2c2c36;
 }
 
 /* BUS */
@@ -676,33 +770,36 @@ body.category-45 .tile a:hover {
 }
 
 /* CHC */
-body.category-44 #page-header, body.category-44 input[type="submit"]:not([id|="rubric"]), body.category-44 input[type="submit"]:not([id|="rubric"]):hover, body.category-44 input#id_submitbutton, body.category-44 input#id_submitbutton:hover, body.category-44 .tiletopicnav ul li a.current, body.category-44 .tiletopicnav ul li a:hover, body.category-44 .block_navigation .block_tree li.depth_3:hover, body.category-44 td.submit input, body.category-44 input[type="button"], body.category-44 input[type="button"]:hover, body.category-44 .searchform button, body.category-44 .searchform button:hover, body.category-44 button[class|="fp-file"], body.category-44 button[class|="fp-file"]:hover {
-    background-image: -webkit-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-    background-image: -moz-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-    background-image: -o-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-    background-image: -ms-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-    background-image: linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-}
+/* body.category-44 #page-header, body.category-44 input[type="submit"]:not([id|="rubric"]), body.category-44 input[type="submit"]:not([id|="rubric"]):hover, body.category-44 input#id_submitbutton, body.category-44 input#id_submitbutton:hover, body.category-44 .tiletopicnav ul li a.current, body.category-44 .tiletopicnav ul li a:hover, body.category-44 .block_navigation .block_tree li.depth_3:hover, body.category-44 td.submit input, body.category-44 input[type="button"], body.category-44 input[type="button"]:hover, body.category-44 .searchform button, body.category-44 .searchform button:hover, body.category-44 button[class|="fp-file"], body.category-44 button[class|="fp-file"]:hover {
+	background-image: -webkit-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
+	background-image: -moz-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
+	background-image: -o-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
+	background-image: -ms-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
+	background-image: linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
+} */
 body.category-44 .tile a {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_chc.png) !important;
+	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_chc.png) !important;
 }
 body.category-44 .tile a:hover {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_chc.png) !important;
+	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_chc.png) !important;
+}
+body.category-44 div#tileoutlinearea div.tileoutlinecontent {
+	background: #2c2c36 linear-gradient(190deg, #ec2262 0%, #90104c 100%);
 }
 
 /* ICT */
-body.category-9 input[type="submit"]:not([id|="rubric"]), body.category-9 input[type="submit"]:not([id|="rubric"]):hover, body.category-9 input#id_submitbutton, body.category-9 input#id_submitbutton:hover, body.category-9 .tiletopicnav ul li a.current, body.category-9 .tiletopicnav ul li a:hover, body.category-9 .block_navigation .block_tree li.depth_3:hover, body.category-9 td.submit input, body.category-9 input[type="button"], body.category-9 input[type="button"]:hover, body.category-9 .searchform button, body.category-9 .searchform button:hover, body.category-9 button[class|="fp-file"], body.category-9 button[class|="fp-file"]:hover {
-    background-image: -webkit-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-    background-image: -moz-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-    background-image: -o-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-    background-image: -ms-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-    background-image: linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-}
+/* body.category-9 input[type="submit"]:not([id|="rubric"]), body.category-9 input[type="submit"]:not([id|="rubric"]):hover, body.category-9 input#id_submitbutton, body.category-9 input#id_submitbutton:hover, body.category-9 .tiletopicnav ul li a.current, body.category-9 .tiletopicnav ul li a:hover, body.category-9 .block_navigation .block_tree li.depth_3:hover, body.category-9 td.submit input, body.category-9 input[type="button"], body.category-9 input[type="button"]:hover, body.category-9 .searchform button, body.category-9 .searchform button:hover, body.category-9 button[class|="fp-file"], body.category-9 button[class|="fp-file"]:hover {
+	background-image: -webkit-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
+	background-image: -moz-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
+	background-image: -o-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
+	background-image: -ms-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
+	background-image: linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
+} */
 body.category-9 .tile a {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_ict.png) !important;
+	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_ict.png) !important;
 }
 body.category-9 .tile a:hover {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_ict.png) !important;
+	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_ict.png) !important;
 }
 body.category-9 div#tileoutlinearea div.tileoutlinecontent {
 	background: #2c2c36 linear-gradient(190deg, #f2b81e 0%, #cc840a 100%);
