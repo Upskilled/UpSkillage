@@ -542,6 +542,15 @@ div#region-bs-main-and-pre > div.row-fluid {
 #rubric-rubric.gradingform_rubric.editor .moveup input, #rubric-rubric.gradingform_rubric.editor .moveup input:hover {
 	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/up.svg) 0.2em/2em 2em no-repeat !important;
 }
+#rubric-rubric.gradingform_rubric.editor .movedown input, #rubric-rubric.gradingform_rubric.editor .movedown input:hover {
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/down.svg) 0.2em/2em 2em no-repeat !important;
+}
+#rubric-rubric.gradingform_rubric.editor .delete input, #rubric-rubric.gradingform_rubric.editor .delete input:hover {
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/cross.svg) 0.2em/2em 2em no-repeat !important;
+}
+#rubric-rubric.gradingform_rubric.editor .duplicate input, #rubric-rubric.gradingform_rubric.editor .duplicate input:hover {
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/copy.svg) 0.2em/2em 2em no-repeat !important;
+}
 #rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric .addcriterion input:hover {
 	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) 0.2em/2em 2em no-repeat !important;
 	padding-left: 2.5em;
