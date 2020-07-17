@@ -1,0 +1,13 @@
+<svg id="down" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="down_1" data-name="down 1" class="cls-1" d="M64.205,85.631L61.376,82.8,103.8,40.369l2.829,2.828Z" transform="translate(0 1)"/>
+  <path id="down_2" data-name="down 2" class="cls-1" d="M21.374,43.2L24.2,40.371,66.626,82.8,63.8,85.629Z" transform="translate(0 1)"/>
+</svg>
