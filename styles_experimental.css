@@ -268,6 +268,17 @@ body, h1, h2, h3, h4, h5, h6, p {
 a, a:link, a:visited {
 	color: rgba(44,44,54,0.7);
 }
+#notice.box.generalbox {
+	text-align: center;
+	padding: 0.4em 1em;
+	background: #aaaab4;
+	color: #000000;
+}
+.alert {
+	margin-bottom: 0;
+	border-radius: 2px;
+	border: none;
+}
 /* Login Page */
 #page-login-index #region-main {
 	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
@@ -540,16 +551,28 @@ div#region-bs-main-and-pre > div.row-fluid {
 	border: 2px solid #ffffff;
 }
 #rubric-rubric.gradingform_rubric.editor .moveup input, #rubric-rubric.gradingform_rubric.editor .moveup input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/up.svg) 0.2em/2em 2em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/up.svg) center/1em no-repeat !important;
+	width: auto;
+	height: auto;
+	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .movedown input, #rubric-rubric.gradingform_rubric.editor .movedown input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/down.svg) 0.2em/2em 2em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/down.svg) center/1em no-repeat !important;
+	width: auto;
+	height: auto;
+	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .delete input, #rubric-rubric.gradingform_rubric.editor .delete input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/cross.svg) 0.2em/2em 2em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/cross.svg) center/1em no-repeat !important;
+	width: auto;
+	height: auto;
+	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .duplicate input, #rubric-rubric.gradingform_rubric.editor .duplicate input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/copy.svg) 0.2em/2em 2em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/copy.svg) center/1em no-repeat !important;
+	width: auto;
+	height: auto;
+	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric .addcriterion input:hover {
 	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) 0.2em/2em 2em no-repeat !important;
@@ -568,15 +591,13 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pre input#adminsearchquery:hover, input#searchform_search:hover, input#search:hover, aside#block-region-side-pre input[type="text"]:focus, aside#block-region-side-pre input#adminsearchquery:focus, input#searchform_search:focus, input#search:focus {
 	border-radius: 0px;
 }
+#rubric-rubric.gradingform_rubric {
+	max-width: 100%;
+}
 #region-main hr, aside#block-region-side-pre hr {
 	height: 0px;
 	border: 1px solid #aaaab4;
 	border-top: none;
-}
-.alert {
-	margin-bottom: 0;
-	border-radius: 2px;
-	border: none;
 }
 #page-report-outline-user .mod-scorm .structlist > li {
     word-wrap: break-word;
