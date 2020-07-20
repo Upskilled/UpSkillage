@@ -500,6 +500,9 @@ aside#block-region-side-pre .block_navigation .block_tree li.depth_1:first-child
 .block .moodle-actionmenu.block-control-actions.commands {
 	border: none;
 }
+.block .header .title h2, .block h3.main, .block_navigation .block_tree li {
+	font-weight: normal;
+}
 /* Page Content and Layout */
 section#region-main {
 	min-height: 73.5vh;
@@ -910,137 +913,8 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 .section .activity .editing_move {
 	z-index: 2;
 }
-
 /* Quality of life improvement for SQL reports */
 div#fitem_id_querysql div.felement.ftextarea {
 	width: 100%;
 	max-width: 1280px;
 }
-
-/*** Taken from additional theme css ***/
-
-/* LT163381 */
-.category-45 .tiletitle {
-    color: #fff;
-    text-shadow: initial !important;
-}
-.category-45 .tile a:hover .tiletitle {
-    text-shadow: initial !important;
-}
-.tiletitle, .tile a:hover .tiletitle {
-    text-shadow: none !important;
-}
-.tile a:hover .tiletitle {
-	background-repeat: no-repeat;
-}
-.block .header .title h2, .block h3.main, .block_navigation .block_tree li {
-	font-weight: normal;
-}
-
-
-.tiletitle, .tile a:hover .tiletitle {
-	text-shadow: none !important;
-}
-
-
-/* *** FACULTY INDIVIDUAL THEMING *** */
-
-/* Defaults */
-/* #page-header, input#id_submitbutton, input#id_submitbutton:hover, td.submit input, .searchform button, .searchform button:hover, button[class|="fp-file"], button[class|="fp-file"]:hover {
-    background-image: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    background-image: -moz-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    background-image: -o-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    background-image: -ms-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    background-image: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-    color: white;
-} */
-
-/* .tile a {
-	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new.png) !important;
-	font-family: inherit;
-}
-.tile a:hover {
-	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new.png) !important;
-	font-family: inherit;
-} */
-
-/* BUS */
-/* body.category-5 #page-header, body.category-5 input[type="submit"]:not([id|="rubric"]), body.category-5 input[type="submit"]:not([id|="rubric"]):hover, body.category-5 input#id_submitbutton, body.category-5 input#id_submitbutton:hover, body.category-5 .tiletopicnav ul li a.current, body.category-5 .tiletopicnav ul li a:hover, body.category-5 .block_navigation .block_tree li.depth_3:hover, body.category-5 td.submit input, body.category-5 input[type="button"], body.category-5 input[type="button"]:hover, body.category-5 .searchform button, body.category-5 .searchform button:hover, body.category-5 button[class|="fp-file"], body.category-5 button[class|="fp-file"]:hover {
-    background-image: -webkit-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: -moz-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: -o-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: -ms-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-} */
-/* body.category-5 .tile a {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_bus.png) !important;
-}
-body.category-5 .tile a:hover {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_bus.png) !important;
-} */
-
-/* SIT & FSK */
-/* body.category-41 #page-header, body.category-41 input[type="submit"]:not([id|="rubric"]), body.category-41 input[type="submit"]:not([id|="rubric"]):hover, body.category-41 input#id_submitbutton, body.category-41 input#id_submitbutton:hover, body.category-41 .tiletopicnav ul li a.current, body.category-41 .tiletopicnav ul li a:hover, body.category-41 .block_navigation .block_tree li.depth_3:hover, body.category-41 td.submit input, body.category-41 input[type="button"], body.category-41 input[type="button"]:hover, body.category-41 .searchform button, body.category-41 .searchform button:hover, body.category-41 button[class|="fp-file"], body.category-41 button[class|="fp-file"]:hover {
-    background-image: -webkit-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: -moz-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: -o-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: -ms-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-} */
-/* body.category-41 .tile a {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_bus.png) !important;
-}
-body.category-41 .tile a:hover {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_bus.png) !important;
-} */
-
-/* TLI */
-/* body.category-45 #page-header, body.category-45 input[type="submit"]:not([id|="rubric"]), body.category-45 input[type="submit"]:not([id|="rubric"]):hover, body.category-45 input#id_submitbutton, body.category-45 input#id_submitbutton:hover, body.category-45 .tiletopicnav ul li a.current, body.category-45 .tiletopicnav ul li a:hover, body.category-45 .block_navigation .block_tree li.depth_3:hover, body.category-45 td.submit input, body.category-45 input[type="button"], body.category-45 input[type="button"]:hover, body.category-45 .searchform button, body.category-45 .searchform button:hover, body.category-45 button[class|="fp-file"], body.category-45 button[class|="fp-file"]:hover {
-    background-image: -webkit-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: -moz-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: -o-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: -ms-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-    background-image: linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-} */
-/* body.category-45 .tile a {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_bus.png) !important;
-}
-body.category-45 .tile a:hover {
-    background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_bus.png) !important;
-} */
-
-/* CHC */
-/* body.category-44 #page-header, body.category-44 input[type="submit"]:not([id|="rubric"]), body.category-44 input[type="submit"]:not([id|="rubric"]):hover, body.category-44 input#id_submitbutton, body.category-44 input#id_submitbutton:hover, body.category-44 .tiletopicnav ul li a.current, body.category-44 .tiletopicnav ul li a:hover, body.category-44 .block_navigation .block_tree li.depth_3:hover, body.category-44 td.submit input, body.category-44 input[type="button"], body.category-44 input[type="button"]:hover, body.category-44 .searchform button, body.category-44 .searchform button:hover, body.category-44 button[class|="fp-file"], body.category-44 button[class|="fp-file"]:hover {
-	background-image: -webkit-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-	background-image: -moz-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-	background-image: -o-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-	background-image: -ms-linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-	background-image: linear-gradient(190deg, #ec2262 0%, #90104c 100%) !important;
-} */
-/* body.category-44 .tile a {
-	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_chc.png) !important;
-}
-body.category-44 .tile a:hover {
-	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_chc.png) !important;
-} */
-/* body.category-44 div#tileoutlinearea div.tileoutlinecontent {
-	background: #2c2c36 linear-gradient(190deg, #ec2262 0%, #90104c 100%);
-} */
-
-/* ICT */
-/* body.category-9 input[type="submit"]:not([id|="rubric"]), body.category-9 input[type="submit"]:not([id|="rubric"]):hover, body.category-9 input#id_submitbutton, body.category-9 input#id_submitbutton:hover, body.category-9 .tiletopicnav ul li a.current, body.category-9 .tiletopicnav ul li a:hover, body.category-9 .block_navigation .block_tree li.depth_3:hover, body.category-9 td.submit input, body.category-9 input[type="button"], body.category-9 input[type="button"]:hover, body.category-9 .searchform button, body.category-9 .searchform button:hover, body.category-9 button[class|="fp-file"], body.category-9 button[class|="fp-file"]:hover {
-	background-image: -webkit-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-	background-image: -moz-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-	background-image: -o-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-	background-image: -ms-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-	background-image: linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
-} */
-/* body.category-9 .tile a {
-	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_ict.png) !important;
-}
-body.category-9 .tile a:hover {
-	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_ict.png) !important;
-}
-body.category-9 div#tileoutlinearea div.tileoutlinecontent {
-	background: #2c2c36 linear-gradient(190deg, #f2b81e 0%, #cc840a 100%);
-} */
