@@ -305,7 +305,7 @@ div#page-navbar, div#page-navbar-wrapper {
 	background: none !important;
 	border: none;
 }
-#page-navbar nav.breadcrumb-nav {
+#page-navbar nav.breadcrumb-nav, .navbar-text {
 	padding: 0;
 }
 #page-navbar div.breadcrumb-button {
@@ -337,6 +337,9 @@ nav.breadcrumb-nav ul.breadcrumb {
 	border-radius: 0;
 	border: 2px solid #2c2c36;
 }
+.dir-ltr .usermenu{
+	background: none;
+}
 header.navbar .usermenu .moodle-actionmenu .toggle-display {
 	color: #f6f6fa;
 }
@@ -357,6 +360,7 @@ nav.navbar-inner {
 }
 div#page-navbar {
 	border: none;
+	padding-bottom: 12px;
 }
 .bannertext img, .logounit img {
 	width: 205px;
@@ -504,6 +508,9 @@ aside#block-region-side-pre .block_navigation .block_tree li.depth_1:first-child
 	font-weight: normal;
 }
 /* Page Content and Layout */
+#page {
+    padding: 0;
+}
 section#region-main {
 	min-height: 73.5vh;
 	padding-top: 10px;
@@ -577,7 +584,7 @@ aside#block-region-side-post button {
 .mform .fitem .felement {
 	float: inline-start;
 }
-.editor_atto_wrap {
+#page-blocks-configurable_reports-editreport .editor_atto_wrap {
 	width: 74%;
 	float: inline-start;
 }
@@ -782,6 +789,12 @@ footer#page-footer {
 #footnotewrapper div.copyright a.footer_copyright-link {
 	color: #aaaab4;
 }
+#page-footer, #page-footer p {
+	color: #ffffff;
+}
+#page-footer {
+	background: #2c2c36;
+}
 /* Course Specific */
 select[multiple], select[size] {
 	width: inherit;
@@ -956,13 +969,13 @@ div#fitem_id_querysql div.felement.ftextarea {
 	line-height: 1em;
 }
 #page-blocks-configurable_reports-viewreport #id_submitbutton {
-	margin-left: 212px;
+	margin-left: 232px;
 }
 #page-blocks-configurable_reports-viewreport #reporttable.generaltable {
 	border: none;
 }
 #page-blocks-configurable_reports-viewreport #reporttable.generaltable th {
-	background-color: #1696ec;
+	background-color: #A65AFA;
 	color: #ffffff;
 	font-weight: 600;
 }
