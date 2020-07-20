@@ -250,14 +250,14 @@ td.hasevent.calendar_event_course {
 /* ***** MAJOR MOODLE RESTYLE AND IMPROVEMENT ***** */
 /* General Site-Wide */
 ::selection {
-    background: #7b1ce9;
-    color: #ffffff;
-    text-shadow: none;
+	background: #7b1ce9;
+	color: #ffffff;
+	text-shadow: none;
 }
 .container-fluid {
 	background: #2c2c36;
 }
-html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, optgroup, select, table, td, tr, th, strong, b, ins, i, img, em, label, dl, dt, dd {
+html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, optgroup, select, table, td, tr, th, strong, b, ins, i, img, em, label, dl, dt, dd, legend, fieldset {
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 2em;
 }
@@ -359,12 +359,12 @@ div#page-navbar {
 	border: none;
 }
 .bannertext img, .logounit img {
-    width: 205px;
-    height: 33px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/text_logo_mont.png) left top no-repeat;
-    padding-left: 205px;
+	width: 205px;
+	height: 33px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/text_logo_mont.png) left top no-repeat;
+	padding-left: 205px;
 }
 #page-user-profile .page-context-header {
 	background: #ffffff;
@@ -577,6 +577,10 @@ aside#block-region-side-post button {
 .mform .fitem .felement {
 	float: inline-start;
 }
+.editor_atto_wrap {
+	width: 74%;
+	float: inline-start;
+}
 table#advancedgrading-criteria textarea[cols] {
 	width: 300px;
 }
@@ -644,6 +648,29 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 	transition: all ease-in-out 0.2s;
 	max-width: 100%;
 }
+a.linkbutton {
+	height: auto;
+	width: auto;
+	text-decoration: none;
+	text-align: center;
+	background: #4ADCB0;
+	font-weight: 600;
+	font-size: 1rem;
+	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.5em;
+	color: #ffffff;
+	border-radius: 4px;
+	border: 2px solid #ffffff;
+	box-shadow: none;
+	padding: 0.6em 1.2em;
+	transition: all ease-in-out 0.2s;
+}
+.linkbutton:hover {
+	color: #ffffff;
+	background: #4ADCB0;
+	border: 2px solid #4ADCB0;
+	border-radius: 0;
+}
 aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pre input#adminsearchquery:hover, input#searchform_search:hover, input#search:hover, aside#block-region-side-pre input[type="text"]:focus, aside#block-region-side-pre input#adminsearchquery:focus, input#searchform_search:focus, input#search:focus {
 	border-radius: 0px;
 }
@@ -659,7 +686,7 @@ aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pr
 	border-top: none;
 }
 #page-report-outline-user .mod-scorm .structlist > li {
-    word-wrap: break-word;
+	word-wrap: break-word;
 }
 table.flexible th, .generaltable th {
 	font-weight: 600;
@@ -675,7 +702,7 @@ table.flexible th, .generaltable th {
 	border: none;
 }
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
-	background: #1696ec;
+	background: #1696ec !important;
 	border: none;
 	color: #ffffff;
 }
@@ -725,27 +752,27 @@ footer div.social {
 	display: none;
 }
 footer .footer_social-links {
-    list-style: none;
-    font-size: 0;
-    line-height: 20px;
-    text-align: left;
-    padding: 0;
-    margin: 0;
+	list-style: none;
+	font-size: 0;
+	line-height: 20px;
+	text-align: left;
+	padding: 0;
+	margin: 0;
 }
 footer .footer_social-link-item {
-    display: inline-block;
-    height: 32px;
+	display: inline-block;
+	height: 32px;
 	vertical-align: middle;
 	text-align: right;
 }
 footer .footer_social-link-item:hover {
-    opacity: 0.8;
+	opacity: 0.8;
 }
 footer .footer_social-link-item:not(:first-child) {
 	padding-left: 20px;
 }
 footer .footer_social-link-item svg {
-    fill: #ffffff;
+	fill: #ffffff;
 }
 footer#page-footer {
 	font-size: 0.8em;
@@ -753,7 +780,7 @@ footer#page-footer {
 	border: none;
 }
 #footnotewrapper div.copyright a.footer_copyright-link {
-    color: #aaaab4;
+	color: #aaaab4;
 }
 /* Course Specific */
 select[multiple], select[size] {
@@ -917,7 +944,14 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 	z-index: 2;
 }
 /* Quality of life improvement for SQL reports */
+div.CodeMirror.cm-s-default {
+	width: 160vh;
+}
 div#fitem_id_querysql div.felement.ftextarea {
 	width: 100%;
-	max-width: 1280px;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+.CodeMirror-code pre, .CodeMirror-code pre span {
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	line-height: 1em;
 }
