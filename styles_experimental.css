@@ -283,7 +283,7 @@ a, a:link, a:visited {
 }
 /* Login Page */
 #page-login-index #region-main {
-	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
+	background-image: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
 	position: absolute;
 	z-index: 12345;
 	top: 0;
@@ -294,14 +294,11 @@ div.loginbox {
 	border: none;
 }
 /* Top Navbar */
-#page-header {
-	background: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
-	background: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
+header.navbar.navbar-fixed-top {
+	background: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
+	background: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
 }
-div#page-header-wrapper {
-	background: none !important;
-}
-div#page-navbar, div#page-navbar-wrapper {
+#page-header, div#page-header-wrapper, nav.navbar-inner, div#page-navbar, div#page-navbar-wrapper, header nav .container-fluid {
 	background: none !important;
 	border: none;
 }
@@ -357,6 +354,7 @@ header.navbar .usermenu ul.menu.align-tr-br .filler {
 }
 nav.navbar-inner {
 	border-bottom: none !important;
+	box-shadow: none;
 }
 div#page-navbar {
 	border: none;
