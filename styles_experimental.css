@@ -955,3 +955,6 @@ div#fitem_id_querysql div.felement.ftextarea {
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 	line-height: 1em;
 }
+#page-blocks-configurable_reports-viewreport #id_submitbutton {
+	margin-left: 212px;
+}
