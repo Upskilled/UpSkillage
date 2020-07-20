@@ -157,10 +157,12 @@ div.flip {
 	text-align: center;
 	margin: 10px 0;
 	background: rgba( 204, 132, 10, 0.5 );
+	background: -webkit-linear-gradient( to bottom left, rgba(242, 184, 30, 0.5), rgba(204, 132, 10, 0.5) );
 	background: linear-gradient( to bottom left, rgba(242, 184, 30, 0.5), rgba(204, 132, 10, 0.5) );
 }
 div.flip:hover {
 	background: rgba( 204, 132, 10, 1 );
+	background: -webkit-linear-gradient( to bottom left, rgba(242, 184, 30, 1), rgba(204, 132, 10, 1) );
 	background: linear-gradient( to bottom left, rgba(242, 184, 30, 1), rgba(204, 132, 10, 1) );
 }
 img.panelIcon {
@@ -292,6 +294,10 @@ div.loginbox {
 	border: none;
 }
 /* Top Navbar */
+#page-header {
+	background: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
+	background: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
+}
 div#page-header-wrapper {
 	background: none !important;
 }
@@ -360,9 +366,6 @@ div#page-navbar {
     background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/text_logo_mont.png) left top no-repeat;
     padding-left: 205px;
 }
-header.navbar.navbar-fixed-top.moodle-has-zindex {
-	background: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
-}
 #page-user-profile .page-context-header {
 	background: #ffffff;
 }
@@ -393,6 +396,30 @@ header.navbar.navbar-fixed-top.moodle-has-zindex {
 }
 div.upskilled_news_date .month, div.upskilled_news_date .day {
 	line-height: 1em;
+}
+a.ical-link, a.ical-link:link, a.ical-link:visited {
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 600;
+	background: #7b1ce9;
+	padding: 0.1em 0.5em;
+	border: 2px solid #ffffff;
+	transition: all ease-in-out 0.2s;
+}
+a.ical-link:hover {
+	border: 2px solid #7b1ce9;
+}
+.block .minicalendar th, .block .minicalendar td {
+	border: 1px solid #2c2c36;
+}
+.maincalendar .calendarmonth td {
+	border: 1px solid #aaaab4;
+}
+.maincalendar .calendarmonth th {
+	border: none;
+}
+.path-calendar .maincalendar .calendarmonth td {
+	height: 7em;
 }
 /* Blocks */
 .block .header {
@@ -538,7 +565,8 @@ div#region-bs-main-and-pre > div.row-fluid {
 	background: #f6f6fa;
 }
 .mform .fitem div.fitemtitle {
-	width: 15%;
+	width: auto;
+	min-width: 15%;
 }
 .mform .fitem .felement {
 	float: inline-start;
@@ -646,6 +674,7 @@ table.flexible th, .generaltable th {
 	color: #ffffff;
 }
 .forumpost .row.header {
+	background: #1548e0 -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
 	background: #1548e0 linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
 	border: none;
 	padding: 4px 0px;
@@ -746,6 +775,19 @@ div#tileoutlinearea div.tileoutlinecontent {
 	background-position-x: 200%;
 	background-position-y: bottom;
 	padding-right: 40%;
+	min-height: 280px;
+}
+body.category-5 div#tileoutlinearea div.tileoutlinecontent, body.category-41 div#tileoutlinearea div.tileoutlinecontent, body.category-45 div#tileoutlinearea div.tileoutlinecontent {
+	background: #fff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) no-repeat;
+	background-size: 66%;
+	background-position-x: 200%;
+	background-position-y: bottom;
+}
+body.category-9 div#tileoutlinearea div.tileoutlinecontent {
+	background: #fff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) no-repeat;
+	background-size: 66%;
+	background-position-x: 200%;
+	background-position-y: bottom;
 }
 body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 	background: #fff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) no-repeat;
@@ -765,6 +807,18 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 }
 #tileoutlinetiles .tile a:hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 0px/110% no-repeat !important;
+}
+body.category-5 #tileoutlinetiles .tile a, body.category-41 #tileoutlinetiles .tile a, body.category-45 #tileoutlinetiles .tile a {
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) center 50px/100% no-repeat !important;
+}
+body.category-5 #tileoutlinetiles .tile a:hover, body.category-41 #tileoutlinetiles .tile a:hover, body.category-45 #tileoutlinetiles .tile a:hover {
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) center 0px/110% no-repeat !important;
+}
+body.category-9 #tileoutlinetiles .tile a {
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 50px/100% no-repeat !important;
+}
+body.category-9 #tileoutlinetiles .tile a:hover {
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 0px/110% no-repeat !important;
 }
 body.category-44 #tileoutlinetiles .tile a {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 50px/100% no-repeat !important;
@@ -801,6 +855,30 @@ div#tileoutlinearea.tileoutlinearea {
 	background: #ffffff;
 	border: 2px solid #7b1ce9;
 	color: #7b1ce9 !important;
+}
+body.category-5 .tiletopicnav ul li a, body.category-41 .tiletopicnav ul li a, body.category-45 .tiletopicnav ul li a {
+	background: #1696ec;
+	border: 2px solid #1696ec;
+	color: #ffffff;
+	border-radius: 2px;
+	transition: all ease-in-out 0.2s;
+}
+body.category-5 .tiletopicnav ul li a:hover, body.category-5 .tiletopicnav ul li a.current, body.category-41 .tiletopicnav ul li a:hover, body.category-41 .tiletopicnav ul li a.current, body.category-45 .tiletopicnav ul li a:hover, body.category-45 .tiletopicnav ul li a.current {
+	background: #ffffff;
+	border: 2px solid #1696ec;
+	color: #1696ec !important;
+}
+body.category-9 .tiletopicnav ul li a {
+	background: #f2b81e;
+	border: 2px solid #f2b81e;
+	color: #ffffff;
+	border-radius: 2px;
+	transition: all ease-in-out 0.2s;
+}
+body.category-9 .tiletopicnav ul li a:hover, body.category-9 .tiletopicnav ul li a.current {
+	background: #ffffff;
+	border: 2px solid #f2b81e;
+	color: #f2b81e !important;
 }
 body.category-44 .tiletopicnav ul li a {
 	background: #ec2262;
@@ -868,14 +946,14 @@ div#fitem_id_querysql div.felement.ftextarea {
 /* *** FACULTY INDIVIDUAL THEMING *** */
 
 /* Defaults */
-#page-header, input#id_submitbutton, input#id_submitbutton:hover, td.submit input, .searchform button, .searchform button:hover, button[class|="fp-file"], button[class|="fp-file"]:hover {
+/* #page-header, input#id_submitbutton, input#id_submitbutton:hover, td.submit input, .searchform button, .searchform button:hover, button[class|="fp-file"], button[class|="fp-file"]:hover {
     background-image: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
     background-image: -moz-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
     background-image: -o-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
     background-image: -ms-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
     background-image: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) !important;
     color: white;
-}
+} */
 
 /* .tile a {
 	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new.png) !important;
@@ -887,49 +965,49 @@ div#fitem_id_querysql div.felement.ftextarea {
 } */
 
 /* BUS */
-body.category-5 #page-header, body.category-5 input[type="submit"]:not([id|="rubric"]), body.category-5 input[type="submit"]:not([id|="rubric"]):hover, body.category-5 input#id_submitbutton, body.category-5 input#id_submitbutton:hover, body.category-5 .tiletopicnav ul li a.current, body.category-5 .tiletopicnav ul li a:hover, body.category-5 .block_navigation .block_tree li.depth_3:hover, body.category-5 td.submit input, body.category-5 input[type="button"], body.category-5 input[type="button"]:hover, body.category-5 .searchform button, body.category-5 .searchform button:hover, body.category-5 button[class|="fp-file"], body.category-5 button[class|="fp-file"]:hover {
+/* body.category-5 #page-header, body.category-5 input[type="submit"]:not([id|="rubric"]), body.category-5 input[type="submit"]:not([id|="rubric"]):hover, body.category-5 input#id_submitbutton, body.category-5 input#id_submitbutton:hover, body.category-5 .tiletopicnav ul li a.current, body.category-5 .tiletopicnav ul li a:hover, body.category-5 .block_navigation .block_tree li.depth_3:hover, body.category-5 td.submit input, body.category-5 input[type="button"], body.category-5 input[type="button"]:hover, body.category-5 .searchform button, body.category-5 .searchform button:hover, body.category-5 button[class|="fp-file"], body.category-5 button[class|="fp-file"]:hover {
     background-image: -webkit-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: -moz-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: -o-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: -ms-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-}
-body.category-5 .tile a {
+} */
+/* body.category-5 .tile a {
     background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_bus.png) !important;
 }
 body.category-5 .tile a:hover {
     background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_bus.png) !important;
-}
+} */
 
 /* SIT & FSK */
-body.category-41 #page-header, body.category-41 input[type="submit"]:not([id|="rubric"]), body.category-41 input[type="submit"]:not([id|="rubric"]):hover, body.category-41 input#id_submitbutton, body.category-41 input#id_submitbutton:hover, body.category-41 .tiletopicnav ul li a.current, body.category-41 .tiletopicnav ul li a:hover, body.category-41 .block_navigation .block_tree li.depth_3:hover, body.category-41 td.submit input, body.category-41 input[type="button"], body.category-41 input[type="button"]:hover, body.category-41 .searchform button, body.category-41 .searchform button:hover, body.category-41 button[class|="fp-file"], body.category-41 button[class|="fp-file"]:hover {
+/* body.category-41 #page-header, body.category-41 input[type="submit"]:not([id|="rubric"]), body.category-41 input[type="submit"]:not([id|="rubric"]):hover, body.category-41 input#id_submitbutton, body.category-41 input#id_submitbutton:hover, body.category-41 .tiletopicnav ul li a.current, body.category-41 .tiletopicnav ul li a:hover, body.category-41 .block_navigation .block_tree li.depth_3:hover, body.category-41 td.submit input, body.category-41 input[type="button"], body.category-41 input[type="button"]:hover, body.category-41 .searchform button, body.category-41 .searchform button:hover, body.category-41 button[class|="fp-file"], body.category-41 button[class|="fp-file"]:hover {
     background-image: -webkit-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: -moz-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: -o-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: -ms-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-}
-body.category-41 .tile a {
+} */
+/* body.category-41 .tile a {
     background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_bus.png) !important;
 }
 body.category-41 .tile a:hover {
     background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_bus.png) !important;
-}
+} */
 
 /* TLI */
-body.category-45 #page-header, body.category-45 input[type="submit"]:not([id|="rubric"]), body.category-45 input[type="submit"]:not([id|="rubric"]):hover, body.category-45 input#id_submitbutton, body.category-45 input#id_submitbutton:hover, body.category-45 .tiletopicnav ul li a.current, body.category-45 .tiletopicnav ul li a:hover, body.category-45 .block_navigation .block_tree li.depth_3:hover, body.category-45 td.submit input, body.category-45 input[type="button"], body.category-45 input[type="button"]:hover, body.category-45 .searchform button, body.category-45 .searchform button:hover, body.category-45 button[class|="fp-file"], body.category-45 button[class|="fp-file"]:hover {
+/* body.category-45 #page-header, body.category-45 input[type="submit"]:not([id|="rubric"]), body.category-45 input[type="submit"]:not([id|="rubric"]):hover, body.category-45 input#id_submitbutton, body.category-45 input#id_submitbutton:hover, body.category-45 .tiletopicnav ul li a.current, body.category-45 .tiletopicnav ul li a:hover, body.category-45 .block_navigation .block_tree li.depth_3:hover, body.category-45 td.submit input, body.category-45 input[type="button"], body.category-45 input[type="button"]:hover, body.category-45 .searchform button, body.category-45 .searchform button:hover, body.category-45 button[class|="fp-file"], body.category-45 button[class|="fp-file"]:hover {
     background-image: -webkit-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: -moz-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: -o-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: -ms-linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
     background-image: linear-gradient(190deg, #1696ec 0%, #1548e0 100%) !important;
-}
-body.category-45 .tile a {
+} */
+/* body.category-45 .tile a {
     background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_bus.png) !important;
 }
 body.category-45 .tile a:hover {
     background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_hover_new_bus.png) !important;
-}
+} */
 
 /* CHC */
 /* body.category-44 #page-header, body.category-44 input[type="submit"]:not([id|="rubric"]), body.category-44 input[type="submit"]:not([id|="rubric"]):hover, body.category-44 input#id_submitbutton, body.category-44 input#id_submitbutton:hover, body.category-44 .tiletopicnav ul li a.current, body.category-44 .tiletopicnav ul li a:hover, body.category-44 .block_navigation .block_tree li.depth_3:hover, body.category-44 td.submit input, body.category-44 input[type="button"], body.category-44 input[type="button"]:hover, body.category-44 .searchform button, body.category-44 .searchform button:hover, body.category-44 button[class|="fp-file"], body.category-44 button[class|="fp-file"]:hover {
@@ -957,7 +1035,7 @@ body.category-44 .tile a:hover {
 	background-image: -ms-linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
 	background-image: linear-gradient(190deg, #f2b81e 0%, #cc840a 100%) !important;
 } */
-body.category-9 .tile a {
+/* body.category-9 .tile a {
 	background-image: url(https://upskilled-sandbox.mrooms.net/pluginfile.php/1/tool_themeassets/assets/0/tile_bg_new_ict.png) !important;
 }
 body.category-9 .tile a:hover {
@@ -965,4 +1043,4 @@ body.category-9 .tile a:hover {
 }
 body.category-9 div#tileoutlinearea div.tileoutlinecontent {
 	background: #2c2c36 linear-gradient(190deg, #f2b81e 0%, #cc840a 100%);
-}
+} */
