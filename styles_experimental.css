@@ -549,6 +549,9 @@ div#region-bs-main-and-pre > div.row-fluid {
 	padding: 0.6em 1.2em;
 	transition: all ease-in-out 0.2s;
 }
+aside#block-region-side-post button {
+	padding: 0.2em 1.2em;
+}
 .enrolpanel.roleassign.visible input[type="button"] {
 	font-size: 1em;
 	padding: 0.6em 1.2em;
