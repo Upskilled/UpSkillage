@@ -521,24 +521,43 @@ div#region-bs-main-and-pre > div.row-fluid {
 }
 .enrolpanel.roleassign.visible input[type="button"] {
 	font-size: 1em;
+	padding: 0.6em 1.2em;
 }
 #rubric-rubric.gradingform_rubric .addcriterion {
 	background: none;
 	border: none;
 	box-shadow: none;
 }
-#rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input {
+.gradingform_rubric {
+	max-width: none;
+}
+.gradingform_rubric .criterion {
+	border: 1px solid #f6f6fa;
+}
+.gradingform_rubric .criterion.even {
+	background: #f6f6fa;
+}
+.mform .fitem div.fitemtitle {
+	width: 15%;
+}
+.mform .fitem .felement {
+	float: inline-start;
+}
+table#advancedgrading-criteria textarea[cols] {
+	width: 300px;
+}
+#rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input, #guide-guide.gradingform_guide.editor .addcriterion input, #guide-guide.gradingform_guide.editor .addcomment input {
 	font-size: 1em;
 	color: #ffffff;
 	height: auto;
-	padding: 0.6em 1.2em;
+	padding: 0.1em 0.5em;
 	border: 2px solid #ffffff;
 	box-shadow: none;
 }
 #region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, .enrolpanel.roleassign.visible input[type="button"]:disabled {
 	color: #2c2c36;
 }
-#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, #region-main input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, aside#block-region-side-post button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover {
+#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, #region-main input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, aside#block-region-side-post button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover {
 	color: #ffffff;
 	background: #4ADCB0 !important;
 	border-radius: 0;
@@ -578,6 +597,9 @@ div#region-bs-main-and-pre > div.row-fluid {
 	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) 0.2em/2em 2em no-repeat !important;
 	padding-left: 2.5em;
 }
+#rubric-rubric.gradingform_rubric .criterion.even input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input {
+	border: 2px solid #f6f6fa;
+}
 aside#block-region-side-pre input[type="text"], aside#block-region-side-pre input#adminsearchquery, input#searchform_search, input#search {
 	border: 1px solid #000000;
 	box-shadow: none;
@@ -593,6 +615,9 @@ aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pr
 }
 #rubric-rubric.gradingform_rubric {
 	max-width: 100%;
+}
+.gradingform_rubric .criterion.even {
+	background: #f6f6fa;
 }
 #region-main hr, aside#block-region-side-pre hr {
 	height: 0px;
@@ -642,6 +667,20 @@ table.flexible th, .generaltable th {
 }
 .forumpost {
 	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+table.flexible td, .generaltable td, .generaltable tr, .generaltable th {
+	border: none;
+}
+table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody > tr:nth-child(2n+1) > td, table.grading-report tbody > tr:nth-child(2n+1) > td, table#listdirectories tbody > tr:nth-child(2n+1) > td, table.rolecaps tbody > tr:nth-child(2n+1) > td, table.userenrolment tbody > tr:nth-child(2n+1) > td, table#form tbody > tr:nth-child(2n+1) > td, form#movecourses table tbody > tr:nth-child(2n+1) > td, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > td, .forumheaderlist tbody > tr:nth-child(2n+1) > td, table.flexible tbody > tr:nth-child(2n+1) > td, .generaltable tbody > tr:nth-child(2n+1) > td, .path-mod-assign .gradingtable tr.unselectedrow:nth-child(2n+1) > td, table#explaincaps tbody > tr:nth-child(2n+1) > th, table#defineroletable tbody > tr:nth-child(2n+1) > th, table.grading-report tbody > tr:nth-child(2n+1) > th, table#listdirectories tbody > tr:nth-child(2n+1) > th, table.rolecaps tbody > tr:nth-child(2n+1) > th, table.userenrolment tbody > tr:nth-child(2n+1) > th, table#form tbody > tr:nth-child(2n+1) > th, form#movecourses table tbody > tr:nth-child(2n+1) > th, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > th, .forumheaderlist tbody > tr:nth-child(2n+1) > th, table.flexible tbody > tr:nth-child(2n+1) > th, .generaltable tbody > tr:nth-child(2n+1) > th, .user-enroller-panel .uep-search-results .users tbody tr:hover > td, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td, table.grading-report tbody tr:hover > td, .forumheaderlist tbody tr:hover > td, .generaltable tbody tr:hover > td, table.flexible tbody tr:hover > td, .category_subcategories tbody tr:hover > td, table#modules tbody tr:hover > td, table#permissions tbody tr:hover > td, .user-enroller-panel .uep-search-results .users tbody tr:hover > th, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th, table.grading-report tbody tr:hover > th, .forumheaderlist tbody tr:hover > th, .generaltable tbody tr:hover > th, table.flexible tbody tr:hover > th, .category_subcategories tbody tr:hover > th, table#modules tbody tr:hover > th, table#permissions tbody tr:hover > th {
+	background: #f6f6fa;
+}
+.path-mod-assign div.submissionsummarytable table tbody tr td.c0 {
+	width: auto;
+	font-weight: 600;
+}
+.path-mod-assign td.submissionstatus, .path-mod-assign div.submissionstatus, .path-mod-assign a:link.submissionstatus {
+	color: #2c2c36;
+	background: none;
 }
 /* Footer */
 .footnote.text-left {
