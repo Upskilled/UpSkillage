@@ -958,3 +958,11 @@ div#fitem_id_querysql div.felement.ftextarea {
 #page-blocks-configurable_reports-viewreport #id_submitbutton {
 	margin-left: 212px;
 }
+#page-blocks-configurable_reports-viewreport #reporttable.generaltable {
+	border: none;
+}
+#page-blocks-configurable_reports-viewreport #reporttable.generaltable th {
+	background-color: #1696ec;
+	color: #ffffff;
+	font-weight: 600;
+}
