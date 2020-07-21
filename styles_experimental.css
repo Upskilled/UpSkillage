@@ -850,10 +850,12 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 	background: none;
 }
 #tileoutlinetiles .tile a {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 50px/100% no-repeat !important;
 	font-family: inherit;
 	border: none !important;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+#tileoutlinetiles .tile a:not([style*="background-image"]) {
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 50px/100% no-repeat !important;
 	transition: all ease-in-out 0.2s;
 }
 #tileoutlinetiles .tile a:hover {
