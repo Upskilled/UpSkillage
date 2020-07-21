@@ -283,7 +283,7 @@ a, a:link, a:visited {
 }
 /* Login Page */
 #page-login-index #region-main {
-	background-image: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
+	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
 	position: absolute;
 	z-index: 12345;
 	top: 0;
@@ -298,9 +298,10 @@ header.navbar.navbar-fixed-top {
 	background: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
 	background: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
 }
-#page-header, div#page-header-wrapper, nav.navbar-inner, div#page-navbar, div#page-navbar-wrapper, header nav .container-fluid {
+#page-header, div#page-header-wrapper, header.navbar > nav.navbar-inner, div#page-navbar, div#page-navbar-wrapper, header nav .container-fluid {
 	background: none !important;
 	border: none;
+	box-shadow: none;
 }
 #page-navbar nav.breadcrumb-nav, .navbar-text {
 	padding: 0;
@@ -336,6 +337,12 @@ nav.breadcrumb-nav ul.breadcrumb {
 }
 .dir-ltr .usermenu{
 	background: none;
+}
+.usermenu .login {
+	color: #ffffff;
+}
+.usermenu .login a {
+	color: #4ADCB0;
 }
 header.navbar .usermenu .moodle-actionmenu .toggle-display {
 	color: #f6f6fa;
