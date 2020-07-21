@@ -850,7 +850,6 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 	background: none;
 }
 #tileoutlinetiles .tile a {
-	font-family: inherit;
 	border: none !important;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
@@ -858,25 +857,25 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 50px/100% no-repeat !important;
 	transition: all ease-in-out 0.2s;
 }
-#tileoutlinetiles .tile a:hover {
+#tileoutlinetiles .tile a:not([style*="background-image"]):hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 0px/110% no-repeat !important;
 }
-body.category-5 #tileoutlinetiles .tile a, body.category-41 #tileoutlinetiles .tile a, body.category-45 #tileoutlinetiles .tile a {
+body.category-5 #tileoutlinetiles .tile a:not([style*="background-image"]), body.category-41 #tileoutlinetiles .tile a:not([style*="background-image"]), body.category-45 #tileoutlinetiles .tile a:not([style*="background-image"]) {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) center 50px/100% no-repeat !important;
 }
-body.category-5 #tileoutlinetiles .tile a:hover, body.category-41 #tileoutlinetiles .tile a:hover, body.category-45 #tileoutlinetiles .tile a:hover {
+body.category-5 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, body.category-41 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, body.category-45 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) center 0px/110% no-repeat !important;
 }
-body.category-9 #tileoutlinetiles .tile a {
+body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]) {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 50px/100% no-repeat !important;
 }
-body.category-9 #tileoutlinetiles .tile a:hover {
+body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 0px/110% no-repeat !important;
 }
-body.category-44 #tileoutlinetiles .tile a {
+body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]) {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 50px/100% no-repeat !important;
 }
-body.category-44 #tileoutlinetiles .tile a:hover {
+body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 0px/110% no-repeat !important;
 }
 div#tileoutlinearea.tileoutlinearea {
