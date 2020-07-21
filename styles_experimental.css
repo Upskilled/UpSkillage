@@ -549,7 +549,7 @@ div#region-bs-main-and-pre > div.row-fluid {
 #page-site-index .forumolddiscuss {
 	background: none;
 }
-#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), #region-main input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], aside#block-region-side-post button, .enrolpanel.roleassign.visible input[type="button"] {
+#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button {
 	background: #4ADCB0 !important;
 	font-weight: 600;
 	font-size: 1.2em;
@@ -607,7 +607,7 @@ table#advancedgrading-criteria textarea[cols] {
 #region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, .enrolpanel.roleassign.visible input[type="button"]:disabled {
 	color: #2c2c36;
 }
-#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, #region-main input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, aside#block-region-side-post button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover {
+#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover {
 	color: #ffffff;
 	background: #4ADCB0 !important;
 	border-radius: 0;
@@ -961,6 +961,22 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 }
 .section .activity .editing_move {
 	z-index: 2;
+}
+#page-backup-import legend.ftoggler {
+	border-bottom-color: #aaaab4;
+}
+#page-backup-import div.grouped_settings.section_level{
+	background: none;
+	border: none;
+	border-bottom: 1px solid #aaaab4;
+	box-shadow: none;
+}
+#page #intro.box.generalbox.boxaligncenter.boxwidthwide {
+	background: none;
+	box-shadow: none;
+}
+#page-mod-scorm-player div[role="main"] {
+	width: 100%;
 }
 /* Quality of life improvement for SQL reports */
 div.CodeMirror.cm-s-default {
