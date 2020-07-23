@@ -561,7 +561,7 @@ div#region-bs-main-and-pre > div.row-fluid {
 #page-site-index .forumolddiscuss {
 	background: none;
 }
-#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button:not(.editor_atto_toolbar button) {
+#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button {
 	background: #4ADCB0 !important;
 	font-weight: 600;
 	font-size: 1.2em;
@@ -572,6 +572,9 @@ div#region-bs-main-and-pre > div.row-fluid {
 	box-shadow: none;
 	padding: 0.6em 1.2em;
 	transition: all ease-in-out 0.2s;
+}
+div.editor_atto_toolbar button {
+	background: none !important;
 }
 aside#block-region-side-post button {
 	padding: 0.2em 1.2em;
@@ -624,6 +627,9 @@ table#advancedgrading-criteria textarea[cols] {
 	background: #4ADCB0 !important;
 	border-radius: 0;
 	border: 2px solid #4ADCB0;
+}
+div.editor_atto_toolbar button:hover {
+	background: rgba(170, 170, 180, 0.5) radial-gradient(ellipse at center, #fff 60%, rgba(170, 170, 180, 0.5) 100%) !important;
 }
 #region-main input[type="submit"]:hover:disabled, aside#block-region-side-pre input[type="submit"]:hover:disabled, aside#block-region-side-post input[type="submit"]:hover:disabled, aside#block-region-side-post button:hover:disabled, .enrolpanel.roleassign.visible input[type="button"]:hover:disabled {
 	background: #4ADCB0 !important;
