@@ -292,6 +292,8 @@ a, a:link, a:visited {
 div.loginbox {
 	margin: 25vh 0 0 55vw;
 	border: none;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 .loginbox .loginform .form-label {
 	padding: 0;
