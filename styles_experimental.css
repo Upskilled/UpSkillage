@@ -293,6 +293,16 @@ div.loginbox {
 	margin: 25vh 0 0 55vw;
 	border: none;
 }
+.loginbox .loginform .form-label {
+	padding: 0;
+	width: 25%;
+}
+.loginbox .loginform .form-input {
+	width: 70%;
+}
+.loginbox .loginform .form-input input {
+	width: 90%;
+}
 /* Top Navbar */
 header.navbar.navbar-fixed-top {
 	background: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
