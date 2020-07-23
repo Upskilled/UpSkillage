@@ -283,14 +283,14 @@ a, a:link, a:visited {
 }
 /* Login Page */
 #page-login-index #region-main {
-	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/Canvas_Login_Back.png);
+	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/login_1.png) center/cover no-repeat;
 	position: absolute;
 	z-index: 12345;
 	top: 0;
 	height: 100%;
 }
 div.loginbox {
-	margin: 15% 0 0 55%;
+	margin: 25vh 0 0 55vw;
 	border: none;
 }
 /* Top Navbar */
@@ -957,7 +957,7 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 	color: #2c2c36;
 }
 .tile a:hover .tiletopic {
-	background: rgba(44,44,54,1);
+	background: rgba(44,44,54,1); 
 }
 .section .activity .editing_move {
 	z-index: 2;
