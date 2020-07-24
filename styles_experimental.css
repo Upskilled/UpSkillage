@@ -598,7 +598,7 @@ div#region-bs-main-and-pre > div.row-fluid {
 #page-site-index .forumolddiscuss {
 	background: none;
 }
-#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button:not([id^="wistia"]) {
+#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button {
 	background: #4ADCB0 !important;
 	font-weight: 600;
 	font-size: 1.2em;
@@ -610,7 +610,7 @@ div#region-bs-main-and-pre > div.row-fluid {
 	padding: 0.6em 1.2em;
 	transition: all ease-in-out 0.2s;
 }
-div.editor_atto_toolbar button {
+div.editor_atto_toolbar button, div[id^="wistia"] button {
 	background: none !important;
 }
 aside#block-region-side-post button {
