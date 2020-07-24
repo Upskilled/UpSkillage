@@ -558,6 +558,9 @@ div.block.block_engagement div.trafficlight {
 	font-size: 1.1em;
 	font-weight: 600;
 }
+.block_settings .title h2::before {
+	vertical-align: top;
+}
 /* Page Content and Layout */
 #page {
     padding: 0;
@@ -595,7 +598,7 @@ div#region-bs-main-and-pre > div.row-fluid {
 #page-site-index .forumolddiscuss {
 	background: none;
 }
-#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button {
+#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button:not([id^="wistia"]) {
 	background: #4ADCB0 !important;
 	font-weight: 600;
 	font-size: 1.2em;
@@ -1006,7 +1009,7 @@ body.category-44 .tiletopicnav ul li a:hover, body.category-44 .tiletopicnav ul 
 div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited  {
 	color: #2c2c36;
 }
-.tileoutlinecontent h1, .tileoutlinecontent p {
+.tileoutlinecontent h1, .tileoutlinecontent p, .tileoutlinecontent div {
 	color: #2c2c36;
 }
 .tile a:hover .tiletopic {
