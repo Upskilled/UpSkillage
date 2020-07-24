@@ -294,7 +294,7 @@ img.iconhelp, .helplink img {
 	border: none;
 }
 .moodle-dialogue-base .closebutton {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/cross.svg) center/contain no-repeat !important;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/cross.svg) center/contain no-repeat !important;
 	height: 2em;
 	width: 2em;
 	margin: 0.3em;
@@ -506,15 +506,15 @@ div.block {
 	padding-top: 6px;
 }
 .block .header .block_action > img.block-hider-hide {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/minus.svg) 4px top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/minus.svg) 4px top no-repeat;
 	background-size: contain;
 }
 .block .header .block_action > .block-hider-show {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/plus.svg) 4px top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/plus.svg) 4px top no-repeat;
 	background-size: contain;
 }
 .block .header .block_action input.moveto.customcommand.requiresjs {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/left.svg) 4px top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/left.svg) 4px top no-repeat;
 	background-size: contain;
 }
 body.has_dock #page {
@@ -668,31 +668,31 @@ div.editor_atto_toolbar button:hover {
 	border: 2px solid #ffffff;
 }
 #rubric-rubric.gradingform_rubric.editor .moveup input, #rubric-rubric.gradingform_rubric.editor .moveup input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/up.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/up.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .movedown input, #rubric-rubric.gradingform_rubric.editor .movedown input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/down.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/down.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .delete input, #rubric-rubric.gradingform_rubric.editor .delete input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/cross.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/cross.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .duplicate input, #rubric-rubric.gradingform_rubric.editor .duplicate input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/copy.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/copy.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric .addcriterion input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/plus.svg) 0.2em/2em 2em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/plus.svg) 0.2em/2em 2em no-repeat !important;
 	padding-left: 2.5em;
 }
 #rubric-rubric.gradingform_rubric .criterion.even input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input {
@@ -702,7 +702,7 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 	border: 1px solid #000000;
 	box-shadow: none;
 	border-radius: 16px;
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/search-interface-symbol.svg) no-repeat 6px center;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/search-interface-symbol.svg) no-repeat 6px center;
 	background-size: 1.5em;
 	padding-left: 32px;
 	transition: all ease-in-out 0.2s;
