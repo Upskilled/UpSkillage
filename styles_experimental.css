@@ -474,8 +474,9 @@ a.ical-link:hover {
 }
 .block .header .title h2 {
 	border: none;
-	background-color: #1548e0;
-	color: #ffffff;
+	background: none;
+	color: #1548e0;
+	font-size: 1.3em;
 	padding: 8px 10px;
 }
 .block .header .block_action img, .block .header .block_action input {
