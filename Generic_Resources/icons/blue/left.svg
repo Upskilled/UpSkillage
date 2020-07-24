@@ -1,0 +1,14 @@
+<svg id="left" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #1548e0;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="left_1" class="cls-1" d="M44.188,63.616l-2.827-2.83,42.452-42.4,2.827,2.83Z"/>
+  <path id="left_2" class="cls-1" d="M41.376,61.2l2.829-2.828L86.624,100.8l-2.829,2.828Z"/>
+</svg>

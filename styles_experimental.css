@@ -281,6 +281,25 @@ a, a:link, a:visited {
 	border-radius: 2px;
 	border: none;
 }
+img.iconhelp, .helplink img {
+	padding: 0.1em;
+	vertical-align: text-top;
+}
+.moodle-dialogue-base .moodle-dialogue-wrap {
+	border: none;
+}
+.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd {
+	color: #ffffff;
+	background: #7b1ce9;
+	border: none;
+}
+.moodle-dialogue-base .closebutton {
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/cross.svg) center/contain no-repeat !important;
+	height: 2em;
+	width: 2em;
+	margin: 0.3em;
+	box-shadow: none;
+}
 /* Login Page */
 #page-login-index #region-main {
 	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/login_1.png) center/cover no-repeat;
@@ -486,15 +505,15 @@ div.block {
 	padding-top: 6px;
 }
 .block .header .block_action > img.block-hider-hide {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg) 4px top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/minus.svg) 4px top no-repeat;
 	background-size: contain;
 }
 .block .header .block_action > .block-hider-show {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) 4px top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/plus.svg) 4px top no-repeat;
 	background-size: contain;
 }
 .block .header .block_action input.moveto.customcommand.requiresjs {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.svg) 4px top no-repeat;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/left.svg) 4px top no-repeat;
 	background-size: contain;
 }
 body.has_dock #page {
@@ -505,6 +524,9 @@ body.has_dock #page {
 }
 aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:visited, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:visited,.block_navigation .block_tree li.depth_3 ul li a:visited {
 	color: #2c2c36 !important;
+}
+a span:hover {
+	text-decoration: underline;
 }
 aside#block-region-side-pre .block_navigation .block_tree li.depth_1:first-child {
 	border: none;
@@ -523,6 +545,13 @@ aside#block-region-side-pre .block_navigation .block_tree li.depth_1:first-child
 }
 .block .header .title h2, .block h3.main, .block_navigation .block_tree li {
 	font-weight: normal;
+}
+div.block.block_engagement div.trafficlight {
+    background-size: cover;
+	width: 1em;
+	height: 1em;
+	left: 0;
+	top: 0.5em;
 }
 /* Page Content and Layout */
 #page {
@@ -638,31 +667,31 @@ div.editor_atto_toolbar button:hover {
 	border: 2px solid #ffffff;
 }
 #rubric-rubric.gradingform_rubric.editor .moveup input, #rubric-rubric.gradingform_rubric.editor .moveup input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/up.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/up.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .movedown input, #rubric-rubric.gradingform_rubric.editor .movedown input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/down.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/down.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .delete input, #rubric-rubric.gradingform_rubric.editor .delete input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/cross.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/cross.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .duplicate input, #rubric-rubric.gradingform_rubric.editor .duplicate input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/copy.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/copy.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric .addcriterion input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg) 0.2em/2em 2em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/plus.svg) 0.2em/2em 2em no-repeat !important;
 	padding-left: 2.5em;
 }
 #rubric-rubric.gradingform_rubric .criterion.even input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input {
@@ -672,7 +701,7 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 	border: 1px solid #000000;
 	box-shadow: none;
 	border-radius: 16px;
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/search-interface-symbol.svg) no-repeat 6px center;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/search-interface-symbol.svg) no-repeat 6px center;
 	background-size: 1.5em;
 	padding-left: 32px;
 	transition: all ease-in-out 0.2s;
@@ -995,6 +1024,9 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 }
 #page-mod-scorm-player div[role="main"] {
 	width: 100%;
+}
+.path-course-view .completionprogress {
+	height: 2em;
 }
 /* Quality of life improvement for SQL reports */
 div.CodeMirror.cm-s-default {
