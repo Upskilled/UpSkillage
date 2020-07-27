@@ -1060,3 +1060,12 @@ div#fitem_id_querysql div.felement.ftextarea {
 	color: #ffffff;
 	font-weight: 600;
 }
+/* Quality of life improvement for additional HTML settings */
+#id_s__additionalhtmlhead, #id_s__additionalhtmltopofbody, #id_s__additionalhtmlfooter {
+	width: 50vw;
+	height: 33vh;
+}
+#id_s__additionalhtmlhead, #id_s__additionalhtmltopofbody, #id_s__additionalhtmlfooter, #id_s_theme_ups_customcss {
+	line-height: 1em;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}

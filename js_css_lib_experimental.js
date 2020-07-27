@@ -145,6 +145,25 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	
 }
 
+// Function to minimise and maximise the trainer chat
+function toggleLC() {
+	if (document.getElementById('chatIframe').classList.contains('lc-min')) {
+		// Maximise
+		document.getElementById('chatContainer').classList.replace('lc-min', 'lc-max');
+		document.getElementById('chatIframe').classList.replace('lc-min', 'lc-max');
+		document.getElementById('chatBubble').classList.replace('lc-max', 'lc-min');
+		document.getElementById('chatMinimise').style.display = 'block';
+		document.getElementById('chatInnerBubble').style.display = 'none';
+	} else {
+		// Minimise
+		document.getElementById('chatContainer').classList.replace('lc-max', 'lc-min');
+		document.getElementById('chatIframe').classList.replace('lc-max', 'lc-min');
+		document.getElementById('chatBubble').classList.replace('lc-min', 'lc-max');
+		document.getElementById('chatMinimise').style.display = 'none';
+		document.getElementById('chatInnerBubble').style.display = 'block';
+	}
+}
+
 // Used to hide/show the link to foundations courses
 function showCourse( course ) {
 	var check;
@@ -1407,11 +1426,11 @@ function insertReadme() {
 // for( var i = 0; i < icons.length; i++ ) {
 // 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.svg';
 // }
-window.onload = function() {
-	var script = document.createElement('script');
-	script.defer = true;
-	script.async = true;
-	script.innerText = 'var copyright = document.querySelector(\'div.copyright\');' +
-						'copyright.innerHTML = \'© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676\';';
-	document.body.appendChild(script);
-};
+// window.onload = function() {
+// 	var script = document.createElement('script');
+// 	script.defer = true;
+// 	script.async = true;
+// 	script.innerText = 'var copyright = document.querySelector(\'div.copyright\');' +
+// 						'copyright.innerHTML = \'© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676\';';
+// 	document.body.appendChild(script);
+// };
