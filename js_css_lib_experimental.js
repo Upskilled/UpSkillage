@@ -1380,16 +1380,16 @@ function insertReadme() {
 }
 
 // switched to external css stylesheet
-var link = document.createElement("link");
-link.rel = "stylesheet";
-link.type = "text/css";
-link.id = "UpskillStyle";
-link.href = "https://skeksalot.github.io/UpSkillage/styles_experimental.css";
+// var link = document.createElement("link");
+// link.rel = "stylesheet";
+// link.type = "text/css";
+// link.id = "UpskillStyle";
+// link.href = "https://skeksalot.github.io/UpSkillage/styles_experimental.css";
 
-// only include stylesheet once
-if ( document.getElementById("UpskillStyle") == null ) {
-	document.head.appendChild(link);
-}
+// // only include stylesheet once
+// if ( document.getElementById("UpskillStyle") == null ) {
+// 	document.head.appendChild(link);
+// }
 
 // Alter footer copyright info
 // var copyright = document.querySelector('div.copyright');
