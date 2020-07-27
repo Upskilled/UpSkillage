@@ -1398,7 +1398,7 @@ function insertReadme() {
 	}
 }
 
-// switched to external css stylesheet
+// SWITCHED TO INCLUDING THIS WITHIN THE THEME CUSTOM CSS SECTION OF THE SITE 27/7/20
 // var link = document.createElement("link");
 // link.rel = "stylesheet";
 // link.type = "text/css";
@@ -1426,6 +1426,7 @@ function insertReadme() {
 // for( var i = 0; i < icons.length; i++ ) {
 // 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.svg';
 // }
+// SWITCHED TO INCLUDING THIS WITHIN THE ADDITIONAL HTML SECTION OF THE SITE 27/7/20
 // window.onload = function() {
 // 	var script = document.createElement('script');
 // 	script.defer = true;

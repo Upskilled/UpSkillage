@@ -715,7 +715,7 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 	transition: all ease-in-out 0.2s;
 	max-width: 100%;
 }
-a.linkbutton {
+a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a {
 	height: auto;
 	width: auto;
 	text-decoration: none;
@@ -732,7 +732,11 @@ a.linkbutton {
 	padding: 0.6em 1.2em;
 	transition: all ease-in-out 0.2s;
 }
-.linkbutton:hover {
+#page-admin-tool-xmldb-index p.centerpara.buttons a {
+	font-size: 1em;
+	line-height: 3em;
+}
+.linkbutton:hover, #page-admin-tool-xmldb-index p.centerpara.buttons a:hover {
 	color: #ffffff;
 	background: #4ADCB0;
 	border: 2px solid #4ADCB0;
