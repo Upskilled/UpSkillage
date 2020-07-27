@@ -488,13 +488,10 @@ div.block div.content {
 	background: #ffffff;
 	color: #2c2c36;
 }
-div.block {
+div.block, .collapsibleregioncaption {
 	background: none;
 }
-.collapsibleregioncaption {
-	background: none;
-}
-.block .header .block_action > img.block-hider-hide, .block .header .block_action > .block-hider-show, .block .header .block_action input.moveto.customcommand.requiresjs {
+.block .header .block_action > img.block-hider-hide, .block .header .block_action > .block-hider-show, .block .header .block_action input.moveto.customcommand.requiresjs, body.has_dock div#dock div.controls img[alt="Undock all"], body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_hd .hidepanelicon img, body.has_dock  div#dock .dockeditempanel_content.block .dockeditempanel_hd .moveto.customcommand.requiresjs img {
 	max-width: 24px;
 	width: 24px;
 	height: 24px;
@@ -506,19 +503,70 @@ div.block {
 	padding-top: 6px;
 }
 .block .header .block_action > img.block-hider-hide {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/minus.svg) 4px top no-repeat;
-	background-size: contain;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/minus.svg) 4px top/contain no-repeat;
 }
 .block .header .block_action > .block-hider-show {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/plus.svg) 4px top no-repeat;
-	background-size: contain;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/plus.svg) 4px top/contain no-repeat;
 }
 .block .header .block_action input.moveto.customcommand.requiresjs {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/left.svg) 4px top no-repeat;
-	background-size: contain;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/left.svg) 4px top/contain no-repeat;
+}
+body.has_dock div#dock div.controls img[alt="Undock all"] {
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/right.svg) 4px top/contain no-repeat;
+}
+body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_hd .hidepanelicon img {
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/cross.svg) 4px top/contain no-repeat;
+}
+body.has_dock  div#dock .dockeditempanel_content.block .dockeditempanel_hd .moveto.customcommand.requiresjs img {
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/right.svg) 4px top/contain no-repeat;
 }
 body.has_dock #page {
 	padding: 0;
+}
+body.has_dock div#dock {
+	background: #1548e0;
+}
+body.has_dock div#dock div.dockedtitle {
+	background: #ffffff !important;
+	border: none;
+	box-shadow: none;
+	transition: all ease-in-out 0.2s;
+}
+body.has_dock div#dock div.dockedtitle:hover {
+	background: #7B1CE9 !important;
+}
+body.has_dock div#dock div.dockedtitle h2 {
+	color: #2c2c36;
+	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 2em;
+	font-weight: normal;
+	transition: all ease-in-out 0.2s;
+}
+body.has_dock div#dock div.dockedtitle:hover h2 {
+	color: #ffffff;
+}
+body.has_dock div#dock .dockeditempanel_content.block {
+	background: #ffffff;
+	border: none;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	display: inline-block;
+	min-width: 15vw;
+}
+body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_hd {
+	border: none;
+}
+body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_hd .commands {
+	margin: -6px -6px 0 0;
+}
+body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_hd h2 {
+	border: none;
+	background: none;
+	color: #1548e0;
+	font-size: 1.3em;
+}
+body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_bd {
+	float: left;
+	background: none;
 }
 .block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li, .block_navigation .block_tree li.depth_3:hover {
 	background: #f6f6fa;
