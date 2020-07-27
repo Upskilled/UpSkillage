@@ -1435,3 +1435,12 @@ function insertReadme() {
 // 						'copyright.innerHTML = \'© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676\';';
 // 	document.body.appendChild(script);
 // };
+
+// Script for selecting a randomised login background
+// var backs = ['login_1.png', 'login_3.png', 'login_2.png']
+// if( document.URL.search('login/index.php') != -1 ) {
+// 	// Login page, choose one of the backgrounds
+// 	sel = Math.floor(Math.random() * 3);
+// 	var back = document.querySelector('#page-login-index #region-main');
+// 	back.style.background = '#1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/' + backs[sel] + ') center/cover no-repeat';
+// }
