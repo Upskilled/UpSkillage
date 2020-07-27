@@ -294,7 +294,7 @@ img.iconhelp, .helplink img {
 	border: none;
 }
 .moodle-dialogue-base .closebutton {
-	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/cross.svg) center/contain no-repeat !important;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/cross.svg) center/contain no-repeat !important;
 	height: 2em;
 	width: 2em;
 	margin: 0.3em;
@@ -410,29 +410,27 @@ div#page-navbar {
 	background: #ffffff;
 }
 /* Calendar */
+.block_calendar_month.block .content, .block_calendar_month.block .content .calendar-controls, .minicalendar.calendartable tr.weekdays, .minicalendar.calendartable td.day {
+	background: none;
+}
+.maincalendar .calendarmonth th, .block .minicalendar th, .block .minicalendar td, .block .minicalendar th abbr[title], .minicalendar.calendartable td.day, .minicalendar.calendartable td.dayblank {
+	border: none;
+}
 .block_calendar_month.block .content {
 	padding: 0;
-	background: #aaaab4;
 }
-.block_calendar_month.block .content .calendar-controls {
-	background: #1548e0;
+.block_calendar_month .content .calendar-controls a {
+	color: #1548e0;
 }
-.minicalendar.calendartable tr.weekdays {
-	background: #2c2c36;
-}
-.minicalendar.calendartable td.dayblank {
-	border: 1px solid #2c2c36;
-}
-.minicalendar.calendartable td.day {
-	background: #f6f6fa;
+.minicalendar.calendartable td.day, .minicalendar.calendartable tr.weekdays {
 	color: #2c2c36;
-	border: 1px solid #aaaab4;
 }
 .minicalendar.calendartable td.weekend.day {
 	color: #aaaab4;
 }
 .block_calendar_month.block .minicalendar td.today, .block .minicalendar td.today {
-	background-color: #1548e0;
+	background: #1548e0;
+	border-radius: 4px;
 }
 div.upskilled_news_date .month, div.upskilled_news_date .day {
 	line-height: 1em;
@@ -448,15 +446,6 @@ a.ical-link, a.ical-link:link, a.ical-link:visited {
 }
 a.ical-link:hover {
 	border: 2px solid #7b1ce9;
-}
-.block .minicalendar th, .block .minicalendar td {
-	border: 1px solid #2c2c36;
-}
-.maincalendar .calendarmonth td {
-	border: 1px solid #aaaab4;
-}
-.maincalendar .calendarmonth th {
-	border: none;
 }
 .path-calendar .maincalendar .calendarmonth td {
 	height: 7em;
