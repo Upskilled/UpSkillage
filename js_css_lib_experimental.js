@@ -1447,6 +1447,8 @@ function insertReadme() {
 
 // Padding out the tiles to cover up unwanted sections of the background
 // var tiles = document.querySelector('body.category-44 #tileoutlinetiles');
+// var i = tiles.childElementCount;
+// tiles.style.height = 14 * Math.ceil(tiles.childElementCount / 3) + 'em';
 // for( i = tiles.childElementCount; (i % 3) != 0; i++ ) {
 // 	var mask = document.createElement('li');
 // 	mask.classList = "tile";
