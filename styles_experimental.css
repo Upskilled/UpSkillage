@@ -678,6 +678,12 @@ aside#block-region-side-post button {
 .mform .fitem .felement {
 	float: inline-start;
 }
+.mform .fitem .felement:first-child {
+	margin-left: 15%;
+}
+input, select {
+	margin-right: 4px;
+}
 #page-blocks-configurable_reports-editreport .editor_atto_wrap {
 	width: 74%;
 	float: inline-start;
@@ -712,35 +718,38 @@ div.editor_atto_toolbar button:hover {
 	border: 2px solid #ffffff;
 }
 #rubric-rubric.gradingform_rubric.editor .moveup input, #rubric-rubric.gradingform_rubric.editor .moveup input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/up.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/up.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .movedown input, #rubric-rubric.gradingform_rubric.editor .movedown input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/down.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/down.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .delete input, #rubric-rubric.gradingform_rubric.editor .delete input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/cross.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/cross.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .duplicate input, #rubric-rubric.gradingform_rubric.editor .duplicate input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/copy.svg) center/1em no-repeat !important;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/copy.svg) center/1em no-repeat !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric .addcriterion input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/plus.svg) 0.2em/2em 2em no-repeat !important;
-	padding-left: 2.5em;
+	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/plus.svg) 0.2em/2em 2em no-repeat !important;
+	padding: 0.5em 0.5em 0.5em 2.5em;
 }
 #rubric-rubric.gradingform_rubric .criterion.even input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input {
 	border: 2px solid #f6f6fa;
+}
+#rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover {
+	border: 2px solid #4ADCB0;
 }
 aside#block-region-side-pre input[type="text"], aside#block-region-side-pre input#adminsearchquery, input#searchform_search, input#search {
 	border: 1px solid #000000;
@@ -945,6 +954,7 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 }
 #tileoutlinetiles .tile {
 	background: none;
+	max-width: calc(100% / 3);
 }
 #tileoutlinetiles .tile a {
 	border: none !important;
@@ -970,8 +980,7 @@ body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]):hover
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 0px/110% no-repeat !important;
 }
 body.category-44 #tileoutlinetiles {
-	background: #fff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center/cover no-repeat !important;
-	height: 42em;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center/cover no-repeat !important;
 }
 body.category-44 #tileoutlinetiles .tile {
 	background: none;
