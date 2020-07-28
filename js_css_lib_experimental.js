@@ -1444,3 +1444,13 @@ function insertReadme() {
 // 	var back = document.querySelector('#page-login-index #region-main');
 // 	back.style.background = '#1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/' + backs[sel] + ') center/cover no-repeat';
 // }
+
+// Padding out the tiles to cover up unwanted sections of the background
+// var tiles = document.querySelector('body.category-44 #tileoutlinetiles');
+// for( i = tiles.childElementCount; (i % 3) != 0; i++ ) {
+// 	var mask = document.createElement('li');
+// 	mask.classList = "tile";
+// 	mask.style.background = "#fff";
+// 	mask.style.height = "14em";
+// 	tiles.appendChild(mask);
+// }

@@ -969,11 +969,36 @@ body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]) {
 body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 0px/110% no-repeat !important;
 }
+body.category-44 #tileoutlinetiles {
+	background: #fff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center/cover no-repeat !important;
+	height: 42em;
+}
+body.category-44 #tileoutlinetiles .tile {
+	background: none;
+	border: solid 1.5em #fff;
+	box-sizing: border-box;
+	margin: 0px;
+}
 body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]) {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 50px/100% no-repeat !important;
 }
 body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 0px/110% no-repeat !important;
+}
+body.category-44 div.tiles ul#tileoutlinetiles li.tile a {
+	border: solid 0px #fff !important;
+	margin: 0;
+	width: 100%;
+	display: block;
+}
+body.category-44 div.tiles ul#tileoutlinetiles li.tile a:not([style*="background-image"]) {
+	background: none !important;
+}
+body.category-44 div.tiles ul#tileoutlinetiles li.tile a:not([style*="background-image"]):hover {
+	background: none !important;
+}
+body.category-44 #tileoutlinetiles .tile a .tiletopic {
+	position: absolute;
 }
 div#tileoutlinearea.tileoutlinearea {
 	padding-top: 0;
