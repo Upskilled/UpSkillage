@@ -254,7 +254,11 @@ td.hasevent.calendar_event_course {
 	color: #ffffff;
 	text-shadow: none;
 }
-.container-fluid {
+body {
+	position: relative;
+	min-height: 100vh;
+}
+html, .container-fluid {
 	background: #2c2c36;
 }
 html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, optgroup, select, table, td, tr, th, strong, b, ins, i, img, em, label, dl, dt, dd, legend, fieldset {
@@ -905,6 +909,8 @@ footer#page-footer {
 }
 #page-footer {
 	background: #2c2c36;
+	position: absolute;
+	bottom: -8em;
 }
 /* Course Specific */
 select[multiple], select[size] {
@@ -979,7 +985,7 @@ body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]) {
 body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 0px/110% no-repeat !important;
 }
-body.category-44 #tileoutlinetiles {
+body.category-44 div:not(.tilepreview) > #tileoutlinetiles {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center/cover no-repeat !important;
 }
 body.category-44 #tileoutlinetiles .tile {
