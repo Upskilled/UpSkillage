@@ -279,11 +279,21 @@ a, a:link, a:visited {
 	padding: 0.4em 1em;
 	background: #aaaab4;
 	color: #000000;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+#notice.box.generalbox p {
+	color: #000000;
+}
+#page-content .box.generalbox.adminwarning {
+	background: none;
+	border: none;
+	color: #2c2c36;
 }
 .alert {
 	margin-bottom: 0;
 	border-radius: 2px;
 	border: none;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 img.iconhelp, .helplink img {
 	padding: 0.1em;
@@ -312,6 +322,9 @@ img.iconhelp, .helplink img {
 	top: 0;
 	height: 100%;
 }
+#page-login-index span#maincontent {
+	height: 0px;
+}
 div.loginbox {
 	margin: 25vh 0 0 55vw;
 	border: none;
@@ -327,6 +340,18 @@ div.loginbox {
 }
 .loginbox .loginform .form-input input {
 	width: 90%;
+}
+form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] legend, #page-login-forgot_password div[role="main"] > div, form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] .fitemtitle {
+	text-align: center;
+}
+form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] .fcontainer {
+	margin-left: 36%;
+}
+form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] input[type="text"] {
+	width: 20em;
+}
+form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] .felement.ftext, form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] .felement.fsubmit {
+	float: left;
 }
 /* Top Navbar */
 header.navbar.navbar-fixed-top {
@@ -639,7 +664,7 @@ div#region-bs-main-and-pre > div.row-fluid {
 #page-site-index .forumolddiscuss {
 	background: none;
 }
-#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button {
+#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button, #notice .singlebutton + .singlebutton input[type="submit"], .capabilitysearchui input[type="button"] {
 	background: #4ADCB0 !important;
 	font-weight: 600;
 	font-size: 1.2em;
@@ -660,6 +685,10 @@ aside#block-region-side-post button {
 .enrolpanel.roleassign.visible input[type="button"] {
 	font-size: 1em;
 	padding: 0.6em 1.2em;
+}
+#notice input[type="submit"], #notice .singlebutton + .singlebutton input[type="submit"] {
+	border: 2px solid #aaaab4;
+	margin: 0;
 }
 #rubric-rubric.gradingform_rubric .addcriterion {
 	background: none;
@@ -703,10 +732,10 @@ table#advancedgrading-criteria textarea[cols] {
 	border: 2px solid #ffffff;
 	box-shadow: none;
 }
-#region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, .enrolpanel.roleassign.visible input[type="button"]:disabled {
+#region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, #region-main input[type="button"]:disabled {
 	color: #2c2c36;
 }
-#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover {
+#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover {
 	color: #ffffff;
 	background: #4ADCB0 !important;
 	border-radius: 0;
@@ -913,6 +942,12 @@ footer#page-footer {
 	bottom: -8em;
 }
 /* Course Specific */
+#region-main .box.generalbox.info div.coursebox {
+	border: none;
+}
+#region-main #notice ~ .continuebutton {
+	margin-top: 1em;
+}
 select[multiple], select[size] {
 	width: inherit;
 }
