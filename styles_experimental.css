@@ -290,7 +290,6 @@ a, a:link, a:visited {
 	color: #2c2c36;
 }
 .alert {
-	margin-bottom: 0;
 	border-radius: 2px;
 	border: none;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -313,6 +312,17 @@ img.iconhelp, .helplink img {
 	width: 2em;
 	margin: 0.3em;
 	box-shadow: none;
+}
+span.error span.error {
+	display: inline;
+	border: none;
+	font-weight: 600;
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+.userprofile .profile_tree section.node_category {
+	border: none;
 }
 /* Login Page */
 #page-login-index #region-main {
@@ -735,7 +745,7 @@ table#advancedgrading-criteria textarea[cols] {
 	border: 2px solid #ffffff;
 	box-shadow: none;
 }
-#region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, input[type="button"]:disabled {
+#region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, input[type="button"]:disabled, .fitem.disabled .fp-btn-choose {
 	color: #2c2c36;
 	border: 2px solid #4ADCB0;
 }
@@ -748,7 +758,7 @@ table#advancedgrading-criteria textarea[cols] {
 div.editor_atto_toolbar button:hover {
 	background: rgba(170, 170, 180, 0.5) radial-gradient(ellipse at center, #fff 60%, rgba(170, 170, 180, 0.5) 100%) !important;
 }
-#region-main input[type="submit"]:hover:disabled, aside#block-region-side-pre input[type="submit"]:hover:disabled, aside#block-region-side-post input[type="submit"]:hover:disabled, aside#block-region-side-post button:hover:disabled, .enrolpanel.roleassign.visible input[type="button"]:hover:disabled, input[type="button"]:hover:disabled {
+#region-main input[type="submit"]:hover:disabled, aside#block-region-side-pre input[type="submit"]:hover:disabled, aside#block-region-side-post input[type="submit"]:hover:disabled, aside#block-region-side-post button:hover:disabled, .enrolpanel.roleassign.visible input[type="button"]:hover:disabled, input[type="button"]:hover:disabled, .fitem.disabled .fp-btn-choose:hover {
 	background: #4ADCB0 !important;
 	color: #2c2c36;
 	border-radius: 2px;
@@ -798,7 +808,7 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 	max-width: 100%;
 	transition: all ease-in-out 0.2s;
 }
-a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a {
+a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, .userprofile a.btn[data-trigger^="core_message"] {
 	height: auto;
 	width: auto;
 	text-decoration: none;
@@ -819,7 +829,16 @@ a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a {
 	font-size: 1em;
 	line-height: 3em;
 }
-.linkbutton:hover, #page-admin-tool-xmldb-index p.centerpara.buttons a:hover {
+.userprofile a.btn[data-trigger^="core_message"] img {
+	max-width: 24px;
+	width: 24px;
+	height: 24px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0 4px 0 28px;
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/msg.svg) 4px top/contain no-repeat;
+}
+.linkbutton:hover, #page-admin-tool-xmldb-index p.centerpara.buttons a:hover, .userprofile a.btn[data-trigger^="core_message"]:hover  {
 	color: #ffffff;
 	background: #4ADCB0;
 	border: 2px solid #4ADCB0;
@@ -890,6 +909,9 @@ table.flexible td, .generaltable td, .generaltable tr, .generaltable th {
 }
 table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody > tr:nth-child(2n+1) > td, table.grading-report tbody > tr:nth-child(2n+1) > td, table#listdirectories tbody > tr:nth-child(2n+1) > td, table.rolecaps tbody > tr:nth-child(2n+1) > td, table.userenrolment tbody > tr:nth-child(2n+1) > td, table#form tbody > tr:nth-child(2n+1) > td, form#movecourses table tbody > tr:nth-child(2n+1) > td, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > td, .forumheaderlist tbody > tr:nth-child(2n+1) > td, table.flexible tbody > tr:nth-child(2n+1) > td, .generaltable tbody > tr:nth-child(2n+1) > td, .path-mod-assign .gradingtable tr.unselectedrow:nth-child(2n+1) > td, table#explaincaps tbody > tr:nth-child(2n+1) > th, table#defineroletable tbody > tr:nth-child(2n+1) > th, table.grading-report tbody > tr:nth-child(2n+1) > th, table#listdirectories tbody > tr:nth-child(2n+1) > th, table.rolecaps tbody > tr:nth-child(2n+1) > th, table.userenrolment tbody > tr:nth-child(2n+1) > th, table#form tbody > tr:nth-child(2n+1) > th, form#movecourses table tbody > tr:nth-child(2n+1) > th, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > th, .forumheaderlist tbody > tr:nth-child(2n+1) > th, table.flexible tbody > tr:nth-child(2n+1) > th, .generaltable tbody > tr:nth-child(2n+1) > th, .user-enroller-panel .uep-search-results .users tbody tr:hover > td, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td, table.grading-report tbody tr:hover > td, .forumheaderlist tbody tr:hover > td, .generaltable tbody tr:hover > td, table.flexible tbody tr:hover > td, .category_subcategories tbody tr:hover > td, table#modules tbody tr:hover > td, table#permissions tbody tr:hover > td, .user-enroller-panel .uep-search-results .users tbody tr:hover > th, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th, table.grading-report tbody tr:hover > th, .forumheaderlist tbody tr:hover > th, .generaltable tbody tr:hover > th, table.flexible tbody tr:hover > th, .category_subcategories tbody tr:hover > th, table#modules tbody tr:hover > th, table#permissions tbody tr:hover > th {
 	background: #f6f6fa;
+}
+.generaltable tbody > tr:nth-child(2n+1) > td[id^="rubric-criteria"].level {
+	background: none;
 }
 .path-mod-assign div.submissionsummarytable table tbody tr td.c0 {
 	width: auto;
@@ -1138,10 +1160,39 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 .section .activity .editing_move {
 	z-index: 2;
 }
+#page-mod-assign-view .submissionsummarytable img.expandsummaryicon {
+	max-width: 24px;
+	width: 24px;
+	height: 24px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0 4px 0 28px;
+	background: url('https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/brand/Asset 28.png') 4px top/contain no-repeat;
+}
+#page-mod-assign-view .submissionsummarytable
+div:not(.plugincontentsummary) img.expandsummaryicon {
+	background: url('https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/brand/Asset 29.png') 4px top/contain no-repeat;
+}
+.fitem.disabled .fp-btn-choose {
+	opacity: 0.5;
+}
+.userlist .userinfobox {
+	border: none;
+}
+#fitem_id_submissionstatement .fitemtitle label[for="id_submissionstatement"] {
+	float: inline-end;
+}
+div.submitforgrading div.box.generalbox.submitconfirm {
+	width: 68%;
+	margin-left: calc(calc(100% - 68%) / 2);
+}
+div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
+	width: 55%;
+}
 #page-backup-import legend.ftoggler {
 	border-bottom-color: #aaaab4;
 }
-#page-backup-import div.grouped_settings.section_level{
+#page-backup-import div.grouped_settings.section_level {
 	background: none;
 	border: none;
 	border-bottom: 1px solid #aaaab4;
