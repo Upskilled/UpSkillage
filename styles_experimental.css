@@ -844,6 +844,9 @@ a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, .userprofile 
 	border: 2px solid #4ADCB0;
 	border-radius: 0;
 }
+.userprofile a.btn[data-trigger^="core_message"]:hover span {
+	text-decoration: none;
+}
 aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pre input#adminsearchquery:hover, input#searchform_search:hover, input#search:hover, aside#block-region-side-pre input[type="text"]:focus, aside#block-region-side-pre input#adminsearchquery:focus, input#searchform_search:focus, input#search:focus {
 	border-radius: 0px;
 }
