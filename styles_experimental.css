@@ -627,6 +627,9 @@ div.block.block_engagement div.trafficlight {
 .block_settings .title h2::before {
 	vertical-align: top;
 }
+.block_course_overview.block div.box.coursebox h2.title {
+	font-weight: 600;
+}
 /* Page Content and Layout */
 #page {
     padding: 0;
@@ -732,8 +735,9 @@ table#advancedgrading-criteria textarea[cols] {
 	border: 2px solid #ffffff;
 	box-shadow: none;
 }
-#region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, #region-main input[type="button"]:disabled {
+#region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, input[type="button"]:disabled {
 	color: #2c2c36;
+	border: 2px solid #4ADCB0;
 }
 #region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover {
 	color: #ffffff;
@@ -744,11 +748,11 @@ table#advancedgrading-criteria textarea[cols] {
 div.editor_atto_toolbar button:hover {
 	background: rgba(170, 170, 180, 0.5) radial-gradient(ellipse at center, #fff 60%, rgba(170, 170, 180, 0.5) 100%) !important;
 }
-#region-main input[type="submit"]:hover:disabled, aside#block-region-side-pre input[type="submit"]:hover:disabled, aside#block-region-side-post input[type="submit"]:hover:disabled, aside#block-region-side-post button:hover:disabled, .enrolpanel.roleassign.visible input[type="button"]:hover:disabled {
+#region-main input[type="submit"]:hover:disabled, aside#block-region-side-pre input[type="submit"]:hover:disabled, aside#block-region-side-post input[type="submit"]:hover:disabled, aside#block-region-side-post button:hover:disabled, .enrolpanel.roleassign.visible input[type="button"]:hover:disabled, input[type="button"]:hover:disabled {
 	background: #4ADCB0 !important;
 	color: #2c2c36;
 	border-radius: 2px;
-	border: 2px solid #ffffff;
+	border: 2px solid #4ADCB0;
 }
 #rubric-rubric.gradingform_rubric.editor .moveup input, #rubric-rubric.gradingform_rubric.editor .moveup input:hover {
 	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/up.svg) center/1em no-repeat !important;
@@ -791,8 +795,8 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/search.svg) no-repeat 6px center;
 	background-size: 1.5em;
 	padding-left: 32px;
-	transition: all ease-in-out 0.2s;
 	max-width: 100%;
+	transition: all ease-in-out 0.2s;
 }
 a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a {
 	height: auto;
@@ -1152,6 +1156,121 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 }
 .path-course-view .completionprogress {
 	height: 2em;
+}
+#page-enrol-manual-manage #assignform .roleassigntable #existingcell, #page-enrol-manual-manage #assignform .roleassigntable #buttonscell, #page-enrol-manual-manage #assignform .roleassigntable #potentialcell {
+	background: none;
+}
+#page-enrol-users #filterform select {
+	width: 11em;
+}
+#page-enrol-users .enrolpanel.roleassign.visible, #page-enrol-users .user-enroller-panel {
+	background: none;
+}
+#page-enrol-users .user-enroller-panel {
+	border: none;
+}
+#page-enrol-users .enrolpanel.roleassign.visible .container, #page-enrol-users .user-enroller-panel .uep-wrap {
+	border: none;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+#page-enrol-users .enrolpanel.roleassign.visible .container .header, #page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header {
+	border-bottom: 1px solid #aaaab4;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header {
+	background: none;
+	border-radius: 8px 8px 0 0;
+}
+#page-enrol-users .enrolpanel.roleassign.visible .container .header h2, #page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header h2 {
+	font-size: 1em;
+	font-weight: 600;
+	color: #1548e0;
+	text-align: center;
+	margin: 0.5em 1em;
+}
+#page-enrol-users .enrolpanel.roleassign.visible .container .header .close, #page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header .close {
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/cross.svg) top/contain no-repeat;
+	opacity: 1;
+	top: 0.3em;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header .close {
+	top: 0.2em;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content {
+	border: none;
+	background: #f6f6fa;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-controls {
+	border: none;
+	background: none;
+	text-align: center;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-controls .uep-searchoptions .collapsibleheading.active ~ .collapsiblearea {
+	border: none;
+	background: none;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .totalusers {
+	border: none;
+	background: none;
+	font-size: 0.9em;
+	font-weight: 600;
+	padding: 0.2em;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user {
+	border: none;
+	font-size: 0.8em;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.odd {
+	background: #ffffff;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.even {
+	background: none;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user .count {
+	border: none;
+	text-align: center;
+	font-size: 0.8em;
+	width: 2em;
+	line-height: 4em;
+	background: none;
+	padding: 0.3em;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user .details {
+	margin: 0.8em 0;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.even .options input[type="button"] {
+	border: 2px solid #f6f6fa;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.even .options input[type="button"]:hover {
+	border: 2px solid #4ADCB0;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .uep-more-results {
+	border: none;
+	background: none;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-footer {
+	background: #f6f6fa;
+	border-radius: 0 0 8px 8px;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #enrolusersearch {
+	border: 1px solid #000000;
+	box-shadow: none;
+	border-radius: 16px;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/search.svg) no-repeat 6px center;
+	background-size: 1.5em;
+	padding-left: 32px;
+	max-width: 100%;
+	transition: all ease-in-out 0.2s;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #enrolusersearch:focus, #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #enrolusersearch:hover {
+	border-radius: 0px;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #searchbtn, #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer .close-button input[type="button"] {
+	width: unset;
+	border: 2px solid #f6f6fa;
+}
+#page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #searchbtn:hover, #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer .close-button input[type="button"]:hover {
+	border: 2px solid #4ADCB0;
 }
 /* Quality of life improvement for SQL reports */
 div.CodeMirror.cm-s-default {
