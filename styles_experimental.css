@@ -258,7 +258,10 @@ body {
 	position: relative;
 	min-height: 100vh;
 }
-html, .container-fluid {
+html {
+	background: #ffffff;
+}
+.container-fluid {
 	background: #2c2c36;
 }
 html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, optgroup, select, table, td, tr, th, strong, b, ins, i, img, em, label, dl, dt, dd, legend, fieldset {
@@ -301,8 +304,10 @@ img.iconhelp, .helplink img {
 .moodle-dialogue-base .moodle-dialogue-wrap {
 	border: none;
 }
-.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd {
+.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h1 {
 	color: #ffffff;
+}
+.moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd {
 	background: #7b1ce9;
 	border: none;
 }
@@ -447,6 +452,9 @@ div#page-navbar {
 }
 #page-user-profile .page-context-header {
 	background: #ffffff;
+}
+#page-mod-quiz-attempt .nav .navbar-text {
+	color: #ffffff;
 }
 /* Calendar */
 .block_calendar_month.block .content, .block_calendar_month.block .content .calendar-controls, .minicalendar.calendartable tr.weekdays, .minicalendar.calendartable td.day {
@@ -712,10 +720,13 @@ aside#block-region-side-post button {
 	max-width: none;
 }
 .gradingform_rubric .criterion {
-	border: 1px solid #f6f6fa;
+	border: none;
 }
 .gradingform_rubric .criterion.even {
 	background: #f6f6fa;
+}
+.gradingform_rubric .criterion.odd {
+	background: #ffffff;
 }
 .mform .fitem div.fitemtitle {
 	width: auto;
@@ -852,9 +863,6 @@ aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pr
 }
 #rubric-rubric.gradingform_rubric {
 	max-width: 100%;
-}
-.gradingform_rubric .criterion.even {
-	background: #f6f6fa;
 }
 #region-main hr, aside#block-region-side-pre hr {
 	height: 0px;
@@ -1163,6 +1171,9 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 .section .activity .editing_move {
 	z-index: 2;
 }
+.section .activity .autocompletion img {
+	margin-right: 4px;
+}
 #page-mod-assign-view .submissionsummarytable img.expandsummaryicon {
 	max-width: 24px;
 	width: 24px;
@@ -1326,15 +1337,48 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #searchbtn:hover, #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer .close-button input[type="button"]:hover {
 	border: 2px solid #4ADCB0;
 }
+#page-mod-quiz-attempt #page {
+	background: #ffffff;
+}
+#page-mod-quiz-attempt #page h1 {
+	color: #2c2c36;
+}
+#page-mod-quiz-attempt .que .info {
+	background: #f6f6fa;
+	border: none;
+}
+#page-mod-quiz-attempt .que .info h3 {
+	font-size: 1em;
+}
+#page-mod-quiz-attempt .content .formulation {
+	border: none;
+	background: rgba(22,150,236,0.1);
+	color: #2c2c36;
+}
+.moodleSkin .mceToolbar .mceListBox .mceText {
+	color: #2c2c36;
+	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#page-mod-page-view {
+	padding: 1em;
+}
+#page-mod-book-view #block-region-side-pre {
+	border-right: 1px solid #aaaab4;
+	margin: 1em 1em 1em 0em;
+}
+#page-mod-book-view .box.generalbox.book_content {
+	border: none;
+	padding: 0;
+}
 /* Quality of life improvement for SQL reports */
 div.CodeMirror.cm-s-default {
-	width: 160vh;
+	width: 67vw;
 }
 div#fitem_id_querysql div.felement.ftextarea {
 	width: 100%;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
-.CodeMirror-code pre, .CodeMirror-code pre span {
+.CodeMirror .CodeMirror-code pre, .CodeMirror .CodeMirror-code pre span {
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 	line-height: 1em;
 }
