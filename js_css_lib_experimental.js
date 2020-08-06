@@ -128,6 +128,12 @@ function popup( givenName, iframeSrc, iconSrc ) {
 				content.style.display = "none";
 				content.src = content.src;
 			}
+			container.onclick = function() {
+				// Hide the content
+				container.style.display = "none";
+				content.style.display = "none";
+				content.src = content.src;
+			}
 			document.onkeyup = function(e) {
 				// Hide the content (esc key)
 				if( e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27 ) {
@@ -1437,12 +1443,11 @@ function insertReadme() {
 // };
 
 // Script for selecting a randomised login background
-// var backs = ['login_1.png', 'login_3.png', 'login_2.png']
 // if( document.URL.search('login/index.php') != -1 ) {
 // 	// Login page, choose one of the backgrounds
-// 	sel = Math.floor(Math.random() * 3);
+// 	sel = Math.floor(Math.random() * 4) + 1;
 // 	var back = document.querySelector('#page-login-index #region-main');
-// 	back.style.background = '#1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/' + backs[sel] + ') center/cover no-repeat';
+// 	back.style.background = '#1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/login_' + sel + '.jpg) center/cover no-repeat';
 // }
 
 // Padding out the tiles to cover up unwanted sections of the background

@@ -183,7 +183,6 @@ a.popupLink:hover {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.9);
 	margin: 0;
 }
@@ -1404,8 +1403,17 @@ div#fitem_id_querysql div.felement.ftextarea {
 	width: 100%;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
+.CodeMirror .CodeMirror-scroll .CodeMirror-gutters {
+	background: #f6f6fa;
+	border: none;
+}
 .CodeMirror .CodeMirror-code pre, .CodeMirror .CodeMirror-code pre span {
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	line-height: 1em;
+}
+.CodeMirror .CodeMirror-code .CodeMirror-linenumber {
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	color: #aaaab4;
 	line-height: 1em;
 }
 #page-blocks-configurable_reports-viewreport #id_submitbutton {
@@ -1413,11 +1421,6 @@ div#fitem_id_querysql div.felement.ftextarea {
 }
 #page-blocks-configurable_reports-viewreport #reporttable.generaltable {
 	border: none;
-}
-#page-blocks-configurable_reports-viewreport #reporttable.generaltable th {
-	background-color: #A65AFA;
-	color: #ffffff;
-	font-weight: 600;
 }
 /* Quality of life improvement for additional HTML settings */
 #id_s__additionalhtmlhead, #id_s__additionalhtmltopofbody, #id_s__additionalhtmlfooter {
