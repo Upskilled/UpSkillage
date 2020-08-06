@@ -707,6 +707,9 @@ aside#block-region-side-post button {
 	font-size: 1em;
 	padding: 0.6em 1.2em;
 }
+#rubric-rubric.gradingform_rubric .criterion.even input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"] {
+	border: 2px solid #f6f6fa;
+}
 #notice input[type="submit"], #notice .singlebutton + .singlebutton input[type="submit"] {
 	border: 2px solid #aaaab4;
 	margin: 0;
@@ -756,11 +759,11 @@ table#advancedgrading-criteria textarea[cols] {
 	border: 2px solid #ffffff;
 	box-shadow: none;
 }
-#region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, input[type="button"]:disabled, .fitem.disabled .fp-btn-choose {
+#region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, input[type="button"]:disabled, .fitem.disabled .fp-btn-choose, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:disabled {
 	color: #2c2c36;
 	border: 2px solid #4ADCB0;
 }
-#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover {
+#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover, #rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover {
 	color: #ffffff;
 	background: #4ADCB0 !important;
 	border-radius: 0;
@@ -769,7 +772,7 @@ table#advancedgrading-criteria textarea[cols] {
 div.editor_atto_toolbar button:hover {
 	background: rgba(170, 170, 180, 0.5) radial-gradient(ellipse at center, #fff 60%, rgba(170, 170, 180, 0.5) 100%) !important;
 }
-#region-main input[type="submit"]:hover:disabled, aside#block-region-side-pre input[type="submit"]:hover:disabled, aside#block-region-side-post input[type="submit"]:hover:disabled, aside#block-region-side-post button:hover:disabled, .enrolpanel.roleassign.visible input[type="button"]:hover:disabled, input[type="button"]:hover:disabled, .fitem.disabled .fp-btn-choose:hover {
+#region-main input[type="submit"]:hover:disabled, aside#block-region-side-pre input[type="submit"]:hover:disabled, aside#block-region-side-post input[type="submit"]:hover:disabled, aside#block-region-side-post button:hover:disabled, .enrolpanel.roleassign.visible input[type="button"]:hover:disabled, input[type="button"]:hover:disabled, .fitem.disabled .fp-btn-choose:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover:disabled {
 	background: #4ADCB0 !important;
 	color: #2c2c36;
 	border-radius: 2px;
@@ -802,12 +805,6 @@ div.editor_atto_toolbar button:hover {
 #rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric .addcriterion input:hover {
 	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/plus.svg) 0.2em/2em 2em no-repeat !important;
 	padding: 0.5em 0.5em 0.5em 2.5em;
-}
-#rubric-rubric.gradingform_rubric .criterion.even input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input {
-	border: 2px solid #f6f6fa;
-}
-#rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover {
-	border: 2px solid #4ADCB0;
 }
 aside#block-region-side-pre input[type="text"], aside#block-region-side-pre input#adminsearchquery, input#searchform_search, input#search {
 	border: 1px solid #000000;
@@ -876,10 +873,11 @@ table.flexible th, .generaltable th {
 	font-weight: 600;
 }
 .nav-tabs > li > a {
-	background: #1548e0;
+	background: none;
 	border: none;
-	color: #ffffff;
+	color: #1548e0;
 	transition: all ease-in-out 0.2s;
+	box-shadow: 0px -1px 1px rgba(0,0,0,0.3);
 }
 .nav-tabs > li > a:hover {
 	background: #1696ec;
@@ -1370,7 +1368,35 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	border: none;
 	padding: 0;
 }
+.moodle-dialogue-wrap.moodle-dialogue-content .moodle-dialogue-bd {
+	background: #f6f6fa;
+}
+.moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .options {
+	border: none;
+}
+.moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .alloptions {
+	box-shadow: none;
+	color: #2c2c36;
+}
+.moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .alloptions .moduletypetitle .typename {
+	font-weight: 600;
+	color: #1548e0;
+	font-size: 1em;
+}
+.moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .alloptions .option.selected {
+	box-shadow: none;
+}
 /* Quality of life improvement for SQL reports */
+#reportslist th.header, #page-blocks-configurable_reports-viewreport #reporttable.generaltable th {
+	background-color: #A65AFA;
+	padding: 1em;
+    line-height: 1em;
+    vertical-align: middle !important;
+    text-align: center !important;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1rem;
+}
 div.CodeMirror.cm-s-default {
 	width: 67vw;
 }
