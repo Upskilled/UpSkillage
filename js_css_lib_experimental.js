@@ -80,19 +80,20 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	while ( document.getElementById( givenName.replace( /\s/g, '' ) + popupID ) != null ) {
 		popupID = Math.floor( ( Math.random() * 1000 ) + 1 );
 	}
-	
+	var startDiv = document.getElementById(givenName);
 	// Create the link and add to the container
 	var a = document.createElement("a");
 	var html = document.createTextNode(givenName);
 	a.id = "vidLink" + popupID;
-	a.className = "popupLink";
+	a.classList = "popupLink";
 	var icon = document.createElement("img");
 	icon.src = iconSrc;
 	icon.classList = "activityicon iconlarge";
 	icon.alt = givenName;
 	a.appendChild(icon);
 	a.appendChild(html);
-	document.getElementById(givenName).appendChild(a);
+	startDiv.classList = "popupOuter";
+	startDiv.appendChild(a);
 	var content = document.createElement("iframe");
 	var exit = document.createElement("span");
 	var container = document.createElement("div");
