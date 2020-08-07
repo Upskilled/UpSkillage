@@ -169,6 +169,9 @@ img.panelIcon {
 	height: 16px;
 	width: 16px;
 }
+div.popupOuter {
+	max-height: calc(2em - 2px);
+}
 a.popupLink:hover {
 	text-decoration: underline;
 	cursor: pointer;
@@ -686,7 +689,7 @@ div#region-bs-main-and-pre > div.row-fluid {
 #page-site-index .forumolddiscuss {
 	background: none;
 }
-#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button, #notice .singlebutton + .singlebutton input[type="submit"], .capabilitysearchui input[type="button"] {
+#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button, #notice .singlebutton + .singlebutton input[type="submit"], .capabilitysearchui input[type="button"], #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn, .availability-button:last-child button.btn, .availability-dialogue button.btn {
 	background: #4ADCB0 !important;
 	font-weight: 600;
 	font-size: 1.2em;
@@ -708,7 +711,7 @@ aside#block-region-side-post button {
 	font-size: 1em;
 	padding: 0.6em 1.2em;
 }
-#rubric-rubric.gradingform_rubric .criterion.even input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"] {
+#rubric-rubric.gradingform_rubric .criterion.even input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"], .moodle-dialogue-confirm .confirmation-dialogue .confirmation-buttons input[type="button"], #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn, .availability-dialogue button.btn {
 	border: 2px solid #f6f6fa;
 }
 #notice input[type="submit"], #notice .singlebutton + .singlebutton input[type="submit"] {
@@ -764,7 +767,7 @@ table#advancedgrading-criteria textarea[cols] {
 	color: #2c2c36;
 	border: 2px solid #4ADCB0;
 }
-#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover, #rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover {
+#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover, #rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover, .moodle-dialogue-confirm .confirmation-dialogue .confirmation-buttons input[type="button"]:hover, #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn:hover, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn:hover, .availability-button:last-child button.btn:hover, .availability-dialogue button.btn:hover {
 	color: #ffffff;
 	background: #4ADCB0 !important;
 	border-radius: 0;
@@ -1387,16 +1390,35 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .alloptions .option.selected {
 	box-shadow: none;
 }
+#fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner, #fitem_id_availabilityconditionsjson .availability-plugincontrols {
+	background: #f6f6fa;
+	border: none;
+}
+.availability-dialogue ul button.btn {
+	min-width: 180px;
+}
+.availability-dialogue ul label {
+	margin-left: 200px;
+}
+.availability-dialogue .moodle-dialogue {
+	width: 500px;
+}
+.availability-dialogue .availability-buttons {
+	padding: 1em 0;
+}
+.mform fieldset.collapsible legend a.fheader {
+	color: #1548e0;
+}
 /* Quality of life improvement for SQL reports */
 #reportslist th.header, #page-blocks-configurable_reports-viewreport #reporttable.generaltable th {
 	background-color: #A65AFA;
 	padding: 1em;
-    line-height: 1em;
-    vertical-align: middle !important;
-    text-align: center !important;
-    font-weight: 600;
-    color: #fff;
-    font-size: 1rem;
+	line-height: 1em;
+	vertical-align: middle !important;
+	text-align: center !important;
+	font-weight: 600;
+	color: #fff;
+	font-size: 1rem;
 }
 div.CodeMirror.cm-s-default {
 	width: 67vw;

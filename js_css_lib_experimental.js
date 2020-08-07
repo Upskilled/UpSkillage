@@ -1452,7 +1452,7 @@ function insertReadme() {
 // }
 
 // Padding out the tiles to cover up unwanted sections of the background
-// if( document.URL.search(/course\/view.php\?id=[0-9]{1,5}#?$/) != -1 ) {
+// if( document.URL.search(/course\/view.php\?id=[0-9]{1,5}($|#|&)?/) != -1 ) {
 // 	var tiles = document.querySelector('body.category-44 #tileoutlinetiles');
 // 	var i = tiles.childElementCount;
 // 	tiles.style.height = 14 * Math.ceil(tiles.childElementCount / 3) + 'em';
