@@ -179,7 +179,7 @@ a.popupLink:hover {
 .modal {
 	display: none;
 	position: fixed;
-	z-index: 1;
+	z-index: 10;
 	padding-top: 10vh;
 	left: 0;
 	top: 0;
@@ -315,7 +315,7 @@ a, a:link, a:visited {
 	padding: 0.4em 1em;
 	background: var(--colour-light-accent-1-shadow);
 	color: var(--colour-neutral-5);
-	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
+	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
 }
 #notice.box.generalbox p {
 	color: var(--colour-neutral-5);
@@ -328,7 +328,7 @@ a, a:link, a:visited {
 .alert {
 	border-radius: 2px;
 	border: none;
-	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
+	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
 }
 img.iconhelp, .helplink img {
 	padding: 0.1em;
@@ -377,7 +377,7 @@ div.loginbox {
 	margin: 25vh 0 0 55vw;
 	border: none;
 	border-radius: 8px;
-	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
+	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
 }
 .loginbox .loginform .form-label {
 	padding: 0;
@@ -616,7 +616,7 @@ body.has_dock div#dock div.dockedtitle:hover h2 {
 body.has_dock div#dock .dockeditempanel_content.block {
 	background: var(--colour-neutral-1);
 	border: none;
-	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
+	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
 	display: inline-block;
 	min-width: 15vw;
 }
@@ -691,28 +691,15 @@ section#region-main {
 aside#block-region-side-pre {
 	/* background-color: var(--colour-neutral-2); */
 	background-color: var(--colour-neutral-1);
-	flex: 1;
-	order: 1;
 	padding-top: 8px;
 }
 section#region-main, .course-content ul li.section.main {
 	background-color: var(--colour-neutral-1);
-	flex: 5;
-	order: 2;
 }
 aside#block-region-side-post {
 	/* background-color: var(--colour-neutral-2); */
 	background-color: var(--colour-neutral-1);
 	padding-top: 8px;
-}
-div#page-content {
-	display: flex;
-}
-div#region-bs-main-and-pre {
-	display: flex;
-}
-div#region-bs-main-and-pre > div.row-fluid {
-	display: flex;
 }
 #page-site-index .forumolddiscuss {
 	background: none;
@@ -728,6 +715,9 @@ div#region-bs-main-and-pre > div.row-fluid {
 	border: 2px solid transparent;
 	box-shadow: none;
 	padding: 0.6em 1.2em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
 	transition: all ease-in-out 0.2s;
 }
 div.editor_atto_toolbar button, div[id^="wistia"] button {
@@ -791,7 +781,7 @@ table#advancedgrading-criteria textarea[cols] {
 	border: 2px solid var(--colour-light-calltoaction);
 }
 div.editor_atto_toolbar button:hover, div.editor_atto_toolbar button.highlight {
-	background: var(--colour-neutral-3-shadow) radial-gradient(ellipse at center, var(--colur-neutral-1) 60%, var(--colour-neutral-3-shadow) 100%) !important;
+	background: var(--colour-neutral-3-shadow) radial-gradient(ellipse at center, var(--colour-neutral-1) 60%, var(--colour-neutral-3-shadow) 100%) !important;
 }
 #region-main input[type="submit"]:hover:disabled, aside#block-region-side-pre input[type="submit"]:hover:disabled, aside#block-region-side-post input[type="submit"]:hover:disabled, aside#block-region-side-post button:hover:disabled, .enrolpanel.roleassign.visible input[type="button"]:hover:disabled, input[type="button"]:hover:disabled, .fitem.disabled .fp-btn-choose:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover:disabled {
 	background: var(--colour-light-calltoaction) !important;
@@ -907,7 +897,7 @@ table.flexible th, .generaltable th {
 	border: none;
 	color: var(--colour-dark-primary);
 	transition: all ease-in-out 0.2s;
-	box-shadow: 0px -1px 1px var(--colour-neutral-shadow);
+	box-shadow: 0px -1px 1px var(--colour-neutral-5-shadow);
 }
 .nav-tabs > li > a:hover {
 	background: var(--colour-light-primary);
@@ -939,7 +929,7 @@ table.flexible th, .generaltable th {
 	background: none;
 }
 .forumpost {
-	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
+	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
 	margin-bottom: 2em;
 }
 table.flexible td, .generaltable td, .generaltable tr, .generaltable th, .gradingform_rubric .criterion, .gradingform_rubric .criterion .levels .level, .gradingform_rubric .criterion .levels .level.last, .gradingform_guide .criterion {
@@ -1026,7 +1016,7 @@ select[multiple]#groups, select[size]#groups {
 .forumsearch {
 	background: var(--colour-neutral-1);
 	padding: 4px;
-	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
+	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
 	border-radius: 4px;
 }
 div#tileoutlinearea div.tileoutlinecontent {
@@ -1063,7 +1053,7 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 }
 #tileoutlinetiles .tile a {
 	border: none !important;
-	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
+	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
 }
 #tileoutlinetiles .tile a:not([style*="background-image"]) {
 	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 50px/100% no-repeat !important;
@@ -1089,7 +1079,7 @@ body.category-44 div:not(.tilepreview) > #tileoutlinetiles {
 }
 body.category-44 #tileoutlinetiles .tile {
 	background: none;
-	border: solid 1.5em var(--colur-neutral-1);
+	border: solid 1.5em var(--colour-neutral-1);
 	box-sizing: border-box;
 	margin: 0px;
 }
@@ -1100,7 +1090,7 @@ body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]):hove
 	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 0px/110% no-repeat !important;
 }
 body.category-44 div.tiles ul#tileoutlinetiles li.tile a {
-	border: solid 0px var(--colur-neutral-1) !important;
+	border: solid 0px var(--colour-neutral-1) !important;
 	margin: 0;
 	width: 100%;
 	display: block;
@@ -1264,7 +1254,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 #page-enrol-users .enrolpanel.roleassign.visible .container, #page-enrol-users .user-enroller-panel .uep-wrap {
 	border: none;
 	border-radius: 8px;
-	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
+	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
 }
 #page-enrol-users .enrolpanel.roleassign.visible .container .header, #page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header {
 	border-bottom: 1px solid var(--colour-neutral-3);
@@ -1442,7 +1432,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	vertical-align: middle !important;
 	text-align: center !important;
 	font-weight: 600;
-	color: var(--colur-neutral-1);
+	color: var(--colour-neutral-1);
 	font-size: 1rem;
 }
 div.CodeMirror.cm-s-default {
