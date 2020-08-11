@@ -252,6 +252,30 @@ td.hasevent.calendar_event_course {
 }
 
 /* ***** MAJOR MOODLE RESTYLE AND IMPROVEMENT ***** */
+/* Variable declarations */
+:root {
+	--colour-dark-primary: #1548e0;
+	--colour-dark-secondary: #7B1ce9;
+	--colour-dark-calltoaction: #02a878;
+	--colour-dark-accent-1: #cc840a;
+	--colour-dark-accent-2: #90104c;
+	--colour-light-primary: #1696ec;
+	--colour-light-secondary: #a65afa;
+	--colour-light-calltoaction: #4adcb0;
+	--colour-light-accent-1: #f2b81e;
+	--colour-light-accent-2: #ec2262;
+	--colour-neutral-1: #ffffff;
+	--colour-neutral-2: #f6f6fa;
+	--colour-neutral-3: #aaaab4;
+	--colour-neutral-4: #2c2c36;
+	--colour-neutral-5: #000000;
+	--gradient-primary: linear-gradient(190deg, var(--colour-dark-secondary) 0%, var(--colour-dark-primary) 100%);
+	--gradient-accent-1: linear-gradient(190deg, var(--colour-light-accent-1) 0%, var(--colour-dark-accent-1) 100%);
+	--gradient-accent-2: linear-gradient(190deg, var(--colour-light-accent-2) 0%, var(--colour-dark-accent-2) 100%);
+	--gradient-accent-3: linear-gradient(190deg, var(--colour-light-primary) 0%, var(--colour-dark-primary) 100%);
+	--gradient-neutral: linear-gradient(190deg, var(--colour-neutral-4) 0%, var(--colour-neutral-5) 100%);
+}
+
 /* General Site-Wide */
 ::selection {
 	background: #7b1ce9;
