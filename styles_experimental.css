@@ -255,20 +255,25 @@ td.hasevent.calendar_event_course {
 /* Variable declarations */
 :root {
 	--colour-dark-primary: #1548e0;
-	--colour-dark-secondary: #7B1ce9;
+	--colour-dark-secondary: #7b1ce9;
 	--colour-dark-calltoaction: #02a878;
 	--colour-dark-accent-1: #cc840a;
 	--colour-dark-accent-2: #90104c;
 	--colour-light-primary: #1696ec;
+	--colour-light-primary-shadow: rgba(22,150,236,0.1);
 	--colour-light-secondary: #a65afa;
 	--colour-light-calltoaction: #4adcb0;
 	--colour-light-accent-1: #f2b81e;
+	--colour-light-accent-1-shadow: rgba(242, 184, 30, 0.5);
 	--colour-light-accent-2: #ec2262;
 	--colour-neutral-1: #ffffff;
 	--colour-neutral-2: #f6f6fa;
 	--colour-neutral-3: #aaaab4;
+	--colour-neutral-3-shadow: rgba(170, 170, 180, 0.5);
 	--colour-neutral-4: #2c2c36;
+	--colour-neutral-4-shadow: rgba(44, 44, 54, 0.7);
 	--colour-neutral-5: #000000;
+	--colour-neutral-5-shadow: rgba(0,0,0,0.3);
 	--gradient-primary: linear-gradient(190deg, var(--colour-dark-secondary) 0%, var(--colour-dark-primary) 100%);
 	--gradient-accent-1: linear-gradient(190deg, var(--colour-light-accent-1) 0%, var(--colour-dark-accent-1) 100%);
 	--gradient-accent-2: linear-gradient(190deg, var(--colour-light-accent-2) 0%, var(--colour-dark-accent-2) 100%);
@@ -278,8 +283,8 @@ td.hasevent.calendar_event_course {
 
 /* General Site-Wide */
 ::selection {
-	background: #7b1ce9;
-	color: #ffffff;
+	background: var(--colour-dark-secondary);
+	color: var(--colour-neutral-1);
 	text-shadow: none;
 }
 body {
@@ -287,10 +292,10 @@ body {
 	min-height: 100vh;
 }
 html {
-	background: #ffffff;
+	background: var(--colour-neutral-1);
 }
 .container-fluid {
-	background: #2c2c36;
+	background: var(--colour-neutral-4);
 }
 html, body, h1, h2, h3, h4, h5, h6, a, div, span, p, ul, li, header, footer, nav, section, aside, button, input, textarea, option, optgroup, select, table, td, tr, th, strong, b, ins, i, img, em, label, dl, dt, dd, legend, fieldset {
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -300,30 +305,30 @@ pre, code, pre span {
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 body, h1, h2, h3, h4, h5, h6, p {
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 }
 a, a:link, a:visited {
-	color: rgba(44,44,54,0.7);
+	color: var(--colour-neutral-4-shadow);
 }
 #notice.box.generalbox {
 	text-align: center;
 	padding: 0.4em 1em;
-	background: rgba(242, 184, 30, 0.5);
-	color: #000000;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	background: var(--colour-light-accent-1-shadow);
+	color: var(--colour-neutral-5);
+	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
 }
 #notice.box.generalbox p {
-	color: #000000;
+	color: var(--colour-neutral-5);
 }
 #page-content .box.generalbox.adminwarning {
 	background: none;
 	border: none;
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 }
 .alert {
 	border-radius: 2px;
 	border: none;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
 }
 img.iconhelp, .helplink img {
 	padding: 0.1em;
@@ -333,10 +338,10 @@ img.iconhelp, .helplink img {
 	border: none;
 }
 .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h1 {
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 }
 .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd {
-	background: #7b1ce9;
+	background: var(--colour-dark-secondary);
 	border: none;
 }
 .moodle-dialogue-base .closebutton {
@@ -359,7 +364,7 @@ span.error span.error {
 }
 /* Login Page */
 #page-login-index #region-main {
-	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/login_1.png) center/cover no-repeat;
+	background: var(--colour-dark-primary) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/login_1.png) center/cover no-repeat;
 	position: absolute;
 	z-index: 12345;
 	top: 0;
@@ -372,7 +377,7 @@ div.loginbox {
 	margin: 25vh 0 0 55vw;
 	border: none;
 	border-radius: 8px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
 }
 .loginbox .loginform .form-label {
 	padding: 0;
@@ -398,8 +403,7 @@ form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php
 }
 /* Top Navbar */
 header.navbar.navbar-fixed-top {
-	background: -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
-	background: linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
+	background: var(--gradient-primary);
 }
 #page-header, div#page-header-wrapper, header.navbar > nav.navbar-inner, div#page-navbar, div#page-navbar-wrapper, header nav .container-fluid {
 	background: none !important;
@@ -414,19 +418,19 @@ header.navbar.navbar-fixed-top {
 	margin: 0;
 }
 ul.breadcrumb, ul.breadcrumb a {
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 }
 nav.breadcrumb-nav ul.breadcrumb {
 	padding: 0 0 0 12px;
 }
 #page-navbar ul.breadcrumb a.dimmed_text {
-	color: #f6f6fa;
+	color: var(--colour-neutral-2);
 }
 #page-navbar .singlebutton input {
-	color: #2c2c36;
-	background: #ffffff !important;
+	color: var(--colour-neutral-4);
+	background: var(--colour-neutral-1) !important;
 	border-radius: 2px;
-	border: 2px solid #ffffff;
+	border: 2px solid var(--colour-neutral-1);
 	padding: 0.6em 1.2em;
 	font-weight: 600;
 	font-size: 16px;
@@ -436,19 +440,19 @@ nav.breadcrumb-nav ul.breadcrumb {
 }
 #page-navbar .singlebutton input:hover {
 	border-radius: 0;
-	border: 2px solid #2c2c36;
+	border: 2px solid var(--colour-neutral-4);
 }
 .dir-ltr .usermenu{
 	background: none;
 }
 .usermenu .login {
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 }
 .usermenu .login a {
-	color: #4ADCB0;
+	color: var(--colour-light-calltoaction);
 }
 header.navbar .usermenu .moodle-actionmenu .toggle-display {
-	color: #f6f6fa;
+	color: var(--colour-neutral-2);
 }
 header.navbar nav.navbar-inner .usermenu .moodle-actionmenu.show ul.menu.align-tr-br {
 	padding: 0;
@@ -456,7 +460,7 @@ header.navbar nav.navbar-inner .usermenu .moodle-actionmenu.show ul.menu.align-t
 	border: none;
 }
 .jsenabled .usermenu .moodle-actionmenu.show .menu a:hover {
-	background: #1696ec;
+	background: var(--colour-light-primary);
 }
 header.navbar .usermenu ul.menu.align-tr-br .filler {
 	margin: 4px 1px;
@@ -479,10 +483,10 @@ div#page-navbar {
 	padding-left: 205px;
 }
 #page-user-profile .page-context-header {
-	background: #ffffff;
+	background: var(--colour-neutral-1);
 }
 #page-mod-quiz-attempt .nav .navbar-text {
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 }
 /* Calendar */
 .block_calendar_month.block .content, .block_calendar_month.block .content .calendar-controls, .minicalendar.calendartable tr.weekdays, .minicalendar.calendartable td.day {
@@ -495,32 +499,32 @@ div#page-navbar {
 	padding: 0;
 }
 .block_calendar_month .content .calendar-controls a {
-	color: #1548e0;
+	color: var(--colour-dark-primary);
 }
 .minicalendar.calendartable td.day, .minicalendar.calendartable tr.weekdays {
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 }
 .minicalendar.calendartable td.weekend.day {
-	color: #aaaab4;
+	color: var(--colour-neutral-3);
 }
 .block_calendar_month.block .minicalendar td.today, .block .minicalendar td.today {
-	background: #1548e0;
+	background: var(--colour-dark-primary);
 	border-radius: 4px;
 }
 div.upskilled_news_date .month, div.upskilled_news_date .day {
 	line-height: 1em;
 }
 a.ical-link, a.ical-link:link, a.ical-link:visited {
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 	font-size: 12px;
 	font-weight: 600;
-	background: #7b1ce9;
+	background: var(--colour-dark-secondary);
 	padding: 0.1em 0.5em;
-	border: 2px solid #ffffff;
+	border: 2px solid var(--colour-neutral-1);
 	transition: all ease-in-out 0.2s;
 }
 a.ical-link:hover {
-	border: 2px solid #7b1ce9;
+	border: 2px solid var(--colour-dark-secondary);
 }
 .path-calendar .maincalendar .calendarmonth td {
 	height: 7em;
@@ -539,7 +543,7 @@ a.ical-link:hover {
 .block .header .title h2 {
 	border: none;
 	background: none;
-	color: #1548e0;
+	color: var(--colour-dark-primary);
 	font-size: 1.3em;
 	padding: 8px 10px;
 }
@@ -548,9 +552,9 @@ a.ical-link:hover {
 }
 div.block div.content {
 	border: none !important;
-	/* background: #f6f6fa; */
-	background: #ffffff;
-	color: #2c2c36;
+	/* background: var(--colour-neutral-2); */
+	background: var(--colour-neutral-1);
+	color: var(--colour-neutral-4);
 }
 div.block, .collapsibleregioncaption {
 	background: none;
@@ -588,31 +592,31 @@ body.has_dock #page {
 	padding: 0;
 }
 body.has_dock div#dock {
-	background: #1548e0;
+	background: var(--colour-dark-primary);
 }
 body.has_dock div#dock div.dockedtitle {
-	background: #ffffff !important;
+	background: var(--colour-neutral-1) !important;
 	border: none;
 	box-shadow: none;
 	transition: all ease-in-out 0.2s;
 }
 body.has_dock div#dock div.dockedtitle:hover {
-	background: #7B1CE9 !important;
+	background: var(--colour-dark-secondary) !important;
 }
 body.has_dock div#dock div.dockedtitle h2 {
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 2em;
 	font-weight: normal;
 	transition: all ease-in-out 0.2s;
 }
 body.has_dock div#dock div.dockedtitle:hover h2 {
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 }
 body.has_dock div#dock .dockeditempanel_content.block {
-	background: #ffffff;
+	background: var(--colour-neutral-1);
 	border: none;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
 	display: inline-block;
 	min-width: 15vw;
 }
@@ -625,7 +629,7 @@ body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_hd .comma
 body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_hd h2 {
 	border: none;
 	background: none;
-	color: #1548e0;
+	color: var(--colour-dark-primary);
 	font-size: 1.3em;
 }
 body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_bd {
@@ -633,10 +637,10 @@ body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_bd {
 	background: none;
 }
 .block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li, .block_navigation .block_tree li.depth_3:hover {
-	background: #f6f6fa;
+	background: var(--colour-neutral-2);
 }
 aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:visited, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:visited,.block_navigation .block_tree li.depth_3 ul li a:visited {
-	color: #2c2c36 !important;
+	color: var(--colour-neutral-4) !important;
 }
 a span:hover {
 	text-decoration: underline;
@@ -651,7 +655,7 @@ aside#block-region-side-pre .block_navigation .block_tree li.depth_1:first-child
 	background-position-y: 0.4em;
 }
 .block_navigation .dimmed_text {
-	color: #aaaab4;
+	color: var(--colour-neutral-3);
 }
 .block .moodle-actionmenu.block-control-actions.commands {
 	border: none;
@@ -685,20 +689,20 @@ section#region-main {
 	padding-top: 10px;
 }
 aside#block-region-side-pre {
-	/* background-color: #f6f6fa; */
-	background-color: #ffffff;
+	/* background-color: var(--colour-neutral-2); */
+	background-color: var(--colour-neutral-1);
 	flex: 1;
 	order: 1;
 	padding-top: 8px;
 }
 section#region-main, .course-content ul li.section.main {
-	background-color: #ffffff;
+	background-color: var(--colour-neutral-1);
 	flex: 5;
 	order: 2;
 }
 aside#block-region-side-post {
-	/* background-color: #f6f6fa; */
-	background-color: #ffffff;
+	/* background-color: var(--colour-neutral-2); */
+	background-color: var(--colour-neutral-1);
 	padding-top: 8px;
 }
 div#page-content {
@@ -713,14 +717,14 @@ div#region-bs-main-and-pre > div.row-fluid {
 #page-site-index .forumolddiscuss {
 	background: none;
 }
-#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button, #notice .singlebutton + .singlebutton input[type="submit"], .capabilitysearchui input[type="button"], #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn, .availability-button:last-child button.btn, .availability-dialogue button.btn {
-	background: #4ADCB0 !important;
+#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button, #notice .singlebutton + .singlebutton input[type="submit"], .capabilitysearchui input[type="button"], #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn, .availability-button:last-child button.btn, .availability-dialogue button.btn, #page-grade-grading-manage .actions .action {
+	background: var(--colour-light-calltoaction) !important;
 	background-clip: padding-box !important;
 	font-weight: 600;
 	font-size: 1.2em;
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 	border-radius: 4px;
-	/* border: 2px solid #f6f6fa; */
+	/* border: 2px solid var(--colour-neutral-2); */
 	border: 2px solid transparent;
 	box-shadow: none;
 	padding: 0.6em 1.2em;
@@ -737,7 +741,6 @@ aside#block-region-side-post button {
 	padding: 0.6em 1.2em;
 }
 #notice input[type="submit"], #notice .singlebutton + .singlebutton input[type="submit"] {
-	/* border: 2px solid rgba(242, 184, 30, 0.5); */
 	margin: 0;
 }
 #rubric-rubric.gradingform_rubric .addcriterion, #guide-guide.gradingform_guide .addcriterion {
@@ -770,71 +773,71 @@ table#advancedgrading-criteria textarea[cols] {
 }
 #rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input, #guide-guide.gradingform_guide.editor .addcriterion input, #guide-guide.gradingform_guide.editor .addcomment input {
 	font-size: 1em;
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 	height: auto;
 	padding: 0.1em 0.5em;
 	border: 2px solid transparent;
 	box-shadow: none;
 }
 #region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, input[type="button"]:disabled, .fitem.disabled .fp-btn-choose, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:disabled {
-	color: #2c2c36;
-	/* border: 2px solid #4ADCB0; */
+	color: var(--colour-neutral-4);
+	/* border: 2px solid var(--colour-light-calltoaction); */
 }
-#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover, #rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover, .moodle-dialogue-confirm .confirmation-dialogue .confirmation-buttons input[type="button"]:hover, #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn:hover, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn:hover, .availability-button:last-child button.btn:hover, .availability-dialogue button.btn:hover {
-	color: #ffffff;
-	background: #4ADCB0 !important;
+#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover, #rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover, .moodle-dialogue-confirm .confirmation-dialogue .confirmation-buttons input[type="button"]:hover, #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn:hover, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn:hover, .availability-button:last-child button.btn:hover, .availability-dialogue button.btn:hover, #page-grade-grading-manage .actions .action:hover {
+	color: var(--colour-neutral-1);
+	background: var(--colour-light-calltoaction) !important;
 	background-clip: padding-box !important;
 	border-radius: 0;
-	border: 2px solid #4ADCB0;
+	border: 2px solid var(--colour-light-calltoaction);
 }
 div.editor_atto_toolbar button:hover, div.editor_atto_toolbar button.highlight {
-	background: rgba(170, 170, 180, 0.5) radial-gradient(ellipse at center, #fff 60%, rgba(170, 170, 180, 0.5) 100%) !important;
+	background: var(--colour-neutral-3-shadow) radial-gradient(ellipse at center, var(--colur-neutral-1) 60%, var(--colour-neutral-3-shadow) 100%) !important;
 }
 #region-main input[type="submit"]:hover:disabled, aside#block-region-side-pre input[type="submit"]:hover:disabled, aside#block-region-side-post input[type="submit"]:hover:disabled, aside#block-region-side-post button:hover:disabled, .enrolpanel.roleassign.visible input[type="button"]:hover:disabled, input[type="button"]:hover:disabled, .fitem.disabled .fp-btn-choose:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover:disabled {
-	background: #4ADCB0 !important;
+	background: var(--colour-light-calltoaction) !important;
 	background-clip: padding-box !important;
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 	/* border-radius: 2px; */
-	/* border: 2px solid #4ADCB0; */
+	/* border: 2px solid var(--colour-light-calltoaction); */
 }
 #rubric-rubric.gradingform_rubric.editor .moveup input, #rubric-rubric.gradingform_rubric.editor .moveup input:hover, #guide-guide.gradingform_guide.editor .moveup input, #guide-guide.gradingform_guide.editor .moveup input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/up.svg) center/1em no-repeat !important;
+	background: var(--colour-light-calltoaction) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/up.svg) center/1em no-repeat !important;
 	background-clip: padding-box !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .movedown input, #rubric-rubric.gradingform_rubric.editor .movedown input:hover, #guide-guide.gradingform_guide.editor .movedown input, #guide-guide.gradingform_guide.editor .movedown input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/down.svg) center/1em no-repeat !important;
+	background: var(--colour-light-calltoaction) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/down.svg) center/1em no-repeat !important;
 	background-clip: padding-box !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .delete input, #rubric-rubric.gradingform_rubric.editor .delete input:hover, #guide-guide.gradingform_guide.editor .delete input, #guide-guide.gradingform_guide.editor .delete input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/cross.svg) center/1em no-repeat !important;
+	background: var(--colour-light-calltoaction) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/cross.svg) center/1em no-repeat !important;
 	background-clip: padding-box !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric.editor .duplicate input, #rubric-rubric.gradingform_rubric.editor .duplicate input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/copy.svg) center/1em no-repeat !important;
+	background: var(--colour-light-calltoaction) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/copy.svg) center/1em no-repeat !important;
 	background-clip: padding-box !important;
 	width: auto;
 	height: auto;
 	padding: 0.2em 0.8em;
 }
 #rubric-rubric.gradingform_rubric .addcriterion input, #rubric-rubric.gradingform_rubric .addcriterion input:hover {
-	background: #4ADCB0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/plus.svg) 0.2em/2em 2em no-repeat !important;
+	background: var(--colour-light-calltoaction) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/plus.svg) 0.2em/2em 2em no-repeat !important;
 	background-clip: padding-box !important;
 	padding: 0.5em 0.5em 0.5em 2.5em;
 }
 aside#block-region-side-pre input[type="text"], aside#block-region-side-pre input#adminsearchquery, input#searchform_search, input#search {
-	border: 1px solid #000000;
+	border: 1px solid var(--colour-neutral-5);
 	box-shadow: none;
 	border-radius: 16px;
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/search.svg) no-repeat 6px center;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/search.svg) no-repeat 6px center;
 	background-clip: padding-box !important;
 	background-size: 1.5em;
 	padding-left: 32px;
@@ -846,13 +849,13 @@ a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, #page-user-pr
 	width: auto;
 	text-decoration: none;
 	text-align: center;
-	background: #4ADCB0;
+	background: var(--colour-light-calltoaction);
 	background-clip: padding-box !important;
 	font-weight: 600;
 	font-size: 1rem;
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 1.5em;
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 	border-radius: 4px;
 	border: 2px solid transparent;
 	box-shadow: none;
@@ -873,10 +876,10 @@ a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, #page-user-pr
 	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/msg.svg) 4px top/contain no-repeat;
 }
 .linkbutton:hover, #page-admin-tool-xmldb-index p.centerpara.buttons a:hover, #page-user-profile a.btn[data-trigger^="core_message"]:hover  {
-	color: #ffffff;
-	background: #4ADCB0;
+	color: var(--colour-neutral-1);
+	background: var(--colour-light-calltoaction);
 	background-clip: padding-box !important;
-	border: 2px solid #4ADCB0;
+	border: 2px solid var(--colour-light-calltoaction);
 	border-radius: 0;
 }
 #page-user-profile a.btn[data-trigger^="core_message"]:hover span {
@@ -890,7 +893,7 @@ aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pr
 }
 #region-main hr, aside#block-region-side-pre hr {
 	height: 0px;
-	border: 1px solid #aaaab4;
+	border: 1px solid var(--colour-neutral-3);
 	border-top: none;
 }
 #page-report-outline-user .mod-scorm .structlist > li {
@@ -902,22 +905,21 @@ table.flexible th, .generaltable th {
 .nav-tabs > li > a {
 	background: none;
 	border: none;
-	color: #1548e0;
+	color: var(--colour-dark-primary);
 	transition: all ease-in-out 0.2s;
-	box-shadow: 0px -1px 1px rgba(0,0,0,0.3);
+	box-shadow: 0px -1px 1px var(--colour-neutral-shadow);
 }
 .nav-tabs > li > a:hover {
-	background: #1696ec;
+	background: var(--colour-light-primary);
 	border: none;
 }
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
-	background: #1696ec !important;
+	background: var(--colour-light-primary) !important;
 	border: none;
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 }
 .forumpost .row.header {
-	background: #1548e0 -webkit-linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
-	background: #1548e0 linear-gradient(190deg, #7b1ce9 0%, #1548e0 100%);
+	background: var(--colour-dark-primary) var(--gradient-primary);
 	border: none;
 	padding: 4px 0px;
 }
@@ -925,11 +927,11 @@ table.flexible th, .generaltable th {
 	margin-left: 1em;
 }
 .forumpost .header a, .forumpost .header a:link {
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 }
 .forumpost .header .upskilled_news_date {
 	font-size: 14px;
-	color: #7b1ce9;
+	color: var(--colour-dark-secondary);
 	background-image: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/newsdatebg_new.png);
 }
 .forumpost, .forumpost .content {
@@ -937,14 +939,14 @@ table.flexible th, .generaltable th {
 	background: none;
 }
 .forumpost {
-	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
 	margin-bottom: 2em;
 }
-table.flexible td, .generaltable td, .generaltable tr, .generaltable th, .gradingform_rubric .criterion, .gradingform_rubric .criterion .levels .level, .gradingform_guide .criterion {
+table.flexible td, .generaltable td, .generaltable tr, .generaltable th, .gradingform_rubric .criterion, .gradingform_rubric .criterion .levels .level, .gradingform_rubric .criterion .levels .level.last, .gradingform_guide .criterion {
 	border: none;
 }
 table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody > tr:nth-child(2n+1) > td, table.grading-report tbody > tr:nth-child(2n+1) > td, table#listdirectories tbody > tr:nth-child(2n+1) > td, table.rolecaps tbody > tr:nth-child(2n+1) > td, table.userenrolment tbody > tr:nth-child(2n+1) > td, table#form tbody > tr:nth-child(2n+1) > td, form#movecourses table tbody > tr:nth-child(2n+1) > td, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > td, .forumheaderlist tbody > tr:nth-child(2n+1) > td, table.flexible tbody > tr:nth-child(2n+1) > td, .generaltable tbody > tr:nth-child(2n+1) > td, .path-mod-assign .gradingtable tr.unselectedrow:nth-child(2n+1) > td, table#explaincaps tbody > tr:nth-child(2n+1) > th, table#defineroletable tbody > tr:nth-child(2n+1) > th, table.grading-report tbody > tr:nth-child(2n+1) > th, table#listdirectories tbody > tr:nth-child(2n+1) > th, table.rolecaps tbody > tr:nth-child(2n+1) > th, table.userenrolment tbody > tr:nth-child(2n+1) > th, table#form tbody > tr:nth-child(2n+1) > th, form#movecourses table tbody > tr:nth-child(2n+1) > th, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > th, .forumheaderlist tbody > tr:nth-child(2n+1) > th, table.flexible tbody > tr:nth-child(2n+1) > th, .generaltable tbody > tr:nth-child(2n+1) > th, .user-enroller-panel .uep-search-results .users tbody tr:hover > td, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td, table.grading-report tbody tr:hover > td, .gradingform_rubric .criterion.even, .gradingform_guide .criterion.even, .forumheaderlist tbody tr:hover > td, .generaltable tbody tr:hover > td, table.flexible tbody tr:hover > td, .category_subcategories tbody tr:hover > td, table#modules tbody tr:hover > td, table#permissions tbody tr:hover > td, .user-enroller-panel .uep-search-results .users tbody tr:hover > th, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th, table.grading-report tbody tr:hover > th, .forumheaderlist tbody tr:hover > th, .generaltable tbody tr:hover > th, table.flexible tbody tr:hover > th, .category_subcategories tbody tr:hover > th, table#modules tbody tr:hover > th, table#permissions tbody tr:hover > th {
-	background: #f6f6fa;
+	background: var(--colour-neutral-2);
 }
 .generaltable tbody > tr:nth-child(2n+1) > td[id^="rubric-criteria"].level {
 	background: none;
@@ -954,7 +956,7 @@ table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody >
 	font-weight: 600;
 }
 .path-mod-assign td.submissionstatus, .path-mod-assign div.submissionstatus, .path-mod-assign a:link.submissionstatus {
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 	background: none;
 }
 /* Footer */
@@ -985,7 +987,7 @@ footer .footer_social-link-item:not(:first-child) {
 	padding-left: 20px;
 }
 footer .footer_social-link-item svg {
-	fill: #ffffff;
+	fill: var(--colour-neutral-1);
 }
 footer#page-footer {
 	font-size: 0.8em;
@@ -993,13 +995,13 @@ footer#page-footer {
 	border: none;
 }
 #footnotewrapper div.copyright a.footer_copyright-link {
-	color: #aaaab4;
+	color: var(--colour-neutral-3);
 }
 #page-footer, #page-footer p {
-	color: #ffffff;
+	color: var(--colour-neutral-1);
 }
 #page-footer {
-	background: #2c2c36;
+	background: var(--colour-neutral-4);
 	position: absolute;
 	bottom: -8em;
 }
@@ -1022,15 +1024,15 @@ select[multiple]#groups, select[size]#groups {
 	box-shadow: none;
 }
 .forumsearch {
-	background: #ffffff;
+	background: var(--colour-neutral-1);
 	padding: 4px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
 	border-radius: 4px;
 }
 div#tileoutlinearea div.tileoutlinecontent {
-	/* background: #2c2c36; */
+	/* background: var(--colour-neutral-4); */
 	position: static;
-	background: rgba(255,255,255,0.8) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) no-repeat;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) no-repeat;
 	background-size: 66%;
 	background-position-x: 200%;
 	background-position-y: bottom;
@@ -1038,19 +1040,19 @@ div#tileoutlinearea div.tileoutlinecontent {
 	min-height: 280px;
 }
 body.category-5 div#tileoutlinearea div.tileoutlinecontent, body.category-41 div#tileoutlinearea div.tileoutlinecontent, body.category-45 div#tileoutlinearea div.tileoutlinecontent {
-	background: rgba(255,255,255,0.8) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) no-repeat;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) no-repeat;
 	background-size: 66%;
 	background-position-x: 200%;
 	background-position-y: bottom;
 }
 body.category-9 div#tileoutlinearea div.tileoutlinecontent {
-	background: rgba(255,255,255,0.8) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) no-repeat;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) no-repeat;
 	background-size: 66%;
 	background-position-x: 200%;
 	background-position-y: bottom;
 }
 body.category-44 div#tileoutlinearea div.tileoutlinecontent {
-	background: rgba(255,255,255,0.8) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) no-repeat;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) no-repeat;
 	background-size: 66%;
 	background-position-x: 200%;
 	background-position-y: bottom;
@@ -1061,44 +1063,44 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 }
 #tileoutlinetiles .tile a {
 	border: none !important;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
 }
 #tileoutlinetiles .tile a:not([style*="background-image"]) {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 50px/100% no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 50px/100% no-repeat !important;
 	transition: all ease-in-out 0.2s;
 }
 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 0px/110% no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings.svg) center 0px/110% no-repeat !important;
 }
 body.category-5 #tileoutlinetiles .tile a:not([style*="background-image"]), body.category-41 #tileoutlinetiles .tile a:not([style*="background-image"]), body.category-45 #tileoutlinetiles .tile a:not([style*="background-image"]) {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) center 50px/100% no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) center 50px/100% no-repeat !important;
 }
 body.category-5 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, body.category-41 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, body.category-45 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) center 0px/110% no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-light_blue.svg) center 0px/110% no-repeat !important;
 }
 body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]) {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 50px/100% no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 50px/100% no-repeat !important;
 }
 body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 0px/110% no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 0px/110% no-repeat !important;
 }
 body.category-44 div:not(.tilepreview) > #tileoutlinetiles {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center/cover no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center/cover no-repeat !important;
 }
 body.category-44 #tileoutlinetiles .tile {
 	background: none;
-	border: solid 1.5em #fff;
+	border: solid 1.5em var(--colur-neutral-1);
 	box-sizing: border-box;
 	margin: 0px;
 }
 body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]) {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 50px/100% no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 50px/100% no-repeat !important;
 }
 body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 0px/110% no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 0px/110% no-repeat !important;
 }
 body.category-44 div.tiles ul#tileoutlinetiles li.tile a {
-	border: solid 0px #fff !important;
+	border: solid 0px var(--colur-neutral-1) !important;
 	margin: 0;
 	width: 100%;
 	display: block;
@@ -1119,79 +1121,79 @@ div#tileoutlinearea.tileoutlinearea {
 	font-family: inherit;
 }
 #tileoutlinearea h3.sectionname {
-	color: #2c2c36 !important;
+	color: var(--colour-neutral-4) !important;
 }
 .tile span.tiletopic, .tile a:hover .tiletopic {
 	border: none;
 	border-radius: 2px;
-	color: #ffffff;
-	background: rgba(44,44,54,0.8);
+	color: var(--colour-neutral-1);
+	background: var(--colour-neutral-4-shadow);
 	font-family: inherit;
 	padding: .1em 0.6em;
 	transition: all ease-in-out 0.2s;
 }
 .tiletopicnav ul li a {
-	background: #7b1ce9;
-	border: 2px solid #ffffff;
-	color: #ffffff;
+	background: var(--colour-dark-secondary);
+	border: 2px solid var(--colour-neutral-1);
+	color: var(--colour-neutral-1);
 	border-radius: 2px;
 	transition: all ease-in-out 0.2s;
 }
 .tiletopicnav ul li a:hover, .tiletopicnav ul li a.current {
-	background: #ffffff;
-	border: 2px solid #7b1ce9;
-	color: #7b1ce9 !important;
+	background: var(--colour-neutral-1);
+	border: 2px solid var(--colour-dark-secondary);
+	color: var(--colour-dark-secondary) !important;
 }
 body.category-5 .tiletopicnav ul li a, body.category-41 .tiletopicnav ul li a, body.category-45 .tiletopicnav ul li a {
-	background: #1696ec;
-	border: 2px solid #1696ec;
-	color: #ffffff;
+	background: var(--colour-light-primary);
+	border: 2px solid var(--colour-light-primary);
+	color: var(--colour-neutral-1);
 	border-radius: 2px;
 	transition: all ease-in-out 0.2s;
 }
 body.category-5 .tiletopicnav ul li a:hover, body.category-5 .tiletopicnav ul li a.current, body.category-41 .tiletopicnav ul li a:hover, body.category-41 .tiletopicnav ul li a.current, body.category-45 .tiletopicnav ul li a:hover, body.category-45 .tiletopicnav ul li a.current {
-	background: #ffffff;
-	border: 2px solid #1696ec;
-	color: #1696ec !important;
+	background: var(--colour-neutral-1);
+	border: 2px solid var(--colour-light-primary);
+	color: var(--colour-light-primary) !important;
 }
 body.category-9 .tiletopicnav ul li a {
-	background: #f2b81e;
-	border: 2px solid #f2b81e;
-	color: #ffffff;
+	background: var(--colour-light-accent-1);
+	border: 2px solid var(--colour-light-accent-1);
+	color: var(--colour-neutral-1);
 	border-radius: 2px;
 	transition: all ease-in-out 0.2s;
 }
 body.category-9 .tiletopicnav ul li a:hover, body.category-9 .tiletopicnav ul li a.current {
-	background: #ffffff;
-	border: 2px solid #f2b81e;
-	color: #f2b81e !important;
+	background: var(--colour-neutral-1);
+	border: 2px solid var(--colour-light-accent-1);
+	color: var(--colour-light-accent-1) !important;
 }
 body.category-44 .tiletopicnav ul li a {
-	background: #ec2262;
-	border: 2px solid #ec2262;
-	color: #ffffff;
+	background: var(--colour-light-accent-2);
+	border: 2px solid var(--colour-light-accent-2);
+	color: var(--colour-neutral-1);
 	border-radius: 2px;
 	transition: all ease-in-out 0.2s;
 }
 body.category-44 .tiletopicnav ul li a:hover, body.category-44 .tiletopicnav ul li a.current {
-	background: #ffffff;
-	border: 2px solid #ec2262;
-	color: #ec2262 !important;
+	background: var(--colour-neutral-1);
+	border: 2px solid var(--colour-light-accent-2);
+	color: var(--colour-light-accent-2) !important;
 }
 #region-main .tiletopicnav ul li a.disabled {
-	background: #aaaab4;
-	border: 2px solid #aaaab4;
-	color: #ffffff !important;
+	background: var(--colour-neutral-3);
+	border: 2px solid var(--colour-neutral-3);
+	color: var(--colour-neutral-1) !important;
 	border-radius: 2px;
 }
 div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited  {
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 }
 .tileoutlinecontent h1, .tileoutlinecontent p, .tileoutlinecontent div {
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 }
 .tile a:hover .tiletopic {
-	background: rgba(44,44,54,1); 
+	background: var(--colour-neutral-4); 
 }
 .section .activity .editing_move {
 	z-index: 2;
@@ -1229,12 +1231,12 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	width: 55%;
 }
 #page-backup-import legend.ftoggler {
-	border-bottom-color: #aaaab4;
+	border-bottom-color: var(--colour-neutral-3);
 }
 #page-backup-import div.grouped_settings.section_level {
 	background: none;
 	border: none;
-	border-bottom: 1px solid #aaaab4;
+	border-bottom: 1px solid var(--colour-neutral-3);
 	box-shadow: none;
 }
 #page #intro.box.generalbox.boxaligncenter.boxwidthwide {
@@ -1262,10 +1264,10 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 #page-enrol-users .enrolpanel.roleassign.visible .container, #page-enrol-users .user-enroller-panel .uep-wrap {
 	border: none;
 	border-radius: 8px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 5px var(--colour-neutral-shadow);
 }
 #page-enrol-users .enrolpanel.roleassign.visible .container .header, #page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header {
-	border-bottom: 1px solid #aaaab4;
+	border-bottom: 1px solid var(--colour-neutral-3);
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header {
 	background: none;
@@ -1274,7 +1276,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 #page-enrol-users .enrolpanel.roleassign.visible .container .header h2, #page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header h2 {
 	font-size: 1em;
 	font-weight: 600;
-	color: #1548e0;
+	color: var(--colour-dark-primary);
 	text-align: center;
 	margin: 0.5em 1em;
 }
@@ -1288,7 +1290,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content {
 	border: none;
-	background: #f6f6fa;
+	background: var(--colour-neutral-2);
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-controls {
 	border: none;
@@ -1311,7 +1313,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	font-size: 0.8em;
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.odd {
-	background: #ffffff;
+	background: var(--colour-neutral-1);
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.even {
 	background: none;
@@ -1329,24 +1331,24 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	margin: 0.8em 0;
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.even .options input[type="button"] {
-	border: 2px solid #f6f6fa;
+	border: 2px solid var(--colour-neutral-2);
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.even .options input[type="button"]:hover {
-	border: 2px solid #4ADCB0;
+	border: 2px solid var(--colour-light-calltoaction);
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .uep-more-results {
 	border: none;
 	background: none;
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer {
-	background: #f6f6fa;
+	background: var(--colour-neutral-2);
 	border-radius: 0 0 8px 8px;
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #enrolusersearch {
-	border: 1px solid #000000;
+	border: 1px solid var(--colour-neutral-5);
 	box-shadow: none;
 	border-radius: 16px;
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/search.svg) no-repeat 6px center;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/search.svg) no-repeat 6px center;
 	background-size: 1.5em;
 	padding-left: 32px;
 	max-width: 100%;
@@ -1357,19 +1359,19 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #searchbtn, #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer .close-button input[type="button"] {
 	width: unset;
-	border: 2px solid #f6f6fa;
+	border: 2px solid var(--colour-neutral-2);
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #searchbtn:hover, #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer .close-button input[type="button"]:hover {
-	border: 2px solid #4ADCB0;
+	border: 2px solid var(--colour-light-calltoaction);
 }
 #page-mod-quiz-attempt #page {
-	background: #ffffff;
+	background: var(--colour-neutral-1);
 }
 #page-mod-quiz-attempt #page h1 {
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 }
 #page-mod-quiz-attempt .que .info {
-	background: #f6f6fa;
+	background: var(--colour-neutral-2);
 	border: none;
 }
 #page-mod-quiz-attempt .que .info h3 {
@@ -1377,18 +1379,18 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 }
 #page-mod-quiz-attempt .content .formulation {
 	border: none;
-	background: rgba(22,150,236,0.1);
-	color: #2c2c36;
+	background: var(--colour-light-primary-shadow);
+	color: var(--colour-neutral-4);
 }
 .moodleSkin .mceToolbar .mceListBox .mceText {
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #page-mod-page-view {
 	padding: 1em;
 }
 #page-mod-book-view #block-region-side-pre {
-	border-right: 1px solid #aaaab4;
+	border-right: 1px solid var(--colour-neutral-3);
 	margin: 1em 1em 1em 0em;
 }
 #page-mod-book-view .box.generalbox.book_content {
@@ -1396,25 +1398,25 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	padding: 0;
 }
 .moodle-dialogue-wrap.moodle-dialogue-content .moodle-dialogue-bd {
-	background: #f6f6fa;
+	background: var(--colour-neutral-2);
 }
 .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .options {
 	border: none;
 }
 .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .alloptions {
 	box-shadow: none;
-	color: #2c2c36;
+	color: var(--colour-neutral-4);
 }
 .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .alloptions .moduletypetitle .typename {
 	font-weight: 600;
-	color: #1548e0;
+	color: var(--colour-dark-primary);
 	font-size: 1em;
 }
 .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .alloptions .option.selected {
 	box-shadow: none;
 }
 #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner, #fitem_id_availabilityconditionsjson .availability-plugincontrols {
-	background: #f6f6fa;
+	background: var(--colour-neutral-2);
 	border: none;
 }
 .availability-dialogue ul button.btn {
@@ -1430,17 +1432,17 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	padding: 1em 0;
 }
 .mform fieldset.collapsible legend a.fheader {
-	color: #1548e0;
+	color: var(--colour-dark-primary);
 }
 /* Quality of life improvement for SQL reports */
 #reportslist th.header, #page-blocks-configurable_reports-viewreport #reporttable.generaltable th {
-	background-color: #A65AFA;
+	background-color: var(--colour-light-secondary);
 	padding: 1em;
 	line-height: 1em;
 	vertical-align: middle !important;
 	text-align: center !important;
 	font-weight: 600;
-	color: #fff;
+	color: var(--colur-neutral-1);
 	font-size: 1rem;
 }
 div.CodeMirror.cm-s-default {
@@ -1451,7 +1453,7 @@ div#fitem_id_querysql div.felement.ftextarea {
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 .CodeMirror .CodeMirror-scroll .CodeMirror-gutters {
-	background: #f6f6fa;
+	background: var(--colour-neutral-2);
 	border: none;
 }
 .CodeMirror .CodeMirror-code pre, .CodeMirror .CodeMirror-code pre span {
@@ -1460,7 +1462,7 @@ div#fitem_id_querysql div.felement.ftextarea {
 }
 .CodeMirror .CodeMirror-code .CodeMirror-linenumber {
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-	color: #aaaab4;
+	color: var(--colour-neutral-3);
 	line-height: 1em;
 }
 #page-blocks-configurable_reports-viewreport #id_submitbutton {
