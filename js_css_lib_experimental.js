@@ -9,7 +9,7 @@ function popupDoc( mylink, windowname ) {
 	} else {
 		href = mylink.href;
 	}
-	window.open( href, windowname, 'width=860,height=720,scrollbars=yes' );
+	window.open( href, windowname, 'width=900,height=720,scrollbars=yes' );
 	return false;
 }
 
