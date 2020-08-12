@@ -559,7 +559,7 @@ div.block div.content {
 div.block, .collapsibleregioncaption {
 	background: none;
 }
-.block .header .block_action > img.block-hider-hide, .block .header .block_action > .block-hider-show, .block .header .block_action input.moveto.customcommand.requiresjs, body.has_dock div#dock div.controls img[alt="Undock all"], body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_hd .hidepanelicon img, body.has_dock  div#dock .dockeditempanel_content.block .dockeditempanel_hd .moveto.customcommand.requiresjs img {
+.block .header .block_action > img.block-hider-hide, .block .header .block_action > .block-hider-show, .block .header .block_action input.moveto.customcommand.requiresjs, body.has_dock div#dock div.controls img[alt="Undock all"], body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_hd .hidepanelicon img, body.has_dock  div#dock .dockeditempanel_content.block .dockeditempanel_hd .moveto.customcommand.requiresjs img, #user-grades a.action-icon[href*="switch_minus"] img, #user-grades a.action-icon[href*="switch_plus"] img {
 	max-width: 24px;
 	width: 24px;
 	height: 24px;
@@ -570,10 +570,10 @@ div.block, .collapsibleregioncaption {
 .block_navigation .header .block_action {
 	padding-top: 6px;
 }
-.block .header .block_action > img.block-hider-hide {
+.block .header .block_action > img.block-hider-hide, #user-grades a.action-icon[href*="switch_minus"] img {
 	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/minus.svg) 4px top/contain no-repeat;
 }
-.block .header .block_action > .block-hider-show {
+.block .header .block_action > .block-hider-show, #user-grades a.action-icon[href*="switch_plus"] img {
 	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/plus.svg) 4px top/contain no-repeat;
 }
 .block .header .block_action input.moveto.customcommand.requiresjs {
@@ -689,7 +689,6 @@ section#region-main {
 	padding-top: 10px;
 }
 aside#block-region-side-pre {
-	/* background-color: var(--colour-neutral-2); */
 	background-color: var(--colour-neutral-1);
 	padding-top: 8px;
 }
@@ -697,7 +696,6 @@ section#region-main, .course-content ul li.section.main {
 	background-color: var(--colour-neutral-1);
 }
 aside#block-region-side-post {
-	/* background-color: var(--colour-neutral-2); */
 	background-color: var(--colour-neutral-1);
 	padding-top: 8px;
 }
@@ -711,7 +709,6 @@ aside#block-region-side-post {
 	font-size: 1.2em;
 	color: var(--colour-neutral-1);
 	border-radius: 4px;
-	/* border: 2px solid var(--colour-neutral-2); */
 	border: 2px solid transparent;
 	box-shadow: none;
 	padding: 0.6em 1.2em;
@@ -771,7 +768,6 @@ table#advancedgrading-criteria textarea[cols] {
 }
 #region-main input[type="submit"]:disabled, aside#block-region-side-pre input[type="submit"]:disabled, aside#block-region-side-post input[type="submit"]:disabled, input[type="button"]:disabled, .fitem.disabled .fp-btn-choose, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:disabled {
 	color: var(--colour-neutral-4);
-	/* border: 2px solid var(--colour-light-calltoaction); */
 }
 #region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover, #rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover, .moodle-dialogue-confirm .confirmation-dialogue .confirmation-buttons input[type="button"]:hover, #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn:hover, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn:hover, .availability-button:last-child button.btn:hover, .availability-dialogue button.btn:hover, #page-grade-grading-manage .actions .action:hover {
 	color: var(--colour-neutral-1);
@@ -787,8 +783,8 @@ div.editor_atto_toolbar button:hover, div.editor_atto_toolbar button.highlight {
 	background: var(--colour-light-calltoaction) !important;
 	background-clip: padding-box !important;
 	color: var(--colour-neutral-4);
-	/* border-radius: 2px; */
-	/* border: 2px solid var(--colour-light-calltoaction); */
+	border-radius: 2px;
+	border: 2px solid transparent;
 }
 #rubric-rubric.gradingform_rubric.editor .moveup input, #rubric-rubric.gradingform_rubric.editor .moveup input:hover, #guide-guide.gradingform_guide.editor .moveup input, #guide-guide.gradingform_guide.editor .moveup input:hover {
 	background: var(--colour-light-calltoaction) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/up.svg) center/1em no-repeat !important;
@@ -823,7 +819,7 @@ div.editor_atto_toolbar button:hover, div.editor_atto_toolbar button.highlight {
 	background-clip: padding-box !important;
 	padding: 0.5em 0.5em 0.5em 2.5em;
 }
-aside#block-region-side-pre input[type="text"], aside#block-region-side-pre input#adminsearchquery, input#searchform_search, input#search {
+aside#block-region-side-pre input[type="text"], aside#block-region-side-pre input#adminsearchquery, input#searchform_search, input#search, input.usp-search-field[type="text"], #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #enrolusersearch, div.other-user-manager-panel div.oump-wrap div.oump-footer #oump-usersearch, .ics-search input[type="text"] {
 	border: 1px solid var(--colour-neutral-5);
 	box-shadow: none;
 	border-radius: 16px;
@@ -834,7 +830,10 @@ aside#block-region-side-pre input[type="text"], aside#block-region-side-pre inpu
 	max-width: 100%;
 	transition: all ease-in-out 0.2s;
 }
-a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, #page-user-profile a.btn[data-trigger^="core_message"] {
+aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pre input#adminsearchquery:hover, input#searchform_search:hover, input#search:hover, aside#block-region-side-pre input[type="text"]:focus, aside#block-region-side-pre input#adminsearchquery:focus, input#searchform_search:focus, input#search:focus, input.usp-search-field[type="text"]:hover, input.usp-search-field[type="text"]:focus, div.other-user-manager-panel div.oump-wrap div.oump-footer #oump-usersearch:hover, div.other-user-manager-panel div.oump-wrap div.oump-footer #oump-usersearch:focus, .ics-search input[type="text"]:hover, .ics-search input[type="text"]:focus {
+	border-radius: 0px;
+}
+a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, a.btn[data-trigger^="core_message"] {
 	height: auto;
 	width: auto;
 	text-decoration: none;
@@ -856,7 +855,7 @@ a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, #page-user-pr
 	font-size: 1em;
 	line-height: 3em;
 }
-#page-user-profile a.btn[data-trigger^="core_message"] img {
+a.btn[data-trigger^="core_message"] img {
 	max-width: 24px;
 	width: 24px;
 	height: 24px;
@@ -865,18 +864,15 @@ a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, #page-user-pr
 	padding: 0 4px 0 28px;
 	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/white/msg.svg) 4px top/contain no-repeat;
 }
-.linkbutton:hover, #page-admin-tool-xmldb-index p.centerpara.buttons a:hover, #page-user-profile a.btn[data-trigger^="core_message"]:hover  {
+.linkbutton:hover, #page-admin-tool-xmldb-index p.centerpara.buttons a:hover, a.btn[data-trigger^="core_message"]:hover  {
 	color: var(--colour-neutral-1);
 	background: var(--colour-light-calltoaction);
 	background-clip: padding-box !important;
 	border: 2px solid var(--colour-light-calltoaction);
 	border-radius: 0;
 }
-#page-user-profile a.btn[data-trigger^="core_message"]:hover span {
+a.btn[data-trigger^="core_message"]:hover span {
 	text-decoration: none;
-}
-aside#block-region-side-pre input[type="text"]:hover, aside#block-region-side-pre input#adminsearchquery:hover, input#searchform_search:hover, input#search:hover, aside#block-region-side-pre input[type="text"]:focus, aside#block-region-side-pre input#adminsearchquery:focus, input#searchform_search:focus, input#search:focus {
-	border-radius: 0px;
 }
 #rubric-rubric.gradingform_rubric, #guide-guide.gradingform_guide {
 	max-width: 100%;
@@ -932,11 +928,14 @@ table.flexible th, .generaltable th {
 	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
 	margin-bottom: 2em;
 }
-table.flexible td, .generaltable td, .generaltable tr, .generaltable th, .gradingform_rubric .criterion, .gradingform_rubric .criterion .levels .level, .gradingform_rubric .criterion .levels .level.last, .gradingform_guide .criterion {
+table.flexible td, .generaltable td, .generaltable tr, .generaltable th, .gradingform_rubric .criterion, .gradingform_rubric .criterion .levels .level, .gradingform_rubric .criterion .levels .level.last, .gradingform_guide .criterion, #user-grades, #user-grades th, #user-grades td, .gradereport_history_usp .usp-user, .gradereport_history_usp .usp-ajax-content {
 	border: none;
 }
-table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody > tr:nth-child(2n+1) > td, table.grading-report tbody > tr:nth-child(2n+1) > td, table#listdirectories tbody > tr:nth-child(2n+1) > td, table.rolecaps tbody > tr:nth-child(2n+1) > td, table.userenrolment tbody > tr:nth-child(2n+1) > td, table#form tbody > tr:nth-child(2n+1) > td, form#movecourses table tbody > tr:nth-child(2n+1) > td, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > td, .forumheaderlist tbody > tr:nth-child(2n+1) > td, table.flexible tbody > tr:nth-child(2n+1) > td, .generaltable tbody > tr:nth-child(2n+1) > td, .path-mod-assign .gradingtable tr.unselectedrow:nth-child(2n+1) > td, table#explaincaps tbody > tr:nth-child(2n+1) > th, table#defineroletable tbody > tr:nth-child(2n+1) > th, table.grading-report tbody > tr:nth-child(2n+1) > th, table#listdirectories tbody > tr:nth-child(2n+1) > th, table.rolecaps tbody > tr:nth-child(2n+1) > th, table.userenrolment tbody > tr:nth-child(2n+1) > th, table#form tbody > tr:nth-child(2n+1) > th, form#movecourses table tbody > tr:nth-child(2n+1) > th, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > th, .forumheaderlist tbody > tr:nth-child(2n+1) > th, table.flexible tbody > tr:nth-child(2n+1) > th, .generaltable tbody > tr:nth-child(2n+1) > th, .user-enroller-panel .uep-search-results .users tbody tr:hover > td, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td, table.grading-report tbody tr:hover > td, .gradingform_rubric .criterion.even, .gradingform_guide .criterion.even, .forumheaderlist tbody tr:hover > td, .generaltable tbody tr:hover > td, table.flexible tbody tr:hover > td, .category_subcategories tbody tr:hover > td, table#modules tbody tr:hover > td, table#permissions tbody tr:hover > td, .user-enroller-panel .uep-search-results .users tbody tr:hover > th, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th, table.grading-report tbody tr:hover > th, .forumheaderlist tbody tr:hover > th, .generaltable tbody tr:hover > th, table.flexible tbody tr:hover > th, .category_subcategories tbody tr:hover > th, table#modules tbody tr:hover > th, table#permissions tbody tr:hover > th {
+table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody > tr:nth-child(2n+1) > td, table.grading-report tbody > tr:nth-child(2n+1) > td, table#listdirectories tbody > tr:nth-child(2n+1) > td, table.rolecaps tbody > tr:nth-child(2n+1) > td, table.userenrolment tbody > tr:nth-child(2n+1) > td, table#form tbody > tr:nth-child(2n+1) > td, form#movecourses table tbody > tr:nth-child(2n+1) > td, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > td, .forumheaderlist tbody > tr:nth-child(2n+1) > td, table.flexible tbody > tr:nth-child(2n+1) > td, .generaltable tbody > tr:nth-child(2n+1) > td, .path-mod-assign .gradingtable tr.unselectedrow:nth-child(2n+1) > td, table#explaincaps tbody > tr:nth-child(2n+1) > th, table#defineroletable tbody > tr:nth-child(2n+1) > th, table.grading-report tbody > tr:nth-child(2n+1) > th, table#listdirectories tbody > tr:nth-child(2n+1) > th, table.rolecaps tbody > tr:nth-child(2n+1) > th, table.userenrolment tbody > tr:nth-child(2n+1) > th, table#form tbody > tr:nth-child(2n+1) > th, form#movecourses table tbody > tr:nth-child(2n+1) > th, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > th, .forumheaderlist tbody > tr:nth-child(2n+1) > th, table.flexible tbody > tr:nth-child(2n+1) > th, .generaltable tbody > tr:nth-child(2n+1) > th, .user-enroller-panel .uep-search-results .users tbody tr:hover > td, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td, table.grading-report tbody tr:hover > td, .gradingform_rubric .criterion.even, .gradingform_guide .criterion.even, .forumheaderlist tbody tr:hover > td, .generaltable tbody tr:hover > td, table.flexible tbody tr:hover > td, .category_subcategories tbody tr:hover > td, table#modules tbody tr:hover > td, table#permissions tbody tr:hover > td, .user-enroller-panel .uep-search-results .users tbody tr:hover > th, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th, table.grading-report tbody tr:hover > th, .forumheaderlist tbody tr:hover > th, .generaltable tbody tr:hover > th, table.flexible tbody tr:hover > th, .category_subcategories tbody tr:hover > th, table#modules tbody tr:hover > th, table#permissions tbody tr:hover > th, .path-grade-report .gradeparent tr:nth-of-type(2n) .cell, .gradereport_history_usp .usp-user:nth-child(2n+1) {
 	background: var(--colour-neutral-2);
+}
+.path-grade-report-grader .gradeparent tr:nth-child(n) td.overridden:nth-child(n) {
+	background: var(--colour-light-accent-1-shadow);
 }
 .generaltable tbody > tr:nth-child(2n+1) > td[id^="rubric-criteria"].level {
 	background: none;
@@ -1280,7 +1279,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content {
 	border: none;
-	background: var(--colour-neutral-2);
+	background: var(--colour-neutral-1);
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-controls {
 	border: none;
@@ -1303,7 +1302,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	font-size: 0.8em;
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.odd {
-	background: var(--colour-neutral-1);
+	background: var(--colour-neutral-2);
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.even {
 	background: none;
@@ -1320,39 +1319,19 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user .details {
 	margin: 0.8em 0;
 }
-#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.even .options input[type="button"] {
-	border: 2px solid var(--colour-neutral-2);
-}
-#page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .users .user.even .options input[type="button"]:hover {
-	border: 2px solid var(--colour-light-calltoaction);
-}
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-content .uep-ajax-content .uep-search-results .uep-more-results {
 	border: none;
 	background: none;
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer {
-	background: var(--colour-neutral-2);
+	background: var(--colour-neutral-1);
 	border-radius: 0 0 8px 8px;
-}
-#page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #enrolusersearch {
-	border: 1px solid var(--colour-neutral-5);
-	box-shadow: none;
-	border-radius: 16px;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/search.svg) no-repeat 6px center;
-	background-size: 1.5em;
-	padding-left: 32px;
-	max-width: 100%;
-	transition: all ease-in-out 0.2s;
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #enrolusersearch:focus, #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #enrolusersearch:hover {
 	border-radius: 0px;
 }
 #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #searchbtn, #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer .close-button input[type="button"] {
 	width: unset;
-	border: 2px solid var(--colour-neutral-2);
-}
-#page-enrol-users .user-enroller-panel .uep-wrap .uep-footer #searchbtn:hover, #page-enrol-users .user-enroller-panel .uep-wrap .uep-footer .close-button input[type="button"]:hover {
-	border: 2px solid var(--colour-light-calltoaction);
 }
 #page-mod-quiz-attempt #page {
 	background: var(--colour-neutral-1);
@@ -1388,7 +1367,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	padding: 0;
 }
 .moodle-dialogue-wrap.moodle-dialogue-content .moodle-dialogue-bd {
-	background: var(--colour-neutral-2);
+	background: var(--colour-neutral-1);
 }
 .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .options {
 	border: none;
@@ -1423,6 +1402,71 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 }
 .mform fieldset.collapsible legend a.fheader {
 	color: var(--colour-dark-primary);
+}
+div.other-user-manager-panel, div.other-user-manager-panel div.oump-wrap, div.other-user-manager-panel div.oump-wrap div.oump-header.header {
+	border: none;
+	background: var(--colour-neutral-1);
+	border-radius: 8px;
+}
+div.other-user-manager-panel {
+	box-shadow: 0 2px 5px var(--colour-neutral-5-shadow);
+}
+div.other-user-manager-panel div.oump-wrap {
+	margin: 0;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-header.header .oump-panel-close {
+	background: url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/icons/blue/cross.svg) top/contain no-repeat;
+	opacity: 1;
+	top: 0.3em;
+	height: 25px;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-header.header h2 {
+	color: var(--colour-dark-primary);
+	text-align: center;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-content {
+	border: none;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-content .oump-total-users {
+	border: none;
+	background: none;
+	font-size: 0.8em;
+	font-weight: 600;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-content .oump-user {
+	background: var(--colour-neutral-2);
+	border: none;
+	font-size: 1em;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-content .oump-user .count {
+	font-size: 0.8em;
+	font-weight: 600;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-content .oump-user .oump-user-details {
+	background: var(--colour-neutral-1);
+	border: none;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-content .oump-user .oump-user-details .oump-role-options span {
+	background: var(--colour-neutral-3);
+	font-size: 1em;
+	font-weight: 600;
+	line-height: 1em;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-content .oump-user.odd .oump-user-details {
+	background: var(--colour-neutral-2);
+}
+div.other-user-manager-panel div.oump-wrap div.oump-content .oump-more-results {
+	background: none;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-footer {
+	background: none;
+	border-radius: 
+}
+div.other-user-manager-panel div.oump-wrap div.oump-footer .oump-search {
+	margin: 0.5em;
+}
+div.other-user-manager-panel div.oump-wrap div.oump-footer label {
+	font-size: 1em;
 }
 /* Quality of life improvement for SQL reports */
 #reportslist th.header, #page-blocks-configurable_reports-viewreport #reporttable.generaltable th {
