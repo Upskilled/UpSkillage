@@ -1454,13 +1454,15 @@ function insertReadme() {
 // Padding out the tiles to cover up unwanted sections of the background
 // if( document.URL.search(/course\/view.php\?id=[0-9]{1,5}($|#|&)?/) != -1 ) {
 // 	var tiles = document.querySelector('body.category-44 #tileoutlinetiles');
-// 	var i = tiles.childElementCount;
-// 	tiles.style.height = 14 * Math.ceil(tiles.childElementCount / 3) + 'em';
-// 	for( i = tiles.childElementCount; (i % 3) != 0; i++ ) {
-// 		var mask = document.createElement('li');
-// 		mask.classList = "tile";
-// 		mask.style.background = "#fff";
-// 		mask.style.height = "14em";
-// 		tiles.appendChild(mask);
-// 	}		
+// 	if( tiles != null ) {
+// 		var i = tiles.childElementCount;
+// 		tiles.style.height = 14 * Math.ceil(tiles.childElementCount / 3) + 'em';
+// 		for( i = tiles.childElementCount; (i % 3) != 0; i++ ) {
+// 			var mask = document.createElement('li');
+// 			mask.classList = "tile";
+// 			mask.style.background = "#fff";
+// 			mask.style.height = "14em";
+// 			tiles.appendChild(mask);
+// 		}		
+// 	}
 // }

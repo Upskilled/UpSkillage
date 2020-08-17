@@ -29,6 +29,7 @@
 	--gradient-accent-2: linear-gradient(190deg, var(--colour-light-accent-2) 0%, var(--colour-dark-accent-2) 100%);
 	--gradient-accent-3: linear-gradient(190deg, var(--colour-light-primary) 0%, var(--colour-dark-primary) 100%);
 	--gradient-neutral: linear-gradient(190deg, var(--colour-neutral-4) 0%, var(--colour-neutral-5) 100%);
+	--gradient-calltoaction: linear-gradient(0deg, var(--colour-light-calltoaction), var(--colour-light-calltoaction));
 }
 
 /* General Site-Wide */
@@ -111,6 +112,11 @@ span.error span.error {
 }
 .userprofile .profile_tree section.node_category {
 	border: none;
+}
+@media only screen and (max-width: 880px) {
+	#page-content {
+		margin-bottom: 2em;
+	}
 }
 /* Login Page */
 #page-login-index #region-main {
@@ -238,6 +244,17 @@ div#page-navbar {
 #page-mod-quiz-attempt .nav .navbar-text {
 	color: var(--colour-neutral-1);
 }
+.navbar .btn-navbar, .navbar .btn-navbar:hover {
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+.navbar .nav-collapse.in {
+	border: none;
+}
+div.nav-collapse.in.collapse a.menu-action {
+	color: var(--colour-neutral-1);
+}
 /* Calendar */
 .block_calendar_month.block .content, .block_calendar_month.block .content .calendar-controls, .minicalendar.calendartable tr.weekdays, .minicalendar.calendartable td.day {
 	background: none;
@@ -278,6 +295,19 @@ a.ical-link:hover {
 }
 .path-calendar .maincalendar .calendarmonth td {
 	height: 7em;
+}
+.block_calendar_month.block .minicalendar td.today .calendar-event-panel {
+	color: var(--colour-neutral-4);
+}
+.block .calendar-event-panel {
+	background: var(--colour-neutral-2);
+	border: none;
+	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
+}
+.block .calendar-event-panel .yui3-overlay-content {
+	background: none;
+	border: none;
+	box-shadow: none;
 }
 /* Blocks */
 .block .header {
@@ -386,26 +416,55 @@ body.has_dock div#dock .dockeditempanel_content.block .dockeditempanel_bd {
 	float: left;
 	background: none;
 }
-.block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li, .block_navigation .block_tree li.depth_3:hover {
-	background: var(--colour-neutral-2);
+aside#block-region-side-pre hr {
+	display: none;
 }
-aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:visited, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:visited,.block_navigation .block_tree li.depth_3 ul li a:visited {
+aside#block-region-side-pre .footer {
+	border: none;
+}
+aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li:hover a:link, aside#block-region-side-pre .block_navigation .block_tree li.depth_3:hover a:visited, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:visited,.block_navigation .block_tree li.depth_3 ul li a:visited, .block_navigation a:link, .block_navigation a:visited, .block_navigation a:link, .block_navigation a:visited {
 	color: var(--colour-neutral-4) !important;
 }
-a span:hover {
-	text-decoration: underline;
+.block_navigation .dimmed_text {
+	color: var(--colour-neutral-3);
 }
-aside#block-region-side-pre .block_navigation .block_tree li.depth_1:first-child {
+.block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li, .block_navigation .block_tree li.depth_3:hover {
+	background: none;
+}
+.block_navigation .block_tree .tree_item {
+	margin: 0;
+}
+.block_navigation .block_tree li a {
+	padding: 0.5em;
+	background: var(--gradient-calltoaction) 0px 0px/0% 100% no-repeat;
+	border-radius: 0 2em 2em 0;
+	transition: all ease-in-out 0.2s;
+}
+.block_navigation .block_tree li a:hover, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 a:link:hover, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 a:visited:hover, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:link:hover, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul ul li a:visited:hover, aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:link:hover {
+	background: var(--gradient-calltoaction) 0px 0px/100% 100% no-repeat;
+	color: var(--colour-neutral-1) !important;
+}
+.block_navigation .block_tree .tree_item.branch {
+	padding-left: 20px;
+}
+.block_navigation .block_tree li .tree_item.branch span {
+	padding: 0.5em 0em 0.5em 0.5em;
+	display: block;
+}
+aside#block-region-side-pre .block_navigation .block_tree li {
 	border: none;
+}
+aside#block-region-side-pre .block_navigation .block_tree > li:first-child {
+	padding: 0;
+}
+aside#block-region-side-pre a {
+	text-decoration: none;
 }
 .block_settings .block_tree li.item_with_icon > p img {
 	top: 0.4em;
 }
 .jsenabled .block_settings .block_tree .tree_item.branch{
 	background-position-y: 0.4em;
-}
-.block_navigation .dimmed_text {
-	color: var(--colour-neutral-3);
 }
 .block .moodle-actionmenu.block-control-actions.commands {
 	border: none;
@@ -426,6 +485,9 @@ div.block.block_engagement div.trafficlight {
 }
 .block_settings .title h2::before {
 	vertical-align: top;
+}
+#page-my-index #region-main .block_course_overview .coursebox {
+	border: none;
 }
 .block_course_overview.block div.box.coursebox h2.title {
 	font-weight: 600;
@@ -456,7 +518,7 @@ aside#block-region-side-post {
 	background: var(--colour-light-calltoaction) !important;
 	background-clip: padding-box !important;
 	font-weight: 600;
-	font-size: 1.2em;
+	font-size: 1em;
 	color: var(--colour-neutral-1);
 	border-radius: 4px;
 	border: 2px solid transparent;
@@ -678,7 +740,10 @@ table.flexible th, .generaltable th {
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 	margin-bottom: 2em;
 }
-table.flexible td, .generaltable td, .generaltable tr, .generaltable th, .gradingform_rubric .criterion, .gradingform_rubric .criterion .levels .level, .gradingform_rubric .criterion .levels .level.last, .gradingform_guide .criterion, #user-grades, #user-grades th, #user-grades td, .gradereport_history_usp .usp-user, .gradereport_history_usp .usp-ajax-content {
+#page-mod-forum-subscribers .generaltable.boxaligncenter .cell.c0 {
+	width: 1%;
+}
+table.flexible td, .generaltable td, .generaltable tr, .generaltable th, .gradingform_rubric .criterion, .gradingform_rubric .criterion .levels .level, .gradingform_rubric .criterion .levels .level.last, .gradingform_rubric .criterion .levels .level.checked, .gradingform_guide .criterion, #user-grades, #user-grades th, #user-grades td, .gradereport_history_usp .usp-user, .gradereport_history_usp .usp-ajax-content {
 	border: none;
 }
 table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody > tr:nth-child(2n+1) > td, table.grading-report tbody > tr:nth-child(2n+1) > td, table#listdirectories tbody > tr:nth-child(2n+1) > td, table.rolecaps tbody > tr:nth-child(2n+1) > td, table.userenrolment tbody > tr:nth-child(2n+1) > td, table#form tbody > tr:nth-child(2n+1) > td, form#movecourses table tbody > tr:nth-child(2n+1) > td, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > td, .forumheaderlist tbody > tr:nth-child(2n+1) > td, table.flexible tbody > tr:nth-child(2n+1) > td, .generaltable tbody > tr:nth-child(2n+1) > td, .path-mod-assign .gradingtable tr.unselectedrow:nth-child(2n+1) > td, table#explaincaps tbody > tr:nth-child(2n+1) > th, table#defineroletable tbody > tr:nth-child(2n+1) > th, table.grading-report tbody > tr:nth-child(2n+1) > th, table#listdirectories tbody > tr:nth-child(2n+1) > th, table.rolecaps tbody > tr:nth-child(2n+1) > th, table.userenrolment tbody > tr:nth-child(2n+1) > th, table#form tbody > tr:nth-child(2n+1) > th, form#movecourses table tbody > tr:nth-child(2n+1) > th, #page-admin-course-index .editcourse tbody > tr:nth-child(2n+1) > th, .forumheaderlist tbody > tr:nth-child(2n+1) > th, table.flexible tbody > tr:nth-child(2n+1) > th, .generaltable tbody > tr:nth-child(2n+1) > th, .user-enroller-panel .uep-search-results .users tbody tr:hover > td, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > td, table.grading-report tbody tr:hover > td, .gradingform_rubric .criterion.even, .gradingform_guide .criterion.even, .forumheaderlist tbody tr:hover > td, .generaltable tbody tr:hover > td, table.flexible tbody tr:hover > td, .category_subcategories tbody tr:hover > td, table#modules tbody tr:hover > td, table#permissions tbody tr:hover > td, .user-enroller-panel .uep-search-results .users tbody tr:hover > th, .user-enroller-panel .uep-search-results .cohorts tbody tr:hover > th, table.grading-report tbody tr:hover > th, .forumheaderlist tbody tr:hover > th, .generaltable tbody tr:hover > th, table.flexible tbody tr:hover > th, .category_subcategories tbody tr:hover > th, table#modules tbody tr:hover > th, table#permissions tbody tr:hover > th, .path-grade-report .gradeparent tr:nth-of-type(2n) .cell, .gradereport_history_usp .usp-user:nth-child(2n+1) {
@@ -687,8 +752,11 @@ table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody >
 .path-grade-report-grader .gradeparent tr:nth-child(n) td.overridden:nth-child(n) {
 	background: var(--colour-light-accent-1-shadow);
 }
-.generaltable tbody > tr:nth-child(2n+1) > td[id^="rubric-criteria"].level {
+.generaltable tbody > tr:nth-child(2n+1) > td[id^="rubric-criteria"].level, .generaltable tbody > tr:nth-child(2n+1) > td[id*="criteria"].level:not(.checked) {
 	background: none;
+}
+.gradingform_rubric .criteria {
+	background: var(--colour-neutral-1);
 }
 .path-mod-assign div.submissionsummarytable table tbody tr td.c0 {
 	width: auto;
@@ -1217,6 +1285,14 @@ div.other-user-manager-panel div.oump-wrap div.oump-footer .oump-search {
 div.other-user-manager-panel div.oump-wrap div.oump-footer label {
 	font-size: 1em;
 }
+#id_introeditor {
+	width: 100%;
+	padding: 0.5em;
+}
+.comment-list li {
+	background: var(--colour-light-accent-1-shadow) !important;
+	color: var(--colour-dark-primary) !important;
+}
 /* Quality of life improvement for SQL reports */
 #reportslist th.header, #page-blocks-configurable_reports-viewreport #reporttable.generaltable th {
 	background-color: var(--colour-light-secondary);
@@ -1398,12 +1474,10 @@ div.flip {
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 	color: var(--colour-light-accent-1);
 	background: var(--colour-neutral-1);
-	/* background: var(--colour-dark-accent-1) var(--gradient-accent-1-shadow); */
 }
 div.flip:hover {
 	color: var(--colour-neutral-1);
 	background: var(--colour-light-accent-1);
-	/* background: var(--colour-light-accent-1) var(--gradient-accent-1); */
 }
 div.panel {
 	padding: 15px;
