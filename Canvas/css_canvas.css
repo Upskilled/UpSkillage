@@ -158,6 +158,15 @@ body:not(.full-width):not(.outcomes) .ic-Layout-wrapper {
 .right-side {
 	background-color: #f6f6fa;
 }
+/* LTI new tab styling */
+.ic-framed-lti-tool .load_tab {
+	margin: 2em;
+}
+.ic-framed-lti-tool .load_tab button {
+	background: var(--ic-brand-button--primary-bgd);
+	color: var(--ic-brand-button--primary-text);
+	border: none;
+}
 
 /* modal formatting for popup videos */
 .modal {
