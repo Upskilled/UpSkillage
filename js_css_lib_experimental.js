@@ -1462,7 +1462,7 @@ function insertReadme() {
 // 			mask.classList = "tile";
 // 			mask.style.background = "#fff";
 // 			mask.style.height = "14em";
-// 			mask.style.width = "33.33%";
+// 			mask.style.width = "calc(100% / 3)";
 // 			mask.style.display = "block";
 // 			mask.style.float = "left";
 // 			tiles.appendChild(mask);

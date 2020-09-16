@@ -1,163 +1,130 @@
-/* Login Page & Main UI Customisation */
+/*	Canvas built-in CSS variables from theme editor
+--ic-brand-primary-darkened-5: #1445D5;
+--ic-brand-primary-darkened-10: #1341CA;
+--ic-brand-primary-darkened-15: #123EBF;
+--ic-brand-primary-lightened-5: #2051E1;
+--ic-brand-primary-lightened-10: #2C5AE3;
+--ic-brand-primary-lightened-15: #3863E4;
+--ic-brand-button--primary-bgd-darkened-5: #1445D5;
+--ic-brand-button--primary-bgd-darkened-15: #123EBF;
+--ic-brand-button--secondary-bgd-darkened-5: #47D1A8;
+--ic-brand-button--secondary-bgd-darkened-15: #3FBB96;
+--ic-brand-font-color-dark-lightened-15: #4B4B54;
+--ic-brand-font-color-dark-lightened-30: #6B6B72;
+--ic-link-color-darkened-10: #6F1AD2;
+--ic-link-color-lightened-10: #8832EB;
+--ic-brand-primary: #1548E0;
+--ic-brand-font-color-dark: #2C2C36;
+--ic-link-color: #7b1ce9;
+--ic-brand-button--primary-bgd: #1548e0;
+--ic-brand-button--primary-text: #ffffff;
+--ic-brand-button--secondary-bgd: #4adcb0;
+--ic-brand-button--secondary-text: #ffffff;
+--ic-brand-global-nav-bgd: #1548e0;
+--ic-brand-global-nav-ic-icon-svg-fill: #ffffff;
+--ic-brand-global-nav-ic-icon-svg-fill--active: #7b1ce9;
+--ic-brand-global-nav-menu-item__text-color: #ffffff;
+--ic-brand-global-nav-menu-item__text-color--active: var(--ic-link-color);
+--ic-brand-global-nav-avatar-border: #1548e0;
+--ic-brand-global-nav-menu-item__badge-bgd: #4adcb0;
+--ic-brand-global-nav-menu-item__badge-text: #ffffff;
+--ic-brand-global-nav-logo-bgd: #1548e0;
+--ic-brand-header-image: url('https://instructure-uploads-apse2.s3.ap-southeast-2.amazonaws.com/account_184380000000000001/attachments/802/Logo%20White%20Wordmark%20Stacked.png');
+--ic-brand-mobile-global-nav-logo: url('https://instructure-uploads-apse2.s3.ap-southeast-2.amazonaws.com/account_184380000000000001/attachments/804/Wordmark%20primary%20gradient%20on%20white.png');
+--ic-brand-watermark: ;
+--ic-brand-watermark-opacity: 1.0;
+--ic-brand-favicon: url('https://instructure-uploads-apse2.s3.ap-southeast-2.amazonaws.com/account_184380000000000001/attachments/806/favicon.ico');
+--ic-brand-apple-touch-icon: url('https://instructure-uploads-apse2.s3.ap-southeast-2.amazonaws.com/account_184380000000000001/attachments/807/Primary-gradient.png');
+--ic-brand-msapplication-tile-color: var(--ic-brand-primary);
+--ic-brand-msapplication-tile-square: url('https://instructure-uploads-apse2.s3.ap-southeast-2.amazonaws.com/account_184380000000000001/attachments/808/Logo%20White%20Wordmark%20Stacked.png');
+--ic-brand-msapplication-tile-wide: url('https://instructure-uploads-apse2.s3.ap-southeast-2.amazonaws.com/account_184380000000000001/attachments/809/Logo%20White%20Wordmark.png');
+--ic-brand-right-sidebar-logo: ;
+--ic-brand-Login-body-bgd-color: #1548e0;
+--ic-brand-Login-body-bgd-image: url('https://instructure-uploads-apse2.s3.ap-southeast-2.amazonaws.com/account_184380000000000001/attachments/810/login_1.jpg');
+--ic-brand-Login-body-bgd-shadow-color: #2c2c36;
+--ic-brand-Login-logo: url('https://instructure-uploads-apse2.s3.ap-southeast-2.amazonaws.com/account_184380000000000001/attachments/805/Wordmark%20primary%20gradient%20on%20white.png');
+--ic-brand-Login-Content-bgd-color: #ffffff;
+--ic-brand-Login-Content-border-color: none;
+--ic-brand-Login-Content-inner-bgd: none;
+--ic-brand-Login-Content-inner-border: none;
+--ic-brand-Login-Content-inner-body-bgd: none;
+--ic-brand-Login-Content-inner-body-border: none;
+--ic-brand-Login-Content-label-text-color: #2c2c36;
+--ic-brand-Login-Content-password-text-color: #1548e0;
+--ic-brand-Login-footer-link-color: #1548e0;
+--ic-brand-Login-footer-link-color-hover: #1548e0;
+--ic-brand-Login-instructure-logo: #ffffff;
+*/
+/* Variable declarations */
+:root {
+	--colour-dark-primary: #1548e0;
+	--colour-dark-secondary: #7b1ce9;
+	--colour-dark-calltoaction: #02a878;
+	--colour-dark-accent-1: #cc840a;
+	--colour-dark-accent-1-shadow: rgba(204, 132, 10, 0.5);
+	--colour-dark-accent-2: #90104c;
+	--colour-light-primary: #1696ec;
+	--colour-light-primary-shadow: rgba(22, 150, 236, 0.1);
+	--colour-light-secondary: #a65afa;
+	--colour-light-secondary-shadow: rgba(166, 60, 250, 0.3);
+	--colour-light-calltoaction: #4adcb0;
+	--colour-light-calltoaction-shadow: rgba(74, 220, 176, 0.3);
+	--colour-light-accent-1: #f2b81e;
+	--colour-light-accent-1-shadow: rgba(242, 184, 30, 0.5);
+	--colour-light-accent-1-shadow-2: rgba(242, 184, 30, 0.3);
+	--colour-light-accent-2: #ec2262;
+	--colour-light-accent-2-shadow: rgba(236, 34, 98, 0.3);
+	--colour-neutral-1: #ffffff;
+	--colour-neutral-2: #f6f6fa;
+	--colour-neutral-3: #aaaab4;
+	--colour-neutral-3-shadow: rgba(170, 170, 180, 0.5);
+	--colour-neutral-4: #2c2c36;
+	--colour-neutral-4-shadow: rgba(44, 44, 54, 0.7);
+	--colour-neutral-5: #000000;
+	--colour-neutral-5-shadow: rgba(0, 0, 0, 0.9);
+	--colour-neutral-5-boxshadow: rgba(0, 0, 0, 0.3);
+	--gradient-primary: linear-gradient(190deg, var(--colour-dark-secondary) 0%, var(--colour-dark-primary) 100%);
+	--gradient-accent-1: linear-gradient(190deg, var(--colour-light-accent-1) 0%, var(--colour-dark-accent-1) 100%);
+	--gradient-accent-1-shadow: linear-gradient(190deg, var(--colour-light-accent-1-shadow), var(--colour-dark-accent-1-shadow) );
+	--gradient-accent-2: linear-gradient(190deg, var(--colour-light-accent-2) 0%, var(--colour-dark-accent-2) 100%);
+	--gradient-accent-3: linear-gradient(190deg, var(--colour-light-primary) 0%, var(--colour-dark-primary) 100%);
+	--gradient-neutral: linear-gradient(190deg, var(--colour-neutral-4) 0%, var(--colour-neutral-5) 100%);
+	--gradient-calltoaction: linear-gradient(0deg, var(--colour-light-calltoaction), var(--colour-light-calltoaction));
+}
+
+/* Login Page */
 .ic-Login__container {
 	margin-top: 10%;
 	margin-left: 40%;
 }
-
 body.ic-Login-Body {
 	background-image: var(--ic-brand-Login-body-bgd-image);
+	background-position: center;
 }
 
-.ic-app-header__logomark {
+/* Main UI Customisation */
+/* .ic-app-header__logomark {
 	background-color: var(--ic-brand-primary);
-	background-position-y: top;
-	height: 55px;
-}
+	background-size: 80%;
+} */
+/* .btn, .Button, .ui-button { */
+/* .btn, .Button:not([class*="Button--"]) {
+	background: #f6f6fa;
+	background: var(--colour-neutral-2);
+	border: none;
+	border-radius: 0;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 1px var(--colour-neutral-5-boxshadow);
+	color: var(--ic-brand-font-color-dark);
 
-body:not(.full-width):not(.outcomes) .ic-Layout-wrapper {
-    max-width: none;
-}
+} */
+/* .btn:hover, .Button:hover, .ui-button:hover, .ui-button.ui-state-hover { */
+/* .btn:hover, .Button:not([class*="Button--"]):hover {
+	background: rgba(170, 170, 180, 0.5);
+	background: var(--colour-neutral-3-shadow);
+	color: var(--ic-brand-font-color-dark);
+} */
 
-/* Icon styling */
-.activityicon {
-	padding: 0.4em 0.4em 0.4em 0em;
-	height: 1.6em;
-}
-
-/* popupLink formatting */
-.popupLink {
-	color: #02A878;
-	text-decoration: none !important;
-}
-.popupLink:hover {
-	color: #02A878;
-	text-decoration: underline !important;
-	cursor: pointer;
-}
-
-/* Tile formatting for course pages */
-.banner {
-	width: 100%;
-}
-.page-wrapper {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	color: #ffffff;
-}
-.tile {
-	background-color: #ffffff;
-	color: #2c2c36;
-	min-height: 6em;
-	padding: 0;
-	opacity: 0.8;
-	transition: opacity .2s ease-in-out;
-	text-decoration: none !important;
-	position: relative;
-}
-.tile:hover {
-	opacity: 1;
-}
-.tile-img {
-	border-radius: .5em;
-	object-fit: contain;
-	width: 100%;
-}
-.tile-bar{
-	color: #ffffff;
-	background-color: #ffffff;
-	background-image: linear-gradient(45deg, #1548E0, #7B1CE9);
-	display: inline-block;
-	position: absolute;
-	margin: 0em 0em 0em -0.5em;
-	bottom: 0.5em;
-	left: 0em;
-	min-height: 3em;
-	width: 50%;
-	/* border-radius: 0.5em; */
-	transition: width .4s ease-in-out;
-	transition-property: width;
-}
-.tile-bar:hover{
-	width: 100%;
-}
-.tile-title {
-	display: block;
-	font-size: 1.2em;
-	padding: 0.4em 0em 0em 0.5em;
-	word-break: break-word;
-	word-wrap: break-word;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.tile-outer {
-    margin-bottom: 1em;
-}
-
-.tile-pre {
-	background-color: #ffffff;
-	color: #2c2c36;
-	min-height: 6em;
-	padding: 0;
-	opacity: 0.8;
-	transition: opacity .2s ease-in-out;
-	text-decoration: none !important;
-	position: relative;
-}
-.tile-pre:hover {
-	opacity: 1;
-}
-.tile-img-pre {
-	border-radius: .5em;
-	object-fit: contain;
-	width: 100%;
-}
-.tile-bar-pre {
-	color: #2c2c36;
-	background-color: #ffffff;
-	display: inline-block;
-	position: absolute;
-	margin: 0em 0em 0em -0.5em;
-	bottom: 0.5em;
-	left: 0em;
-	min-height: 3em;
-	width: 50%;
-	/* border-radius: 0.5em; */
-	transition: width .4s ease-in-out;
-	transition-property: width;
-}
-.tile-bar-pre:hover {
-	width: 100%;
-}
-.tile-title-pre {
-	display: block;
-	font-size: 1.4em;
-	padding: 0.3em 0em 0em 0.5em;
-	word-break: break-word;
-	word-wrap: break-word;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.page-content {
-	background-color: #ffffff;
-	color: #2c2c36;
-	opacity: 0.8;
-	transition: opacity .2s ease-in-out;
-	text-decoration: none !important;
-	position: relative;
-}
-.page-content:hover {
-	opacity: 1;
-}
-.side-list {
-	list-style: none;
-	vertical-align: middle;
-}
-.right-side {
-	background-color: #f6f6fa;
-}
 /* LTI new tab styling */
 .ic-framed-lti-tool .load_tab {
 	margin: 2em;
@@ -168,57 +135,55 @@ body:not(.full-width):not(.outcomes) .ic-Layout-wrapper {
 	border: none;
 }
 
-/* modal formatting for popup videos */
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 255;
-	padding-top: 100px;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0,0.9);
-	margin: 0;
-	opacity: 1;
-}
-.modal-content {
-	margin: auto !important;
-	display: block;
-	width: 75%;
-	height: 75%;
-	min-width: 640px;
-	min-height: 360px;
+/* Course Modules */
+/* .item-group-condensed .ig-header {
+	background: #f6f6fa;
+	background: var(--colour-neutral-2);
 	border: none;
-	-webkit-animation-name: zoom;
-	-webkit-animation-duration: 0.6s;
-	animation-name: zoom;
-	animation-duration: 0.6s;
 }
-@-webkit-keyframes zoom {
-	from { -webkit-transform:scale(0) }
-	to { -webkit-transform:scale(1) } 
+.item-group-condensed .ig-header:hover {
+	background: rgba(22, 150, 236, 0.1);
+	background: var(--colour-light-primary-shadow); 
 }
-@keyframes zoom {
-	from { transform:scale(0) }
-	to { transform:scale(1) }
+.item-group-condensed .ig-row {
+	border: none;
 }
-.close {
-	position: absolute;
-	top: 15px;
-	right: 35px;
-	color: #f1f1f1;
-	font-size: 40px;
-	font-weight: bold;
-	transition: 0.3s;
+.item-group-condensed .ig-row:hover {
+	background: rgba(22, 150, 236, 0.1);
+	background: var(--colour-light-primary-shadow); 
+} */
+
+/* *** PAGES *** */
+
+/* Course page nav links */
+div.show-content.user_content a.nav {
+	vertical-align: top;
 }
-.close:hover, .close:focus {
-	color: #bbb;
-	text-decoration: none;
-	cursor: pointer;
+div.show-content.user_content a.nav img {
+	margin-top: 2.6%;
+	width: 5%;
+	opacity: 1;
+	box-shadow: none;
+	transition: all 0.2s ease-in-out;
 }
-@media only screen and (max-width: 700px) {
-	.modal-content { width: 100%;}
+div.show-content.user_content a.nav img:hover {
+	opacity: 0.7;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	transition: all 0.2s ease-in-out;
+}
+/* Course page banner */
+div.show-content.user_content img.banner {
+	width: 94%;
+}
+/* Course page tiles */
+div.show-content.user_content img.tile {
+	padding: 0.5em;
+	opacity: 1;
+	box-shadow: none;
+	transition: all 0.2s ease-in-out;
+}
+div.show-content.user_content img.tile:hover {
+	opacity: 0.7;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	transition: all 0.2s ease-in-out;
 }

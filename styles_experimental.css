@@ -78,7 +78,7 @@ a, a:link, a:visited {
 	background: var(--colour-light-accent-1-shadow);
 	color: #000000;
 	color: var(--colour-neutral-5);
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 }
 #notice.box.generalbox p {
@@ -94,7 +94,7 @@ a, a:link, a:visited {
 .alert {
 	border-radius: 2px;
 	border: none;
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 }
 img.iconhelp, .helplink img {
@@ -153,7 +153,7 @@ div.loginbox {
 	margin: 25vh 0 0 55vw;
 	border: none;
 	border-radius: 8px;
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 }
 .loginbox .loginform .form-label {
@@ -348,7 +348,7 @@ a.ical-link:hover {
 	background: #f6f6fa;
 	background: var(--colour-neutral-2);
 	border: none;
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 }
 .block .calendar-event-panel .yui3-overlay-content {
@@ -796,7 +796,7 @@ a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, a.btn[data-tr
 	background: var(--colour-light-calltoaction);
 	background-clip: padding-box;
 	font-weight: 600;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 1.5em;
 	color: #ffffff;
@@ -804,7 +804,7 @@ a.linkbutton, #page-admin-tool-xmldb-index p.centerpara.buttons a, a.btn[data-tr
 	border-radius: 4px;
 	border: 2px solid transparent;
 	box-shadow: none;
-	padding: 0.6em 1.2em;
+	padding: 0.5em 1em;
 	transition: all ease-in-out 0.2s;
 }
 #page-admin-tool-xmldb-index p.centerpara.buttons a {
@@ -893,7 +893,7 @@ table.flexible th, .generaltable th {
 	background: none;
 }
 .forumpost {
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 	margin-bottom: 2em;
 }
@@ -926,6 +926,18 @@ table#explaincaps tbody > tr:nth-child(2n+1) > td, table#defineroletable tbody >
 	color: #2c2c36;
 	color: var(--colour-neutral-4);
 	background: none;
+}
+#course-category-listings .listitem > div .idnumber {
+	color: #aaaab4;
+	color: var(--colour-neutral-3);
+}
+#course-category-listings li[data-selected="1"] > div, #course-category-listings li > div:hover, #course-category-listings li[data-selected="1"] > div:hover {
+	background: #f6f6fa;
+	background: var(--colour-neutral-2);
+}
+#course-category-listings .listitem[data-visible="0"] > div > a {
+	color: #aaaab4;
+	color: var(--colour-neutral-3);
 }
 
 /* Footer */
@@ -977,6 +989,9 @@ footer#page-footer {
 	color: #ffffff;
 	color: var(--colour-neutral-1);
 }
+#page-footer #footnotewrapper {
+	padding: 1em 3em;
+}
 
 /* Course Specific */
 #region-main .box.generalbox.info div.coursebox {
@@ -1000,7 +1015,7 @@ select[multiple]#groups, select[size]#groups {
 	background: #ffffff;
 	background: var(--colour-neutral-1);
 	padding: 4px;
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 	border-radius: 4px;
 }
@@ -1042,11 +1057,11 @@ _:-ms-input-placeholder, :root div#tileoutlinearea div.tileoutlinecontent, :root
 }
 #tileoutlinetiles .tile {
 	background: none;
-	max-width: 33.33%;
+	max-width: calc(100% / 3);
 }
 #tileoutlinetiles .tile a {
 	border: none !important;
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 }
 #tileoutlinetiles .tile a:not([style*="background-image"]) {
@@ -1280,6 +1295,14 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	border-bottom: 1px solid var(--colour-neutral-3);
 	box-shadow: none;
 }
+.path-backup .mform .grouped_settings.section_level {
+	background: #f6f6fa;
+	background: var(--colour-neutral-2);
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 1em 2em;
+}
 #page #intro.box.generalbox.boxaligncenter.boxwidthwide {
 	background: none;
 	box-shadow: none;
@@ -1305,7 +1328,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 #page-enrol-users .enrolpanel.roleassign.visible .container, #page-enrol-users .user-enroller-panel .uep-wrap {
 	border: none;
 	border-radius: 8px;
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 }
 #page-enrol-users .enrolpanel.roleassign.visible .container .header, #page-enrol-users .user-enroller-panel .uep-wrap .uep-header.header {
@@ -1434,6 +1457,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 .moodle-dialogue-wrap.moodle-dialogue-content .moodle-dialogue-bd {
 	background: #ffffff;
 	background: var(--colour-neutral-1);
+	border-radius: 0 0 10px 10px;
 }
 .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .options {
 	border: none;
@@ -1480,7 +1504,7 @@ div.other-user-manager-panel, div.other-user-manager-panel div.oump-wrap, div.ot
 	border-radius: 8px;
 }
 div.other-user-manager-panel {
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 }
 div.other-user-manager-panel div.oump-wrap {
@@ -1603,7 +1627,7 @@ div#fitem_id_querysql div.felement.ftextarea {
 	border: none;
 }
 .activity span.actions {
-	min-width: 101px;
+	text-align: right;
 }
 
 /* Quality of life improvement for additional HTML settings */
@@ -1672,7 +1696,7 @@ div#fitem_id_querysql div.felement.ftextarea {
 #chatBubble[class~=lc-max] {
 	width: 60px;
 	height: 60px;
-	box-shadow: #000000 0px 4px 8px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
 	box-shadow: var(--colour-neutral-5-boxshadow) 0px 4px 8px;
 	border-radius: 50%;
 	-moz-box-pack: center;
@@ -1687,7 +1711,7 @@ div#fitem_id_querysql div.felement.ftextarea {
 #chatBubble[class~=lc-min] {
 	width: 0px;
 	height: 0px;
-	box-shadow: #000000 0px 4px 8px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
 	box-shadow: var(--colour-neutral-5-boxshadow) 0px 4px 8px;
 	border-radius: 50%;
 	-moz-box-pack: center;
@@ -1754,7 +1778,7 @@ div.flip {
 	text-align: center;
 	margin: 0.5em 0 0.5em 1%;
 	width: 97%;
-	box-shadow: 0 2px 5px #000000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 	color: #f2b81e;
 	color: var(--colour-light-accent-1);
@@ -1804,7 +1828,7 @@ a.popupLink:hover {
 	width: 100vw;
 	height: 100vh;
 	overflow: auto;
-	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.9);
 	background-color: var(--colour-neutral-5-shadow);
 	margin: 0;
 	border: none;
