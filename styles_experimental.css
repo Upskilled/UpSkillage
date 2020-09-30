@@ -188,19 +188,22 @@ header.navbar.navbar-fixed-top {
 	border: none;
 	box-shadow: none;
 }
+#page-header .logo, #page-header .bannertext {
+	padding: 1em 2em;
+}
 #page-navbar nav.breadcrumb-nav, .navbar-text {
 	padding: 0;
 }
 #page-navbar div.breadcrumb-button {
-	padding: 0 12px 0 0;
+	padding: 0 2em 0 0;
 	margin: 0;
+}
+nav.breadcrumb-nav ul.breadcrumb {
+	padding: 0 0 0 2em;
 }
 ul.breadcrumb, ul.breadcrumb a {
 	color: #ffffff;
 	color: var(--colour-neutral-1);
-}
-nav.breadcrumb-nav ul.breadcrumb {
-	padding: 0 0 0 12px;
 }
 #page-navbar ul.breadcrumb a.dimmed_text {
 	color: #f6f6fa;
@@ -226,7 +229,10 @@ nav.breadcrumb-nav ul.breadcrumb {
 	border: 2px solid #2c2c36;
 	border: 2px solid var(--colour-neutral-4);
 }
-.dir-ltr .usermenu{
+.navbar-inner .nav.pull-right {
+	padding-right: 2em;
+}
+.dir-ltr .usermenu {
 	background: none;
 }
 .usermenu .login {
@@ -1583,6 +1589,9 @@ div.other-user-manager-panel div.oump-wrap div.oump-footer label {
 }
 .mceLast * {
 	line-height: 1em;
+}
+form[action="modedit.php"] {
+	margin: 0 1em;
 }
 
 /* Quality of life improvement for SQL reports */

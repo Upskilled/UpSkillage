@@ -103,10 +103,10 @@ body.ic-Login-Body {
 }
 
 /* Main UI Customisation */
-/* .ic-app-header__logomark {
+.ic-app-header__logomark {
 	background-color: var(--ic-brand-primary);
 	background-size: 80%;
-} */
+}
 /* .btn, .Button, .ui-button { */
 /* .btn, .Button:not([class*="Button--"]) {
 	background: #f6f6fa;
