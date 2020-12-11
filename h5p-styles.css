@@ -1,0 +1,187 @@
+.h5p-content {
+	--h5p-colour-dark-primary: #1548e0;
+	--h5p-colour-dark-primary-shadow: rgba(21, 72, 224, 0.1);
+	--h5p-colour-dark-primary-shadow-extra: rgba(21, 72, 224, 0.05);
+	--h5p-colour-dark-secondary: #7b1ce9;
+	--h5p-colour-dark-secondary-shadow: rgba(123, 28, 233, 0.2);
+	--h5p-colour-dark-secondary-shadow-extra: rgba(123, 28, 233, 0.1);
+	--h5p-colour-dark-calltoaction: #02a878;
+	--h5p-colour-dark-accent-1: #cc840a;
+	--h5p-colour-dark-accent-2: #90104c;
+	--h5p-colour-light-primary: #1696ec;
+	--h5p-colour-light-primary-shadow: rgba(22, 150, 236, 0.5);
+	--h5p-colour-light-primary-shadow-extra: rgba(22, 150, 236, 0.1);
+	--h5p-colour-light-secondary: #a65afa;
+	--h5p-colour-light-secondary-shadow: rgba(166, 60, 250, 0.3);
+	--h5p-colour-light-calltoaction: #4adcb0;
+	--h5p-colour-light-calltoaction-shadow: rgba(74, 220, 176, 0.3);
+	--h5p-colour-light-accent-1: #f2b81e;
+	--h5p-colour-light-accent-2: #ec2262;
+	--h5p-colour-neutral-1: #ffffff;
+	--h5p-colour-neutral-2: #f6f6fa;
+	--h5p-colour-neutral-3: #aaaab4;
+	--h5p-colour-neutral-3-shadow: rgba(170, 170, 180, 0.3);
+	--h5p-colour-neutral-4: #2c2c36;
+	--h5p-colour-neutral-5: #000000;
+}
+
+/* General for all content types */
+.h5p-content {
+	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+.h5p-content .h5p-question-feedback {
+	color: var(--h5p-colour-dark-primary);
+}
+.h5p-content .h5p-joubelui-button {
+	background-color: var(--h5p-colour-dark-primary);
+	border-radius: 0px;
+	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.h5p-content .h5p-joubelui-button:hover, .h5p-content .h5p-joubelui-button:focus {
+	background-color: var(--h5p-colour-dark-primary);
+	opacity: 0.9;
+}
+
+/* Content types will be organised based on what content can be placed within them. Types like Course Presentation or Interactive Book will be listed early, to allow the content placed within them to take a higher priority with applying styles. */
+
+/* Interactive Book */
+.h5p-content .h5p-interactive-book-cover, .h5p-content .h5p-interactive-book-cover-readbutton button, .h5p-content .h5p-interactive-book-status-chapter .title, .h5p-content .h5p-interactive-book-status-progress-divider, .h5p-content .h5p-interactive-book-status-progress-number, .h5p-content .h5p-interactive-book-navigation-chapter-button .h5p-interactive-book-navigation-chapter-title-text, .h5p-content .h5p-interactive-book-navigation-maintitle .navigation-title, .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-book-summary-buttons .h5p-interactive-book-summary-button, .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-book-summary-overview-section-details .h5p-interactive-book-summary-section-title, .h5p-content .h5p-interactive-book-summary-dropdown button, .h5p-content .h5p-interactive-book-summary-menu-button .h5p-interactive-book-summary-text {
+	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.h5p-content .h5p-interactive-book-status-chapter .title {
+	color: var(--h5p-colour-neutral-4);
+}
+.h5p-content .h5p-interactive-book-cover-readbutton button, .h5p-content .h5p-interactive-book-navigation-maintitle, .h5p-content .h5p-interactive-book-status-progressbar-front, .h5p-content .h5p-interactive-book-status-menu.h5p-interactive-book-status-menu-active {
+	background-color: var(--h5p-colour-dark-primary);
+}
+.h5p-content .h5p-interactive-book-cover-readbutton button:hover {
+	background-color: var(--h5p-colour-dark-primary);
+	opacity: 0.9;
+}
+.h5p-content .h5p-interactive-book-navigation-chapter-button.h5p-interactive-book-navigation-current, .h5p-content .h5p-interactive-book-status-progressbar-back, .h5p-content .h5p-interactive-book-status-button:hover {
+	background-color: var(--h5p-colour-dark-primary-shadow);
+}
+.h5p-content .h5p-interactive-book-status-arrow, .h5p-content .h5p-interactive-book-navigation-chapter-button:hover, .h5p-content .h5p-interactive-book-status-button[disabled]:hover {
+	background-color: var(--h5p-colour-dark-primary-shadow-extra);
+}
+.h5p-content .h5p-interactive-book-status-arrow .navigation-button, .h5p-content .h5p-interactive-book-status-progress-number, .h5p-content .h5p-interactive-book-navigation-chapter-button .h5p-interactive-book-navigation-chapter-title-text, .h5p-content .h5p-interactive-book-status-fullscreen.h5p-interactive-book-enter-fullscreen::before, .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-box-summary-progress .h5p-interactive-book-summary-progressbox-bigtext, .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-book-summary-section-icon, .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-book-summary-overview-section h4 span[class^="icon-"], .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-book-summary-overview-list-empty h4 span[class^="icon-"], .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-book-summary-overview-section h4 span[class*=" icon-"], .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-book-summary-overview-list-empty h4 span[class*=" icon-"], .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-book-summary-overview-section h4:hover, .h5p-content .h5p-interactive-book-summary-page .h5p-interactive-book-summary-overview-list-empty h4:hover {
+	color: var(--h5p-colour-dark-primary);
+}
+.h5p-content .h5p-interactive-book-status-progress-number, .h5p-content .h5p-interactive-book-navigation-chapter-button .h5p-interactive-book-navigation-chapter-title-text {
+	text-decoration: none solid var(--h5p-colour-dark-primary);
+}
+
+/* Course Presentation */
+.h5p-content .h5p-course-presentation {
+	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: var(--h5p-colour-neutral-4);
+}
+.h5p-content .h5p-course-presentation .h5p-press-to-go.h5p-visible:hover {
+	background-color: var(--h5p-colour-dark-primary-shadow);
+}
+.h5p-content .h5p-course-presentation .h5p-progressbar .h5p-progressbar-part-show {
+	background: var(--h5p-colour-dark-primary);
+}
+.h5p-content .h5p-course-presentation .h5p-element {
+	font-size: 1rem;
+}
+.h5p-content .h5p-course-presentation .h5p-element .h5p-element-inner:not(.h5p-interactive-video) {
+	overflow: hidden;
+}
+.h5p-content .h5p-course-presentation .h5p-element-button {
+	background: var(--h5p-colour-dark-primary);
+}
+.h5p-content .h5p-course-presentation .h5p-element-button:hover {
+	opacity: 0.9;
+}
+.h5p-content .h5p-course-presentation .h5p-keywords-wrapper > [role="menu"] > [role="menuitem"]:hover span {
+	color: var(--h5p-colour-dark-primary);
+}
+.h5p-content .h5p-course-presentation .h5p-keywords-wrapper > [role="menu"] > [role="menuitem"]:focus {
+	background-color: var(--h5p-colour-dark-primary-shadow);
+}
+
+/* Question Set */
+
+
+/* Multiple Choice */
+.h5p-content .h5p-multichoice .h5p-alternative-container {
+	background: var(--h5p-colour-neutral-3-shadow);
+}
+.h5p-content .h5p-multichoice .h5p-answer:not([aria-disabled="true"]):hover .h5p-alternative-container {
+	background-color: var(--h5p-colour-neutral-2);
+}
+.h5p-content .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container {
+	background: var(--h5p-colour-dark-primary-shadow);
+	color: var(--h5p-colour-neutral-4);
+}
+.h5p-content .h5p-multichoice .h5p-answer[aria-checked="true"]:not(.h5p-wrong):not(.h5p-correct):not([aria-disabled="true"]):hover .h5p-alternative-container {
+	background-color: var(--h5p-colour-dark-primary-shadow-extra);
+}
+.h5p-content .h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container, .h5p-content .h5p-multichoice .h5p-answer.h5p-correct:hover .h5p-alternative-container {
+	background: #b6e4ce;
+}
+.h5p-content .h5p-multichoice .h5p-answer.h5p-wrong .h5p-alternative-container, .h5p-content .h5p-multichoice .h5p-answer.h5p-wrong:hover .h5p-alternative-container {
+	background: #fbd7d8;
+}
+
+/* Drag Text */
+.h5p-content .h5p-drag-text [aria-dropeffect] {
+	background-color: var(--h5p-colour-dark-primary-shadow);
+}
+.h5p-content .h5p-drag-text [aria-grabbed] {
+	background: var(--h5p-colour-neutral-3-shadow);
+}
+.h5p-content .h5p-drag-text [aria-grabbed="true"], .h5p-content .h5p-drag-text [aria-grabbed].h5p-drag-dropped:not(.ui-state-disabled):hover, .h5p-content .h5p-drag-text [aria-grabbed]:not(.ui-state-disabled):hover {
+	color: var(--h5p-colour-neutral-4);
+	background: var(--h5p-colour-dark-secondary-shadow-extra);
+	border: 0.1em solid var(--h5p-colour-dark-secondary-shadow);
+}
+.h5p-content .h5p-drag-text [aria-grabbed="true"], .h5p-content .h5p-drag-text [aria-grabbed].h5p-drag-dropped:not(.ui-state-disabled):hover, .h5p-content .h5p-drag-text [aria-grabbed]:not(.ui-state-disabled):hover {
+	color: var(--h5p-colour-neutral-4);
+}
+.h5p-content .h5p-drag-text .h5p-drag-dropped.h5p-drag-draggable-correct, .h5p-content .h5p-drag-text .h5p-drag-dropped.h5p-drag-draggable-wrong {
+	background: none;
+}
+.h5p-content .h5p-multichoice .h5p-answer.h5p-correct .h5p-alternative-container, .h5p-content .h5p-multichoice .h5p-answer.h5p-correct:hover .h5p-alternative-container {
+	color: #255c41;
+}
+.h5p-content .h5p-multichoice .h5p-answer.h5p-wrong .h5p-alternative-container, .h5p-content .h5p-multichoice .h5p-answer.h5p-wrong:hover .h5p-alternative-container {
+ color: #b71c1c;
+}
+.h5p-content .h5p-drag-text [aria-dropeffect].h5p-drag-correct-feedback {
+	background: #9dd8bb;
+}
+.h5p-content .h5p-drag-text [aria-dropeffect].h5p-drag-wrong-feedback {
+	background: #f7d0d0;
+}
+
+/* True/False */
+.h5p-content .h5p-true-false-answer[aria-checked="true"] {
+	background: var(--h5p-colour-dark-primary-shadow);
+	border-color: var(--h5p-colour-light-primary);
+}
+.h5p-content .h5p-true-false-answer:hover {
+	border-color: var(--h5p-colour-light-primary-shadow);
+}
+.h5p-content .h5p-true-false-answer.correct {
+	background: #fff;
+	border-color: #47b47d;
+}
+.h5p-content .h5p-true-false-answer.wrong {
+	background: #fff;
+	border-color: #dd2e2e;
+}
+
+/* Fill in the Blanks */
+.h5p-content .h5p-blanks .h5p-text-input {
+	font-family: Mont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Drag and Drop */
+.h5p-content .h5p-dragquestion .h5p-draggable:not(.ui-state-disabled).h5p-draggable-hover {
+	color: var(--h5p-colour-neutral-4);
+	background: var(--h5p-colour-dark-secondary-shadow-extra);
+	border: 0.1em solid var(--h5p-colour-dark-secondary-shadow);
+}
