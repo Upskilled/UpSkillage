@@ -69,6 +69,8 @@ if( frame != null ) {
 		document.getElementById('mobile-header').style.display = 'none';
 		// Remove scrollbar
 		document.body.style.overflow = 'hidden';
+		// Remove Student view alert bar
+		document.getElementById('masquerade_bar').style.display = 'none';
 		// Notifications and popups?
 	}
 }
