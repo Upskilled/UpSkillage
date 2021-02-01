@@ -1095,53 +1095,13 @@ body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]):hover
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 0px/110% no-repeat !important;
 	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-yellow.svg) center 0px/110% no-repeat !important;
 }
-/* body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]) {
+body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]) {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 50px/100% no-repeat !important;
 	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 50px/100% no-repeat !important;
 }
 body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 0px/110% no-repeat !important;
 	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center 0px/110% no-repeat !important;
-} */
-body.category-44 div:not(.tilepreview) > #tileoutlinetiles {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center/cover no-repeat !important;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) center/cover no-repeat !important;
-}
-_:-ms-input-placeholder, :root body.category-44 div:not(.tilepreview) > #tileoutlinetiles {
-	background-size: 200% !important;
-}
-_:-ms-input-placeholder, :root #tileoutlinetiles .tile a:not([style*="background-image"]), :root body.category-5 #tileoutlinetiles .tile a:not([style*="background-image"]), :root body.category-41 #tileoutlinetiles .tile a:not([style*="background-image"]), :root body.category-45 #tileoutlinetiles .tile a:not([style*="background-image"]), :root body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]), :root body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]) {
-	/* IE */
-	background-size: 250% !important;
-	background-position: center 50px !important;
-}
-_:-ms-input-placeholder, :root #tileoutlinetiles .tile a:not([style*="background-image"]):hover, :root body.category-5 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, :root body.category-41 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, :root body.category-45 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, :root body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, :root body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
-	/* IE */
-	background-size: 275% !important;
-	background-position: center 0px !important;
-}
-body.category-44 #tileoutlinetiles .tile {
-	background: none;
-	border: solid 1.5em #ffffff;
-	border: solid 1.5em var(--colour-neutral-1);
-	box-sizing: border-box;
-	margin: 0px;
-}
-body.category-44 div.tiles ul#tileoutlinetiles li.tile a {
-	border: solid 0px #ffffff !important;
-	border: solid 0px var(--colour-neutral-1) !important;
-	margin: 0;
-	width: 100%;
-	display: block;
-}
-body.category-44 div.tiles ul#tileoutlinetiles li.tile a:not([style*="background-image"]) {
-	background: none !important;
-}
-body.category-44 div.tiles ul#tileoutlinetiles li.tile a:not([style*="background-image"]):hover {
-	background: none !important;
-}
-body.category-44 #tileoutlinetiles .tile a .tiletopic {
-	position: absolute;
 }
 div#tileoutlinearea.tileoutlinearea {
 	padding: 0;
