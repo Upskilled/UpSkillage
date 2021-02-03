@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="987pt" height="209.999996pt" viewBox="0 0 987 209.999996" version="1.2">
 <g id="surface1">
-<rect x="0" y="0" width="987" height="209.999996" style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"/>
-<rect x="0" y="0" width="987" height="209.999996" style="fill:rgb(8.239746%,30.589294%,87.838745%);fill-opacity:1;stroke:none;"/>
 <path style=" stroke:none;fill-rule:nonzero;fill:rgb(94.898987%,72.158813%,11.759949%);fill-opacity:1;" d="M 704.722656 0.0859375 L 986.992188 0.0859375 L 986.992188 210 Z M 704.722656 0.0859375 "/>
 </g>
 </svg>
