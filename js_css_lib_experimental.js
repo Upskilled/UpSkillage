@@ -1405,6 +1405,11 @@ function insertReadme() {
 	}
 }
 
+// Alter footer copyright info
+// var year = new Date().getFullYear();
+// var copyright = document.querySelector('div.copyright');
+// copyright.innerHTML = '© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676';
+
 // SWITCHED TO INCLUDING THIS WITHIN THE ADDITIONAL HTML SECTION OF THE SITE 27/7/20
 // window.onload = function() {
 // 	var script = document.createElement('script');
