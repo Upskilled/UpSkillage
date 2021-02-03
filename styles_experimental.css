@@ -139,8 +139,8 @@ span.error span.error {
 
 /* Login Page */
 #page-login-index #region-main {
-	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/login_1.png) center/cover no-repeat;
-	background: var(--colour-dark-primary) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/login_1.png) center/cover no-repeat;
+	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/login.jpg) center/cover no-repeat;
+	background: var(--colour-dark-primary) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/login.jpg) center/cover no-repeat;
 	position: absolute;
 	z-index: 12345;
 	top: 0;
@@ -1027,22 +1027,22 @@ select[multiple]#groups, select[size]#groups {
 }
 div#tileoutlinearea div.tileoutlinecontent {
 	position: static;
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-green.svg) top right no-repeat;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-green.svg) top right no-repeat;
+	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-green.svg) top right no-repeat;
+	background: var(--colour-dark-primary) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-green.svg) top right no-repeat;
 	padding-right: 33%;
 	min-height: 280px;
 }
 body.category-5 div#tileoutlinearea div.tileoutlinecontent, body.category-41 div#tileoutlinearea div.tileoutlinecontent, body.category-45 div#tileoutlinearea div.tileoutlinecontent {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-blue.svg) top right no-repeat;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-blue.svg) top right no-repeat;
+	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-blue.svg) top right no-repeat;
+	background: var(--colour-dark-primary) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-blue.svg) top right no-repeat;
 }
 body.category-9 div#tileoutlinearea div.tileoutlinecontent {
 	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-yellow.svg) top right no-repeat;
 	background: var(--colour-dark-primary) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-yellow.svg) top right no-repeat;
 }
 body.category-44 div#tileoutlinearea div.tileoutlinecontent {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-red.svg) top right no-repeat;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-red.svg) top right no-repeat;
+	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-red.svg) top right no-repeat;
+	background: var(--colour-dark-primary) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-red.svg) top right no-repeat;
 }
 #tileoutlinetiles .tile {
 	background: none;

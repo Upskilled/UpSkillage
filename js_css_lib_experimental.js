@@ -1405,34 +1405,6 @@ function insertReadme() {
 	}
 }
 
-// SWITCHED TO INCLUDING THIS WITHIN THE THEME CUSTOM CSS SECTION OF THE SITE 27/7/20
-// var link = document.createElement("link");
-// link.rel = "stylesheet";
-// link.type = "text/css";
-// link.id = "UpskillStyle";
-// link.href = "https://skeksalot.github.io/UpSkillage/styles_experimental.css";
-
-// // only include stylesheet once
-// if ( document.getElementById("UpskillStyle") == null ) {
-// 	document.head.appendChild(link);
-// }
-
-// Alter footer copyright info
-// var copyright = document.querySelector('div.copyright');
-// copyright.innerHTML = '© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676';
-
-// var icons = document.querySelectorAll('img.block-hider-hide');
-// for( var i = 0; i < icons.length; i++ ) {
-// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/minus.svg';
-// }
-// var icons = document.querySelectorAll('img.block-hider-show');
-// for( var i = 0; i < icons.length; i++ ) {
-// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/plus.svg';
-// }
-// var icons = document.querySelectorAll('input.moveto.customcommand.requiresjs');
-// for( var i = 0; i < icons.length; i++ ) {
-// 		icons[i].src = 'https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/dock_left.svg';
-// }
 // SWITCHED TO INCLUDING THIS WITHIN THE ADDITIONAL HTML SECTION OF THE SITE 27/7/20
 // window.onload = function() {
 // 	var script = document.createElement('script');
@@ -1442,11 +1414,3 @@ function insertReadme() {
 // 						'copyright.innerHTML = \'© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676\';';
 // 	document.body.appendChild(script);
 // };
-
-// Script for selecting a randomised login background
-// if( document.URL.search('login/index.php') != -1 ) {
-// 	// Login page, choose one of the backgrounds
-// 	sel = Math.floor(Math.random() * 4) + 1;
-// 	var back = document.querySelector('#page-login-index #region-main');
-// 	back.style.background = '#1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/backgrounds/login_' + sel + '.jpg) center/cover no-repeat';
-// }
