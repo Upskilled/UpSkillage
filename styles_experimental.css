@@ -1043,11 +1043,8 @@ body.category-5 div#tileoutlinearea div.tileoutlinecontent, body.category-41 div
 	background-position-y: bottom;
 }
 body.category-9 div#tileoutlinearea div.tileoutlinecontent {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-yellow.svg) no-repeat;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-yellow.svg) no-repeat;
-	background-size: 66%;
-	background-position-x: 200%;
-	background-position-y: bottom;
+	background: #1548e0 url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-yellow.svg) top right no-repeat;
+	background: var(--colour-dark-primary) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/course-home-yellow.svg) top right no-repeat;
 }
 body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/rings-red.svg) no-repeat;
@@ -1056,14 +1053,8 @@ body.category-44 div#tileoutlinearea div.tileoutlinecontent {
 	background-position-x: 200%;
 	background-position-y: bottom;
 }
-_:-ms-input-placeholder, :root div#tileoutlinearea div.tileoutlinecontent, :root body.category-5 div#tileoutlinearea div.tileoutlinecontent, :root body.category-41 div#tileoutlinearea div.tileoutlinecontent, :root body.category-45 div#tileoutlinearea div.tileoutlinecontent, :root body.category-9 div#tileoutlinearea div.tileoutlinecontent, :root body.category-44 div#tileoutlinearea div.tileoutlinecontent {
-	/* IE */
-	background-size: 200%;
-	background-position-x: 0%;
-}
 #tileoutlinetiles .tile {
 	background: none;
-	max-width: calc(100% / 3);
 }
 #tileoutlinetiles .tile a {
 	border: none !important;
@@ -1071,47 +1062,43 @@ _:-ms-input-placeholder, :root div#tileoutlinearea div.tileoutlinecontent, :root
 	box-shadow: 0 2px 5px var(--colour-neutral-5-boxshadow);
 }
 #tileoutlinetiles .tile a:not([style*="background-image"]) {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-green.svg) center 100%/100% no-repeat !important;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-green.svg) center 100%/100% no-repeat !important;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-green.svg) center left/430px 250px no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-green.svg) center left/430px 250px no-repeat !important;
 	transition: all ease-in-out 0.2s;
 }
 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-green.svg) center 100%/110% no-repeat !important;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-green.svg) center 100%/110% no-repeat !important;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-green.svg) center left/480px 300px no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-green.svg) center left/480px 300px no-repeat !important;
 }
 body.category-5 #tileoutlinetiles .tile a:not([style*="background-image"]), body.category-41 #tileoutlinetiles .tile a:not([style*="background-image"]), body.category-45 #tileoutlinetiles .tile a:not([style*="background-image"]) {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-blue.svg) center 100%/100% no-repeat !important;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-blue.svg) center 100%/100% no-repeat !important;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-blue.svg) center left/430px 250px no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-blue.svg) center left/430px 250px no-repeat !important;
 }
 body.category-5 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, body.category-41 #tileoutlinetiles .tile a:not([style*="background-image"]):hover, body.category-45 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-blue.svg) center 100%/110% no-repeat !important;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-blue.svg) center 100%/110% no-repeat !important;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-blue.svg) center left/480px 300px no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-blue.svg) center left/480px 300px no-repeat !important;
 }
 body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]) {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-yellow.svg) center 100%/100% no-repeat !important;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-yellow.svg) center 100%/100% no-repeat !important;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-yellow.svg) center left/430px 250px no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-yellow.svg) center left/430px 250px no-repeat !important;
 }
 body.category-9 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-yellow.svg) center 100%/110% no-repeat !important;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-yellow.svg) center 100%/110% no-repeat !important;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-yellow.svg) center left/480px 300px no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-yellow.svg) center left/480px 300px no-repeat !important;
 }
 body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]) {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-red.svg) center 100%/100% no-repeat !important;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-red.svg) center 100%/100% no-repeat !important;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-red.svg) center left/430px 250px no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-red.svg) center left/430px 250px no-repeat !important;
 }
 body.category-44 #tileoutlinetiles .tile a:not([style*="background-image"]):hover {
-	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-red.svg) center 100%/110% no-repeat !important;
-	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-red.svg) center 100%/110% no-repeat !important;
+	background: #ffffff url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-red.svg) center left/480px 300px no-repeat !important;
+	background: var(--colour-neutral-1) url(https://github.com/Skeksalot/UpSkillage/raw/master/Generic_Resources/tile-red.svg) center left/480px 300px no-repeat !important;
 }
 div#tileoutlinearea.tileoutlinearea {
 	padding: 0;
 }
 .tile span.tiletitle, .tiletitle, .tile a:hover .tiletitle, #tileoutlinearea h3.sectionname {
 	font-family: inherit;
-}
-#tileoutlinearea h3.sectionname {
-	color: #2c2c36 !important;
-	color: var(--colour-neutral-4) !important;
 }
 .tile span.tiletopic, .tile a:hover .tiletopic {
 	border: none;
@@ -1203,6 +1190,10 @@ body.category-44 .tiletopicnav ul li a:hover, body.category-44 .tiletopicnav ul 
 	color: var(--colour-neutral-1) !important;
 	border-radius: 2px;
 }
+/* #tileoutlinearea h3.sectionname {
+	color: #2c2c36 !important;
+	color: var(--colour-neutral-4) !important;
+}
 div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited  {
 	color: #2c2c36;
 	color: var(--colour-neutral-4);
@@ -1210,6 +1201,18 @@ div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited
 .tileoutlinecontent h1, .tileoutlinecontent p, .tileoutlinecontent div {
 	color: #2c2c36;
 	color: var(--colour-neutral-4);
+} */
+#tileoutlinearea h3.sectionname {
+	color: #ffffff !important;
+	color: var(--colour-neutral-1) !important;
+}
+div#tileoutlinearea a, div#tileoutlinearea a:link, div#tileoutlinearea a:visited  {
+	color: #ffffff;
+	color: var(--colour-neutral-1);
+}
+.tileoutlinecontent h1, .tileoutlinecontent p, .tileoutlinecontent div {
+	color: #ffffff;
+	color: var(--colour-neutral-1);
 }
 .tile a:hover .tiletopic {
 	background: #2c2c36;
