@@ -1408,7 +1408,7 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 #page-mod-book-view #block-region-side-pre {
 	border-right: 1px solid #aaaab4;
 	border-right: 1px solid var(--colour-neutral-3);
-	margin: 1em 1em 1em 0em;
+	margin: 1em 0em;
 }
 #page-mod-book-view .box.generalbox.book_content {
 	border: none;
