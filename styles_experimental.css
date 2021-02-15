@@ -1414,6 +1414,9 @@ div.submitforgrading div.box.generalbox.submitconfirm .fdescription.required {
 	border: none;
 	padding: 0;
 }
+#page-login-index .moodle-dialogue-focused {
+	z-index: 13000;
+}
 .moodle-dialogue-wrap.moodle-dialogue-content .moodle-dialogue-bd {
 	background: #ffffff;
 	background: var(--colour-neutral-1);
