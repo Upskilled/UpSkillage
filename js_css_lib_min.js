@@ -73,12 +73,36 @@ function popup( givenName, iframeSrc, iconSrc ) {
 				content.src = content.src;
 			}
 		}
-
 		// Display the content
 		container.style.display = "block";
 		content.style.display = "block";
 	}
+}
 
+// Used to hide/show the link to foundations courses
+function showCourse( course ) {
+	var check;
+	var doc;
+	if( course === "dev" ) {
+		check = document.getElementById("devCheck");
+		doc = document.getElementById("devCourse");
+	} else if( course === "itif" ) {
+		check = document.getElementById("itifCheck");
+		doc = document.getElementById("itifCourse");
+	} else if( course === "virtDevCheck") {
+		check = document.getElementById("virtDevCheck");
+		doc = document.getElementById("virtDevEnv");
+	} else {
+		return;
+	}
+
+	if( check.value === "off" ) {
+		check.value = "on";
+		doc.style.display = "block";
+	} else {
+		check.value = "off";
+		doc.style.display = "none";
+	}
 }
 
 // Insert external css stylesheet
