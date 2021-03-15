@@ -9,7 +9,7 @@ function popupDoc( mylink, windowname ) {
 	} else {
 		href = mylink.href;
 	}
-	window.open( href, windowname, 'width=800,height=600,scrollbars=yes' );
+	window.open( href, windowname, 'width=900,height=720,scrollbars=yes' );
 	return false;
 }
 
@@ -80,19 +80,20 @@ function popup( givenName, iframeSrc, iconSrc ) {
 	while ( document.getElementById( givenName.replace( /\s/g, '' ) + popupID ) != null ) {
 		popupID = Math.floor( ( Math.random() * 1000 ) + 1 );
 	}
-	
+	var startDiv = document.getElementById(givenName);
 	// Create the link and add to the container
 	var a = document.createElement("a");
 	var html = document.createTextNode(givenName);
 	a.id = "vidLink" + popupID;
-	a.className = "popupLink";
+	a.classList = "popupLink";
 	var icon = document.createElement("img");
 	icon.src = iconSrc;
 	icon.classList = "activityicon iconlarge";
 	icon.alt = givenName;
 	a.appendChild(icon);
 	a.appendChild(html);
-	document.getElementById(givenName).appendChild(a);
+	startDiv.classList = "popupOuter";
+	startDiv.appendChild(a);
 	var content = document.createElement("iframe");
 	var exit = document.createElement("span");
 	var container = document.createElement("div");
@@ -128,6 +129,12 @@ function popup( givenName, iframeSrc, iconSrc ) {
 				content.style.display = "none";
 				content.src = content.src;
 			}
+			container.onclick = function() {
+				// Hide the content
+				container.style.display = "none";
+				content.style.display = "none";
+				content.src = content.src;
+			}
 			document.onkeyup = function(e) {
 				// Hide the content (esc key)
 				if( e.key == 'Escape' || e.key == 'Esc' || e.keyCode == 27 ) {
@@ -143,6 +150,25 @@ function popup( givenName, iframeSrc, iconSrc ) {
 		content.style.display = "block";
 	}
 	
+}
+
+// Function to minimise and maximise the trainer chat
+function toggleLC() {
+	if (document.getElementById('chatIframe').classList.contains('lc-min')) {
+		// Maximise
+		document.getElementById('chatContainer').classList.replace('lc-min', 'lc-max');
+		document.getElementById('chatIframe').classList.replace('lc-min', 'lc-max');
+		document.getElementById('chatBubble').classList.replace('lc-max', 'lc-min');
+		document.getElementById('chatMinimise').style.display = 'block';
+		document.getElementById('chatInnerBubble').style.display = 'none';
+	} else {
+		// Minimise
+		document.getElementById('chatContainer').classList.replace('lc-max', 'lc-min');
+		document.getElementById('chatIframe').classList.replace('lc-max', 'lc-min');
+		document.getElementById('chatBubble').classList.replace('lc-min', 'lc-max');
+		document.getElementById('chatMinimise').style.display = 'none';
+		document.getElementById('chatInnerBubble').style.display = 'block';
+	}
 }
 
 // Used to hide/show the link to foundations courses
@@ -1379,13 +1405,17 @@ function insertReadme() {
 	}
 }
 
-// switched to external css stylesheet
-var link = document.createElement("link");
-link.rel = "stylesheet";
-link.type = "text/css";
-link.id = "UpskillStyle";
-link.href = "https://skeksalot.github.io/UpSkillage/styles.css";
-// only include stylesheet once
-if ( document.getElementById("UpskillStyle") == null ) {
-	document.head.appendChild(link);
-}
+// Alter footer copyright info
+// var year = new Date().getFullYear();
+// var copyright = document.querySelector('div.copyright');
+// copyright.innerHTML = '© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676';
+
+// SWITCHED TO INCLUDING THIS WITHIN THE ADDITIONAL HTML SECTION OF THE SITE 27/7/20
+// window.onload = function() {
+// 	var script = document.createElement('script');
+// 	script.defer = true;
+// 	script.async = true;
+// 	script.innerText = 'var copyright = document.querySelector(\'div.copyright\');' +
+// 						'copyright.innerHTML = \'© Upskilled Pty Ltd 2020. All rights reserved. <a href="https://upskilled.edu.au/terms-and-conditions" class="footer_copyright-link">Terms &amp; Conditions</a> | <a href="https://upskilled.edu.au/upskilled-policies" class="footer_copyright-link">Upskilled policies</a> | RTO No 40374  |  ABN: 14 125 906 676\';';
+// 	document.body.appendChild(script);
+// };
