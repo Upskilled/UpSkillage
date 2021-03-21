@@ -106,7 +106,7 @@ img.iconhelp, .helplink img {
 	border: none;
 }
 .moodle-dialogue-hd {
-	height: 2em;
+	min-height: 2em;
 }
 .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h1 {
 	color: #ffffff;
