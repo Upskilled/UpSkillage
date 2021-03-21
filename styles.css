@@ -105,6 +105,9 @@ img.iconhelp, .helplink img {
 .moodle-dialogue-base .moodle-dialogue-wrap {
 	border: none;
 }
+.moodle-dialogue-hd {
+	height: 2em;
+}
 .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd, .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd h1 {
 	color: #ffffff;
 	color: var(--colour-neutral-1);
@@ -646,7 +649,7 @@ aside#block-region-side-post, aside#block-region-side-pre {
 #page-site-index .forumolddiscuss {
 	background: none;
 }
-#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button, #notice .singlebutton + .singlebutton input[type="submit"], .capabilitysearchui input[type="button"], #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn, .availability-button:last-child button.btn, .availability-dialogue button.btn, #page-grade-grading-manage .actions .action {
+#region-main input[type="submit"], input[type="submit"]:not([id|="rubric"]), input[type="button"], aside#block-region-side-pre input[type="submit"], aside#block-region-side-post input[type="submit"], button, #notice .singlebutton + .singlebutton input[type="submit"], .capabilitysearchui input[type="button"], #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn, .availability-button:last-child button.btn, .availability-dialogue button.btn, #page-grade-grading-manage .actions .action, button.fp-file-update, button.fp-file-cancel, button.fp-dlg-butconfirm, button.fp-dlg-butcancel {
 	background: #4adcb0 !important;
 	background: var(--colour-light-calltoaction) !important;
 	background-clip: padding-box !important;
@@ -717,7 +720,7 @@ table#advancedgrading-criteria textarea[cols] {
 	color: #2c2c36;
 	color: var(--colour-neutral-4);
 }
-#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover, #rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover, .moodle-dialogue-confirm .confirmation-dialogue .confirmation-buttons input[type="button"]:hover, #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn:hover, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn:hover, .availability-button:last-child button.btn:hover, .availability-dialogue button.btn:hover, #page-grade-grading-manage .actions .action:hover {
+#region-main input[type="submit"]:hover, input[type="submit"]:not([id|="rubric"]):hover, input[type="button"]:hover, aside#block-region-side-pre input[type="submit"]:hover, aside#block-region-side-post input[type="submit"]:hover, button:hover, .enrolpanel.roleassign.visible input[type="button"]:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion .addlevel input:hover, #guide-guide.gradingform_guide.editor .addcriterion input:hover, #guide-guide.gradingform_guide.editor .addcomment input:hover, #notice input[type="submit"]:hover, #notice .singlebutton + .singlebutton input[type="submit"]:hover, #rubric-rubric.gradingform_rubric .criterion.even input:hover, #rubric-rubric.gradingform_rubric #rubric-criteria .criterion.even .addlevel input:hover, .moodle-dialogue-wrap.moodle-dialogue-content .choosercontainer #chooseform .submitbuttons input[type="submit"]:hover, .moodle-dialogue-confirm .confirmation-dialogue .confirmation-buttons input[type="button"]:hover, #fitem_id_availabilityconditionsjson .availability-childlist > .availability-inner .availability-button button.btn:hover, #fitem_id_availabilityconditionsjson .availability-plugincontrols .availability-button button.btn:hover, .availability-button:last-child button.btn:hover, .availability-dialogue button.btn:hover, #page-grade-grading-manage .actions .action:hover, button.fp-file-update:hover, button.fp-file-cancel:hover, button.fp-dlg-butconfirm:hover, button.fp-dlg-butcancel:hover {
 	color: #ffffff;
 	color: var(--colour-neutral-1);
 	background: #4adcb0 !important;
@@ -1596,6 +1599,10 @@ div#fitem_id_querysql div.felement.ftextarea {
 .activity span.actions {
 	text-align: right;
 }
+h3[id*=fm-dialog-label] {
+	color: var(--colour-neutral-1);
+}
+
 
 /* Quality of life improvement for additional HTML settings */
 #id_s__additionalhtmlhead, #id_s__additionalhtmltopofbody, #id_s__additionalhtmlfooter {
