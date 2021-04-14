@@ -563,7 +563,7 @@ aside#block-region-side-pre .block_navigation .block_tree li.depth_3 ul li a:lin
 	color: #aaaab4;
 	color: var(--colour-neutral-3);
 }
-.block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li, .block_navigation .block_tree li.depth_3:hover {
+.block_navigation .block_tree li.depth_3 ul li, .block_navigation .block_tree li.depth_3 ul ul li, .block_navigation .block_tree li.depth_3:hover, .block_navigation .block_tree li.depth_5:hover {
 	background: none;
 }
 .block_navigation .block_tree .tree_item {
