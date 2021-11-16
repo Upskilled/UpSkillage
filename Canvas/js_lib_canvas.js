@@ -49,7 +49,7 @@ function receiveMessage(event) {
 window.addEventListener("message", receiveMessage, false);
 
 ////////////////////////////////////////////////////
-// LinkedIn Learning Hack                         //
+// LTI Iframe Embed Hack                          //
 ////////////////////////////////////////////////////
 
 // Check if page is within an iframe or not (or cross-origin, which is blocked anyway)
@@ -59,7 +59,7 @@ if( frame != null ) {
 	//console.log( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) );
 	//console.log( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) );
 	// Enforce rules to identify if this iframe is an LTI Tool embedded in a content page. 
-	if( ( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) > -1 && frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) > -1 ) || frame.classList.contains('lti-iframe') ) {
+	if( ( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) > -1 && ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/assignments\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/quizzes\//i) > -1 ) ) || frame.classList.contains('lti-iframe') ) {
 		// Remove course nav
 		document.getElementById('left-side').style.display = 'none';
 		document.getElementById('main').style.marginLeft = '0';
@@ -77,6 +77,7 @@ if( frame != null ) {
 		// Notifications and popups?
 	}
 }
+
 ////////////////////////////////////////////////////
 // COURSE FILTER CODE                             //
 ////////////////////////////////////////////////////
