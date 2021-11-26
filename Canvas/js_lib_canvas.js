@@ -7,7 +7,7 @@ $('head').append('<script src="https://kit.fontawesome.com/e1cf153082.js" crosso
 // START CUSTOM FOOTER LINKS                      //
 ////////////////////////////////////////////////////
 
-$('.with-right-side #wrapper').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links">Ã‚Â© Upskilled Pty Ltd 2021. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a>&nbsp;&nbsp;|&nbsp;&nbsp;RTO No 40374&nbsp;&nbsp;|&nbsp;&nbsp;ABN: 14 125 906 676</div></footer>');
+$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>© Upskilled Pty Ltd 2021. All rights reserved.&nbsp;<a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a>&nbsp;|&nbsp;<a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a>&nbsp;|&nbsp;RTO No 40374&nbsp;|&nbsp;ABN: 14 125 906 676</span></div></footer>');
 
 ////////////////////////////////////////////////////
 // START LOREE CODE                               //
@@ -83,36 +83,36 @@ if( frame != null ) {
 ////////////////////////////////////////////////////
 
 $(document).ready(function() {
-  if ($("div.context_module").length > 0) {
+	if ($("div.context_module").length > 0) {
 
-	$("div.header-bar").append("<div><ul id='module_filters' style='list-style-type: none; display: inline;'></ul></div>");
+		$("div.header-bar").append("<div><ul id='module_filters' style='list-style-type: none; display: inline;'></ul></div>");
 
-	var item_types = [{id: "wiki_page", label: "Pages", icon: "icon-document"},
-					  {id: "assignment", label: "Assignments", icon: "icon-assignment"},
-					  {id: "quiz", label: "Quizzes", icon: "icon-quiz"},
-					  {id: "lti-quiz", label: "Quizzes", icon: "icon-quiz icon-Solid"},
-					  {id: "discussion_topic", label: "Discussion Topics", icon: "icon-discussion"},
-					  {id: "external_url", label: "Links", icon: "icon-link"},
-					  {id: "attachment", label: "Files", icon: "icon-paperclip"},
-					  {id: "context_external_tool", label: "External Tools", icon: "icon-integrations"}];
+		var item_types = [{id: "wiki_page", label: "Pages", icon: "icon-document"},
+						{id: "assignment", label: "Assignments", icon: "icon-assignment"},
+						{id: "quiz", label: "Quizzes", icon: "icon-quiz"},
+						{id: "lti-quiz", label: "Quizzes", icon: "icon-quiz icon-Solid"},
+						{id: "discussion_topic", label: "Discussion Topics", icon: "icon-discussion"},
+						{id: "external_url", label: "Links", icon: "icon-link"},
+						{id: "attachment", label: "Files", icon: "icon-paperclip"},
+						{id: "context_external_tool", label: "External Tools", icon: "icon-integrations"}];
 
-	item_types.forEach(function(type) {
-	  var icon = `<i id="module_filter_${type['id']}" class="${type['icon']}" title="${type['label']}"></i>`;
+		item_types.forEach(function(type) {
+			var icon = `<i id="module_filter_${type['id']}" class="${type['icon']}" title="${type['label']}"></i>`;
 
-	  $("ul#module_filters").append(`<li style="padding: 0 1em 0 0; display: inline-block;"><input type="checkbox" id="${type['id']}" name="${type['id']}" checked style="display: none;"> <label for="${type['id']}">${icon}</label></li>`);
+			$("ul#module_filters").append(`<li style="padding: 0 1em 0 0; display: inline-block;"><input type="checkbox" id="${type['id']}" name="${type['id']}" checked style="display: none;"> <label for="${type['id']}">${icon}</label></li>`);
 
-	  $(`#${type['id']}`).change(function() {
-		if (this.checked == true) {
-		  $(`li.${type['id']}`).show();
-		  $(`#module_filter_${type['id']}`).css('background-color', '');
-		}
-		else {
-		  $(`li.${type['id']}`).hide();
-		  $(`#module_filter_${type['id']}`).css('background-color', 'darkgrey');
-		}
-	  });
-	});
-  }
+			$(`#${type['id']}`).change(function() {
+				if (this.checked == true) {
+					$(`li.${type['id']}`).show();
+					$(`#module_filter_${type['id']}`).css('background-color', '');
+				}
+				else {
+					$(`li.${type['id']}`).hide();
+					$(`#module_filter_${type['id']}`).css('background-color', 'darkgrey');
+				}
+			});
+		});
+	}
 });
 
 ////////////////////////////////////////////////////
