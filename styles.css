@@ -170,16 +170,16 @@ div.loginbox {
 .loginbox .loginform .form-input input {
 	width: 90%;
 }
-form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] legend, #page-login-forgot_password div[role="main"] > div, form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] .fitemtitle {
+form[action="https://lms.upskilled.edu.au/login/forgot_password.php"] legend, #page-login-forgot_password div[role="main"] > div, form[action="https://lms.upskilled.edu.au/login/forgot_password.php"] .fitemtitle {
 	text-align: center;
 }
-form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] .fcontainer {
+form[action="https://lms.upskilled.edu.au/login/forgot_password.php"] .fcontainer {
 	margin-left: 36%;
 }
-form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] input[type="text"] {
+form[action="https://lms.upskilled.edu.au/login/forgot_password.php"] input[type="text"] {
 	width: 20em;
 }
-form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] .felement.ftext, form[action="https://upskilledtest30.androgogic.com.au/login/forgot_password.php"] .felement.fsubmit {
+form[action="https://lms.upskilled.edu.au/login/forgot_password.php"] .felement.ftext, form[action="https://lms.upskilled.edu.au/login/forgot_password.php"] .felement.fsubmit {
 	float: left;
 }
 /* Top Navbar */
@@ -687,12 +687,17 @@ aside#block-region-side-post button {
 .gradingform_rubric, .gradingform_guide {
 	max-width: none;
 }
+.mform.gradeform > #id_gradeheader > .fcontainer {
+	max-width: 100vw;
+}
 .mform .fitem div.fitemtitle {
 	width: auto;
 	min-width: 15%;
 }
 .mform .fitem .felement {
-	float: inline-start;
+	float: none;
+	margin-left: 15% !important;
+	max-width: 50%;
 }
 .mform .fitem .felement:first-child {
 	margin-left: 15%;
