@@ -212,7 +212,7 @@ nav a:hover {
 
 /*  Breadcrumb Styling */
 
-#breadcrumbs>ul>li {
+#breadcrumbs > ul > li {
 	font-size: 1.2em;
 }
 
@@ -273,6 +273,10 @@ nav a:hover {
 	color: #1548e0 !important;
 	text-transform: uppercase;
 	font-size: 21px;
+}
+
+#content .text-transform-none {
+	text-transform: none;
 }
 
 .ic-Layout-contentMain h2 {
@@ -1164,7 +1168,10 @@ footer#footer {
 /* .ui-icon {
 	display: none !important;
 } */
-
+.ui-icon-extlink {
+	display:none !important;
+	}
+	
 * {
 	box-sizing: border-box;
 }
