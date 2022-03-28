@@ -1,128 +1,136 @@
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
 /* Mont fonts */
 @font-face {
-	font-family: "Mont Hairline"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Hairline.otf") format("opentype"); 
-	font-weight:100;
-	font-style:normal;
-}
-
-@font-face {
-	font-family: "Mont Extra Light"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+ExtraLight.ttf") format("truetype"); 
-	font-weight:200;
-	font-style:normal;
-}
-
-@font-face {
-	font-family: "Mont Light"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Light.ttf") format("truetype"); 
-	font-weight:300;
-	font-style:normal;
-}
-
-@font-face {
-	font-family: "Mont Thin"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Thin.ttf") format("truetype"); 
+	font-family: "Mont Hairline";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Hairline.otf") format("opentype");
+	font-weight: 100;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: "Mont Regular"; 
+	font-family: "Mont Extra Light";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+ExtraLight.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Mont Light";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Mont Thin";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Thin.ttf") format("truetype");
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Mont Regular";
 	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric-Mont-Regular.ttf") format("opentype");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: "Mont Semi Bold"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+SemiBold.ttf") format("truetype"); 
+	font-family: "Mont Semi Bold";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+SemiBold.ttf") format("truetype");
 	font-weight: 600;
-	font-style: normal; 
+	font-style: normal;
 }
 
 @font-face {
-	font-family: "Mont Bold"; 
+	font-family: "Mont Bold";
 	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Bold.ttf") format("truetype");
 	font-weight: 700;
-	font-style: normal; 
+	font-style: normal;
 }
 
 @font-face {
-	font-family: "Mont Heavy"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Heavy.ttf") format("truetype"); 
+	font-family: "Mont Heavy";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Heavy.ttf") format("truetype");
 	font-weight: 800;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: "Mont Black"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Black.ttf") format("truetype"); 
+	font-family: "Mont Black";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Black.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Mont Book"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Book.ttf") format("truetype"); 
+	font-family: "Mont Book";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Book.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Mont Semi Bold Italic"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+SemiBold+Italic.otf") format("opentype"); 
+	font-family: "Mont Semi Bold Italic";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+SemiBold+Italic.otf") format("opentype");
 	font-style: italic;
 }
 
 @font-face {
-	font-family: "Mont Extra Light Italic"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+ExtraLight+Italic.otf") format("opentype"); 
+	font-family: "Mont Extra Light Italic";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+ExtraLight+Italic.otf") format("opentype");
 	font-style: italic;
 }
 
 @font-face {
-	font-family: "Mont Thin Italic"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Light+Italic.otf") format("opentype"); 
+	font-family: "Mont Thin Italic";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Light+Italic.otf") format("opentype");
 	font-style: italic;
 }
 
 @font-face {
-	font-family: "Mont Regular Italic"; 
+	font-family: "Mont Regular Italic";
 	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Regular+Italic.otf") format("opentype");
-	font-style: italic; 
-}
-
-@font-face {
-	font-family: "Mont Bold Italic"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Bold+Italic.otf") format("opentype"); 
 	font-style: italic;
 }
 
 @font-face {
-	font-family: "Mont Heavy Italic"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Heavy+Italic.otf") format("opentype"); 
+	font-family: "Mont Bold Italic";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Bold+Italic.otf") format("opentype");
 	font-style: italic;
 }
 
 @font-face {
-	font-family: "Mont Hairline Italic"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Hairline+Italic.otf") format("opentype"); 
+	font-family: "Mont Heavy Italic";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Heavy+Italic.otf") format("opentype");
 	font-style: italic;
 }
 
 @font-face {
-	font-family: "Mont Black Italic"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Black+Italic.otf") format("opentype"); 
+	font-family: "Mont Hairline Italic";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Hairline+Italic.otf") format("opentype");
 	font-style: italic;
 }
 
 @font-face {
-	font-family: "Mont Book Italic"; 
-	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Book+Italic.otf") format("opentype"); 
-	font-weight:300;
+	font-family: "Mont Black Italic";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Black+Italic.otf") format("opentype");
 	font-style: italic;
 }
 
 @font-face {
-	font-family: "Mont Light Italic"; 
+	font-family: "Mont Book Italic";
 	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Book+Italic.otf") format("opentype");
-	font-weight:300;
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Mont Light Italic";
+	src: url("https://wysiwyg-page-builder.s3-ap-southeast-2.amazonaws.com/assets/fonts/Upskilled's_font/Fontfabric+-+Mont+Book+Italic.otf") format("opentype");
+	font-weight: 300;
 	font-style: italic;
 }
 
@@ -171,6 +179,7 @@ a:hover {
 	margin-top: 10%;
 	margin-left: 40%;
 }
+
 body.ic-Login-Body {
 	background-image: var(--ic-brand-Login-body-bgd-image);
 	background-position: center;
@@ -179,15 +188,15 @@ body.ic-Login-Body {
 /*  Upskilled Gradient */
 
 #gradient-horizontal {
-	  --color-stop-1: var(--ic-brand-button--primary-bgd);
-	  --color-stop-2: #1548E0;
+	--color-stop-1: var(--ic-brand-button--primary-bgd);
+	--color-stop-2: #1548E0;
 }
 
 .icon-hgradient {
-	  fill: url(#gradient-horizontal) var(--ic-brand-button--primary-bgd);
-	  /* We could use it as a stroke fill too:
-	  stroke: url(#gradient-horizontal) #1548e0; */
-	}
+	fill: url(#gradient-horizontal) var(--ic-brand-button--primary-bgd);
+	/* We could use it as a stroke fill too:
+		stroke: url(#gradient-horizontal) #1548e0; */
+}
 
 /*  Site Menu Styling */
 
@@ -212,7 +221,7 @@ nav a:hover {
 
 /*  Breadcrumb Styling */
 
-#breadcrumbs > ul > li {
+#breadcrumbs>ul>li {
 	font-size: 1.2em;
 }
 
@@ -230,7 +239,7 @@ nav a:hover {
 }
 
 .context_module_item .ig-type-icon i.icon-paperclip, #select_context_content_dialog i.icon-paperclip, #module_filters i.icon-paperclip {
-   background-color: #2E294E;
+	background-color: #2E294E;
 }
 
 .context_module_item .ig-type-icon i.icon-discussion, #select_context_content_dialog i.icon-discussion, #module_filters i.icon-discussion {
@@ -279,6 +288,18 @@ nav a:hover {
 	text-transform: none;
 }
 
+#content .text-transform-upper {
+	text-transform: uppercase;
+}
+
+#content .text-transform-lower {
+	text-transform: lowercase;
+}
+
+#content .text-transform-caps {
+	text-transform: capitalize;
+}
+
 .ic-Layout-contentMain h2 {
 	font-weight: 700;
 	color: #1548e0;
@@ -293,6 +314,7 @@ nav a:hover {
 div.show-content.user_content a.nav {
 	vertical-align: top;
 }
+
 div.show-content.user_content a.nav img {
 	margin-top: 2.6%;
 	width: 5%;
@@ -300,15 +322,18 @@ div.show-content.user_content a.nav img {
 	box-shadow: none;
 	transition: all 0.2s ease-in-out;
 }
+
 div.show-content.user_content a.nav img:hover {
 	opacity: 0.7;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	transition: all 0.2s ease-in-out;
 }
+
 /* Course page banner */
 div.show-content.user_content img.banner {
 	width: 94%;
 }
+
 /* Course page tiles */
 div.show-content.user_content img.tile {
 	padding: 0.5em;
@@ -316,6 +341,7 @@ div.show-content.user_content img.tile {
 	box-shadow: none;
 	transition: all 0.2s ease-in-out;
 }
+
 div.show-content.user_content img.tile:hover {
 	opacity: 0.7;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -326,6 +352,7 @@ div.show-content.user_content img.tile:hover {
 .ic-framed-lti-tool .load_tab {
 	margin: 2em;
 }
+
 .ic-framed-lti-tool .load_tab button {
 	background: var(--ic-brand-button--primary-bgd);
 	color: var(--ic-brand-button--primary-text);
@@ -334,7 +361,7 @@ div.show-content.user_content img.tile:hover {
 
 /* Nav Styling */
 
-.list-view > ul > li > a, .list-view > nav > ul > li > a {
+.list-view>ul>li>a, .list-view>nav>ul>li>a {
 	font-weight: 700;
 }
 
@@ -376,7 +403,7 @@ ul.message-attachments a {
 
 /* Module Styling */
 #context_modules .ig-header {
-	background-image: linear-gradient( to left, rgb(22, 150, 236), rgb(21, 72, 224) );
+	background-image: linear-gradient(to left, rgb(22, 150, 236), rgb(21, 72, 224));
 	background-size: cover;
 }
 
@@ -410,7 +437,7 @@ ul.message-attachments a {
 }
 
 .progress-bar__bar {
-	background:rgb(22, 150, 236);
+	background: rgb(22, 150, 236);
 	background-image: linear-gradient(to left, rgb(22, 150, 236), rgb(21, 72, 224));
 }
 
@@ -442,24 +469,24 @@ footer#footer {
 
 /* Loree Custom CSS */
 
- dfn {
+dfn {
 	font-style: italic;
 }
 
- strong {
+strong {
 	font-weight: bolder;
 }
 
- img {
+img {
 	vertical-align: middle;
 	border-style: none;
 }
 
- table {
+table {
 	border-collapse: collapse;
 }
 
- caption {
+caption {
 	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
 	color: #6c757d;
@@ -467,53 +494,53 @@ footer#footer {
 	caption-side: bottom;
 }
 
- th {
+th {
 	text-align: inherit;
 }
 
- button {
+button {
 	border-radius: 0;
 }
 
- button:focus {
+button:focus {
 	outline: 1px dotted;
 	outline: 5px auto -webkit-focus-ring-color;
 }
 
- button, input {
+button, input {
 	margin: 0;
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
 }
 
- button, input {
+button, input {
 	overflow: visible;
 }
 
- button {
+button {
 	text-transform: none;
 }
 
- [type=reset], [type=submit], button, html [type=button] {
+[type=reset], [type=submit], button, html [type=button] {
 	-webkit-appearance: button;
 }
 
- [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
 	padding: 0;
 	border-style: none;
 }
 
- input[type=checkbox], input[type=radio] {
+input[type=checkbox], input[type=radio] {
 	box-sizing: border-box;
 	padding: 0;
 }
 
- input[type=date], input[type=datetime-local], input[type=month], input[type=time] {
+input[type=date], input[type=datetime-local], input[type=month], input[type=time] {
 	-webkit-appearance: listbox;
 }
 
- legend {
+legend {
 	display: block;
 	width: 100%;
 	max-width: 100%;
@@ -525,25 +552,25 @@ footer#footer {
 	white-space: normal;
 }
 
- [type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
 	height: auto;
 }
 
- [type=search] {
+[type=search] {
 	outline-offset: -2px;
 	-webkit-appearance: none;
 }
 
- [type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
- ::-webkit-file-upload-button {
+::-webkit-file-upload-button {
 	font: inherit;
 	-webkit-appearance: button;
 }
 
- [hidden] {
+[hidden] {
 	display: none !important;
 }
 
@@ -1066,21 +1093,21 @@ footer#footer {
 	}
 }
 
- .table {
+.table {
 	width: 100%;
 	max-width: 100%;
 	margin-bottom: 1rem;
 	background-color: #fff;
 }
 
- .table td, .table th {
+.table td, .table th {
 	padding: 0.75rem;
 	vertical-align: top;
 	border-top: 1px solid #dee2e6;
 	word-break: break-word;
 }
 
- .table .table {
+.table .table {
 	background-color: #fff;
 }
 
@@ -1113,13 +1140,13 @@ footer#footer {
 	}
 }
 
- .border {
+.border {
 	border: 1px solid #dee2e6 !important;
 }
 
 @media print {
 
-	 *, ::after, ::before {
+	*, ::after, ::before {
 		text-shadow: none !important;
 		box-shadow: none !important;
 	}
@@ -1161,29 +1188,701 @@ footer#footer {
 	overflow: hidden;
 }
 
-.bg-img{
-	background-image : url ('https://loree.io/wp-content/uploads/2019/06/Loree_Logo_Final.png');
+.bg-img {
+	background-image: url ('https://loree.io/wp-content/uploads/2019/06/Loree_Logo_Final.png');
 }
 
 /* .ui-icon {
 	display: none !important;
 } */
 .ui-icon-extlink {
-	display:none !important;
-	}
-	
+	display: none !important;
+}
+
 * {
 	box-sizing: border-box;
 }
 
-input { 
-	box-sizing: content-box; 
+input {
+	box-sizing: content-box;
 }
 
 .bStyle {
 	font-weight: bold !important;
 }
 
-.normalStyle{
+.normalStyle {
 	font-weight: normal !important;
+}
+
+/* Loree Nav bar */
+.font-weight-bold {
+	font-weight: 700 !important;
+}
+
+.font-weight-normal {
+	font-weight: 400 !important;
+}
+
+.font-weight-thin {
+	font-weight: 300 !important;
+}
+
+.bStyle {
+	font-weight: bold !important;
+}
+
+.normalStyle {
+	font-weight: normal !important;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.justify-content-start {
+	justify-content: flex-start !important;
+}
+
+.align-items-start {
+	align-items: flex-start !important;
+}
+
+/* Navigation bar*/
+
+.navbar {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+}
+
+.navbar-nav {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+
+.navigation1 .loree-iframe-content-menu nav {
+	width: 100%;
+}
+
+.navigation2 .loree-navigation-image-section {
+	text-align: left;
+}
+
+.navigation3 .loree-navigation-image-section {
+	text-align: right;
+}
+
+ul.loree-iframe-content-menu {
+	flex-wrap: wrap;
+}
+
+.navigation1 ul.loree-iframe-content-menu,
+.navigation3 ul.loree-iframe-content-menu {
+	justify-content: flex-start;
+	width: auto;
+	text-align: center;
+}
+
+.navigation2 ul.loree-iframe-content-menu {
+	justify-content: flex-end;
+	width: auto;
+	text-align: center;
+}
+
+.navigation9 ul.loree-iframe-content-menu {
+	/*Not sure why we use navigation9 class since we have only 4 elements as predefined*/
+	justify-content: center;
+	width: auto;
+	text-align: center;
+}
+
+/* Min width*/
+@media screen and (min-width: 568px) {
+	.navbar-expand-sm {
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+
+	.navbar-expand-sm .navbar-nav {
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.navbar-expand-lg {
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+
+	.navbar-expand-lg .navbar-nav {
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+}
+
+/* Accessibility */
+.loree-visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	word-wrap: normal;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+}
+
+/*Loree Utility classes*/
+
+.loree-util--all--unset {
+	all: unset;
+}
+
+.loree-util--bottom--0 {
+	bottom: 0;
+}
+
+.loree-util--bottom--100perc {
+	bottom: 100%;
+}
+
+.loree-util--bottom--50perc {
+	bottom: 50%;
+}
+
+.loree-util--bottom--100vh {
+	bottom: 100vh;
+}
+
+.loree-util--bottom--100vw {
+	bottom: 100vw;
+}
+
+.loree-util--bottom--1em {
+	bottom: 1em;
+}
+
+.loree-util--isolation--isolate {
+	isolation: isolate;
+}
+
+.loree-util--caption-side--top {
+	caption-side: top;
+}
+
+.loree-util--caption-side--bottom {
+	caption-side: bottom;
+}
+
+.loree-util--font-weight--100 {
+	font-weight: 100;
+}
+
+.loree-util--font-weight--200 {
+	font-weight: 200;
+}
+
+.loree-util--font-weight--300 {
+	font-weight: 300;
+}
+
+.loree-util--font-weight--400 {
+	font-weight: 400;
+}
+
+.loree-util--font-weight--500 {
+	font-weight: 500;
+}
+
+.loree-util--font-weight--600 {
+	font-weight: 600;
+}
+
+.loree-util--font-weight--700 {
+	font-weight: 700;
+}
+
+.loree-util--font-weight--800 {
+	font-weight: 800;
+}
+
+.loree-util--font-weight--900 {
+	font-weight: 900;
+}
+
+.loree-util--font-weight--normal {
+	font-weight: normal;
+}
+
+.loree-util--font-weight--bold {
+	font-weight: bold;
+}
+
+.loree-util--font-weight--lighter {
+	font-weight: lighter;
+}
+
+.loree-util--font-weight--bolder {
+	font-weight: bolder;
+}
+
+.loree-util--background-size--contain {
+	background-size: contain;
+}
+
+.loree-util--background-size--cover {
+	background-size: cover;
+}
+
+.loree-util--object-fit--contain {
+	object-fit: contain;
+}
+
+.loree-util--object-fit--cover {
+	object-fit: cover;
+}
+
+.loree-util--object-fit--fill {
+	object-fit: fill;
+}
+
+.loree-util--object-fit--none {
+	object-fit: none;
+}
+
+.loree-util--object-fit--scale-down {
+	object-fit: scale-down;
+}
+
+.loree-util--object-position--left-top {
+	object-position: left top;
+}
+
+.loree-util--object-position--left {
+	object-position: left;
+}
+
+.loree-util--object-position--left-bottom {
+	object-position: left bottom;
+}
+
+.loree-util--object-position--top {
+	object-position: top;
+}
+
+.loree-util--object-position--center {
+	object-position: center;
+}
+
+.loree-util--object-position--bottom {
+	object-position: bottom;
+}
+
+.loree-util--object-position--right-top {
+	object-position: right top;
+}
+
+.loree-util--object-position--right {
+	object-position: right;
+}
+
+.loree-util--object-position--right-bottom {
+	object-position: right bottom;
+}
+
+.loree-util--align-content--baseline {
+	align-content: baseline;
+}
+
+.loree-util--align-content--center {
+	align-content: center;
+}
+
+.loree-util--align-content--end {
+	align-content: end;
+}
+
+.loree-util--align-content--first-baseline {
+	align-content: first baseline;
+}
+
+.loree-util--align-content--flex-end {
+	align-content: flex-end;
+}
+
+.loree-util--align-content--flex-start {
+	align-content: flex-start;
+}
+
+.loree-util--align-content--last-baseline {
+	align-content: last baseline;
+}
+
+.loree-util--align-content--normal {
+	align-content: normal;
+}
+
+.loree-util--align-content--space-around {
+	align-content: space-around;
+}
+
+.loree-util--align-content--space-between {
+	align-content: space-between;
+}
+
+.loree-util--align-content--space-evenly {
+	align-content: space-evenly;
+}
+
+.loree-util--align-content--start {
+	align-content: start;
+}
+
+.loree-util--align-content--stretch {
+	align-content: stretch;
+}
+
+.loree-util--align-items--baseline {
+	align-items: baseline;
+}
+
+.loree-util--align-items--center {
+	align-items: center;
+}
+
+.loree-util--align-items--end {
+	align-items: end;
+}
+
+.loree-util--align-items--first-baseline {
+	align-items: first baseline;
+}
+
+.loree-util--align-items--flex-end {
+	align-items: flex-end;
+}
+
+.loree-util--align-items--flex-start {
+	align-items: flex-start;
+}
+
+.loree-util--align-items--last-baseline {
+	align-items: last baseline;
+}
+
+.loree-util--align-items--normal {
+	align-items: normal;
+}
+
+.loree-util--align-items--self-start {
+	align-items: self-start;
+}
+
+.loree-util--align-items--self-end {
+	align-items: self-end;
+}
+
+.loree-util--align-items--start {
+	align-items: start;
+}
+
+.loree-util--align-items--stretch {
+	align-items: stretch;
+}
+
+.loree-util--align-self--baseline {
+	align-self: baseline;
+}
+
+.loree-util--align-self--center {
+	align-self: center;
+}
+
+.loree-util--align-self--end {
+	align-self: end;
+}
+
+.loree-util--align-self--first-baseline {
+	align-self: first baseline;
+}
+
+.loree-util--align-self--flex-end {
+	align-self: flex-end;
+}
+
+.loree-util--align-self--flex-start {
+	align-self: flex-start;
+}
+
+.loree-util--align-self--last-baseline {
+	align-self: last baseline;
+}
+
+.loree-util--align-self--normal {
+	align-self: normal;
+}
+
+.loree-util--align-self--self-start {
+	align-self: self-start;
+}
+
+.loree-util--align-self--self-end {
+	align-self: self-end;
+}
+
+.loree-util--align-self--start {
+	align-self: start;
+}
+
+.loree-util--align-self--stretch {
+	align-self: stretch;
+}
+
+.loree-util--justify-items--baseline {
+	justify-items: baseline;
+}
+
+.loree-util--justify-items--center {
+	justify-items: center;
+}
+
+.loree-util--justify-items--end {
+	justify-items: end;
+}
+
+.loree-util--justify-items--first-baseline {
+	justify-items: first baseline;
+}
+
+.loree-util--justify-items--flex-end {
+	justify-items: flex-end;
+}
+
+.loree-util--justify-items--flex-start {
+	justify-items: flex-start;
+}
+
+.loree-util--justify-items--last-baseline {
+	justify-items: last baseline;
+}
+
+.loree-util--justify-items--normal {
+	justify-items: normal;
+}
+
+.loree-util--justify-items--self-start {
+	justify-items: self-start;
+}
+
+.loree-util--justify-items--self-end {
+	justify-items: self-end;
+}
+
+.loree-util--justify-items--start {
+	justify-items: start;
+}
+
+.loree-util--justify-items--stretch {
+	justify-items: stretch;
+}
+
+.loree-util--justify-self--baseline {
+	justify-self: baseline;
+}
+
+.loree-util--justify-self--center {
+	justify-self: center;
+}
+
+.loree-util--justify-self--end {
+	justify-self: end;
+}
+
+.loree-util--justify-self--first-baseline {
+	justify-self: first baseline;
+}
+
+.loree-util--justify-self--flex-end {
+	justify-self: flex-end;
+}
+
+.loree-util--justify-self--flex-start {
+	justify-self: flex-start;
+}
+
+.loree-util--justify-self--last-baseline {
+	justify-self: last baseline;
+}
+
+.loree-util--justify-self--normal {
+	justify-self: normal;
+}
+
+.loree-util--justify-self--self-start {
+	justify-self: self-start;
+}
+
+.loree-util--justify-self--self-end {
+	justify-self: self-end;
+}
+
+.loree-util--justify-self--start {
+	justify-self: start;
+}
+
+.loree-util--justify-self--stretch {
+	justify-self: stretch;
+}
+
+.loree-util--justify-content--center {
+	justify-content: center;
+}
+
+.loree-util--justify-content--end {
+	justify-content: end;
+}
+
+.loree-util--justify-content--flex-end {
+	justify-content: flex-end;
+}
+
+.loree-util--justify-content--flex-start {
+	justify-content: flex-start;
+}
+
+.loree-util--justify-content--normal {
+	justify-content: normal;
+}
+
+.loree-util--justify-content--space-around {
+	justify-content: space-around;
+}
+
+.loree-util--justify-content--space-between {
+	justify-content: space-between;
+}
+
+.loree-util--justify-content--space-evenly {
+	justify-content: space-evenly;
+}
+
+.loree-util--justify-content--start {
+	justify-content: start;
+}
+
+.loree-util--justify-content--stretch {
+	justify-content: stretch;
+}
+
+.loree-util--flex-direction--row {
+	flex-direction: row;
+}
+
+.loree-util--flex-direction--row-reverse {
+	flex-direction: row-reverse;
+}
+
+.loree-util--flex-direction--column {
+	flex-direction: column;
+}
+
+.loree-util--flex-direction--column-reverse {
+	flex-direction: column-reverse;
+}
+
+.loree-util--flex-wrap--nowrap {
+	flex-wrap: nowrap;
+}
+
+.loree-util--flex-wrap--wrap {
+	flex-wrap: wrap;
+}
+
+.loree-util--flex-wrap--wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+
+.loree-util--grid-area--a {
+	grid-area: a;
+}
+
+.loree-util--grid-area--b {
+	grid-area: b;
+}
+
+.loree-util--grid-area--c {
+	grid-area: c;
+}
+
+.loree-util--grid-area--d {
+	grid-area: d;
+}
+
+.loree-util--grid-area--e {
+	grid-area: e;
+}
+
+.loree-util--grid-area--f {
+	grid-area: f;
+}
+
+.loree-util--grid-area--g {
+	grid-area: g;
+}
+
+.loree-util--grid-area--h {
+	grid-area: h;
+}
+
+a.nav-btns {
+	padding: 30px 20px;
+	text-decoration: none !important;
+	color: #000;
+	border-top: 2px solid #f56600;
+	box-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
+	cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+}
+
+a.nav-btns:hover {
+	border-top: 2px solid #123c78 !important;
+	background-color: #e2e2e2;
+}
+
+/* Setting center alignment for Nav bar logo on mobile devices*/
+@media screen and (max-width: 568px) {
+	.loree-navigation-image-section {
+		width: 100%;
+		max-width: 100% !important;
+		/* For the full width of the image section in tablet and mobile view */
+		text-align: center !important;
+		/* Make the image centered in the image section in tablet and mobile view */
+	}
+
+	ul.loree-iframe-content-menu,
+	.loree-iframe-content-menu nav {
+		width: 100% !important;
+		/* FOr the full width of navigation element in nav bar only for mobile responsive */
+	}
 }
