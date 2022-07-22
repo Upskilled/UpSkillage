@@ -93,6 +93,7 @@ function removeCalendarButtons() {
 	if( calendarButtons ) {
 		// Tigger the agenda button
 		var agendaButton = calendarButtons.querySelector('#agenda');
+		agendaButton.innerHTML = 'Support Sessions';
 		agendaButton.click();
 		// Remove the other buttons
 		var otherButtons = calendarButtons.querySelectorAll('button:not(#agenda)');
