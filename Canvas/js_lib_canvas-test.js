@@ -7,7 +7,7 @@ $('head').append('<script src="https://kit.fontawesome.com/e1cf153082.js" crosso
 // START CUSTOM FOOTER LINKS                      //
 ////////////////////////////////////////////////////
 
-$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>© Upskilled Pty Ltd 2021. All rights reserved.&nbsp;<a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a>&nbsp;|&nbsp;<a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a>&nbsp;|&nbsp;RTO No 40374&nbsp;|&nbsp;ABN: 14 125 906 676</span></div></footer>');
+$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>Â© Upskilled Pty Ltd 2021. All rights reserved.&nbsp;<a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a>&nbsp;|&nbsp;<a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a>&nbsp;|&nbsp;RTO No 40374&nbsp;|&nbsp;ABN: 14 125 906 676</span></div></footer>');
 
 ////////////////////////////////////////////////////
 // START LOREE CODE                               //
@@ -54,11 +54,11 @@ window.addEventListener("message", receiveMessage, false);
 
 // Check if page is within an iframe or not (or cross-origin, which is blocked anyway)
 var frame = window.frameElement;
-console.log(frame);
+// console.log(frame);
 if( frame != null ) {
 	//console.log( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) );
 	//console.log( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) );
-	// Enforce rules to identify if this iframe is an LTI Tool embedded in a content page. 
+	// Enforce rules to identify if this iframe is an LTI Tool embedded in a content page.
 	if( ( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) > -1 && ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/assignments\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/quizzes\//i) > -1 ) ) || frame.classList.contains('lti-iframe') ) {
 		// Remove course nav
 		document.getElementById('left-side').style.display = 'none';
@@ -75,6 +75,32 @@ if( frame != null ) {
 		// Remove Student view alert bar
 		document.getElementById('masquerade_bar').style.display = 'none';
 		// Notifications and popups?
+	}
+}
+
+////////////////////////////////////////////////////
+// Calendar button modifications                  //
+////////////////////////////////////////////////////
+
+// Identify if we're on the calendar page.
+if( document.URL.search(/upskilled(\.test|\.beta)?\.instructure\.com\/calendar/i) > -1 ) {
+	// The buttons are generated after page load, so keep trying until they appear
+	var calendarButtonTimer = setInterval( removeCalendarButtons, 100 );
+}
+
+function removeCalendarButtons() {
+	var calendarButtons = document.querySelector('#calendar_header .header-bar .calendar_view_buttons');
+	if( calendarButtons ) {
+		// Tigger the agenda button
+		var agendaButton = calendarButtons.querySelector('#agenda');
+		agendaButton.click();
+		// Remove the other buttons
+		var otherButtons = calendarButtons.querySelectorAll('button:not(#agenda)');
+		otherButtons.forEach(function(btn) {
+			btn.remove();
+		})
+		// Stop trying once we've been able to find the buttons
+		clearInterval(calendarButtonTimer);
 	}
 }
 
