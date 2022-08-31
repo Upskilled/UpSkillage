@@ -370,3 +370,39 @@ function googleAnalyticsCode(trackingID) {
 };
 
 googleAnalyticsCode("UA-197466447-1") // replace google analytics tracking id here
+
+//////////////////////////////////////////////////
+// API based customisations						//
+//////////////////////////////////////////////////
+
+// TODO Proper token storage and secure key retrieval.
+var devKey = {
+	id: "184380000000000114",
+	secret: "C8WlbxB3qXJ9wJnKljn6HwmPWC8HNCZiDU4Zoj7VbrYtkkvXnLzPMnT5ioCaNDoG"
+}
+var baseURL = 'https://' + document.domain;
+
+// Limit this modification to the course list page.
+if( document.URL.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses$/i) > -1 ) {
+	// var courseListAPITimer = setInterval( modifyCourseListAPI, 50 );
+}
+
+async function modifyCourseListAPI() {
+	// Modify the main table
+	var courseTable = document.querySelector('#my_courses_table');
+	if( courseTable ) {
+		await authenticateAPI();
+		
+		// Stop trying once we've been able to modify the table
+		clearInterval(courseListAPITimer);
+	}
+}
+
+// https://canvas.instructure.com/doc/api
+// https://canvas.instructure.com/doc/api/file.developer_keys.html
+// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#supplying_request_options
+async function authenticateAPI() {
+	await fetch( baseURL + '/login/oauth2/token', {
+		method: 'POST'
+	});
+}

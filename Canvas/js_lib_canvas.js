@@ -1,13 +1,65 @@
 ////////////////////////////////////////////////////
-// LOAD CUSTOM FONTS                              //
+// DESIGN TOOLS CONFIG                            //
 ////////////////////////////////////////////////////
-$('head').append('<script src="https://kit.fontawesome.com/e1cf153082.js" crossorigin="anonymous"></script>');
+// Copyright (C) 2017  Utah State University
+var DT_variables = {
+	iframeID: '',
+	// Path to the hosted USU Design Tools
+	path: 'https://designtools.ciditools.com/',
+	templateCourse: '648',
+	// OPTIONAL: Button will be hidden from view until launched using shortcut keys
+	hideButton: false,
+	 // OPTIONAL: Limit by course format
+	 limitByFormat: false, // Change to true to limit by format
+	 // adjust the formats as needed. Format must be set for the course and in this array for tools to load
+	 formatArray: [
+		'online',
+		'on-campus',
+		'blended'
+	],
+	// OPTIONAL: Limit tools loading by users role
+	limitByRole: false, // set to true to limit to roles in the roleArray
+	// adjust roles as needed
+	roleArray: [
+		'student',
+		'teacher',
+		'admin'
+	],
+	// OPTIONAL: Limit tools to an array of Canvas user IDs
+	limitByUser: true, // Change to true to limit by user
+	// add users to array (Canvas user ID not SIS user ID)
+	userArray: [
+		'106', // Ben Grigor
+		'110', // Andrew Skeklios
+		'152', // Travis Hackett
+		'4072' // Tim Praill
+	],
+	 // OPTIONAL: Relocate Ally alternative formats dropdown and hide heading
+	 overrideAllyHeadings: false,
+	 // OPTIONAL: Make assignment rubrics sortable
+	 sortableRubrics: true,
+	 // OPTIONAL: Transform people page ina course to show student cards
+	 showStudentCards: true
+};
+
+// Run the necessary code when a page loads
+$(document).ready(function () {
+'use strict';
+// This runs code that looks at each page and determines what controls to create
+$.getScript(DT_variables.path + 'js/master_controls.js', function () {
+	console.log('master_controls.js loaded');
+});
+});
+////////////////////////////////////////////////////
+// END DESIGN TOOLS CONFIG                        //
+////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////
 // START CUSTOM FOOTER LINKS                      //
 ////////////////////////////////////////////////////
 
-$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>© Upskilled Pty Ltd 2021. All rights reserved.&nbsp;<a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a>&nbsp;|&nbsp;<a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a>&nbsp;|&nbsp;RTO No 40374&nbsp;|&nbsp;ABN: 14 125 906 676</span></div></footer>');
+var year = new Date().getFullYear();
+$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>Â© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
 
 ////////////////////////////////////////////////////
 // START LOREE CODE                               //
@@ -24,26 +76,26 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-	acc[i].addEventListener("click", function() {
-		this.classList.toggle("active");
-		var panel = this.nextElementSibling;
-		if (panel.style.display === "block") {
-			panel.style.display = "none";
-		} else {
-			panel.style.display = "block";
-		}
-	});
+acc[i].addEventListener("click", function() {
+	this.classList.toggle("active");
+	var panel = this.nextElementSibling;
+	if (panel.style.display === "block") {
+		panel.style.display = "none";
+	} else {
+		panel.style.display = "block";
+	}
+});
 }
 
 function receiveMessage(event) {
-	if (event.data && event.data.type && event.data.type === 'LOREE_WINDOW_SIZE' && event.data.height) {
-		var frames = document.getElementsByTagName('iframe');
-		for (var frame of frames) {
-			if (frame.src && frame.src.startsWith(event.data.url)) {
-				frame.style.height = event.data.height.toString() + "px";
-			}
+if (event.data && event.data.type && event.data.type === 'LOREE_WINDOW_SIZE' && event.data.height) {
+	var frames = document.getElementsByTagName('iframe');
+	for (var frame of frames) {
+		if (frame.src && frame.src.startsWith(event.data.url)) {
+			frame.style.height = event.data.height.toString() + "px";
 		}
 	}
+}
 }
 
 window.addEventListener("message", receiveMessage, false);
@@ -56,26 +108,26 @@ window.addEventListener("message", receiveMessage, false);
 var frame = window.frameElement;
 console.log(frame);
 if( frame != null ) {
-	//console.log( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) );
-	//console.log( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) );
-	// Enforce rules to identify if this iframe is an LTI Tool embedded in a content page. 
-	if( ( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) > -1 && ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/assignments\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/quizzes\//i) > -1 ) ) || frame.classList.contains('lti-iframe') ) {
-		// Remove course nav
-		document.getElementById('left-side').style.display = 'none';
-		document.getElementById('main').style.marginLeft = '0';
-		// Remove top breadcrumbs
-		document.getElementsByClassName('ic-app-nav-toggle-and-crumbs no-print')[0].style.display = 'none';
-		// Remove main site navbar
-		document.getElementById('header').style.display = 'none';
-		document.getElementById('wrapper').style.marginLeft = '0';
-		// Remove responsive navigation
-		document.getElementById('mobile-header').style.display = 'none';
-		// Remove scrollbar
-		document.body.style.overflow = 'hidden';
-		// Remove Student view alert bar
-		document.getElementById('masquerade_bar').style.display = 'none';
-		// Notifications and popups?
-	}
+//console.log( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) );
+//console.log( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) );
+// Enforce rules to identify if this iframe is an LTI Tool embedded in a content page. 
+if( ( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) > -1 && ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/assignments\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/quizzes\//i) > -1 ) ) || frame.classList.contains('lti-iframe') ) {
+	// Remove course nav
+	document.getElementById('left-side').style.display = 'none';
+	document.getElementById('main').style.marginLeft = '0';
+	// Remove top breadcrumbs
+	document.getElementsByClassName('ic-app-nav-toggle-and-crumbs no-print')[0].style.display = 'none';
+	// Remove main site navbar
+	document.getElementById('header').style.display = 'none';
+	document.getElementById('wrapper').style.marginLeft = '0';
+	// Remove responsive navigation
+	document.getElementById('mobile-header').style.display = 'none';
+	// Remove scrollbar
+	document.body.style.overflow = 'hidden';
+	// Remove Student view alert bar
+	document.getElementById('masquerade_bar').style.display = 'none';
+	// Notifications and popups?
+}
 }
 
 ////////////////////////////////////////////////////
@@ -83,36 +135,36 @@ if( frame != null ) {
 ////////////////////////////////////////////////////
 
 $(document).ready(function() {
-	if ($("div.context_module").length > 0) {
+if ($("div.context_module").length > 0) {
 
-		$("div.header-bar").append("<div><ul id='module_filters' style='list-style-type: none; display: inline;'></ul></div>");
+	$("div.header-bar").append("<div><ul id='module_filters' style='list-style-type: none; display: inline;'></ul></div>");
 
-		var item_types = [{id: "wiki_page", label: "Pages", icon: "icon-document"},
-						{id: "assignment", label: "Assignments", icon: "icon-assignment"},
-						{id: "quiz", label: "Quizzes", icon: "icon-quiz"},
-						{id: "lti-quiz", label: "Quizzes", icon: "icon-quiz icon-Solid"},
-						{id: "discussion_topic", label: "Discussion Topics", icon: "icon-discussion"},
-						{id: "external_url", label: "Links", icon: "icon-link"},
-						{id: "attachment", label: "Files", icon: "icon-paperclip"},
-						{id: "context_external_tool", label: "External Tools", icon: "icon-integrations"}];
+	var item_types = [{id: "wiki_page", label: "Pages", icon: "icon-document"},
+					{id: "assignment", label: "Assignments", icon: "icon-assignment"},
+					{id: "quiz", label: "Quizzes", icon: "icon-quiz"},
+					{id: "lti-quiz", label: "Quizzes", icon: "icon-quiz icon-Solid"},
+					{id: "discussion_topic", label: "Discussion Topics", icon: "icon-discussion"},
+					{id: "external_url", label: "Links", icon: "icon-link"},
+					{id: "attachment", label: "Files", icon: "icon-paperclip"},
+					{id: "context_external_tool", label: "External Tools", icon: "icon-integrations"}];
 
-		item_types.forEach(function(type) {
-			var icon = `<i id="module_filter_${type['id']}" class="${type['icon']}" title="${type['label']}"></i>`;
+	item_types.forEach(function(type) {
+		var icon = `<i id="module_filter_${type['id']}" class="${type['icon']}" title="${type['label']}"></i>`;
 
-			$("ul#module_filters").append(`<li style="padding: 0 1em 0 0; display: inline-block;"><input type="checkbox" id="${type['id']}" name="${type['id']}" checked style="display: none;"> <label for="${type['id']}">${icon}</label></li>`);
+		$("ul#module_filters").append(`<li style="padding: 0 1em 0 0; display: inline-block;"><input type="checkbox" id="${type['id']}" name="${type['id']}" checked style="display: none;"> <label for="${type['id']}">${icon}</label></li>`);
 
-			$(`#${type['id']}`).change(function() {
-				if (this.checked == true) {
-					$(`li.${type['id']}`).show();
-					$(`#module_filter_${type['id']}`).css('background-color', '');
-				}
-				else {
-					$(`li.${type['id']}`).hide();
-					$(`#module_filter_${type['id']}`).css('background-color', 'darkgrey');
-				}
-			});
+		$(`#${type['id']}`).change(function() {
+			if (this.checked == true) {
+				$(`li.${type['id']}`).show();
+				$(`#module_filter_${type['id']}`).css('background-color', '');
+			}
+			else {
+				$(`li.${type['id']}`).hide();
+				$(`#module_filter_${type['id']}`).css('background-color', 'darkgrey');
+			}
 		});
-	}
+	});
+}
 });
 
 ////////////////////////////////////////////////////
@@ -120,138 +172,123 @@ $(document).ready(function() {
 ////////////////////////////////////////////////////
 
 (function (i, s, o, g, r, a, m) {
-	i['GoogleAnalyticsObject'] = r;
-	i[r] = i[r] || function () {
-		(i[r].q = i[r].q || []).push(arguments)
-	}, i[r].l = 1 * new Date();
-	a = s.createElement(o),
-		m = s.getElementsByTagName(o)[0];
-	a.async = 1;
-	a.src = g;
-	m.parentNode.insertBefore(a, m)
+i['GoogleAnalyticsObject'] = r;
+i[r] = i[r] || function () {
+	(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date();
+a = s.createElement(o),
+	m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'custom_ga');
 
 function removeStorage(key) {
-	try {
-		localStorage.removeItem(key);
-		localStorage.removeItem(key + '_expiresIn');
-	} catch (e) {
-		console.log('removeStorage: Error removing key [' + key + '] from localStorage: ' + JSON.stringify(e));
-		return false;
-	}
-	return true;
+try {
+	localStorage.removeItem(key);
+	localStorage.removeItem(key + '_expiresIn');
+} catch (e) {
+	console.log('removeStorage: Error removing key [' + key + '] from localStorage: ' + JSON.stringify(e));
+	return false;
+}
+return true;
 }
 
 function getStorage(key) {
-	var now = Date.now(); //epoch time, lets deal only with integer
-	// set expiration for storage
-	var expiresIn = localStorage.getItem(key + '_expiresIn');
-	if (expiresIn === undefined || expiresIn === null) {
-		expiresIn = 0;
-	}
+var now = Date.now(); //epoch time, lets deal only with integer
+// set expiration for storage
+var expiresIn = localStorage.getItem(key + '_expiresIn');
+if (expiresIn === undefined || expiresIn === null) {
+	expiresIn = 0;
+}
 
-	if (expiresIn < now) { // Expired
-		removeStorage(key);
+if (expiresIn < now) { // Expired
+	removeStorage(key);
+	return null;
+} else {
+	try {
+		var value = localStorage.getItem(key);
+		return value;
+	} catch (e) {
+		console.log('getStorage: Error reading key [' + key + '] from localStorage: ' + JSON.stringify(e));
 		return null;
-	} else {
-		try {
-			var value = localStorage.getItem(key);
-			return value;
-		} catch (e) {
-			console.log('getStorage: Error reading key [' + key + '] from localStorage: ' + JSON.stringify(e));
-			return null;
-		}
 	}
+}
 }
 
 function setStorage(key, value, expires) {
-	if (expires === undefined || expires === null) {
-		expires = (24 * 60 * 60); // default: seconds for 6 hours (6*60*60)
-	} else {
-		expires = Math.abs(expires); //make sure it's positive
-	}
+if (expires === undefined || expires === null) {
+	expires = (24 * 60 * 60); // default: seconds for 6 hours (6*60*60)
+} else {
+	expires = Math.abs(expires); //make sure it's positive
+}
 
-	var now = Date.now(); //millisecs since epoch time, lets deal only with integer
-	var schedule = now + expires * 1000;
-	try {
-		localStorage.setItem(key, value);
-		localStorage.setItem(key + '_expiresIn', schedule);
-	} catch (e) {
-		console.log('setStorage: Error setting key [' + key + '] in localStorage: ' + JSON.stringify(e));
-		return false;
-	}
-	return true;
+var now = Date.now(); //millisecs since epoch time, lets deal only with integer
+var schedule = now + expires * 1000;
+try {
+	localStorage.setItem(key, value);
+	localStorage.setItem(key + '_expiresIn', schedule);
+} catch (e) {
+	console.log('setStorage: Error setting key [' + key + '] in localStorage: ' + JSON.stringify(e));
+	return false;
+}
+return true;
 }
 
 async function coursesRequest(courseId) {
-	// 
-	let response = await fetch('/api/v1/users/self/courses?per_page=100');
-	let data = await response.text();
-	data = data.replace('while(1);', '');
-	data = JSON.parse(data)
-	var stringData = JSON.stringify(data)
-	setStorage('ga_enrollments', stringData, null)
-	var course = parseCourses(courseId, stringData)
-	return course
+// 
+let response = await fetch('/api/v1/users/self/courses?per_page=100');
+let data = await response.text();
+data = data.replace('while(1);', '');
+data = JSON.parse(data)
+var stringData = JSON.stringify(data)
+setStorage('ga_enrollments', stringData, null)
+var course = parseCourses(courseId, stringData)
+return course
 };
 
 function parseCourses(courseId, courseData) {
-	if (courseData != undefined) {
-		let data = JSON.parse(courseData);
-		//console.log(data)
-		for (var i = 0; i < data.length; i++) {
-			// console.log(data[i]['id'] + " " + courseId)
-			if (data[i]['id'] == courseId) {
-				return data[i]
-			}
+if (courseData != undefined) {
+	let data = JSON.parse(courseData);
+	//console.log(data)
+	for (var i = 0; i < data.length; i++) {
+		// console.log(data[i]['id'] + " " + courseId)
+		if (data[i]['id'] == courseId) {
+			return data[i]
 		}
 	}
-	return null
+}
+return null
 }
 
 function gaCourseDimensions(course) {
-	custom_ga('set', 'dimension4', course['id']);
-	custom_ga('set', 'dimension5', course['name']);
-	custom_ga('set', 'dimension6', course['account_id']);
-	custom_ga('set', 'dimension7', course['enrollment_term_id']);
-	custom_ga('set', 'dimension8', course['enrollments'][0]['type']);
-	custom_ga('send', 'pageview');
-	return
+custom_ga('set', 'dimension4', course['id']);
+custom_ga('set', 'dimension5', course['name']);
+custom_ga('set', 'dimension6', course['account_id']);
+custom_ga('set', 'dimension7', course['enrollment_term_id']);
+custom_ga('set', 'dimension8', course['enrollments'][0]['type']);
+custom_ga('send', 'pageview');
+return
 }
 
 function googleAnalyticsCode(trackingID) {
-	var userId, userRoles, attempts, courseId;
-	custom_ga('create', trackingID, 'auto');
-	userId = ENV["current_user_id"];
-	userRoles = ENV['current_user_roles'];
-	custom_ga('set', 'userId', userId);
-	custom_ga('set', 'dimension1', userId);
-	custom_ga('set', 'dimension3', userRoles);
-	courseId = window.location.pathname.match(/\/courses\/(\d+)/);
-	if (courseId) {
-		courseId = courseId[1];
-		attempts = 0;
-		try {
-			let courses = getStorage('ga_enrollments')
-			if (courses != null) {
-				var course = parseCourses(courseId, courses);
-				if (course === null) {
-					// console.log("course_id not found in cache, retrieving...")
-					coursesRequest(courseId).then(course => {
-						if (course === null) {
-							// console.log("course data not found")
-							custom_ga('set', 'dimension4', courseId);
-							custom_ga('send', 'pageview');
-						} else {
-							gaCourseDimensions(course)
-						}
-					});
-				} else {
-					// console.log("course found in cache")
-					gaCourseDimensions(course)
-				}
-			} else {
-				// console.log("cache not found, retrieving cache data")
+var userId, userRoles, attempts, courseId;
+custom_ga('create', trackingID, 'auto');
+userId = ENV["current_user_id"];
+userRoles = ENV['current_user_roles'];
+custom_ga('set', 'userId', userId);
+custom_ga('set', 'dimension1', userId);
+custom_ga('set', 'dimension3', userRoles);
+courseId = window.location.pathname.match(/\/courses\/(\d+)/);
+if (courseId) {
+	courseId = courseId[1];
+	attempts = 0;
+	try {
+		let courses = getStorage('ga_enrollments')
+		if (courses != null) {
+			var course = parseCourses(courseId, courses);
+			if (course === null) {
+				// console.log("course_id not found in cache, retrieving...")
 				coursesRequest(courseId).then(course => {
 					if (course === null) {
 						// console.log("course data not found")
@@ -261,18 +298,148 @@ function googleAnalyticsCode(trackingID) {
 						gaCourseDimensions(course)
 					}
 				});
+			} else {
+				// console.log("course found in cache")
+				gaCourseDimensions(course)
 			}
-		} catch (err) {
-			attempts += 1;
-			if (attempts > 5) {
-				custom_ga('set', 'dimension4', courseId);
-				custom_ga('send', 'pageview');
-				return;
-			};
+		} else {
+			// console.log("cache not found, retrieving cache data")
+			coursesRequest(courseId).then(course => {
+				if (course === null) {
+					// console.log("course data not found")
+					custom_ga('set', 'dimension4', courseId);
+					custom_ga('send', 'pageview');
+				} else {
+					gaCourseDimensions(course)
+				}
+			});
+		}
+	} catch (err) {
+		attempts += 1;
+		if (attempts > 5) {
+			custom_ga('set', 'dimension4', courseId);
+			custom_ga('send', 'pageview');
+			return;
 		};
-	} else {
-		custom_ga('send', 'pageview');
 	};
+} else {
+	custom_ga('send', 'pageview');
+};
 };
 
 googleAnalyticsCode("UA-197466447-1") // replace google analytics tracking id here
+
+$(document).ready(updateHandlebarTop);
+window.addEventListener( 'resize', updateHandlebarTop );
+
+// $(document).ready(customiseCourseNavLinks);
+
+setTimeout( startHereClick, 2500 );
+
+setTimeout( linkNextButton, 2000 );
+
+//////////////////////////////////////////////////////
+// Handlebar positioning							//
+//////////////////////////////////////////////////////
+
+function updateHandlebarTop() {
+	// Limit this to pages with content.
+	var regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/((modules\/items\/[0-9]{1,})|(pages\/[a-zA-Z0-9]{1,}))/i;
+	// var regex = /canvas\.cidilabs\.com\/courses\/[0-9]{1,}\/((modules\/items\/[0-9]{1,})|(pages\/[a-zA-Z0-9]{1,}))/i;
+	if( document.URL.search(regex) > -1 ) {
+		// This only applies to the specified themes and when using the handlebar.
+		var content = document.querySelector('#kl_wrapper_3.kl_ups_current.with_handlebar');
+		
+		// Check that elements exist as we go.
+		if( content ) {
+			var banner = content.querySelector('.kl_banner_wrapper');
+			var nav = content.querySelector('#kl_navigation');
+			var progress = content.querySelector('[class*="kl_progress"]').parentElement;
+
+			var top = 0;
+			// Add on the element heights as needed.
+			if( banner ) {
+				top += banner.clientHeight;
+			}
+			if( nav ) {
+				// Include the margin below the navbar too.
+				top += nav.clientHeight + 20;
+			}
+			// Assuming the progress bar is at the top of the page.
+			if( progress ) {
+				top += progress.clientHeight;
+			}
+		}
+		// Only set the top if it's more thant 0.
+		if( top > 0 ) {
+			content.style.setProperty( '--dt-handlebar-top', top + 'px' );
+		}
+	}
+}
+
+//////////////////////////////////////////////////////
+// Course Nav Links customisation					//
+//////////////////////////////////////////////////////
+
+function customiseCourseNavLinks() {
+	// Limit this to course pages with the nav links.
+	var regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}/i;
+	// var regex = /canvas\.cidilabs\.com\/courses\/[0-9]{1,}/i;
+	if( document.URL.search(regex) > -1 ) {
+		// Pick out the left course navigation.
+		var nav = document.querySelector('#left-side ul#section-tabs');
+		if(nav) {
+			var title = document.createElement('li');
+			title.classList.add('section');
+			title.style = "font-weight: bold; color: #2c2c36; padding: 8px 0 8px 6px; word-wrap: break-word; hyphens: none; line-height: 1.3;";
+			title.innerHTML = 'Unit Menu';
+			nav.prepend(title);
+		}
+	}
+}
+
+//////////////////////////////////////////////////////
+// 'Start here' nav link click						//
+//////////////////////////////////////////////////////
+
+function startHereClick() {
+	// Limit this to the front page.
+	var regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[a-zA-Z0-9#_-]{0,}$/i;
+	// var regex = /canvas\.cidilabs\.com\/courses\/[0-9]{1,}[a-zA-Z0-9#_-]{0,}$/i;
+	if( document.URL.search(regex) > -1 ) {
+		// Relies on the 'Start Here' link and the expander being marked by ID.
+		var link = document.querySelector('#kl_wrapper_3.kl_flat_sections_main #kl_navigation li a#start_here');
+		// Only want the first heading in the intro expander.
+		var intro = document.querySelector('#kl_wrapper_3.kl_flat_sections_main #intro_expander .kl_panels_wrapper > h3');
+		if( link && intro ) {
+			link.setAttribute( 'href', '#' + intro.id );
+		}
+	}
+}
+
+//////////////////////////////////////////////////////
+// Custom next button								//
+//////////////////////////////////////////////////////
+
+function linkNextButton() {
+	// Limit this to pages with content.
+	var regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/((modules\/items\/[0-9]{1,})|(pages\/[a-zA-Z0-9]{1,}))/i;
+	// var regex = /canvas\.cidilabs\.com\/courses\/[0-9]{1,}\/((modules\/items\/[0-9]{1,})|(pages\/[a-zA-Z0-9]{1,}))/i;
+	if( document.URL.search(regex) > -1 ) {
+		// Pick out our next button and the default Canvas one.
+		var next = document.querySelector('#kl_wrapper_3.kl_ups_current a#next-button');
+		var canvasNext = document.querySelector('#content .module-sequence-footer-button--next a');
+		// Check for both elements before acting.
+		if( next && canvasNext ) {
+			// Set the custom next button link to the same location.
+			next.href = canvasNext.href;
+			// Leverage Canvas' button again for the button text.
+			var text = document.querySelector('#content #' + canvasNext.getAttribute('aria-describedby'));
+			if(text) {
+				// Replace the text only.
+				var tempText = next.innerHTML.substring( next.innerHTML.indexOf('<') );
+				next.innerHTML = text.innerHTML + tempText;
+			}
+		}
+	}
+}
