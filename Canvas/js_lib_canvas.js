@@ -59,7 +59,7 @@ $.getScript(DT_variables.path + 'js/master_controls.js', function () {
 ////////////////////////////////////////////////////
 
 var year = new Date().getFullYear();
-$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>Â© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
+$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
 
 ////////////////////////////////////////////////////
 // START LOREE CODE                               //
@@ -329,51 +329,71 @@ if (courseId) {
 
 googleAnalyticsCode("UA-197466447-1") // replace google analytics tracking id here
 
-$(document).ready(updateHandlebarTop);
-window.addEventListener( 'resize', updateHandlebarTop );
-
-// $(document).ready(customiseCourseNavLinks);
-
-setTimeout( startHereClick, 2500 );
-
-setTimeout( linkNextButton, 2000 );
-
 //////////////////////////////////////////////////////
-// Handlebar positioning							//
+// Page filtering and function calls				//
 //////////////////////////////////////////////////////
 
-function updateHandlebarTop() {
-	// Limit this to pages with content.
-	var regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/((modules\/items\/[0-9]{1,})|(pages\/[a-zA-Z0-9]{1,}))/i;
-	// var regex = /canvas\.cidilabs\.com\/courses\/[0-9]{1,}\/((modules\/items\/[0-9]{1,})|(pages\/[a-zA-Z0-9]{1,}))/i;
-	if( document.URL.search(regex) > -1 ) {
-		// This only applies to the specified themes and when using the handlebar.
-		var content = document.querySelector('#kl_wrapper_3.kl_ups_current.with_handlebar');
-		
-		// Check that elements exist as we go.
-		if( content ) {
-			var banner = content.querySelector('.kl_banner_wrapper');
-			var nav = content.querySelector('#kl_navigation');
-			var progress = content.querySelector('[class*="kl_progress"]').parentElement;
+// Pages with content (pages, modules).
+// TODO assessments, quizzes, discussions to be added.
+// TODO include front page here too.
+var regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/((modules\/items\/[0-9]{1,})|(pages\/[a-zA-Z0-9#_-]{1,}))/i;
+if( document.URL.search(regex) > -1 ) {
+	// Thread functionality.
+	$(document).ready(updateThreadTop);
+	window.addEventListener( 'resize', updateThreadTop );
+	// Next button functionality.
+	linkNextButton();
+	// Link popup functionality
+	setTimeout( linkInPopupWindow, 3000 );
+}
 
-			var top = 0;
-			// Add on the element heights as needed.
-			if( banner ) {
-				top += banner.clientHeight;
-			}
-			if( nav ) {
-				// Include the margin below the navbar too.
-				top += nav.clientHeight + 20;
-			}
-			// Assuming the progress bar is at the top of the page.
-			if( progress ) {
-				top += progress.clientHeight;
-			}
+// Course pages with the nav links (everything within a course).
+regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}/i;
+if( document.URL.search(regex) > -1 ) {
+	// Customised course nav links functionality.
+	// customiseCourseNavLinks();
+}
+
+// Course front page only.
+regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[a-zA-Z0-9#_-]{0,}$/i;
+if( document.URL.search(regex) > -1 ) {
+	// Start here button functionality.
+	startHereClick();
+	// Link popup functionality
+	setTimeout( linkInPopupWindow, 3000 );
+}
+
+//////////////////////////////////////////////////////
+// Thread size and positioning						//
+//////////////////////////////////////////////////////
+
+function updateThreadTop() {
+	// This only applies to the specified themes and when using the thread.
+	var content = document.querySelector('#kl_wrapper_3.kl_ups_current.with_thread');
+	
+	// Check that elements exist as we go.
+	if( content ) {
+		var banner = content.querySelector('.kl_banner_wrapper');
+		var nav = content.querySelector('#kl_navigation');
+		var progress = content.querySelector('[class*="kl_progress"]').parentElement;
+
+		var top = 0;
+		// Add on the element heights as needed.
+		if( banner ) {
+			top += banner.clientHeight;
 		}
-		// Only set the top if it's more thant 0.
-		if( top > 0 ) {
-			content.style.setProperty( '--dt-handlebar-top', top + 'px' );
+		if( nav ) {
+			// Include the margin below the navbar too.
+			top += nav.clientHeight + 20;
 		}
+		// Assuming the progress bar is at the top of the page.
+		if( progress ) {
+			top += progress.clientHeight;
+		}
+	}
+	// Only set the top if it's more thant 0.
+	if( top > 0 ) {
+		content.style.setProperty( '--dt-thread-top', top + 'px' );
 	}
 }
 
@@ -382,20 +402,20 @@ function updateHandlebarTop() {
 //////////////////////////////////////////////////////
 
 function customiseCourseNavLinks() {
-	// Limit this to course pages with the nav links.
-	var regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}/i;
-	// var regex = /canvas\.cidilabs\.com\/courses\/[0-9]{1,}/i;
-	if( document.URL.search(regex) > -1 ) {
+	// Set interval to repeat until success.
+	var interval = setInterval( function() {
 		// Pick out the left course navigation.
 		var nav = document.querySelector('#left-side ul#section-tabs');
 		if(nav) {
 			var title = document.createElement('li');
 			title.classList.add('section');
-			title.style = "font-weight: bold; color: #2c2c36; padding: 8px 0 8px 6px; word-wrap: break-word; hyphens: none; line-height: 1.3;";
+			title.style = "padding: 8px 0 8px 6px; color: #2c2c36; font-style: italic; word-wrap: break-word; hyphens: none; line-height: 1.3;";
 			title.innerHTML = 'Unit Menu';
 			nav.prepend(title);
+			// Success, cancel the repetition.
+			clearInterval(interval);
 		}
-	}
+	}, 200 );
 }
 
 //////////////////////////////////////////////////////
@@ -403,18 +423,18 @@ function customiseCourseNavLinks() {
 //////////////////////////////////////////////////////
 
 function startHereClick() {
-	// Limit this to the front page.
-	var regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[a-zA-Z0-9#_-]{0,}$/i;
-	// var regex = /canvas\.cidilabs\.com\/courses\/[0-9]{1,}[a-zA-Z0-9#_-]{0,}$/i;
-	if( document.URL.search(regex) > -1 ) {
+	// Set interval to repeat until success.
+	var interval = setInterval( function() {
 		// Relies on the 'Start Here' link and the expander being marked by ID.
-		var link = document.querySelector('#kl_wrapper_3.kl_flat_sections_main #kl_navigation li a#start_here');
+		var link = document.querySelector('#kl_wrapper_3.kl_flat_sections_main #kl_navigation li a#start_here, #kl_wrapper_3.kl_ups_current #kl_navigation li a#start_here');
 		// Only want the first heading in the intro expander.
-		var intro = document.querySelector('#kl_wrapper_3.kl_flat_sections_main #intro_expander .kl_panels_wrapper > h3');
+		var intro = document.querySelector('#kl_wrapper_3.kl_flat_sections_main #intro_expander .kl_panels_wrapper > .kl_panel_heading, #kl_wrapper_3.kl_ups_current #intro_expander .kl_panels_wrapper > .kl_panel_heading');
 		if( link && intro ) {
 			link.setAttribute( 'href', '#' + intro.id );
+			// Success, cancel the repetition.
+			clearInterval(interval);
 		}
-	}
+	}, 200 );
 }
 
 //////////////////////////////////////////////////////
@@ -422,24 +442,51 @@ function startHereClick() {
 //////////////////////////////////////////////////////
 
 function linkNextButton() {
-	// Limit this to pages with content.
-	var regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/((modules\/items\/[0-9]{1,})|(pages\/[a-zA-Z0-9]{1,}))/i;
-	// var regex = /canvas\.cidilabs\.com\/courses\/[0-9]{1,}\/((modules\/items\/[0-9]{1,})|(pages\/[a-zA-Z0-9]{1,}))/i;
-	if( document.URL.search(regex) > -1 ) {
+	// Set interval to repeat until success.
+	var interval = setInterval( function() {
 		// Pick out our next button and the default Canvas one.
-		var next = document.querySelector('#kl_wrapper_3.kl_ups_current a#next-button');
+		var nextAll = document.querySelectorAll('#kl_wrapper_3.kl_ups_current a#next-button');
 		var canvasNext = document.querySelector('#content .module-sequence-footer-button--next a');
 		// Check for both elements before acting.
-		if( next && canvasNext ) {
-			// Set the custom next button link to the same location.
-			next.href = canvasNext.href;
-			// Leverage Canvas' button again for the button text.
-			var text = document.querySelector('#content #' + canvasNext.getAttribute('aria-describedby'));
-			if(text) {
-				// Replace the text only.
-				var tempText = next.innerHTML.substring( next.innerHTML.indexOf('<') );
-				next.innerHTML = text.innerHTML + tempText;
-			}
+		if( ( nextAll.length > 0 ) && canvasNext ) {
+			nextAll.forEach( function(next) {
+				// Set the custom next button link to the same location.
+				next.href = canvasNext.href;
+				// Leverage Canvas' button again for the button text.
+				var text = document.querySelector('#content #' + canvasNext.getAttribute('aria-describedby'));
+				if(text) {
+					// Replace the text only.
+					var tempText = next.innerHTML.substring( next.innerHTML.indexOf('<') );
+					next.innerHTML = text.innerHTML + tempText;
+				}
+			});
+			// Success, cancel the repetition.
+			clearInterval(interval);
 		}
-	}
+	}, 200 );
 }
+
+//////////////////////////////////////////////////////
+// Popup window on links							//
+//////////////////////////////////////////////////////
+
+// TODO investigate this on mobile.
+function linkInPopupWindow() {
+	// Find any links specified as a popup.
+	var links = document.querySelectorAll('#kl_wrapper_3 a[target="popup"]');
+	// Add an eventlistener to each.
+	links.forEach( function(link) {
+		link.classList.add('popup-created');
+		link.addEventListener('click', function() {
+			console.log(this.href);
+			window.open(this.href, 'popup', 'location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,height=900,width=720');
+			return false;
+		});
+	});
+}
+
+//////////////////////////////////////////////////////
+// Resume button									//
+//////////////////////////////////////////////////////
+
+// TODO want to develop a resume button, to take a student back to the spot they've progressed to in a course.
