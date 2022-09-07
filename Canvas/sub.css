@@ -9,3 +9,8 @@
 	color: #2c2c36;
 	border-left: 2px solid #2c2c36;
 }
+
+/* Modules / Contents */
+#context_modules.ig-list .ig-title {
+	font-weight: normal;
+}

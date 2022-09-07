@@ -111,23 +111,23 @@ if( frame != null ) {
 //console.log( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) );
 //console.log( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) );
 // Enforce rules to identify if this iframe is an LTI Tool embedded in a content page. 
-if( ( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) > -1 && ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/assignments\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/quizzes\//i) > -1 ) ) || frame.classList.contains('lti-iframe') ) {
-	// Remove course nav
-	document.getElementById('left-side').style.display = 'none';
-	document.getElementById('main').style.marginLeft = '0';
-	// Remove top breadcrumbs
-	document.getElementsByClassName('ic-app-nav-toggle-and-crumbs no-print')[0].style.display = 'none';
-	// Remove main site navbar
-	document.getElementById('header').style.display = 'none';
-	document.getElementById('wrapper').style.marginLeft = '0';
-	// Remove responsive navigation
-	document.getElementById('mobile-header').style.display = 'none';
-	// Remove scrollbar
-	document.body.style.overflow = 'hidden';
-	// Remove Student view alert bar
-	document.getElementById('masquerade_bar').style.display = 'none';
-	// Notifications and popups?
-}
+	if( ( frame.src.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/modules\/items\/[0-9]{1,}/i) > -1 && ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/pages\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/assignments\//i) > -1 ) || ( frame.baseURI.search(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}\/quizzes\//i) > -1 ) ) || frame.classList.contains('lti-iframe') ) {
+		// Remove course nav
+		document.getElementById('left-side').style.display = 'none';
+		document.getElementById('main').style.marginLeft = '0';
+		// Remove top breadcrumbs
+		document.getElementsByClassName('ic-app-nav-toggle-and-crumbs no-print')[0].style.display = 'none';
+		// Remove main site navbar
+		document.getElementById('header').style.display = 'none';
+		document.getElementById('wrapper').style.marginLeft = '0';
+		// Remove responsive navigation
+		document.getElementById('mobile-header').style.display = 'none';
+		// Remove scrollbar
+		document.body.style.overflow = 'hidden';
+		// Remove Student view alert bar
+		document.getElementById('masquerade_bar').style.display = 'none';
+		// Notifications and popups?
+	}
 }
 
 ////////////////////////////////////////////////////
@@ -428,7 +428,7 @@ function startHereClick() {
 		// Relies on the 'Start Here' link and the expander being marked by ID.
 		var link = document.querySelector('#kl_wrapper_3.kl_flat_sections_main #kl_navigation li a#start_here, #kl_wrapper_3.kl_ups_current #kl_navigation li a#start_here');
 		// Only want the first heading in the intro expander.
-		var intro = document.querySelector('#kl_wrapper_3.kl_flat_sections_main #intro_expander .kl_panels_wrapper > .kl_panel_heading, #kl_wrapper_3.kl_ups_current #intro_expander .kl_panels_wrapper > .kl_panel_heading');
+		var intro = document.querySelector('#kl_wrapper_3.kl_flat_sections_main #kl_unit_prerequisites .kl_panels_wrapper > .kl_panel_heading, #kl_wrapper_3.kl_ups_current #kl_unit_prerequisites .kl_panels_wrapper > .kl_panel_heading');
 		if( link && intro ) {
 			link.setAttribute( 'href', '#' + intro.id );
 			// Success, cancel the repetition.
