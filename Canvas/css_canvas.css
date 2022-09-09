@@ -2797,6 +2797,10 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 	color: var(--dt-color-primary-contrast);
 }
 
+#kl_wrapper_3.kl_ups_current > #kl_banner h2 {
+	margin: 20px 0;
+}
+
 #kl_wrapper_3.kl_ups_current > #kl_banner_image {
 	width: 100%;
 	margin: 0;

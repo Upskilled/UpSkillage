@@ -23,10 +23,14 @@ function customiseCourseNavLinks() {
 			nav.prepend(title);
 			// Rename 'modules' to 'contents'.
 			var modulesLink = nav.querySelector('.modules');
-			modulesLink.innerHTML = 'Contents';
+			if( modulesLink ) {
+				modulesLink.innerHTML = 'Contents';
+			}
 			// Rename 'marks' to 'grades'.
 			var marksLink = nav.querySelector('.grades');
-			marksLink.innerHTML = 'Grades';
+			if( modulesLink ) {
+				marksLink.innerHTML = 'Grades';
+			}
 			// Success, cancel the repetition.
 			clearInterval(interval);
 		}

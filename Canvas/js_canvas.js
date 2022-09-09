@@ -363,6 +363,40 @@ if( document.URL.search(regex) > -1 ) {
 	setTimeout( linkInPopupWindow, 3000 );
 }
 
+// Calendar only
+regex = /upskilled(\.test|\.beta)?\.instructure\.com\/calendar/i;
+if( document.URL.search(regex) > -1 ) {
+	// Remove calendar buttons functionality.
+	// removeCalendarButtons();
+}
+
+//////////////////////////////////////////////////
+// Calendar button modifications				//
+//////////////////////////////////////////////////
+
+function removeCalendarButtons() {
+	// Set interval to repeat until success.
+	var calendarButtonTimer = setInterval( function() {
+		// Pick out the group of calendar buttons.
+		var calendarButtons = document.querySelector('#calendar_header .header-bar .calendar_view_buttons');
+		if( calendarButtons ) {
+			// Trigger the agenda button.
+			var agendaButton = calendarButtons.querySelector('#agenda');
+			agendaButton.innerHTML = 'Support Sessions';
+			agendaButton.click();
+
+			// Remove the other buttons.
+			var otherButtons = calendarButtons.querySelectorAll('button:not(#agenda)');
+			otherButtons.forEach(function(btn) {
+				btn.remove();
+			});
+
+			// Stop trying once we've been able to find the buttons.
+			clearInterval(calendarButtonTimer);
+		}
+	}, 100 );
+}
+
 //////////////////////////////////////////////////////
 // Thread size and positioning						//
 //////////////////////////////////////////////////////
