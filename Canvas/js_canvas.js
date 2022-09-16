@@ -32,6 +32,8 @@ var DT_variables = {
 		'106', // Ben Grigor
 		'110', // Andrew Skeklios
 		'152', // Travis Hackett
+		'193', // Saroj Bhatarai
+		'194', // Sonal Anand
 		'4072' // Tim Praill
 	],
 	 // OPTIONAL: Relocate Ally alternative formats dropdown and hide heading
@@ -59,7 +61,7 @@ $.getScript(DT_variables.path + 'js/master_controls.js', function () {
 ////////////////////////////////////////////////////
 
 var year = new Date().getFullYear();
-$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
+$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>Â© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
 
 ////////////////////////////////////////////////////
 // START LOREE CODE                               //
@@ -361,40 +363,6 @@ if( document.URL.search(regex) > -1 ) {
 	startHereClick();
 	// Link popup functionality
 	setTimeout( linkInPopupWindow, 3000 );
-}
-
-// Calendar only
-regex = /upskilled(\.test|\.beta)?\.instructure\.com\/calendar/i;
-if( document.URL.search(regex) > -1 ) {
-	// Remove calendar buttons functionality.
-	// removeCalendarButtons();
-}
-
-//////////////////////////////////////////////////
-// Calendar button modifications				//
-//////////////////////////////////////////////////
-
-function removeCalendarButtons() {
-	// Set interval to repeat until success.
-	var calendarButtonTimer = setInterval( function() {
-		// Pick out the group of calendar buttons.
-		var calendarButtons = document.querySelector('#calendar_header .header-bar .calendar_view_buttons');
-		if( calendarButtons ) {
-			// Trigger the agenda button.
-			var agendaButton = calendarButtons.querySelector('#agenda');
-			agendaButton.innerHTML = 'Support Sessions';
-			agendaButton.click();
-
-			// Remove the other buttons.
-			var otherButtons = calendarButtons.querySelectorAll('button:not(#agenda)');
-			otherButtons.forEach(function(btn) {
-				btn.remove();
-			});
-
-			// Stop trying once we've been able to find the buttons.
-			clearInterval(calendarButtonTimer);
-		}
-	}, 100 );
 }
 
 //////////////////////////////////////////////////////
