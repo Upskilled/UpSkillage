@@ -28,8 +28,11 @@ function customiseCourseNavLinks() {
 			}
 			// Rename 'marks' to 'grades'.
 			var marksLink = nav.querySelector('.grades');
-			if( modulesLink ) {
-				marksLink.innerHTML = 'Grades';
+			if( marksLink ) {
+				// Take into account the possibility of badges on the link
+				var marksInner = marksLink.childNodes;
+				// The first node is the text content.
+				marksInner[0].textContent = 'Grades';
 			}
 			// Success, cancel the repetition.
 			clearInterval(interval);
