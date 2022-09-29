@@ -2368,6 +2368,7 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 
 /* Banner */
 #kl_wrapper_3.kl_flat_sections #kl_banner #kl_banner_left, #kl_wrapper_3.kl_flat_sections #kl_banner .kl_description {
+	padding: 5px 10px;
 	color: var(--dt-color-secondary-dark-text);
 }
 
