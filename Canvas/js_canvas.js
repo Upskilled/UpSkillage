@@ -34,6 +34,7 @@ var DT_variables = {
 		'152', // Travis Hackett
 		'193', // Saroj Bhatarai
 		'194', // Sonal Anand
+		'2096', // Bosa Grbic
 		'4072' // Tim Praill
 	],
 	 // OPTIONAL: Relocate Ally alternative formats dropdown and hide heading
@@ -61,7 +62,7 @@ $.getScript(DT_variables.path + 'js/master_controls.js', function () {
 ////////////////////////////////////////////////////
 
 var year = new Date().getFullYear();
-$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>Â© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
+$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
 
 ////////////////////////////////////////////////////
 // START LOREE CODE                               //
@@ -346,7 +347,7 @@ if( document.URL.search(regex) > -1 ) {
 	// Next button functionality.
 	linkNextButton();
 	// Link popup functionality
-	setTimeout( linkInPopupWindow, 3000 );
+	linkInPopupWindow();
 }
 
 // Course pages with the nav links (everything within a course).
@@ -362,7 +363,7 @@ if( document.URL.search(regex) > -1 ) {
 	// Start here button functionality.
 	startHereClick();
 	// Link popup functionality
-	setTimeout( linkInPopupWindow, 3000 );
+	linkInPopupWindow();
 }
 
 //////////////////////////////////////////////////////
@@ -485,17 +486,20 @@ function linkNextButton() {
 
 // TODO investigate this on mobile.
 function linkInPopupWindow() {
-	// Find any links specified as a popup.
-	var links = document.querySelectorAll('#kl_wrapper_3 a[target="popup"]');
-	// Add an eventlistener to each.
-	links.forEach( function(link) {
-		link.classList.add('popup-created');
-		link.addEventListener('click', function() {
-			console.log(this.href);
-			window.open(this.href, 'popup', 'location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,height=900,width=720');
-			return false;
+	// Add delay to enable content to load.
+	setTimeout( function() {
+		// Find any links specified as a popup.
+		var links = document.querySelectorAll('#kl_wrapper_3 a[target="popup"]');
+		// Add an eventlistener to each.
+		links.forEach( function(link) {
+			link.classList.add('popup-created');
+			link.addEventListener('click', function() {
+				console.log(this.href);
+				window.open(this.href, 'popup', 'location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,height=900,width=720');
+				return false;
+			});
 		});
-	});
+	}, 3000);
 }
 
 //////////////////////////////////////////////////////
