@@ -248,9 +248,10 @@ body.ic-Login-Body {
 
 /*  Site Menu Styling */
 
-.menu-item__text {
-	font-size: .95em;
-	font-family: "Mont Bold";
+/* Global nav links */
+#header #menu .menu-item__text {
+	font-family: 'Mont Regular';
+	font-weight: 400;
 }
 
 nav a {
@@ -262,14 +263,20 @@ nav a:hover {
 	transition: all .2s ease-in;
 }
 
+/* Colour for selected course nav link */
 .list-view a.active {
-	color: #EC2262;
-	border-left: 2px solid #EC2262;
+	color: #2c2c36;
+	border-left: 2px solid #2c2c36;
+}
+
+/* Modules / Contents */
+#context_modules.ig-list .ig-title {
+	font-weight: normal;
 }
 
 /*  Breadcrumb Styling */
 
-#breadcrumbs>ul>li {
+#breadcrumbs > ul > li {
 	font-size: 1.2em;
 }
 
@@ -407,7 +414,7 @@ div.show-content.user_content img.tile:hover {
 }
 
 /* Nav Styling */
-.list-view>ul>li>a, .list-view>nav>ul>li>a {
+.list-view > ul > li > a, .list-view > nav > ul > li > a {
 	font-weight: 700;
 }
 
@@ -2076,6 +2083,11 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 }
 
 .kl_wrapper .bs-container {
+	padding: 0;
+}
+
+.kl_wrapper ol {
+	margin: 0 0 6px 25px;
 	padding: 0;
 }
 

@@ -354,7 +354,9 @@ if( document.URL.search(regex) > -1 ) {
 regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}/i;
 if( document.URL.search(regex) > -1 ) {
 	// Customised course nav links functionality.
-	// customiseCourseNavLinks();
+	customiseCourseNavLinks();
+	// Course calendar and summary link functionality.
+	customiseCourseLinks();
 }
 
 // Course front page only.
@@ -362,8 +364,38 @@ regex = /upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[a-zA-Z0-9#_-]{0,
 if( document.URL.search(regex) > -1 ) {
 	// Start here button functionality.
 	startHereClick();
-	// Link popup functionality
+	// Link popup functionality.
 	linkInPopupWindow();
+}
+
+// Identify if we're on the calendar page.
+regex = /upskilled(\.test|\.beta)?\.instructure\.com\/calendar/i;
+if( document.URL.search(regex) > -1 ) {
+	// Calendar customisation functionality.
+	removeCalendarButtons();
+}
+
+//////////////////////////////////////////////////////
+// Calendar button modifications					//
+//////////////////////////////////////////////////////
+
+function removeCalendarButtons() {
+	var interval = setInterval( function(){
+		var calendarButtons = document.querySelector('#calendar_header .header-bar .calendar_view_buttons');
+		if( calendarButtons ) {
+			// Trigger the agenda button
+			var agendaButton = calendarButtons.querySelector('#agenda');
+			agendaButton.innerHTML = 'Training and support sessions';
+			agendaButton.click();
+			// Remove the other buttons
+			var otherButtons = calendarButtons.querySelectorAll('button:not(#agenda)');
+			otherButtons.forEach(function(btn) {
+				btn.remove();
+			})
+			// Stop trying once we've been able to find the buttons
+			clearInterval(interval);
+		}
+	}, 100 );
 }
 
 //////////////////////////////////////////////////////
@@ -424,7 +456,10 @@ function customiseCourseNavLinks() {
 			// Rename 'marks' to 'grades'.
 			var marksLink = nav.querySelector('.grades');
 			if( marksLink ) {
-				marksLink.innerHTML = 'Grades';
+				// Take into account the possibility of badges on the link
+				var marksInner = marksLink.childNodes;
+				// The first node is the text content.
+				marksInner[0].textContent = 'Grades';
 			}
 			// Success, cancel the repetition.
 			clearInterval(interval);
@@ -494,7 +529,7 @@ function linkInPopupWindow() {
 		links.forEach( function(link) {
 			link.classList.add('popup-created');
 			link.addEventListener('click', function() {
-				console.log(this.href);
+				// console.log(this.href);
 				window.open(this.href, 'popup', 'location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,height=900,width=720');
 				return false;
 			});
@@ -507,3 +542,30 @@ function linkInPopupWindow() {
 //////////////////////////////////////////////////////
 
 // TODO want to develop a resume button, to take a student back to the spot they've progressed to in a course.
+
+//////////////////////////////////////////////////////
+// Course calendar & summary links					//
+//////////////////////////////////////////////////////
+
+function customiseCourseLinks() {
+	// Add delay to enable content to load.
+	setTimeout( function() {
+		// Pick out course summary links
+		var links = document.querySelectorAll('#kl_wrapper_3 a.course-summary');
+		// Add an eventlistener to each.
+		links.forEach( function(link) {
+			link.href = "https://course-summary.azurewebsites.net";
+			link.target = '_blank';
+		});
+
+		// Repeat for calendar links
+		var links = document.querySelectorAll('#kl_wrapper_3 a.course-calendar');
+		var courseURL = document.URL.match(/upskilled(\.test|\.beta)?\.instructure\.com\/courses\/[0-9]{1,}/i)[0];
+		var courseID = courseURL.substring(courseURL.lastIndexOf('/') + 1);
+
+		links.forEach( function(link) {
+			// https://upskilled.instructure.com/calendar?include_contexts=course_653
+			link.href = 'https://' + document.domain + '/calendar?include_contexts=course_' + courseID;
+		});
+	}, 3000);
+}
