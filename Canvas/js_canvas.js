@@ -62,7 +62,7 @@ $.getScript(DT_variables.path + 'js/master_controls.js', function () {
 ////////////////////////////////////////////////////
 
 var year = new Date().getFullYear();
-$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
+$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>Â© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
 
 ////////////////////////////////////////////////////
 // START LOREE CODE                               //
@@ -456,13 +456,36 @@ function customiseCourseNavLinks() {
 			// Rename 'marks' to 'grades'.
 			var marksLink = nav.querySelector('.grades');
 			if( marksLink ) {
-				// Take into account the possibility of badges on the link
+				// Take into account the possibility of badges on the link.
 				var marksInner = marksLink.childNodes;
 				// The first node is the text content.
 				marksInner[0].textContent = 'Grades';
 			}
-			// Success, cancel the repetition.
+			// Mark nav as done with.
+			nav = false;
+		}
+		// Need to tackle the bradcrumb naming as well for consistency.
+		var breadcrumbs = document.querySelector('#breadcrumbs');
+		if(breadcrumbs) {
+			// Rename 'modules' to 'contents'.
+			var modulesCrumb = breadcrumbs.querySelector('a[href$="modules"] span');
+			if( modulesCrumb ) {
+				modulesCrumb.innerHTML = 'Contents';
+			}
+			// Rename 'marks' to 'grades'.
+			var marksCrumb = breadcrumbs.querySelector('a[href$="grades"] span');
+			if( marksCrumb ) {
+				marksCrumb.innerHTML = 'Grades';
+			}
+			// Mark breadcrumbs as done with.
+			breadcrumbs = false;
+		}
+
+		if(!(nav || breadcrumbs)){
+			// Both nav and breadcrumbs were found and modified, cancel the repetition.
 			clearInterval(interval);
+			// Finally, modify the page title for modules as well.
+			document.title = document.title.replace("Modules", "Contents");
 		}
 	}, 200 );
 }

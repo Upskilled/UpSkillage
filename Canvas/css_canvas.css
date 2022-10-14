@@ -27,7 +27,7 @@
 }
 
 /*********************************************************************/
-/***** END DESIGN TOOLS HEME IMPORT & CUSTOMIZATION   ****************/
+/***** END DESIGN TOOLS THEME IMPORT & CUSTOMIZATION   ***************/
 /*********************************************************************/
 
 
@@ -222,6 +222,14 @@ a:hover {
 	color: var(--ic-link-color);
 }
 
+.ui-tabs .ui-tabs-nav, .ic-Table td, .ic-Table th {
+	border-bottom-color: var(--dt-color-primary);
+}
+
+.ui-tabs .ui-tabs-panel, .ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
+	border-color: var(--dt-color-primary);
+}
+
 /* Login Page */
 .ic-Login__container {
 	margin-top: 10%;
@@ -259,7 +267,7 @@ nav a {
 }
 
 nav a:hover {
-	color: #1548E0;
+	color: var(--dt-color-primary);
 	transition: all .2s ease-in;
 }
 
@@ -360,7 +368,7 @@ nav a:hover {
 }
 
 #content a:not([class*='btn']):hover {
-	color: #009f6e;
+	color: var(--dt-color-link-hover);
 	transition: all 0.2s 0s linear;
 }
 
@@ -430,7 +438,7 @@ div.show-content.user_content img.tile:hover {
 }
 
 #right-side .element_toggler {
-	color: #f3b81e;
+	color: var(--ic-link-color);
 	font-family: "Mont Bold";
 }
 
@@ -448,8 +456,8 @@ ul.message-attachments a {
 }
 
 .message-list .star-btn.active {
-	color: #f3b91e;
-	text-shadow: 0 0 1px #f3b91e;
+	color: var(--dt-color-secondary);
+	text-shadow: 0 0 1px var(--dt-color-secondary);
 }
 
 /* Module Styling */
@@ -475,16 +483,8 @@ ul.message-attachments a {
 	font-size: 1em;
 }
 
-.ui-tabs .ui-tabs-panel, .ui-tabs .ui-tabs-nav li.ui-tabs-active, .ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active:hover {
-	border-color: #f2b81d;
-}
-
-.ui-tabs .ui-tabs-nav, .ic-Table td, .ic-Table th {
-	border-bottom-color: #f2b81d;
-}
-
 .progress-bar__bar-container {
-	border: 1px solid #f2b81d;
+	border: 1px solid var(--dt-color-primary);
 }
 
 .progress-bar__bar {
@@ -493,7 +493,7 @@ ul.message-attachments a {
 }
 
 i.icon-hamburger {
-	color: #1548E0;
+	color: var(--dt-color-primary);
 }
 
 /* Footer Details */
@@ -1354,9 +1354,6 @@ legend {
 	background-image: url ('https://loree.io/wp-content/uploads/2019/06/Loree_Logo_Final.png');
 }
 
-/* .ui-icon {
-	display: none !important;
-} */
 .ui-icon-extlink {
 	display: none !important;
 }
