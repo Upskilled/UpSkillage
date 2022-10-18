@@ -62,7 +62,7 @@ $.getScript(DT_variables.path + 'js/master_controls.js', function () {
 ////////////////////////////////////////////////////
 
 var year = new Date().getFullYear();
-$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>Â© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
+$('.with-right-side #wrapper #main').append('<footer role="contentinfo" id="upskilled-footer" class="ic-app-footer"><div id="footer-links" class="ic-app-footer__links"><span>© Upskilled Pty Ltd ' + year + '. All rights reserved. <a href="https://www.upskilled.edu.au/terms-and-conditions" target="_new">Terms & Conditions</a> | <a href="https://www.upskilled.edu.au/upskilled-policies" target="_new">Upskilled Policies</a> | RTO No 40374 | ABN: 14 125 906 676</span></div></footer>');
 
 ////////////////////////////////////////////////////
 // START LOREE CODE                               //
@@ -445,7 +445,7 @@ function customiseCourseNavLinks() {
 			// Adding the title on top.
 			var title = document.createElement('li');
 			title.classList.add('section');
-			title.style = "padding: 8px 0 8px 6px; color: #2c2c36; font-style: italic; word-wrap: break-word; hyphens: none; line-height: 1.3;";
+			title.style = 'padding: 8px 0 8px 6px; color: #2c2c36; font-style: italic; word-wrap: break-word; hyphens: none; line-height: 1.3;';
 			title.innerHTML = 'Unit Menu';
 			nav.prepend(title);
 			// Rename 'modules' to 'contents'.
@@ -484,8 +484,10 @@ function customiseCourseNavLinks() {
 		if(!(nav || breadcrumbs)){
 			// Both nav and breadcrumbs were found and modified, cancel the repetition.
 			clearInterval(interval);
-			// Finally, modify the page title for modules as well.
-			document.title = document.title.replace("Modules", "Contents");
+
+			// Modify the page title as needed too.
+			document.title = document.title.replace('Modules', 'Contents');
+			document.title = document.title.replace('Marks', 'Grades');
 		}
 	}, 200 );
 }
@@ -573,8 +575,8 @@ function linkInPopupWindow() {
 function customiseCourseLinks() {
 	// Add delay to enable content to load.
 	setTimeout( function() {
-		// Pick out course summary links
-		var links = document.querySelectorAll('#kl_wrapper_3 a.course-summary');
+		// Pick out course overview links
+		var links = document.querySelectorAll('#kl_wrapper_3 a.course-overview');
 		// Add an eventlistener to each.
 		links.forEach( function(link) {
 			link.href = "https://course-summary.azurewebsites.net";
