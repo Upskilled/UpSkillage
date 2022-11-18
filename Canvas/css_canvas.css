@@ -526,6 +526,8 @@ footer#footer {
 /***** START LOREE CUSTOM CSS                         ****************/
 /*********************************************************************/
 
+@import url('https://loree-files.crystaldelta.net/loree-themes/loreeThemesV2.min.css');
+
 dfn {
 	font-style: italic;
 }
@@ -2058,6 +2060,16 @@ a.nav-btns:hover {
 /*********** Global Customisations ********************************/
 /******************************************************************/
 
+/* DesignPLUS sidebar fixes */
+#kl_tools_accordion .ui-accordion-icons.ui-accordion-header i.kl_tool_icon {
+	width: 24px;
+	padding: 2px 4px;
+}
+
+#listCourseContent .kl_panel_content {
+	overflow-y: auto !important;
+}
+
 /* body.primary-nav-expanded:not(.full-width):not(.outcomes):not(.body--login-confirmation) .ic-Layout-wrapper {
 	max-width: calc( 100% - 84px );
 }
@@ -2817,12 +2829,23 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 	/* background: radial-gradient( circle at 84% 60%, var(--dt-color-secondary) 8%, transparent 0%), linear-gradient(70deg, #1548e0, #7b1ce9), #1548e0; */
 }
 
-#kl_wrapper_3.kl_ups_current > #kl_banner, #kl_wrapper_3.kl_ups_current > #kl_banner h2 {
+#kl_wrapper_3.kl_ups_current #kl_banner {
+	text-shadow: 0px 0px 10px #000000a0;
 	color: var(--dt-color-primary-contrast);
 }
 
-#kl_wrapper_3.kl_ups_current > #kl_banner h2 {
-	margin: 20px 0;
+#kl_wrapper_3.kl_ups_current #kl_banner h2 {
+	margin: 40px 0;
+	color: var(--dt-color-primary-contrast);
+}
+
+#kl_wrapper_3.kl_ups_current #kl_banner h2 #kl_banner_left {
+	display: block;
+	font-family: 'Mont Regular';
+}
+
+#kl_wrapper_3.kl_ups_current #kl_banner h2 #kl_banner_right {
+	display: block;
 }
 
 #kl_wrapper_3.kl_ups_current > #kl_banner_image {
@@ -2854,7 +2877,6 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 
 #kl_wrapper_3.kl_ups_current .kl_banner_wrapper #kl_banner h2 {
 	margin: 0;
-	color: var(--dt-color-primary-contrast);
 }
 
 #kl_wrapper_3.kl_ups_current .kl_banner_wrapper #kl_banner .kl_mod_text {
@@ -2961,6 +2983,7 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 #kl_wrapper_3.kl_ups_current .kl_panels_accordion.ui-accordion {
 	margin: 0;
 	padding: 0;
+	font-size: 1em;
 }
 
 #kl_wrapper_3.kl_ups_current .kl_panels_accordion.ui-accordion .kl_panel_heading.ui-accordion-header {
@@ -3028,6 +3051,8 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 #kl_wrapper_3.kl_ups_current .kl_panels_wrapper.ui-tabs .ui-tabs-nav {
 	margin: 10px 0;
 	border-bottom: 1px solid var(--dt-color-primary);
+	font-family: 'Mont Bold';
+	font-size: 1.1em;
 }
 
 #kl_wrapper_3.kl_ups_current .kl_panels_wrapper.ui-tabs .ui-tabs-nav li {
@@ -3042,8 +3067,9 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 }
 
 #kl_wrapper_3.kl_ups_current .kl_panels_wrapper.ui-tabs .ui-tabs-nav li a {
-	padding: 10px 20px;
+	padding: 15px 20px;
 	color: var(--dt-color-primary-dark-text);
+	line-height: 1;
 }
 
 #kl_wrapper_3.kl_ups_current .kl_panels_wrapper.ui-tabs .ui-tabs-nav li:hover a, #kl_wrapper_3.kl_ups_current .kl_panels_wrapper.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
