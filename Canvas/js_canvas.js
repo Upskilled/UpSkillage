@@ -34,6 +34,9 @@ var DT_variables = {
 		'152', // Travis Hackett
 		'193', // Saroj Bhatarai
 		'194', // Sonal Anand
+		'237', // Zaiba Khan
+		'812', // Sarah Marshall
+		'927', // Rachel Dalleywater
 		'2096', // Bosa Grbic
 		'4072' // Tim Praill
 	],
