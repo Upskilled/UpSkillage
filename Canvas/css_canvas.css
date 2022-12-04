@@ -2117,6 +2117,134 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 /*********** Cidilabs Styles and Themes ***************************/
 /******************************************************************/
 
+/* Custom HTML Snippets */
+#kl_wrapper_3 .btn-group {
+	font-size: inherit;
+}
+
+#kl_wrapper_3 .btn-group .btn-header {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: var(--dt-btn-padding);
+	background-color: var(--dt-color-primary);
+	font-size: 1.3em;
+	color: var(--dt-color-primary-contrast);
+}
+
+#kl_wrapper_3 .btn-group a.btn, #kl_wrapper_3 .btn-group a.btn-full {
+	margin: 10px 0;
+	padding: var(--dt-btn-padding);
+	color: var(--dt-color-primary-dark-text);
+	font-size: 1em;
+	font-family: 'Mont Semi Bold', Helvetica, sans-serif;
+}
+
+#kl_wrapper_3 a.btn {
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+	padding: 10px 20px;
+	font-family: 'Mont Bold', Helvetica, sans-serif;
+	font-size: 1.2em;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 0;
+}
+
+#kl_wrapper_3 a.btn-full {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+	padding: 10px 20px;
+	font-family: 'Mont Bold', Helvetica, sans-serif;
+	font-size: 1.2em;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 0;
+}
+
+#kl_wrapper_3 a.btn i:first-child, #kl_wrapper_3 a.btn-full i:first-child {
+	margin-right: 10px;
+}
+
+#kl_wrapper_3 a.btn i:last-child, #kl_wrapper_3 a.btn-full i:last-child {
+	margin-left: 10px;
+}
+
+#kl_wrapper_3 a.btn-ups-primary {
+	background-color: var(--dt-color-primary);
+	color: var(--dt-color-primary-contrast);
+	transition: background-color 0.2s 0s ease, color 0.2s 0s ease, border-color 0.2s 0s ease;
+}
+
+#kl_wrapper_3 a.btn-ups-primary:hover {
+	background-color: var(--dt-color-primary-contrast);
+	border-color: var(--dt-color-primary);
+	color: var(--dt-color-primary);
+}
+
+#kl_wrapper_3 a.btn-ups-secondary {
+	background-color: var(--dt-color-secondary);
+	color: var(--dt-color-secondary-contrast);
+	transition: background-color 0.2s 0s ease, color 0.2s 0s ease, border-color 0.2s 0s ease;
+}
+
+#kl_wrapper_3 a.btn-ups-secondary:hover {
+	background-color: var(--dt-color-secondary-contrast);
+	border-color: var(--dt-color-secondary);
+	color: var(--dt-color-secondary);
+}
+
+#kl_wrapper_3 a.btn-green {
+	background-color: var(--dt-color-accent);
+	color: var(--dt-color-accent-contrast);
+	transition: background-color 0.2s 0s ease;
+}
+
+#kl_wrapper_3 a.btn-green:hover {
+	background-color: var(--dt-color-accent-hover);
+	color: var(--dt-color-accent-contrast);
+}
+
+#kl_wrapper_3 a.btn-outline {
+	background-color: transparent;
+	border: 1px solid var(--dt-color-primary);
+	color: var(--dt-color-primary-dark-text);
+	transition: background-color 0.2s 0s ease;
+}
+
+#kl_wrapper_3 a.btn-outline:hover {
+	background-color: #00000011;
+}
+
+#kl_wrapper_3 a.btn-outline-fill-white {
+	background-color: var(--dt-color-primary-contrast);
+	border: 1px solid var(--dt-color-primary);
+	color: var(--dt-color-primary);
+	transition: background-color 0.2s 0s ease;
+}
+
+#kl_wrapper_3 a.btn-outline-fill-white:hover {
+	background-color: var(--dt-color-primary);
+	color: var(--dt-color-primary-contrast);
+}
+
+#kl_wrapper_3 a.btn .btn-arrow {
+	height: 1em;
+	width: auto;
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+
+#kl_wrapper_3 a.btn-full .btn-arrow {
+	height: 1em;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+
 /******************************************************************/
 /*********** Flat Sections Main 1 - Element Customisations ********/
 /******************************************************************/
@@ -3332,134 +3460,6 @@ body.primary-nav-transitions:not(.full-width):not(.outcomes):not(.body--login-co
 	background-color: var(--dt-color-primary);
 	color: var(--dt-color-primary-contrast);
 	text-decoration: none;
-}
-
-/* Custom HTML Snippets */
-#kl_wrapper_3.kl_ups_current .btn-group {
-	font-size: inherit;
-}
-
-#kl_wrapper_3.kl_ups_current .btn-group .btn-header {
-	width: 100%;
-	max-width: 100%;
-	margin: 0;
-	padding: var(--dt-btn-padding);
-	background-color: var(--dt-color-primary);
-	font-size: 1.3em;
-	color: var(--dt-color-primary-contrast);
-}
-
-#kl_wrapper_3.kl_ups_current .btn-group a.btn, #kl_wrapper_3.kl_ups_current .btn-group a.btn-full {
-	margin: 10px 0;
-	padding: var(--dt-btn-padding);
-	color: var(--dt-color-primary-dark-text);
-	font-size: 1em;
-	font-family: 'Mont Semi Bold', Helvetica, sans-serif;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn {
-	display: inline-flex;
-	align-items: center;
-	margin: 0;
-	padding: 10px 20px;
-	font-family: 'Mont Bold', Helvetica, sans-serif;
-	font-size: 1.2em;
-	text-decoration: none;
-	border: 1px solid transparent;
-	border-radius: 0;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-full {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin: 0;
-	padding: 10px 20px;
-	font-family: 'Mont Bold', Helvetica, sans-serif;
-	font-size: 1.2em;
-	text-decoration: none;
-	border: 1px solid transparent;
-	border-radius: 0;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn i:first-child, #kl_wrapper_3.kl_ups_current a.btn-full i:first-child {
-	margin-right: 10px;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn i:last-child, #kl_wrapper_3.kl_ups_current a.btn-full i:last-child {
-	margin-left: 10px;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-ups-primary {
-	background-color: var(--dt-color-primary);
-	color: var(--dt-color-primary-contrast);
-	transition: background-color 0.2s 0s ease, color 0.2s 0s ease, border-color 0.2s 0s ease;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-ups-primary:hover {
-	background-color: var(--dt-color-primary-contrast);
-	border-color: var(--dt-color-primary);
-	color: var(--dt-color-primary);
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-ups-secondary {
-	background-color: var(--dt-color-secondary);
-	color: var(--dt-color-secondary-contrast);
-	transition: background-color 0.2s 0s ease, color 0.2s 0s ease, border-color 0.2s 0s ease;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-ups-secondary:hover {
-	background-color: var(--dt-color-secondary-contrast);
-	border-color: var(--dt-color-secondary);
-	color: var(--dt-color-secondary);
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-green {
-	background-color: var(--dt-color-accent);
-	color: var(--dt-color-accent-contrast);
-	transition: background-color 0.2s 0s ease;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-green:hover {
-	background-color: var(--dt-color-accent-hover);
-	color: var(--dt-color-accent-contrast);
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-outline {
-	background-color: transparent;
-	border: 1px solid var(--dt-color-primary);
-	color: var(--dt-color-primary-dark-text);
-	transition: background-color 0.2s 0s ease;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-outline:hover {
-	background-color: #00000011;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-outline-fill-white {
-	background-color: var(--dt-color-primary-contrast);
-	border: 1px solid var(--dt-color-primary);
-	color: var(--dt-color-primary);
-	transition: background-color 0.2s 0s ease;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-outline-fill-white:hover {
-	background-color: var(--dt-color-primary);
-	color: var(--dt-color-primary-contrast);
-}
-
-#kl_wrapper_3.kl_ups_current a.btn .btn-arrow {
-	height: 1em;
-	width: auto;
-	margin: 0 0 0 10px;
-	padding: 0;
-}
-
-#kl_wrapper_3.kl_ups_current a.btn-full .btn-arrow {
-	height: 1em;
-	width: auto;
-	margin: 0;
-	padding: 0;
 }
 
 /* Thread & icons */
