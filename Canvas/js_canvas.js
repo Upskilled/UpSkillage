@@ -23,7 +23,8 @@ var DT_variables = {
 	roleArray: [
 		'student',
 		'teacher',
-		'admin'
+		'admin',
+		'CidiLabs Access'
 	],
 	// OPTIONAL: Limit tools to an array of Canvas user IDs
 	limitByUser: true, // Change to true to limit by user
@@ -31,20 +32,19 @@ var DT_variables = {
 	userArray: [
 		'106', // Ben Grigor
 		'110', // Andrew Skeklios
+		'145', // Fiona Stray
 		'152', // Travis Hackett
-		'193', // Saroj Bhatarai
-		'194', // Sonal Anand
 		'237', // Zaiba Khan
+		'332', // MD Faridul
+		'521', // Arlaine Berman
 		'812', // Sarah Marshall
-		'927', // Rachel Dalleywater
-		'2096', // Bosa Grbic
 		'4072' // Tim Praill
 	],
 	 // OPTIONAL: Relocate Ally alternative formats dropdown and hide heading
 	 overrideAllyHeadings: false,
 	 // OPTIONAL: Make assignment rubrics sortable
 	 sortableRubrics: true,
-	 // OPTIONAL: Transform people page ina course to show student cards
+	 // OPTIONAL: Transform people page in a course to show student cards
 	 showStudentCards: true
 };
 
